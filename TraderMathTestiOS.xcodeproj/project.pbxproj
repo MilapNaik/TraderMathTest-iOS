@@ -14,6 +14,10 @@
 		81A89F181CEB995600B2838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F161CEB995600B2838A /* Main.storyboard */; };
 		81A89F1A1CEB995600B2838A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F191CEB995600B2838A /* Images.xcassets */; };
 		81A89F291CEB995600B2838A /* TraderMathTestiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F281CEB995600B2838A /* TraderMathTestiOSTests.swift */; };
+		81AA26631CF4B3D7001DE1D0 /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81AA26621CF4B3D7001DE1D0 /* easymath.txt */; };
+		81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */; };
+		81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26671CF4DFC2001DE1D0 /* Countdown.swift */; };
+		81AA266A1CF4E4B6001DE1D0 /* mathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26691CF4E4B6001DE1D0 /* mathTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		81A89F221CEB995600B2838A /* TraderMathTestiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraderMathTestiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F271CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F281CEB995600B2838A /* TraderMathTestiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraderMathTestiOSTests.swift; sourceTree = "<group>"; };
+		81AA26621CF4B3D7001DE1D0 /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easymath.txt; sourceTree = "<group>"; };
+		81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeOrTest.swift; sourceTree = "<group>"; };
+		81AA26671CF4DFC2001DE1D0 /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
+		81AA26691CF4E4B6001DE1D0 /* mathTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mathTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 		81A89F041CEB995600B2838A = {
 			isa = PBXGroup;
 			children = (
+				81AA26621CF4B3D7001DE1D0 /* easymath.txt */,
 				81A89F0F1CEB995600B2838A /* TraderMathTestiOS */,
 				81A89F251CEB995600B2838A /* TraderMathTestiOSTests */,
 				81A89F0E1CEB995600B2838A /* Products */,
@@ -81,7 +90,10 @@
 			children = (
 				81A89F121CEB995600B2838A /* AppDelegate.swift */,
 				81A89F141CEB995600B2838A /* ViewController.swift */,
+				81AA26671CF4DFC2001DE1D0 /* Countdown.swift */,
 				81A89F161CEB995600B2838A /* Main.storyboard */,
+				81AA26691CF4E4B6001DE1D0 /* mathTest.swift */,
+				81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */,
 				81A89F191CEB995600B2838A /* Images.xcassets */,
 				81A89F101CEB995600B2838A /* Supporting Files */,
 				818520651CF3EB4900063BFC /* Settings.swift */,
@@ -197,6 +209,7 @@
 			files = (
 				81A89F181CEB995600B2838A /* Main.storyboard in Resources */,
 				81A89F1A1CEB995600B2838A /* Images.xcassets in Resources */,
+				81AA26631CF4B3D7001DE1D0 /* easymath.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,10 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */,
 				818520661CF3EB4900063BFC /* Settings.swift in Sources */,
 				818520681CF3ED3C00063BFC /* Info.swift in Sources */,
 				81A89F151CEB995600B2838A /* ViewController.swift in Sources */,
 				81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */,
+				81AA266A1CF4E4B6001DE1D0 /* mathTest.swift in Sources */,
+				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				INFOPLIST_FILE = TraderMathTestiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = TraderMathTestiOS;
@@ -350,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				INFOPLIST_FILE = TraderMathTestiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = TraderMathTestiOS;
