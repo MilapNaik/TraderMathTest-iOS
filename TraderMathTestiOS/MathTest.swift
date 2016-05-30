@@ -15,8 +15,11 @@ class MathTestController: UIViewController {
     var i:Int = 0
     var questionNumber:Int = 1
     var correctAnswer: String?
-    var highscore:Int = 2
-    var finishtime:String?
+    var highscore:Int = 0
+    var finishtime:String = "0"
+    var timer = NSTimer()
+    var time: Double = 0
+    var startTime: NSTimeInterval = 0.0
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
@@ -39,7 +42,11 @@ class MathTestController: UIViewController {
         readFile()
         readUserDefaults()
         qnumLabel.text = "\(questionNumber)/\(testLength)"
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+        
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -165,17 +172,26 @@ class MathTestController: UIViewController {
         }
         
         qnumLabel.text = "\(questionNumber)/\(testLength)"
-        if questionNumber == testLength{
+        if questionNumber > testLength{
+            time = NSDate.timeIntervalSinceReferenceDate() - startTime
             self.performSegueWithIdentifier("goestoFinishTest", sender: highscore)
         }
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        time = Double(round(1000*time)/1000)
+        var minutes = UInt8(time/60.0)
+        var seconds = UInt8(time) - (minutes*60)
+        var milliseconds = Int((time*1000) % 1000)
+        finishtime = String(format: "%02d:%02d.%03d", minutes, seconds, milliseconds)
+        
         if (segue.identifier == "goestoFinishTest") {
             let secondViewController = segue.destinationViewController as! FinishTestController
             let highscore = sender as! Int
             secondViewController.highscore = highscore
+            secondViewController.finishtime = "\(finishtime)"
+
         }
     }
     

@@ -23,8 +23,12 @@ class FinishTestController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         correctAnswers.text = "\(highscore)"
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        correctAnswers.text = "Score: \(highscore!)"
+        Time.text = "Time: \(finishtime!)"
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,6 +44,9 @@ class FinishTestController: UIViewController {
     
     
     // MARK: Actions
+    @IBAction func Menu(sender: UIButton) {
+        self.performSegueWithIdentifier("goestoMenu", sender: self)
+    }
     
     
     

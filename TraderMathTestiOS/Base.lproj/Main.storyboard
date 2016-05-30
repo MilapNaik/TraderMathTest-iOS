@@ -489,8 +489,11 @@
                                         <exclude reference="cP7-ik-g4z"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="Menu:" destination="cmq-oT-RIr" eventType="touchUpInside" id="76E-Hr-lRL"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAt-Kv-Gpb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAt-Kv-Gpb">
                                 <rect key="frame" x="16" y="132" width="568" height="30"/>
                                 <color key="backgroundColor" red="0.1450980392" green="0.015686274510000001" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -499,6 +502,7 @@
                                     <constraint firstAttribute="height" constant="30" id="yqT-Ag-gQb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -507,7 +511,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnB-Of-bEA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnB-Of-bEA">
                                 <rect key="frame" x="16" y="74" width="568" height="30"/>
                                 <color key="backgroundColor" red="0.1450980392" green="0.015686274510000001" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -518,6 +522,7 @@
                                     <constraint firstAttribute="height" constant="30" id="We1-WA-uWf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -624,7 +629,8 @@
                     </view>
                     <connections>
                         <outlet property="Time" destination="vAt-Kv-Gpb" id="7mX-em-yTV"/>
-                        <outlet property="correctAnswers" destination="UnB-Of-bEA" id="jKq-Ld-Gud"/>
+                        <outlet property="correctAnswers" destination="UnB-Of-bEA" id="5oW-UY-80s"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goestoMenu" id="Kfy-cF-ecq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zn-Si-smE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -884,6 +890,6 @@
         <image name="Settings" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qkA-P5-P8m"/>
+        <segue reference="Kfy-cF-ecq"/>
     </inferredMetricsTieBreakers>
 </document>
