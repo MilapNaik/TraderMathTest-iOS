@@ -14,6 +14,7 @@ class FinishTestController: UIViewController {
     // MARK: Properties
     var highscore:Int?
     var finishtime:String?
+    let db = SQLiteDB.sharedInstance()
 
 
     @IBOutlet weak var correctAnswers: UILabel!
@@ -23,6 +24,27 @@ class FinishTestController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        addhighscore()
+        loadhighscores()
+    }
+    
+    func addhighscore(){
+        db.execute("INSERT INTO EASY_MATH5 (Score, Time) Values ('\(correctAnswers)', '\(finishtime!)'); ", parameters:nil)
+        print("Successfully inserted row")
+    }
+    
+    func loadhighscores(){
+        var result = db.query("select * from EASY_MATH5", parameters: nil)
+        println("===============================")
+        for row in result
+        {
+            print(row["Rank"]!.asString())
+            print(" ")
+            print(row["Score"]!.asString())
+            print(" ")
+            println(row["Time"]!.asString())
+        }
         
     }
     

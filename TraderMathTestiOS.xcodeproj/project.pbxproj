@@ -12,6 +12,10 @@
 		818B534F1CF6CC350085346A /* FinishTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B534E1CF6CC350085346A /* FinishTest.swift */; };
 		81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8011CFBBE63007D4C3C /* hardmath.txt */; };
 		81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8021CFBBE63007D4C3C /* mediummath.txt */; };
+		81A4C8131CFDE4AD007D4C3C /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */; };
+		81A4C8141CFDE4AD007D4C3C /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */; };
+		81A4C8161CFDE539007D4C3C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A4C8151CFDE539007D4C3C /* libsqlite3.0.dylib */; };
+		81A4C81A1CFE00AE007D4C3C /* highscores.db in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8191CFE00AE007D4C3C /* highscores.db */; };
 		81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F121CEB995600B2838A /* AppDelegate.swift */; };
 		81A89F151CEB995600B2838A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F141CEB995600B2838A /* ViewController.swift */; };
 		81A89F181CEB995600B2838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F161CEB995600B2838A /* Main.storyboard */; };
@@ -40,6 +44,11 @@
 		818B534E1CF6CC350085346A /* FinishTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishTest.swift; sourceTree = "<group>"; };
 		81A4C8011CFBBE63007D4C3C /* hardmath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardmath.txt; sourceTree = "<group>"; };
 		81A4C8021CFBBE63007D4C3C /* mediummath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediummath.txt; sourceTree = "<group>"; };
+		81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
+		81A4C8151CFDE539007D4C3C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		81A4C8191CFE00AE007D4C3C /* highscores.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = highscores.db; sourceTree = "<group>"; };
 		81A89F0D1CEB995600B2838A /* TraderMathTestiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraderMathTestiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F111CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F121CEB995600B2838A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A4C8161CFDE539007D4C3C /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +87,8 @@
 		81A89F041CEB995600B2838A = {
 			isa = PBXGroup;
 			children = (
+				81A4C8191CFE00AE007D4C3C /* highscores.db */,
+				81A4C8151CFDE539007D4C3C /* libsqlite3.0.dylib */,
 				81A4C8011CFBBE63007D4C3C /* hardmath.txt */,
 				81A4C8021CFBBE63007D4C3C /* mediummath.txt */,
 				81AA26621CF4B3D7001DE1D0 /* easymath.txt */,
@@ -98,6 +110,9 @@
 		81A89F0F1CEB995600B2838A /* TraderMathTestiOS */ = {
 			isa = PBXGroup;
 			children = (
+				81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */,
+				81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */,
+				81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */,
 				81A89F121CEB995600B2838A /* AppDelegate.swift */,
 				81A89F141CEB995600B2838A /* ViewController.swift */,
 				81AA26671CF4DFC2001DE1D0 /* Countdown.swift */,
@@ -221,6 +236,7 @@
 			files = (
 				81A89F181CEB995600B2838A /* Main.storyboard in Resources */,
 				81A89F1A1CEB995600B2838A /* Images.xcassets in Resources */,
+				81A4C81A1CFE00AE007D4C3C /* highscores.db in Resources */,
 				81AA26631CF4B3D7001DE1D0 /* easymath.txt in Resources */,
 				81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */,
 				81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */,
@@ -248,8 +264,10 @@
 				818520681CF3ED3C00063BFC /* Info.swift in Sources */,
 				81A89F151CEB995600B2838A /* ViewController.swift in Sources */,
 				81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */,
+				81A4C8131CFDE4AD007D4C3C /* SQLiteDB.swift in Sources */,
 				81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */,
 				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,
+				81A4C8141CFDE4AD007D4C3C /* String-Extras.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +393,7 @@
 				INFOPLIST_FILE = TraderMathTestiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = TraderMathTestiOS;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTestiOS/TraderMathTestiOS/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -387,6 +406,7 @@
 				INFOPLIST_FILE = TraderMathTestiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = TraderMathTestiOS;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTestiOS/TraderMathTestiOS/Bridging-Header.h";
 			};
 			name = Release;
 		};
