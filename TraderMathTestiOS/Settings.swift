@@ -13,6 +13,10 @@ class SettingsController: UIViewController {
     // MARK: Properties
 
     
+    //var otherButtons : [DLRadioButton] = [button1, button2];
+    
+    
+    
     
     
     // Preferences for difficulty level of questions
@@ -37,19 +41,21 @@ class SettingsController: UIViewController {
     
     
     // MARK: Actions
-    @IBAction func easyButton(sender: UIButton) {
+    @IBAction func easyButton(sender: DLRadioButton) {
         preferences.setObject("Easy", forKey: difficultyKey)
         JLToast.makeText("Difficulty: Easy").show()
     }
-
-    @IBAction func mediumButton(sender: UIButton) {
+    
+    @IBAction func mediumButton(sender: DLRadioButton) {
         preferences.setObject("Medium", forKey: difficultyKey)
         JLToast.makeText("Difficulty: Medium").show()
     }
-    @IBAction func hardButton(sender: UIButton) {
+    
+    @IBAction func hardButton(sender: DLRadioButton) {
         preferences.setObject("Hard", forKey: difficultyKey)
         JLToast.makeText("Difficulty: Hard").show()
     }
+    
     @IBAction func fiveButton(sender: UIButton) {
         preferences.setInteger(5, forKey: questionnumKey)
         JLToast.makeText("Set to 5 questions").show()
