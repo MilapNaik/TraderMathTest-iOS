@@ -19,6 +19,9 @@
 		81A4C81E1CFE73CE007D4C3C /* easyseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81B1CFE73CE007D4C3C /* easyseq.txt */; };
 		81A4C81F1CFE73CE007D4C3C /* hardseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81C1CFE73CE007D4C3C /* hardseq.txt */; };
 		81A4C8201CFE73CE007D4C3C /* mediumseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */; };
+		81A4C8291CFEB2BF007D4C3C /* JLToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8261CFEB2BF007D4C3C /* JLToast.swift */; };
+		81A4C82A1CFEB2BF007D4C3C /* JLToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8271CFEB2BF007D4C3C /* JLToastCenter.swift */; };
+		81A4C82B1CFEB2BF007D4C3C /* JLToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8281CFEB2BF007D4C3C /* JLToastView.swift */; };
 		81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F121CEB995600B2838A /* AppDelegate.swift */; };
 		81A89F151CEB995600B2838A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F141CEB995600B2838A /* ViewController.swift */; };
 		81A89F181CEB995600B2838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F161CEB995600B2838A /* Main.storyboard */; };
@@ -55,6 +58,10 @@
 		81A4C81B1CFE73CE007D4C3C /* easyseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easyseq.txt; sourceTree = "<group>"; };
 		81A4C81C1CFE73CE007D4C3C /* hardseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardseq.txt; sourceTree = "<group>"; };
 		81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediumseq.txt; sourceTree = "<group>"; };
+		81A4C8251CFEB2BF007D4C3C /* JLToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLToast.h; sourceTree = "<group>"; };
+		81A4C8261CFEB2BF007D4C3C /* JLToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToast.swift; sourceTree = "<group>"; };
+		81A4C8271CFEB2BF007D4C3C /* JLToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastCenter.swift; sourceTree = "<group>"; };
+		81A4C8281CFEB2BF007D4C3C /* JLToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastView.swift; sourceTree = "<group>"; };
 		81A89F0D1CEB995600B2838A /* TraderMathTestiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraderMathTestiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F111CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F121CEB995600B2838A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +126,10 @@
 		81A89F0F1CEB995600B2838A /* TraderMathTestiOS */ = {
 			isa = PBXGroup;
 			children = (
+				81A4C8251CFEB2BF007D4C3C /* JLToast.h */,
+				81A4C8261CFEB2BF007D4C3C /* JLToast.swift */,
+				81A4C8271CFEB2BF007D4C3C /* JLToastCenter.swift */,
+				81A4C8281CFEB2BF007D4C3C /* JLToastView.swift */,
 				81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */,
 				81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */,
 				81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */,
@@ -274,8 +285,11 @@
 				81AA522D1CF5ED820078D58B /* Question.swift in Sources */,
 				818520661CF3EB4900063BFC /* Settings.swift in Sources */,
 				818520681CF3ED3C00063BFC /* Info.swift in Sources */,
+				81A4C8291CFEB2BF007D4C3C /* JLToast.swift in Sources */,
 				81A89F151CEB995600B2838A /* ViewController.swift in Sources */,
 				81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */,
+				81A4C82B1CFEB2BF007D4C3C /* JLToastView.swift in Sources */,
+				81A4C82A1CFEB2BF007D4C3C /* JLToastCenter.swift in Sources */,
 				81A4C8131CFDE4AD007D4C3C /* SQLiteDB.swift in Sources */,
 				81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */,
 				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,

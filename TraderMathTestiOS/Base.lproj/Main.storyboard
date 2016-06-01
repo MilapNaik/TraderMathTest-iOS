@@ -825,7 +825,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="easyButton:" destination="NOt-JK-Q0b" eventType="touchUpInside" id="PWL-k3-wSv"/>
                                     <action selector="fiveButton:" destination="NOt-JK-Q0b" eventType="touchUpInside" id="89v-0n-d80"/>
                                 </connections>
                             </button>
@@ -838,7 +837,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="mediumButton:" destination="NOt-JK-Q0b" eventType="touchUpInside" id="TuW-P3-AnL"/>
                                     <action selector="tenButton:" destination="NOt-JK-Q0b" eventType="touchUpInside" id="P3b-2e-boc"/>
                                 </connections>
                             </button>
@@ -851,7 +849,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="hardButton:" destination="NOt-JK-Q0b" eventType="touchUpInside" id="bHZ-FI-U9Z"/>
                                     <action selector="twentyButton:" destination="NOt-JK-Q0b" eventType="touchUpInside" id="nlk-N6-T9v"/>
                                 </connections>
                             </button>

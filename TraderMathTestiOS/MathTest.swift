@@ -237,13 +237,13 @@ class MathTestController: UIViewController {
         
         
         if correctAnswerDouble == answerDouble{
-            answerLabel.text = "correct"
+            JLToast.makeText("Correct!").show()
             questionNumber++
             highscore++
             readFile()
         }
         else{
-            answerLabel.text = "no \(correctAnswer!)"
+            JLToast.makeText("Incorrect: \(correctAnswer!)").show()
             questionNumber++
             readFile()
         }

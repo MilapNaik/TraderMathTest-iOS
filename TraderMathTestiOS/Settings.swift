@@ -39,22 +39,28 @@ class SettingsController: UIViewController {
     // MARK: Actions
     @IBAction func easyButton(sender: UIButton) {
         preferences.setObject("Easy", forKey: difficultyKey)
+        JLToast.makeText("Difficulty: Easy").show()
     }
 
     @IBAction func mediumButton(sender: UIButton) {
         preferences.setObject("Medium", forKey: difficultyKey)
+        JLToast.makeText("Difficulty: Medium").show()
     }
     @IBAction func hardButton(sender: UIButton) {
         preferences.setObject("Hard", forKey: difficultyKey)
+        JLToast.makeText("Difficulty: Hard").show()
     }
     @IBAction func fiveButton(sender: UIButton) {
         preferences.setInteger(5, forKey: questionnumKey)
+        JLToast.makeText("Set to 5 questions").show()
     }
     @IBAction func tenButton(sender: UIButton) {
         preferences.setInteger(10, forKey: questionnumKey)
+        JLToast.makeText("Set to 10 questions").show()
     }
     @IBAction func twentyButton(sender: UIButton) {
         preferences.setInteger(20, forKey: questionnumKey)
+        JLToast.makeText("Set to 20 questions").show()
     }
 
     
