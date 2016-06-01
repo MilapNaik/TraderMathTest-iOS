@@ -12,14 +12,16 @@ import UIKit
 class InfoController: UIViewController {
     
     // MARK: Properties
-    let difficultyKey = "Difficulty"
-    var i:Int = 0
-    
-    @IBOutlet weak var difficultylevel: UILabel!
-    
+    @IBOutlet weak var InfoText: UITextView!
+    @IBOutlet weak var TraderTest: UITextView!
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        InfoText.editable = false
+        TraderTest.editable = false
         
     }
     
@@ -27,20 +29,6 @@ class InfoController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: UITextFieldDelegate
-    
-    
-    
-    
-    // MARK: Actions
-    
 
-
-    @IBAction func difficultybutton(sender: UIButton) {
-
-        difficultylevel.text = "0"
-        
-    }
     
 }

@@ -1110,26 +1110,73 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="wg7-I0-DGr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jy6-a6-B1v">
-                                <rect key="frame" x="179" y="137" width="120" height="21"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Take a test, change the settings to whatever you prefer, and practice to become a trader!                                   " selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwi-Jq-hxY">
+                                <rect key="frame" x="150" y="68" width="300" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.91764705879999997" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9cJ-Ud-dYa"/>
+                                    <constraint firstAttribute="width" constant="300" id="naR-fC-gMn"/>
+                                </constraints>
+                                <color key="textColor" red="0.1450980392" green="0.015686274510000001" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspired by:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdq-qp-rsn">
+                                <rect key="frame" x="249" y="282" width="103" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="dTD-aC-aat"/>
+                                    <constraint firstAttribute="height" constant="36" id="fgN-Ed-7NY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="hEO-kW-NcR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="tdb-Hy-Q42"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hEO-kW-NcR"/>
+                                        <exclude reference="tdb-Hy-Q42"/>
+                                    </mask>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2t-Ho-q5L">
-                                <rect key="frame" x="209" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="difficultybutton:" destination="Rs1-5P-HEV" eventType="touchUpInside" id="amt-XL-ews"/>
-                                </connections>
-                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="http://TraderTest.org" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufw-Cl-1A3">
+                                <rect key="frame" x="215" y="340" width="171" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="dmI-lh-aaF"/>
+                                    <constraint firstAttribute="height" constant="34" id="dnV-wT-TbH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.91764705879999997" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="qdq-qp-rsn" secondAttribute="centerX" id="53R-R6-qzP"/>
+                            <constraint firstAttribute="centerX" secondItem="dwi-Jq-hxY" secondAttribute="centerX" id="BdC-Yy-tJG"/>
+                            <constraint firstItem="dwi-Jq-hxY" firstAttribute="top" secondItem="FB8-YN-gmt" secondAttribute="bottom" constant="48" id="Bk6-7c-Q6o"/>
+                            <constraint firstItem="qdq-qp-rsn" firstAttribute="top" secondItem="dwi-Jq-hxY" secondAttribute="bottom" constant="30" id="MCC-pa-PpH"/>
+                            <constraint firstAttribute="centerX" secondItem="ufw-Cl-1A3" secondAttribute="centerX" id="Uee-hW-nTX"/>
+                            <constraint firstAttribute="centerY" secondItem="qdq-qp-rsn" secondAttribute="centerY" id="Ui9-rT-G5p"/>
+                            <constraint firstItem="dwi-Jq-hxY" firstAttribute="top" secondItem="7CK-dc-zc3" secondAttribute="topMargin" constant="68" id="kvf-eR-UPe"/>
+                            <constraint firstAttribute="centerX" secondItem="ufw-Cl-1A3" secondAttribute="centerX" id="lC3-H7-gFR"/>
+                            <constraint firstItem="ufw-Cl-1A3" firstAttribute="top" secondItem="qdq-qp-rsn" secondAttribute="bottom" constant="22" id="rNR-0a-m3D"/>
+                            <constraint firstItem="ufw-Cl-1A3" firstAttribute="top" secondItem="qdq-qp-rsn" secondAttribute="bottom" constant="8" id="vfO-oX-7hK"/>
+                            <constraint firstItem="qdq-qp-rsn" firstAttribute="top" secondItem="dwi-Jq-hxY" secondAttribute="bottom" constant="30" id="wll-aD-ANo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MCC-pa-PpH"/>
+                                <exclude reference="wll-aD-ANo"/>
+                                <exclude reference="lC3-H7-gFR"/>
+                                <exclude reference="vfO-oX-7hK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="difficultylevel" destination="jy6-a6-B1v" id="AzQ-C7-bTF"/>
+                        <outlet property="InfoText" destination="dwi-Jq-hxY" id="9el-Lc-gnh"/>
+                        <outlet property="TraderTest" destination="ufw-Cl-1A3" id="7MS-z7-8ws"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UJ-uX-IOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1144,7 +1191,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="caa-ug-K1N"/>
-        <segue reference="qkA-P5-P8m"/>
+        <segue reference="wg7-I0-DGr"/>
         <segue reference="pY9-3f-mAa"/>
     </inferredMetricsTieBreakers>
 </document>
