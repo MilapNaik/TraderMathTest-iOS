@@ -20,6 +20,9 @@ class MathTestController: UIViewController {
     var timer = NSTimer()
     var time: Double = 0
     var startTime: NSTimeInterval = 0.0
+    var testType:String?
+    
+    
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
@@ -28,8 +31,10 @@ class MathTestController: UIViewController {
     let preferences = NSUserDefaults.standardUserDefaults()
     let difficultyKey = "Difficulty"
     let questionnumKey = "QuestionNum"
+    let PoTKey = "PoT"
     var difficulty: String = "Easy"
     var testLength: Int = 5
+    var PoT:String = "Practice"
     
 
     override func viewDidLoad() {
@@ -55,7 +60,57 @@ class MathTestController: UIViewController {
     
     // Read selected file
     func readFile(){
-        
+        if testType == "Seq"{
+            if difficulty == "Hard"{
+                if let path = NSBundle.mainBundle().pathForResource("hardseq", ofType: "txt"){
+                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
+                    
+                    if let content = data {
+                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                        
+                        
+                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
+                        questionLabel.text = myStrings[randomIndex]
+                        //answerLabel.text = myStrings[randomIndex + 1]
+                        correctAnswer = myStrings[randomIndex + 1]
+                    }
+                }
+            }
+                
+            else if difficulty == "Medium"{
+                if let path = NSBundle.mainBundle().pathForResource("mediumseq", ofType: "txt"){
+                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
+                    
+                    if let content = data {
+                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                        
+                        
+                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
+                        questionLabel.text = myStrings[randomIndex]
+                        //answerLabel.text = myStrings[randomIndex + 1]
+                        correctAnswer = myStrings[randomIndex + 1]
+                    }
+                }
+            }
+                
+            else{
+                if let path = NSBundle.mainBundle().pathForResource("easyseq", ofType: "txt"){
+                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
+                    
+                    if let content = data {
+                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                        
+                        
+                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
+                        questionLabel.text = myStrings[randomIndex]
+                        //answerLabel.text = myStrings[randomIndex + 1]
+                        correctAnswer = myStrings[randomIndex + 1]
+                    }
+                }
+                
+            }
+        }
+        else{
         if difficulty == "Hard"{
         if let path = NSBundle.mainBundle().pathForResource("hardmath", ofType: "txt"){
             var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
@@ -97,12 +152,14 @@ class MathTestController: UIViewController {
                     
                     
                     let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                    questionLabel.text = myStrings[randomIndex]
+                    questionLabel.text = testType
+                    //myStrings[randomIndex]
                     //answerLabel.text = myStrings[randomIndex + 1]
                     correctAnswer = myStrings[randomIndex + 1]
                 }
             }
             
+        }
         }
     }
     
@@ -110,7 +167,18 @@ class MathTestController: UIViewController {
     func readUserDefaults(){
         
         let difficulty = preferences.stringForKey(difficultyKey)
-        let testLength = preferences.integerForKey(questionnumKey)
+        let PoT = preferences.stringForKey(PoTKey)
+        if PoT == "Test"{
+            if testType == "Seq"{
+                testLength = 50
+            }
+            else{
+                testLength = 80
+            }
+        }
+        else{
+            let testLength = preferences.integerForKey(questionnumKey)
+        }
     }
 
     // MARK: Actions

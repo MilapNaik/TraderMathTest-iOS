@@ -13,10 +13,11 @@ class CountdownController: UIViewController {
     
     // MARK: Properties
     @IBOutlet weak var countDownLabel: UILabel!
-    var timer = NSTimer()
-
     
+    var timer = NSTimer()
     var count = 3
+    var testType:String?
+    var PoT:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,16 @@ class CountdownController: UIViewController {
     
     
     // MARK: Actions
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        if (segue.identifier == "goestoMathTest") {
+            let secondViewController = segue.destinationViewController as! MathTestController
+            //let testType = sender as String
+            secondViewController.testType = testType
+            
+            
+        }
+    }
     
     
 }
