@@ -15,6 +15,9 @@ class MathTestController: UIViewController {
     var i:Int = 0
     var questionNumber:Int = 1
     var correctAnswer: String?
+    var answer: String?
+    var correctAnswerDouble: Double = 0.0
+    var answerDouble: Double? = 0.0
     var highscore:Int = 0
     var finishtime:String = "0"
     var timer = NSTimer()
@@ -152,8 +155,7 @@ class MathTestController: UIViewController {
                     
                     
                     let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                    questionLabel.text = testType
-                    //myStrings[randomIndex]
+                    questionLabel.text = myStrings[randomIndex]
                     //answerLabel.text = myStrings[randomIndex + 1]
                     correctAnswer = myStrings[randomIndex + 1]
                 }
@@ -227,14 +229,21 @@ class MathTestController: UIViewController {
         answerLabel.text = ""
     }
     @IBAction func enterButton(sender: UIButton) {
-        let answer = answerLabel.text
-        if correctAnswer == answer{
+        answer = answerLabel.text
+        
+        //Convert answer and correct answer so all forms are accepted (i.e. .67=0.67=000.67000
+        answerDouble = (answer! as NSString).doubleValue
+        correctAnswerDouble = (correctAnswer! as NSString).doubleValue
+        
+        
+        if correctAnswerDouble == answerDouble{
             answerLabel.text = "correct"
             questionNumber++
             highscore++
             readFile()
         }
         else{
+            answerLabel.text = "no \(correctAnswer!)"
             questionNumber++
             readFile()
         }
