@@ -46,6 +46,7 @@ class MathTestController: UIViewController {
         
     }
     
+    
     override func viewDidAppear(animated: Bool) {
         readFile()
         readUserDefaults()
@@ -235,24 +236,23 @@ class MathTestController: UIViewController {
         answerDouble = (answer! as NSString).doubleValue
         correctAnswerDouble = (correctAnswer! as NSString).doubleValue
         
-        
-        if correctAnswerDouble == answerDouble{
-            JLToast.makeText("Correct!").show()
-            questionNumber++
-            highscore++
-            readFile()
-        }
-        else{
-            JLToast.makeText("Incorrect: \(correctAnswer!)").show()
-            questionNumber++
-            readFile()
-        }
-        
-        qnumLabel.text = "\(questionNumber)/\(testLength)"
         if questionNumber > testLength{
             time = NSDate.timeIntervalSinceReferenceDate() - startTime
             self.performSegueWithIdentifier("goestoFinishTest", sender: highscore)
         }
+        else {
+            questionNumber++
+            if correctAnswerDouble == answerDouble{
+                JLToast.makeText("Correct!").show()
+                highscore++
+            }
+            else{
+                JLToast.makeText("Incorrect: \(correctAnswer!)").show()
+            }
+            readFile()
+        }
+        
+        qnumLabel.text = "\(questionNumber)/\(testLength)"
         
     }
     

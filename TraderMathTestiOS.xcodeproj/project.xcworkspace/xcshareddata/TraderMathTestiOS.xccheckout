@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>69205DEC-6905-4600-8C12-CB6515406789</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>TraderMathTestiOS</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>12C2AB404ECA38A600F425C163EFA61C3CAFDAF3</key>
 		<string>https://github.com/MilapNaik/TraderMathTestiOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TraderMathTestiOS.xcodeproj/project.xcworkspace</string>
+	<string>TraderMathTestiOS.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>12C2AB404ECA38A600F425C163EFA61C3CAFDAF3</key>
