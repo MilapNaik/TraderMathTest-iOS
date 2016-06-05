@@ -75,7 +75,6 @@ class MathTestController: UIViewController {
                         
                         let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
                         questionLabel.text = myStrings[randomIndex]
-                        //answerLabel.text = myStrings[randomIndex + 1]
                         correctAnswer = myStrings[randomIndex + 1]
                     }
                 }
@@ -91,7 +90,6 @@ class MathTestController: UIViewController {
                         
                         let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
                         questionLabel.text = myStrings[randomIndex]
-                        //answerLabel.text = myStrings[randomIndex + 1]
                         correctAnswer = myStrings[randomIndex + 1]
                     }
                 }
@@ -107,7 +105,6 @@ class MathTestController: UIViewController {
                         
                         let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
                         questionLabel.text = myStrings[randomIndex]
-                        //answerLabel.text = myStrings[randomIndex + 1]
                         correctAnswer = myStrings[randomIndex + 1]
                     }
                 }
@@ -115,54 +112,51 @@ class MathTestController: UIViewController {
             }
         }
         else{
-        if difficulty == "Hard"{
-        if let path = NSBundle.mainBundle().pathForResource("hardmath", ofType: "txt"){
-            var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
+            if difficulty == "Hard"{
+                if let path = NSBundle.mainBundle().pathForResource("hardmath", ofType: "txt"){
+                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
             
-            if let content = data {
-                let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                    if let content = data {
+                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
                 
                 
-                let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                questionLabel.text = myStrings[randomIndex]
-                //answerLabel.text = myStrings[randomIndex + 1]
-                correctAnswer = myStrings[randomIndex + 1]
-            }
-        }
+                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
+                        questionLabel.text = myStrings[randomIndex]
+                        correctAnswer = myStrings[randomIndex + 1]
+                    }
+                }
         }
         
-        else if difficulty == "Medium"{
-            if let path = NSBundle.mainBundle().pathForResource("mediummath", ofType: "txt"){
-                var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
+            else if difficulty == "Medium"{
+                if let path = NSBundle.mainBundle().pathForResource("mediummath", ofType: "txt"){
+                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
                 
-                if let content = data {
-                    let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                    if let content = data {
+                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
                     
                     
-                    let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                    questionLabel.text = myStrings[randomIndex]
-                    //answerLabel.text = myStrings[randomIndex + 1]
-                    correctAnswer = myStrings[randomIndex + 1]
-                }
-            }
-        }
-            
-        else{
-            if let path = NSBundle.mainBundle().pathForResource("easymath", ofType: "txt"){
-                var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
-                
-                if let content = data {
-                    let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-                    
-                    
-                    let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                    questionLabel.text = myStrings[randomIndex]
-                    //answerLabel.text = myStrings[randomIndex + 1]
-                    correctAnswer = myStrings[randomIndex + 1]
+                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
+                        questionLabel.text = myStrings[randomIndex]
+                        correctAnswer = myStrings[randomIndex + 1]
+                    }
                 }
             }
             
-        }
+            else{
+                if let path = NSBundle.mainBundle().pathForResource("easymath", ofType: "txt"){
+                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
+                
+                    if let content = data {
+                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                    
+                        
+                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
+                        questionLabel.text = myStrings[randomIndex]
+                        correctAnswer = myStrings[randomIndex + 1]
+                    }
+                }
+            
+            }
         }
     }
     

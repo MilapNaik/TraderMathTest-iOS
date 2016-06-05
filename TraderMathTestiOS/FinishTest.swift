@@ -86,14 +86,6 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
         
         for row in result
         {
-            //FirstScore.text = row["Score"]!.asString()
-            //FirstTime.text = row["Time"]!.asString()
-            
-            /*print(row["Rank"]!.asString())
-            print(" ")
-            print(row["Score"]!.asString())
-            print(" ")
-            println(row["Time"]!.asString())*/
             
             bestScore[i] = row["Score"]!.asString()
             print(bestScore[i])
