@@ -12,28 +12,30 @@ import UIKit
 
 class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: Properties
+    var i: Int = 0
     var highscore:Int?
     var finishtime:String?
-    let db = SQLiteDB.sharedInstance()
     
+    let db = SQLiteDB.sharedInstance()
     var bestRank: [String] = ["1", "2", "3", "4", "5"]
     var bestScore: [String] = ["-----", "-----", "-----", "-----", "-----"]
     var bestTime: [String] = ["-----", "-----", "-----", "-----", "-----"]
     
-    var i: Int = 0
+    let preferences = NSUserDefaults.standardUserDefaults()
+    let difficultyKey = "Difficulty"
+    let questionnumKey = "QuestionNum"
+    let PoTKey = "PoT"
+    let testtypeKey = "TestType"
+    var difficulty: String = "Easy"
+    var questionNum: Int = 5
+    var PoT:String = "Practice"
+    var testType:String = "Math"
 
 
     @IBOutlet weak var correctAnswers: UILabel!
     @IBOutlet weak var finishTime: UILabel!
     
     @IBOutlet var tableView: UITableView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        addhighscore()
-        loadhighscores()
-    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -57,6 +59,13 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
         println("You selected cell #\(indexPath.row)!")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        readUserDefaults()
+        addhighscore()
+        loadhighscores()
+    }
     
     override func viewDidAppear(animated: Bool) {
         correctAnswers.text = "Score: \(highscore!)"
@@ -77,25 +86,44 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func addhighscore(){
-        db.execute("INSERT INTO EASY_MATH5 (Score, Time) Values ('\(highscore!)', '\(finishtime!)'); ", parameters:nil)
+        db.execute("INSERT INTO \(difficulty)_\(testType)_\(questionNum) (Score, Time) Values ('\(highscore!)', '\(finishtime!)'); ", parameters:nil)
+
     }
     
     func loadhighscores(){
-        var result = db.query("SELECT * from EASY_MATH5 ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
+        var result = db.query("SELECT * from \(difficulty)_\(testType)_\(questionNum) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
         println("===============================")
-        
+                
         for row in result
         {
-            
             bestScore[i] = row["Score"]!.asString()
             print(bestScore[i])
             bestTime[i] = row["Time"]!.asString()
             println(bestTime[i])
-            
+                    
             i++
         }
-        
     }
+    
+    // Read user defaults. If none exist, they are set to Easy and 5 questions
+    func readUserDefaults(){
+        testType = preferences.stringForKey(testtypeKey)!
+        difficulty = preferences.stringForKey(difficultyKey)!
+        PoT = preferences.stringForKey(PoTKey)!
+        if PoT == "Test"{
+            if testType == "Seq"{
+                questionNum = 50
+            }
+            else{
+                questionNum = 80
+            }
+        }
+        else{
+            questionNum = preferences.integerForKey(questionnumKey)
+        }
+
+    }
+
     
 }
     

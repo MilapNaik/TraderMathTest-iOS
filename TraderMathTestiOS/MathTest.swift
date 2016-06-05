@@ -23,7 +23,7 @@ class MathTestController: UIViewController {
     var timer = NSTimer()
     var time: Double = 0
     var startTime: NSTimeInterval = 0.0
-    var testType:String?
+
     
     
     
@@ -35,22 +35,22 @@ class MathTestController: UIViewController {
     let difficultyKey = "Difficulty"
     let questionnumKey = "QuestionNum"
     let PoTKey = "PoT"
+    let testtypeKey = "TestType"
     var difficulty: String = "Easy"
-    var testLength: Int = 5
+    var questionNum: Int = 5
     var PoT:String = "Practice"
+    var testType:String = "Math"
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
     
     override func viewDidAppear(animated: Bool) {
-        readFile()
         readUserDefaults()
-        qnumLabel.text = "\(questionNumber)/\(testLength)"
+        readFile()
+        qnumLabel.text = "\(questionNumber)/\(questionNum)"
         startTime = NSDate.timeIntervalSinceReferenceDate()
         
     }
@@ -163,18 +163,19 @@ class MathTestController: UIViewController {
     // Read user defaults. If none exist, they are set to Easy and 5 questions
     func readUserDefaults(){
         
+        let testType = preferences.stringForKey(testtypeKey)
         let difficulty = preferences.stringForKey(difficultyKey)
         let PoT = preferences.stringForKey(PoTKey)
         if PoT == "Test"{
             if testType == "Seq"{
-                testLength = 50
+                questionNum = 50
             }
             else{
-                testLength = 80
+                questionNum = 80
             }
         }
         else{
-            let testLength = preferences.integerForKey(questionnumKey)
+            let questionNum = preferences.integerForKey(questionnumKey)
         }
     }
 
@@ -230,7 +231,7 @@ class MathTestController: UIViewController {
         answerDouble = (answer! as NSString).doubleValue
         correctAnswerDouble = (correctAnswer! as NSString).doubleValue
         
-        if questionNumber > testLength{
+        if questionNumber > questionNum{
             time = NSDate.timeIntervalSinceReferenceDate() - startTime
             self.performSegueWithIdentifier("goestoFinishTest", sender: highscore)
         }
@@ -246,7 +247,7 @@ class MathTestController: UIViewController {
             readFile()
         }
         
-        qnumLabel.text = "\(questionNumber)/\(testLength)"
+        qnumLabel.text = "\(questionNumber)/\(questionNum)"
         
     }
     

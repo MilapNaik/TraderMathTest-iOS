@@ -11,13 +11,6 @@ import UIKit
 class SettingsController: UIViewController {
     
     // MARK: Properties
-
-    
-    //var otherButtons : [DLRadioButton] = [button1, button2];
-    
-    
-    
-    
     
     // Preferences for difficulty level of questions
     let preferences = NSUserDefaults.standardUserDefaults()

@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: Properties
+    let preferences = NSUserDefaults.standardUserDefaults()
+    let testtypeKey = "TestType"
     var testType:String?
 
     @IBOutlet weak var Settings: UIButton!
@@ -51,6 +53,7 @@ class ViewController: UIViewController {
             //let testType = sender as String
             secondViewController.testType = testType
         }
+        preferences.setObject(testType, forKey: testtypeKey)
     }
 
     
