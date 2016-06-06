@@ -34,7 +34,7 @@
 		81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26671CF4DFC2001DE1D0 /* Countdown.swift */; };
 		81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26691CF4E4B6001DE1D0 /* MathTest.swift */; };
 		81AA522D1CF5ED820078D58B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA522C1CF5ED820078D58B /* Question.swift */; };
-		81FFBE1C1D04D43E00530947 /* highscores.db in Resources */ = {isa = PBXBuildFile; fileRef = 81FFBE1B1D04D43E00530947 /* highscores.db */; };
+		81FFBE1E1D05222700530947 /* highscores.db in Resources */ = {isa = PBXBuildFile; fileRef = 81FFBE1D1D05222700530947 /* highscores.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +96,7 @@
 		81AA26671CF4DFC2001DE1D0 /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		81AA26691CF4E4B6001DE1D0 /* MathTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTest.swift; sourceTree = "<group>"; };
 		81AA522C1CF5ED820078D58B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		81FFBE1B1D04D43E00530947 /* highscores.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = highscores.db; sourceTree = "<group>"; };
+		81FFBE1D1D05222700530947 /* highscores.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = highscores.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +123,10 @@
 			children = (
 				81A4C8491CFF495C007D4C3C /* DLRadioButton.framework */,
 				81A4C8151CFDE539007D4C3C /* libsqlite3.0.dylib */,
+				81FFBE1D1D05222700530947 /* highscores.db */,
 				81A4C81B1CFE73CE007D4C3C /* easyseq.txt */,
 				81A4C81C1CFE73CE007D4C3C /* hardseq.txt */,
 				81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */,
-				81FFBE1B1D04D43E00530947 /* highscores.db */,
 				81A4C8011CFBBE63007D4C3C /* hardmath.txt */,
 				81A4C8021CFBBE63007D4C3C /* mediummath.txt */,
 				81AA26621CF4B3D7001DE1D0 /* easymath.txt */,
@@ -286,7 +286,7 @@
 				81A4C8201CFE73CE007D4C3C /* mediumseq.txt in Resources */,
 				81AA26631CF4B3D7001DE1D0 /* easymath.txt in Resources */,
 				81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */,
-				81FFBE1C1D04D43E00530947 /* highscores.db in Resources */,
+				81FFBE1E1D05222700530947 /* highscores.db in Resources */,
 				81A4C81E1CFE73CE007D4C3C /* easyseq.txt in Resources */,
 				81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */,
 			);

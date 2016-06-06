@@ -8,7 +8,7 @@
 #import "DLRadioButton.h"
 
 static const CGFloat kDefaulIconSize = 15.0;
-static const CGFloat kDefaultMarginWidth = 10.0;
+static const CGFloat kDefaultMarginWidth = 5.0;
 static NSString *const kGeneratedIconName = @"Generated Icon";
 
 @interface DLRadioButton()
@@ -42,6 +42,17 @@ static NSString *const kGeneratedIconName = @"Generated Icon";
     _iconSelected = iconSelected;
     [self setImage:self.iconSelected forState:UIControlStateSelected];
     [self setImage:self.iconSelected forState:UIControlStateSelected | UIControlStateHighlighted];
+}
+
+- (void)setMultipleSelectionEnabled:(BOOL)multipleSelectionEnabled {
+    if (!self.isChaining) {
+        self.isChaining = YES;
+        _multipleSelectionEnabled = multipleSelectionEnabled;
+        for (DLRadioButton *radioButton in self.otherButtons) {
+            radioButton.multipleSelectionEnabled = multipleSelectionEnabled;
+        }
+        self.isChaining = NO;
+    }
 }
 
 #pragma mark - Helpers
@@ -115,7 +126,7 @@ static NSString *const kGeneratedIconName = @"Generated Icon";
 }
 
 - (void)initRadioButton {
-    [super addTarget:self action:@selector(touchDown) forControlEvents:UIControlEventTouchDown];
+    [super addTarget:self action:@selector(touchDown) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)prepareForInterfaceBuilder {
@@ -132,16 +143,31 @@ static NSString *const kGeneratedIconName = @"Generated Icon";
 }
 
 - (DLRadioButton *)selectedButton {
-    if (self.selected) {
-        return self;
-    } else {
-        for (DLRadioButton *radioButton in self.otherButtons) {
-            if (radioButton.selected) {
-                return radioButton;
+    if (!self.isMultipleSelectionEnabled) {
+        if (self.selected) {
+            return self;
+        } else {
+            for (DLRadioButton *radioButton in self.otherButtons) {
+                if (radioButton.selected) {
+                    return radioButton;
+                }
             }
         }
-        return nil;
     }
+    return nil;
+}
+
+- (NSArray *)selectedButtons {
+    NSMutableArray *selectedButtons = [[NSMutableArray alloc] init];
+    if (self.selected) {
+        [selectedButtons addObject:self];
+    }
+    for (DLRadioButton *radioButton in self.otherButtons) {
+        if (radioButton.selected) {
+            [selectedButtons addObject:radioButton];
+        }
+    }
+    return selectedButtons;
 }
 
 #pragma mark - UIButton
@@ -165,9 +191,13 @@ static NSString *const kGeneratedIconName = @"Generated Icon";
 #pragma mark - UIControl
 
 - (void)setSelected:(BOOL)selected {
-    [super setSelected:selected];
-    if (selected) {
-        [self deselectOtherButtons];
+    if (self.isMultipleSelectionEnabled) {
+        [super setSelected:!self.isSelected];
+    } else {
+        [super setSelected:selected];
+        if (selected) {
+            [self deselectOtherButtons];
+        }
     }
 }
 

@@ -16,10 +16,38 @@ class SettingsController: UIViewController {
     let preferences = NSUserDefaults.standardUserDefaults()
     let difficultyKey = "Difficulty"
     let questionnumKey = "QuestionNum"
+    var difficulty: String = "EASY"
+
+    
+    @IBOutlet weak var Easy: DLRadioButton!
+    @IBOutlet weak var Medium: DLRadioButton!
+    @IBOutlet weak var Hard: DLRadioButton!
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        readUserDefaults()
+        setDifficulty()
+        
+    }
+    
+    func readUserDefaults(){
+        difficulty = preferences.stringForKey(difficultyKey)!
+        
+    }
+    
+    func setDifficulty(){
+        if difficulty == "HARD"{
+            Hard.selected = true
+        }
+        else if difficulty == "MEDIUM"{
+            Medium.selected = true
+        }
+        else{
+            Easy.selected = true
+        }
         
     }
     
@@ -35,17 +63,17 @@ class SettingsController: UIViewController {
     
     // MARK: Actions
     @IBAction func easyButton(sender: DLRadioButton) {
-        preferences.setObject("Easy", forKey: difficultyKey)
+        preferences.setObject("EASY", forKey: difficultyKey)
         JLToast.makeText("Difficulty: Easy").show()
     }
     
     @IBAction func mediumButton(sender: DLRadioButton) {
-        preferences.setObject("Medium", forKey: difficultyKey)
+        preferences.setObject("MEDIUM", forKey: difficultyKey)
         JLToast.makeText("Difficulty: Medium").show()
     }
     
     @IBAction func hardButton(sender: DLRadioButton) {
-        preferences.setObject("Hard", forKey: difficultyKey)
+        preferences.setObject("HARD", forKey: difficultyKey)
         JLToast.makeText("Difficulty: Hard").show()
     }
     

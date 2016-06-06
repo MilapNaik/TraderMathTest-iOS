@@ -26,7 +26,7 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     let questionnumKey = "QuestionNum"
     let PoTKey = "PoT"
     let testtypeKey = "TestType"
-    var difficulty: String = "Easy"
+    var difficulty: String = "EASY"
     var questionNum: Int = 5
     var PoT:String = "Practice"
     var testType:String = "Math"

@@ -36,7 +36,7 @@ class MathTestController: UIViewController {
     let questionnumKey = "QuestionNum"
     let PoTKey = "PoT"
     let testtypeKey = "TestType"
-    var difficulty: String = "Easy"
+    var difficulty: String = "EASY"
     var questionNum: Int = 5
     var PoT:String = "Practice"
     var testType:String = "Math"
@@ -65,7 +65,7 @@ class MathTestController: UIViewController {
     // Read selected file
     func readFile(){
         if testType == "Seq"{
-            if difficulty == "Hard"{
+            if difficulty == "HARD"{
                 if let path = NSBundle.mainBundle().pathForResource("hardseq", ofType: "txt"){
                     var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
                     
@@ -80,7 +80,7 @@ class MathTestController: UIViewController {
                 }
             }
                 
-            else if difficulty == "Medium"{
+            else if difficulty == "MEDIUM"{
                 if let path = NSBundle.mainBundle().pathForResource("mediumseq", ofType: "txt"){
                     var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
                     
@@ -112,7 +112,7 @@ class MathTestController: UIViewController {
             }
         }
         else{
-            if difficulty == "Hard"{
+            if difficulty == "HARD"{
                 if let path = NSBundle.mainBundle().pathForResource("hardmath", ofType: "txt"){
                     var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
             
@@ -127,7 +127,7 @@ class MathTestController: UIViewController {
                 }
         }
         
-            else if difficulty == "Medium"{
+            else if difficulty == "MEDIUM"{
                 if let path = NSBundle.mainBundle().pathForResource("mediummath", ofType: "txt"){
                     var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
                 

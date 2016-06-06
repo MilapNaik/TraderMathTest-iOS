@@ -51,7 +51,7 @@ class CountdownController: UIViewController {
         if (segue.identifier == "goestoMathTest") {
             let secondViewController = segue.destinationViewController as! MathTestController
             //let testType = sender as String
-            secondViewController.testType = testType
+            secondViewController.testType = testType!
             
             
         }
