@@ -41,14 +41,14 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
         if (segue.identifier == "goestoPoTMath") {
-            testType = "Math"
+            testType = "MATH"
             let secondViewController = segue.destinationViewController as! PoTController
             //let testType = sender as String
             secondViewController.testType = testType
         }
         
         if (segue.identifier == "goestoPoTSeq") {
-            testType = "Seq"
+            testType = "SEQ"
             let secondViewController = segue.destinationViewController as! PoTController
             //let testType = sender as String
             secondViewController.testType = testType

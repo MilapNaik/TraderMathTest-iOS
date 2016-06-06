@@ -29,7 +29,7 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     var difficulty: String = "EASY"
     var questionNum: Int = 5
     var PoT:String = "Practice"
-    var testType:String = "Math"
+    var testType:String = "MATH"
 
 
     @IBOutlet weak var correctAnswers: UILabel!
@@ -111,7 +111,7 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
         difficulty = preferences.stringForKey(difficultyKey)!
         PoT = preferences.stringForKey(PoTKey)!
         if PoT == "Test"{
-            if testType == "Seq"{
+            if testType == "SEQ"{
                 questionNum = 50
             }
             else{
