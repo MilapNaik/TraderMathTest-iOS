@@ -226,6 +226,7 @@ class MathTestController: UIViewController {
     }
     @IBAction func enterButton(sender: UIButton) {
         answer = answerLabel.text
+        questionNumber++
         
         //Convert answer and correct answer so all forms are accepted (i.e. .67=0.67=000.67000
         answerDouble = (answer! as NSString).doubleValue
@@ -236,7 +237,6 @@ class MathTestController: UIViewController {
             self.performSegueWithIdentifier("goestoFinishTest", sender: highscore)
         }
         else {
-            questionNumber++
             if correctAnswerDouble == answerDouble{
                 JLToast.makeText("Correct!").show()
                 highscore++
