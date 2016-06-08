@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81A89F0C1CEB995600B2838A"
-               BuildableName = "TraderMathTestiOS.app"
-               BlueprintName = "TraderMathTestiOS"
-               ReferencedContainer = "container:TraderMathTestiOS.xcodeproj">
+               BuildableName = "TraderMathTest.app"
+               BlueprintName = "TraderMathTest"
+               ReferencedContainer = "container:TraderMathTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81A89F211CEB995600B2838A"
-               BuildableName = "TraderMathTestiOSTests.xctest"
-               BlueprintName = "TraderMathTestiOSTests"
-               ReferencedContainer = "container:TraderMathTestiOS.xcodeproj">
+               BuildableName = "TraderMathTestTests.xctest"
+               BlueprintName = "TraderMathTestTests"
+               ReferencedContainer = "container:TraderMathTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81A89F211CEB995600B2838A"
-               BuildableName = "TraderMathTestiOSTests.xctest"
-               BlueprintName = "TraderMathTestiOSTests"
-               ReferencedContainer = "container:TraderMathTestiOS.xcodeproj">
+               BuildableName = "TraderMathTestTests.xctest"
+               BlueprintName = "TraderMathTestTests"
+               ReferencedContainer = "container:TraderMathTest.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81A89F0C1CEB995600B2838A"
-            BuildableName = "TraderMathTestiOS.app"
-            BlueprintName = "TraderMathTestiOS"
-            ReferencedContainer = "container:TraderMathTestiOS.xcodeproj">
+            BuildableName = "TraderMathTest.app"
+            BlueprintName = "TraderMathTest"
+            ReferencedContainer = "container:TraderMathTest.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81A89F0C1CEB995600B2838A"
-            BuildableName = "TraderMathTestiOS.app"
-            BlueprintName = "TraderMathTestiOS"
-            ReferencedContainer = "container:TraderMathTestiOS.xcodeproj">
+            BuildableName = "TraderMathTest.app"
+            BlueprintName = "TraderMathTest"
+            ReferencedContainer = "container:TraderMathTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81A89F0C1CEB995600B2838A"
-            BuildableName = "TraderMathTestiOS.app"
-            BlueprintName = "TraderMathTestiOS"
-            ReferencedContainer = "container:TraderMathTestiOS.xcodeproj">
+            BuildableName = "TraderMathTest.app"
+            BlueprintName = "TraderMathTest"
+            ReferencedContainer = "container:TraderMathTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -107,6 +107,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Trader Math Test"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

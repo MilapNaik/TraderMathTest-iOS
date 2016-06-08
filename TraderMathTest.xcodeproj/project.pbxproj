@@ -28,13 +28,13 @@
 		81A89F151CEB995600B2838A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F141CEB995600B2838A /* ViewController.swift */; };
 		81A89F181CEB995600B2838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F161CEB995600B2838A /* Main.storyboard */; };
 		81A89F1A1CEB995600B2838A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F191CEB995600B2838A /* Images.xcassets */; };
-		81A89F291CEB995600B2838A /* TraderMathTestiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F281CEB995600B2838A /* TraderMathTestiOSTests.swift */; };
+		81A89F291CEB995600B2838A /* TraderMathTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F281CEB995600B2838A /* TraderMathTestTests.swift */; };
 		81AA26631CF4B3D7001DE1D0 /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81AA26621CF4B3D7001DE1D0 /* easymath.txt */; };
 		81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */; };
 		81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26671CF4DFC2001DE1D0 /* Countdown.swift */; };
 		81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26691CF4E4B6001DE1D0 /* MathTest.swift */; };
 		81AA522D1CF5ED820078D58B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA522C1CF5ED820078D58B /* Question.swift */; };
-		81FFBE1E1D05222700530947 /* highscores.db in Resources */ = {isa = PBXBuildFile; fileRef = 81FFBE1D1D05222700530947 /* highscores.db */; };
+		81FFBE201D05DC6D00530947 /* highscores.db in Resources */ = {isa = PBXBuildFile; fileRef = 81FFBE1F1D05DC6D00530947 /* highscores.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 			containerPortal = 81A89F051CEB995600B2838A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 81A89F0C1CEB995600B2838A;
-			remoteInfo = TraderMathTestiOS;
+			remoteInfo = TraderMathTest;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -82,21 +82,21 @@
 		81A4C8421CFF427C007D4C3C /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = ../DLRadioButton.h; sourceTree = "<group>"; };
 		81A4C8431CFF427C007D4C3C /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = ../DLRadioButton.m; sourceTree = "<group>"; };
 		81A4C8491CFF495C007D4C3C /* DLRadioButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = "<group>"; };
-		81A89F0D1CEB995600B2838A /* TraderMathTestiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraderMathTestiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A89F0D1CEB995600B2838A /* TraderMathTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraderMathTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F111CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F121CEB995600B2838A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A89F141CEB995600B2838A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81A89F171CEB995600B2838A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81A89F191CEB995600B2838A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		81A89F221CEB995600B2838A /* TraderMathTestiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraderMathTestiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A89F221CEB995600B2838A /* TraderMathTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraderMathTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F271CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81A89F281CEB995600B2838A /* TraderMathTestiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraderMathTestiOSTests.swift; sourceTree = "<group>"; };
+		81A89F281CEB995600B2838A /* TraderMathTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraderMathTestTests.swift; sourceTree = "<group>"; };
 		81AA26621CF4B3D7001DE1D0 /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easymath.txt; sourceTree = "<group>"; };
 		81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeOrTest.swift; sourceTree = "<group>"; };
 		81AA26671CF4DFC2001DE1D0 /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		81AA26691CF4E4B6001DE1D0 /* MathTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTest.swift; sourceTree = "<group>"; };
 		81AA522C1CF5ED820078D58B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		81FFBE1D1D05222700530947 /* highscores.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = highscores.db; sourceTree = "<group>"; };
+		81FFBE1F1D05DC6D00530947 /* highscores.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = highscores.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,15 +123,15 @@
 			children = (
 				81A4C8491CFF495C007D4C3C /* DLRadioButton.framework */,
 				81A4C8151CFDE539007D4C3C /* libsqlite3.0.dylib */,
-				81FFBE1D1D05222700530947 /* highscores.db */,
+				81FFBE1F1D05DC6D00530947 /* highscores.db */,
 				81A4C81B1CFE73CE007D4C3C /* easyseq.txt */,
 				81A4C81C1CFE73CE007D4C3C /* hardseq.txt */,
 				81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */,
 				81A4C8011CFBBE63007D4C3C /* hardmath.txt */,
 				81A4C8021CFBBE63007D4C3C /* mediummath.txt */,
 				81AA26621CF4B3D7001DE1D0 /* easymath.txt */,
-				81A89F0F1CEB995600B2838A /* TraderMathTestiOS */,
-				81A89F251CEB995600B2838A /* TraderMathTestiOSTests */,
+				81A89F0F1CEB995600B2838A /* TraderMathTest */,
+				81A89F251CEB995600B2838A /* TraderMathTestTests */,
 				81A89F0E1CEB995600B2838A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,13 +139,13 @@
 		81A89F0E1CEB995600B2838A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81A89F0D1CEB995600B2838A /* TraderMathTestiOS.app */,
-				81A89F221CEB995600B2838A /* TraderMathTestiOSTests.xctest */,
+				81A89F0D1CEB995600B2838A /* TraderMathTest.app */,
+				81A89F221CEB995600B2838A /* TraderMathTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		81A89F0F1CEB995600B2838A /* TraderMathTestiOS */ = {
+		81A89F0F1CEB995600B2838A /* TraderMathTest */ = {
 			isa = PBXGroup;
 			children = (
 				81A4C8421CFF427C007D4C3C /* DLRadioButton.h */,
@@ -171,7 +171,7 @@
 				818B534E1CF6CC350085346A /* FinishTest.swift */,
 				819347C91D022033002EA835 /* TableViewCell.swift */,
 			);
-			path = TraderMathTestiOS;
+			path = TraderMathTest;
 			sourceTree = "<group>";
 		};
 		81A89F101CEB995600B2838A /* Supporting Files */ = {
@@ -182,13 +182,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		81A89F251CEB995600B2838A /* TraderMathTestiOSTests */ = {
+		81A89F251CEB995600B2838A /* TraderMathTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				81A89F281CEB995600B2838A /* TraderMathTestiOSTests.swift */,
+				81A89F281CEB995600B2838A /* TraderMathTestTests.swift */,
 				81A89F261CEB995600B2838A /* Supporting Files */,
 			);
-			path = TraderMathTestiOSTests;
+			path = TraderMathTestTests;
 			sourceTree = "<group>";
 		};
 		81A89F261CEB995600B2838A /* Supporting Files */ = {
@@ -202,9 +202,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81A89F0C1CEB995600B2838A /* TraderMathTestiOS */ = {
+		81A89F0C1CEB995600B2838A /* TraderMathTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81A89F2C1CEB995600B2838A /* Build configuration list for PBXNativeTarget "TraderMathTestiOS" */;
+			buildConfigurationList = 81A89F2C1CEB995600B2838A /* Build configuration list for PBXNativeTarget "TraderMathTest" */;
 			buildPhases = (
 				81A89F091CEB995600B2838A /* Sources */,
 				81A89F0A1CEB995600B2838A /* Frameworks */,
@@ -215,14 +215,14 @@
 			);
 			dependencies = (
 			);
-			name = TraderMathTestiOS;
-			productName = TraderMathTestiOS;
-			productReference = 81A89F0D1CEB995600B2838A /* TraderMathTestiOS.app */;
+			name = TraderMathTest;
+			productName = TraderMathTest;
+			productReference = 81A89F0D1CEB995600B2838A /* TraderMathTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		81A89F211CEB995600B2838A /* TraderMathTestiOSTests */ = {
+		81A89F211CEB995600B2838A /* TraderMathTestTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81A89F2F1CEB995600B2838A /* Build configuration list for PBXNativeTarget "TraderMathTestiOSTests" */;
+			buildConfigurationList = 81A89F2F1CEB995600B2838A /* Build configuration list for PBXNativeTarget "TraderMathTestTests" */;
 			buildPhases = (
 				81A89F1E1CEB995600B2838A /* Sources */,
 				81A89F1F1CEB995600B2838A /* Frameworks */,
@@ -233,9 +233,9 @@
 			dependencies = (
 				81A89F241CEB995600B2838A /* PBXTargetDependency */,
 			);
-			name = TraderMathTestiOSTests;
-			productName = TraderMathTestiOSTests;
-			productReference = 81A89F221CEB995600B2838A /* TraderMathTestiOSTests.xctest */;
+			name = TraderMathTestTests;
+			productName = TraderMathTestTests;
+			productReference = 81A89F221CEB995600B2838A /* TraderMathTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -249,6 +249,7 @@
 				TargetAttributes = {
 					81A89F0C1CEB995600B2838A = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5CUMW2JF9P;
 					};
 					81A89F211CEB995600B2838A = {
 						CreatedOnToolsVersion = 6.4;
@@ -256,7 +257,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 81A89F081CEB995600B2838A /* Build configuration list for PBXProject "TraderMathTestiOS" */;
+			buildConfigurationList = 81A89F081CEB995600B2838A /* Build configuration list for PBXProject "TraderMathTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -269,8 +270,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81A89F0C1CEB995600B2838A /* TraderMathTestiOS */,
-				81A89F211CEB995600B2838A /* TraderMathTestiOSTests */,
+				81A89F0C1CEB995600B2838A /* TraderMathTest */,
+				81A89F211CEB995600B2838A /* TraderMathTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,7 +287,7 @@
 				81A4C8201CFE73CE007D4C3C /* mediumseq.txt in Resources */,
 				81AA26631CF4B3D7001DE1D0 /* easymath.txt in Resources */,
 				81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */,
-				81FFBE1E1D05222700530947 /* highscores.db in Resources */,
+				81FFBE201D05DC6D00530947 /* highscores.db in Resources */,
 				81A4C81E1CFE73CE007D4C3C /* easyseq.txt in Resources */,
 				81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */,
 			);
@@ -329,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81A89F291CEB995600B2838A /* TraderMathTestiOSTests.swift in Sources */,
+				81A89F291CEB995600B2838A /* TraderMathTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +339,7 @@
 /* Begin PBXTargetDependency section */
 		81A89F241CEB995600B2838A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81A89F0C1CEB995600B2838A /* TraderMathTestiOS */;
+			target = 81A89F0C1CEB995600B2838A /* TraderMathTest */;
 			targetProxy = 81A89F231CEB995600B2838A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -372,7 +373,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -395,6 +396,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,7 +419,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Milap Naik (5CUMW2JF9P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Milap Naik (5CUMW2JF9P)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -433,6 +436,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -443,15 +447,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = TraderMathTestiOS/Info.plist;
+				INFOPLIST_FILE = TraderMathTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
-				PRODUCT_NAME = TraderMathTestiOS;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTestiOS/TraderMathTestiOS/Bridging-Header.h";
+				PRODUCT_NAME = TraderMathTest;
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTest/TraderMathTest/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -460,15 +468,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Milap Naik (5CUMW2JF9P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Milap Naik (5CUMW2JF9P)";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = TraderMathTestiOS/Info.plist;
+				INFOPLIST_FILE = TraderMathTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
-				PRODUCT_NAME = TraderMathTestiOS;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTestiOS/TraderMathTestiOS/Bridging-Header.h";
+				PRODUCT_NAME = TraderMathTest;
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTest/TraderMathTest/Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,10 +496,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TraderMathTestiOSTests/Info.plist;
+				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = TraderMathTestiOSTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraderMathTestiOS.app/TraderMathTestiOS";
+				PRODUCT_NAME = TraderMathTestTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraderMathTest.app/TraderMathTest";
 			};
 			name = Debug;
 		};
@@ -499,17 +511,17 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TraderMathTestiOSTests/Info.plist;
+				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = TraderMathTestiOSTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraderMathTestiOS.app/TraderMathTestiOS";
+				PRODUCT_NAME = TraderMathTestTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraderMathTest.app/TraderMathTest";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81A89F081CEB995600B2838A /* Build configuration list for PBXProject "TraderMathTestiOS" */ = {
+		81A89F081CEB995600B2838A /* Build configuration list for PBXProject "TraderMathTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81A89F2A1CEB995600B2838A /* Debug */,
@@ -518,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81A89F2C1CEB995600B2838A /* Build configuration list for PBXNativeTarget "TraderMathTestiOS" */ = {
+		81A89F2C1CEB995600B2838A /* Build configuration list for PBXNativeTarget "TraderMathTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81A89F2D1CEB995600B2838A /* Debug */,
@@ -527,7 +539,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81A89F2F1CEB995600B2838A /* Build configuration list for PBXNativeTarget "TraderMathTestiOSTests" */ = {
+		81A89F2F1CEB995600B2838A /* Build configuration list for PBXNativeTarget "TraderMathTestTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81A89F301CEB995600B2838A /* Debug */,
