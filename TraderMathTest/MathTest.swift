@@ -12,6 +12,7 @@ import UIKit
 class MathTestController: UIViewController {
 
     // MARK: Properties
+    var filepath:String = "easymath"
     var i:Int = 0
     var questionNumber:Int = 1
     var correctAnswer: String?
@@ -62,104 +63,6 @@ class MathTestController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // Read selected file
-    func readFile(){
-        if testType == "Seq"{
-            if difficulty == "HARD"{
-                if let path = NSBundle.mainBundle().pathForResource("hardseq", ofType: "txt"){
-                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
-                    
-                    if let content = data {
-                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-                        
-                        
-                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                        questionLabel.text = myStrings[randomIndex]
-                        correctAnswer = myStrings[randomIndex + 1]
-                    }
-                }
-            }
-                
-            else if difficulty == "MEDIUM"{
-                if let path = NSBundle.mainBundle().pathForResource("mediumseq", ofType: "txt"){
-                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
-                    
-                    if let content = data {
-                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-                        
-                        
-                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                        questionLabel.text = myStrings[randomIndex]
-                        correctAnswer = myStrings[randomIndex + 1]
-                    }
-                }
-            }
-                
-            else{
-                if let path = NSBundle.mainBundle().pathForResource("easyseq", ofType: "txt"){
-                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
-                    
-                    if let content = data {
-                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-                        
-                        
-                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                        questionLabel.text = myStrings[randomIndex]
-                        correctAnswer = myStrings[randomIndex + 1]
-                    }
-                }
-                
-            }
-        }
-        else{
-            if difficulty == "HARD"{
-                if let path = NSBundle.mainBundle().pathForResource("hardmath", ofType: "txt"){
-                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
-            
-                    if let content = data {
-                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-                
-                
-                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                        questionLabel.text = myStrings[randomIndex]
-                        correctAnswer = myStrings[randomIndex + 1]
-                    }
-                }
-        }
-        
-            else if difficulty == "MEDIUM"{
-                if let path = NSBundle.mainBundle().pathForResource("mediummath", ofType: "txt"){
-                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
-                
-                    if let content = data {
-                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-                    
-                    
-                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                        questionLabel.text = myStrings[randomIndex]
-                        correctAnswer = myStrings[randomIndex + 1]
-                    }
-                }
-            }
-            
-            else{
-                if let path = NSBundle.mainBundle().pathForResource("easymath", ofType: "txt"){
-                    var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
-                
-                    if let content = data {
-                        let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-                    
-                        
-                        let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                        questionLabel.text = myStrings[randomIndex]
-                        correctAnswer = myStrings[randomIndex + 1]
-                    }
-                }
-            
-            }
-        }
-    }
-    
     // Read user defaults. If none exist, they are set to Easy and 5 questions
     func readUserDefaults(){
         
@@ -177,6 +80,50 @@ class MathTestController: UIViewController {
         else{
             let questionNum = preferences.integerForKey(questionnumKey)
         }
+    }
+    
+    // Read selected file
+    func readFile(){
+        if testType == "Seq"{
+            if difficulty == "HARD"{
+                filepath = "hardseq"
+            }
+                
+            else if difficulty == "MEDIUM"{
+                filepath = "mediumseq"
+            }
+                
+            else{
+                filepath = "easyseq"
+            }
+        }
+        else{
+            if difficulty == "HARD"{
+                filepath = "hardmath"
+            }
+        
+            else if difficulty == "MEDIUM"{
+                filepath = "mediummath"
+            }
+            
+            else{
+                filepath = "easymath"
+            }
+        }
+        
+        if let path = NSBundle.mainBundle().pathForResource(filepath, ofType: "txt"){
+            var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
+            
+            if let content = data {
+                let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                
+                
+                let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
+                questionLabel.text = myStrings[randomIndex]
+                correctAnswer = myStrings[randomIndex + 1]
+            }
+        }
+        
     }
 
     // MARK: Actions
@@ -226,7 +173,7 @@ class MathTestController: UIViewController {
     }
     @IBAction func enterButton(sender: UIButton) {
         answer = answerLabel.text
-        questionNumber++
+        questionNumber += 1
         
         //Convert answer and correct answer so all forms are accepted (i.e. .67=0.67=000.67000
         answerDouble = (answer! as NSString).doubleValue
@@ -239,7 +186,7 @@ class MathTestController: UIViewController {
         else {
             if correctAnswerDouble == answerDouble{
                 JLToast.makeText("Correct!").show()
-                highscore++
+                highscore += 1
             }
             else{
                 JLToast.makeText("Incorrect: \(correctAnswer!)").show()
@@ -253,9 +200,9 @@ class MathTestController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         time = Double(round(1000*time)/1000)
-        var minutes = UInt8(time/60.0)
-        var seconds = UInt8(time) - (minutes*60)
-        var milliseconds = Int((time*1000) % 1000)
+        let minutes = UInt8(time/60.0)
+        let seconds = UInt8(time) - (minutes*60)
+        let milliseconds = Int((time*1000) % 1000)
         finishtime = String(format: "%02d:%02d.%03d", minutes, seconds, milliseconds)
         
         if (segue.identifier == "goestoFinishTest") {

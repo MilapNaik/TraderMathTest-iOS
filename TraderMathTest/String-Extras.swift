@@ -7,13 +7,8 @@
 //
 
 #if os(iOS)
-import UIKit
-#else
-import AppKit
-#endif
-#if os(iOS)
     import UIKit
-    #else
+#else
     import AppKit
 #endif
 
@@ -22,7 +17,7 @@ extension String {
         var pos = -1
         if let range = self.rangeOfString(sub) {
             if !range.isEmpty {
-                pos = distance(self.startIndex, range.startIndex)
+                pos = self.startIndex.distanceTo(range.startIndex)
             }
         }
         return pos
@@ -30,7 +25,7 @@ extension String {
     
     func subStringFrom(pos:Int)->String {
         var substr = ""
-        let start = advance(self.startIndex, pos)
+        let start = self.startIndex.advancedBy(pos)
         let end = self.endIndex
         //		println("String: \(self), start:\(start), end: \(end)")
         let range = start..<end
@@ -41,7 +36,7 @@ extension String {
     
     func subStringTo(pos:Int)->String {
         var substr = ""
-        let end = advance(self.startIndex, pos-1)
+        let end = self.startIndex.advancedBy(pos-1)
         let range = self.startIndex...end
         substr = self[range]
         return substr
@@ -49,7 +44,7 @@ extension String {
     
     func urlEncoded()->String {
         let res:NSString = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, self as NSString, nil,
-            "!*'();:@&=+$,/?%#[]", CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
+                                                                   "!*'();:@&=+$,/?%#[]", CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
         return res as String
     }
     

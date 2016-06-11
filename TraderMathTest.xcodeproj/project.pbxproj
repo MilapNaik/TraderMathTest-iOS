@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81690D6C1D0C986800787F1D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */; };
+		81690D6E1D0C994100787F1D /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81690D6D1D0C994100787F1D /* SQLTable.swift */; };
+		81690D701D0C9A8000787F1D /* JLToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81690D6F1D0C9A8000787F1D /* JLToastWindow.swift */; };
 		818520661CF3EB4900063BFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520651CF3EB4900063BFC /* Settings.swift */; };
 		818520681CF3ED3C00063BFC /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520671CF3ED3C00063BFC /* Info.swift */; };
 		818B534F1CF6CC350085346A /* FinishTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B534E1CF6CC350085346A /* FinishTest.swift */; };
@@ -15,7 +18,6 @@
 		81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8021CFBBE63007D4C3C /* mediummath.txt */; };
 		81A4C8131CFDE4AD007D4C3C /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */; };
 		81A4C8141CFDE4AD007D4C3C /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */; };
-		81A4C8161CFDE539007D4C3C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A4C8151CFDE539007D4C3C /* libsqlite3.0.dylib */; };
 		81A4C81E1CFE73CE007D4C3C /* easyseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81B1CFE73CE007D4C3C /* easyseq.txt */; };
 		81A4C81F1CFE73CE007D4C3C /* hardseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81C1CFE73CE007D4C3C /* hardseq.txt */; };
 		81A4C8201CFE73CE007D4C3C /* mediumseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */; };
@@ -62,6 +64,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		81690D6D1D0C994100787F1D /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		81690D6F1D0C9A8000787F1D /* JLToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastWindow.swift; sourceTree = "<group>"; };
 		818520651CF3EB4900063BFC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		818520671CF3ED3C00063BFC /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		818B534E1CF6CC350085346A /* FinishTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishTest.swift; sourceTree = "<group>"; };
@@ -71,7 +76,6 @@
 		81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
 		81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
-		81A4C8151CFDE539007D4C3C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		81A4C81B1CFE73CE007D4C3C /* easyseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easyseq.txt; sourceTree = "<group>"; };
 		81A4C81C1CFE73CE007D4C3C /* hardseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardseq.txt; sourceTree = "<group>"; };
 		81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediumseq.txt; sourceTree = "<group>"; };
@@ -104,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81A4C8161CFDE539007D4C3C /* libsqlite3.0.dylib in Frameworks */,
+				81690D6C1D0C986800787F1D /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				81A4C8491CFF495C007D4C3C /* DLRadioButton.framework */,
-				81A4C8151CFDE539007D4C3C /* libsqlite3.0.dylib */,
 				81FFBE1F1D05DC6D00530947 /* highscores.db */,
+				81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */,
 				81A4C81B1CFE73CE007D4C3C /* easyseq.txt */,
 				81A4C81C1CFE73CE007D4C3C /* hardseq.txt */,
 				81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */,
@@ -154,22 +158,24 @@
 				81A4C8261CFEB2BF007D4C3C /* JLToast.swift */,
 				81A4C8271CFEB2BF007D4C3C /* JLToastCenter.swift */,
 				81A4C8281CFEB2BF007D4C3C /* JLToastView.swift */,
+				81690D6F1D0C9A8000787F1D /* JLToastWindow.swift */,
 				81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */,
 				81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */,
+				81690D6D1D0C994100787F1D /* SQLTable.swift */,
 				81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */,
+				81A89F161CEB995600B2838A /* Main.storyboard */,
 				81A89F121CEB995600B2838A /* AppDelegate.swift */,
 				81A89F141CEB995600B2838A /* ViewController.swift */,
-				81AA26671CF4DFC2001DE1D0 /* Countdown.swift */,
-				81A89F161CEB995600B2838A /* Main.storyboard */,
-				81AA522C1CF5ED820078D58B /* Question.swift */,
-				81AA26691CF4E4B6001DE1D0 /* MathTest.swift */,
 				81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */,
-				81A89F191CEB995600B2838A /* Images.xcassets */,
-				81A89F101CEB995600B2838A /* Supporting Files */,
-				818520651CF3EB4900063BFC /* Settings.swift */,
-				818520671CF3ED3C00063BFC /* Info.swift */,
+				81AA26671CF4DFC2001DE1D0 /* Countdown.swift */,
+				81AA26691CF4E4B6001DE1D0 /* MathTest.swift */,
 				818B534E1CF6CC350085346A /* FinishTest.swift */,
 				819347C91D022033002EA835 /* TableViewCell.swift */,
+				81A89F191CEB995600B2838A /* Images.xcassets */,
+				81A89F101CEB995600B2838A /* Supporting Files */,
+				81AA522C1CF5ED820078D58B /* Question.swift */,
+				818520651CF3EB4900063BFC /* Settings.swift */,
+				818520671CF3ED3C00063BFC /* Info.swift */,
 			);
 			path = TraderMathTest;
 			sourceTree = "<group>";
@@ -244,7 +250,8 @@
 		81A89F051CEB995600B2838A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Gamelap Studios";
 				TargetAttributes = {
 					81A89F0C1CEB995600B2838A = {
@@ -308,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				818B534F1CF6CC350085346A /* FinishTest.swift in Sources */,
+				81690D6E1D0C994100787F1D /* SQLTable.swift in Sources */,
 				819347CA1D022033002EA835 /* TableViewCell.swift in Sources */,
 				81A4C8441CFF427D007D4C3C /* DLRadioButton.m in Sources */,
 				81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */,
@@ -321,6 +329,7 @@
 				81A4C82A1CFEB2BF007D4C3C /* JLToastCenter.swift in Sources */,
 				81A4C8131CFDE4AD007D4C3C /* SQLiteDB.swift in Sources */,
 				81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */,
+				81690D701D0C9A8000787F1D /* JLToastWindow.swift in Sources */,
 				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,
 				81A4C8141CFDE4AD007D4C3C /* String-Extras.swift in Sources */,
 			);
@@ -377,6 +386,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -456,10 +466,12 @@
 				);
 				INFOPLIST_FILE = TraderMathTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.milapnaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTest;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTest/TraderMathTest/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -477,10 +489,12 @@
 				);
 				INFOPLIST_FILE = TraderMathTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.milapnaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTest;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTest/TraderMathTest/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -498,6 +512,7 @@
 				);
 				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTestTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraderMathTest.app/TraderMathTest";
 			};
@@ -513,6 +528,7 @@
 				);
 				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTestTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraderMathTest.app/TraderMathTest";
 			};

@@ -56,7 +56,7 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+        
     }
     
     override func viewDidLoad() {
@@ -91,17 +91,17 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func loadhighscores(){
-        var result = db.query("SELECT * from \(difficulty)_\(testType)_\(questionNum) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
-        println("===============================")
+        let result = db.query("SELECT * from \(difficulty)_\(testType)_\(questionNum) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
+        print("===============================")
                 
         for row in result
         {
-            bestScore[i] = row["Score"]!.asString()
+            bestScore[i] = row["Score"]! as! String
             print(bestScore[i])
-            bestTime[i] = row["Time"]!.asString()
-            println(bestTime[i])
+            bestTime[i] = row["Time"]! as! String
+            print(bestTime[i])
                     
-            i++
+            i += 1
         }
     }
     

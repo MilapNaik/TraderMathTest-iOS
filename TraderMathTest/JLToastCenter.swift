@@ -1,7 +1,7 @@
 /*
  * JLToastCenter.swift
  *
- *            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+ *            DO WHAT THE **** YOU WANT TO PUBLIC LICENSE
  *                    Version 2, December 2004
  *
  * Copyright (C) 2013-2015 Su Yeol Jeon
@@ -10,19 +10,23 @@
  * copies of this license document, and changing it is allowed as long
  * as the name is changed.
  *
- *            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+ *            DO WHAT THE **** YOU WANT TO PUBLIC LICENSE
  *   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
  *
- *  0. You just DO WHAT THE FUCK YOU WANT TO.
+ *  0. You just DO WHAT THE **** YOU WANT TO.
  *
  */
 
 import UIKit
 
 @objc public class JLToastCenter: NSObject {
-
+    
     private var _queue: NSOperationQueue!
-
+    
+    public var currentToast: JLToast? {
+        return self._queue.operations.first as? JLToast
+    }
+    
     private struct Singletone {
         static let defaultCenter = JLToastCenter()
     }
@@ -37,7 +41,7 @@ import UIKit
         self._queue.maxConcurrentOperationCount = 1
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: "deviceOrientationDidChange:",
+            selector: #selector(self.deviceOrientationDidChange),
             name: UIDeviceOrientationDidChangeNotification,
             object: nil
         )
@@ -53,4 +57,11 @@ import UIKit
             lastToast.view.updateView()
         }
     }
+    
+    public func cancelAllToasts() {
+        for toast in self._queue.operations {
+            toast.cancel()
+        }
+    }
+    
 }

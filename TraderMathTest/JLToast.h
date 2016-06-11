@@ -1,5 +1,5 @@
 /*
- *            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+ *            DO WHAT THE **** YOU WANT TO PUBLIC LICENSE
  *                    Version 2, December 2004
  *
  * Copyright (C) 2013-2015 Suyeol Jeon <devxoul@gmail.com>
@@ -8,12 +8,14 @@
  * copies of this license document, and changing it is allowed as long
  * as the name is changed.
  *
- *            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+ *            DO WHAT THE **** YOU WANT TO PUBLIC LICENSE
  *   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
  *
- *  0. You just DO WHAT THE FUCK YOU WANT TO.
+ *  0. You just DO WHAT THE **** YOU WANT TO.
  *
  */
+
+#import <Foundation/Foundation.h>
 
 FOUNDATION_EXPORT double JLToastVersionNumber;
 FOUNDATION_EXPORT const unsigned char JLToastVersionString[];
@@ -29,3 +31,4 @@ static NSString * const JLToastViewFontAttributeName = @"JLToastViewFontAttribut
 static NSString * const JLToastViewPortraitOffsetYAttributeName = @"JLToastViewPortraitOffsetYAttributeName";
 static NSString * const JLToastViewLandscapeOffsetYAttributeName = @"JLToastViewLandscapeOffsetYAttributeName";
 #endif
+Status API Training Shop Blog About

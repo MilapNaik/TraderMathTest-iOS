@@ -1,7 +1,7 @@
 /*
  * JLToast.swift
  *
- *            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+ *            DO WHAT THE **** YOU WANT TO PUBLIC LICENSE
  *                    Version 2, December 2004
  *
  * Copyright (C) 2013-2015 Su Yeol Jeon
@@ -10,10 +10,10 @@
  * copies of this license document, and changing it is allowed as long
  * as the name is changed.
  *
- *            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+ *            DO WHAT THE **** YOU WANT TO PUBLIC LICENSE
  *   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
  *
- *  0. You just DO WHAT THE FUCK YOU WANT TO.
+ *  0. You just DO WHAT THE **** YOU WANT TO.
  *
  */
 
@@ -25,7 +25,7 @@ public struct JLToastDelay {
 }
 
 @objc public class JLToast: NSOperation {
-
+    
     public var view: JLToastView = JLToastView()
     
     public var text: String? {
@@ -36,10 +36,10 @@ public struct JLToastDelay {
             self.view.textLabel.text = newValue
         }
     }
-
+    
     public var delay: NSTimeInterval = 0
     public var duration: NSTimeInterval = JLToastDelay.ShortDelay
-
+    
     private var _executing = false
     override public var executing: Bool {
         get {
@@ -51,7 +51,7 @@ public struct JLToastDelay {
             self.didChangeValueForKey("isExecuting")
         }
     }
-
+    
     private var _finished = false
     override public var finished: Bool {
         get {
@@ -63,7 +63,6 @@ public struct JLToastDelay {
             self.didChangeValueForKey("isFinished")
         }
     }
-    
     
     public class func makeText(text: String) -> JLToast {
         return JLToast.makeText(text, delay: 0, duration: JLToastDelay.ShortDelay)
@@ -94,14 +93,14 @@ public struct JLToastDelay {
             super.start()
         }
     }
-
+    
     override public func main() {
         self.executing = true
-
+        
         dispatch_async(dispatch_get_main_queue(), {
             self.view.updateView()
             self.view.alpha = 0
-            UIApplication.sharedApplication().windows.first?.addSubview(self.view)
+            JLToastWindow.sharedWindow.addSubview(self.view)
             UIView.animateWithDuration(
                 0.5,
                 delay: self.delay,
@@ -117,8 +116,14 @@ public struct JLToastDelay {
                         },
                         completion: { completed in
                             self.finish()
-                            UIView.animateWithDuration(0.5, animations: {
-                                self.view.alpha = 0
+                            UIView.animateWithDuration(
+                                0.5,
+                                animations: {
+                                    self.view.alpha = 0
+                                },
+                                completion:{ completed in
+                                    self.view.removeFromSuperview()
+                                    
                             })
                         }
                     )
@@ -127,8 +132,15 @@ public struct JLToastDelay {
         })
     }
     
+    public override func cancel() {
+        super.cancel()
+        self.finish()
+        self.view.removeFromSuperview()
+    }
+    
     public func finish() {
         self.executing = false
         self.finished = true
     }
+    
 }

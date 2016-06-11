@@ -1,36 +1,24 @@
-//
-//  DLRadioButton.m
-//  DLRadioButtonExample
-//
-//  Created by Liu, Xingruo on 8/22/14.
-//
-
 #import "DLRadioButton.h"
 
 static const CGFloat kDefaulIconSize = 15.0;
 static const CGFloat kDefaultMarginWidth = 5.0;
-static NSString *const kGeneratedIconName = @"Generated Icon";
-
-@interface DLRadioButton()
-
-@property BOOL isChaining;
-
-@end
+static NSString * const kGeneratedIconName = @"Generated Icon";
+static BOOL _groupModifing = NO;
 
 @implementation DLRadioButton
 
 - (void)setOtherButtons:(NSArray *)otherButtons {
-    if (!self.isChaining) {
-        _otherButtons = otherButtons;
-        self.isChaining = YES;
-        for (DLRadioButton *radioButton in self.otherButtons) {
-            NSMutableArray *otherButtons = [[NSMutableArray alloc] initWithArray:self.otherButtons];
-            [otherButtons addObject:self];
-            [otherButtons removeObject:radioButton];
-            [radioButton setOtherButtons:[otherButtons copy]];
+    if (![DLRadioButton isGroupModifing]) {
+        [DLRadioButton groupModifing:YES];
+        for (DLRadioButton *radioButton in otherButtons) {
+            NSMutableArray *otherButtonsForCurrentButton = [[NSMutableArray alloc] initWithArray:otherButtons];
+            [otherButtonsForCurrentButton addObject:self];
+            [otherButtonsForCurrentButton removeObject:radioButton];
+            [radioButton setOtherButtons:[otherButtonsForCurrentButton copy]];
         }
-        self.isChaining = NO;
+        [DLRadioButton groupModifing:NO];
     }
+    _otherButtons = otherButtons;
 }
 
 - (void)setIcon:(UIImage *)icon {
@@ -45,14 +33,14 @@ static NSString *const kGeneratedIconName = @"Generated Icon";
 }
 
 - (void)setMultipleSelectionEnabled:(BOOL)multipleSelectionEnabled {
-    if (!self.isChaining) {
-        self.isChaining = YES;
-        _multipleSelectionEnabled = multipleSelectionEnabled;
+    if (![DLRadioButton isGroupModifing]) {
+        [DLRadioButton groupModifing:YES];
         for (DLRadioButton *radioButton in self.otherButtons) {
             radioButton.multipleSelectionEnabled = multipleSelectionEnabled;
         }
-        self.isChaining = NO;
+        [DLRadioButton groupModifing:NO];
     }
+    _multipleSelectionEnabled = multipleSelectionEnabled;
 }
 
 #pragma mark - Helpers
@@ -65,11 +53,23 @@ static NSString *const kGeneratedIconName = @"Generated Icon";
         self.iconSelected = [self drawIconWithSelection:YES];
     }
     CGFloat marginWidth = self.marginWidth ? self.marginWidth : kDefaultMarginWidth;
+    BOOL isRightToLeftLayout = NO;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0) {
+        isRightToLeftLayout = [UIView userInterfaceLayoutDirectionForSemanticContentAttribute:self.semanticContentAttribute] == UIUserInterfaceLayoutDirectionRightToLeft;
+    }
     if (self.isIconOnRight) {
-        self.imageEdgeInsets = UIEdgeInsetsMake(0, self.frame.size.width - self.icon.size.width, 0, 0);
-        self.titleEdgeInsets = UIEdgeInsetsMake(0, -self.icon.size.width, 0, marginWidth + self.icon.size.width);
+        self.imageEdgeInsets = isRightToLeftLayout ?
+        UIEdgeInsetsMake(0, 0, 0, self.frame.size.width - self.icon.size.width) :
+        UIEdgeInsetsMake(0, self.frame.size.width - self.icon.size.width, 0, 0);
+        self.titleEdgeInsets = isRightToLeftLayout ?
+        UIEdgeInsetsMake(0, marginWidth + self.icon.size.width, 0, -self.icon.size.width) :
+        UIEdgeInsetsMake(0, -self.icon.size.width, 0, marginWidth + self.icon.size.width);
     } else {
-        self.titleEdgeInsets = UIEdgeInsetsMake(0, marginWidth, 0, 0);
+        if (isRightToLeftLayout) {
+            self.imageEdgeInsets = UIEdgeInsetsMake(0, marginWidth, 0, 0);
+        } else {
+            self.titleEdgeInsets = UIEdgeInsetsMake(0, marginWidth, 0, 0);
+        }
     }
 }
 
@@ -135,6 +135,14 @@ static NSString *const kGeneratedIconName = @"Generated Icon";
 }
 
 #pragma mark - DLRadiobutton
+
++ (void)groupModifing:(BOOL)chaining {
+    _groupModifing = chaining;
+}
+
++ (BOOL)isGroupModifing {
+    return _groupModifing;
+}
 
 - (void)deselectOtherButtons {
     for (UIButton *button in self.otherButtons) {
