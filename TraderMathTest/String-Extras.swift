@@ -54,6 +54,6 @@ extension String {
     }
     
     func range()->Range<String.Index> {
-        return Range<String.Index>(start:startIndex, end:endIndex)
+        return Range<String.Index>(startIndex ..< endIndex)
     }
 }

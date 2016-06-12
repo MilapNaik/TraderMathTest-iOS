@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81582D5D1D0DFE0E0089C2E1 /* DLRadioButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81582D5A1D0DFDF00089C2E1 /* DLRadioButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81690D6C1D0C986800787F1D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */; };
 		81690D6E1D0C994100787F1D /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81690D6D1D0C994100787F1D /* SQLTable.swift */; };
 		81690D701D0C9A8000787F1D /* JLToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81690D6F1D0C9A8000787F1D /* JLToastWindow.swift */; };
@@ -25,7 +26,6 @@
 		81A4C82A1CFEB2BF007D4C3C /* JLToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8271CFEB2BF007D4C3C /* JLToastCenter.swift */; };
 		81A4C82B1CFEB2BF007D4C3C /* JLToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8281CFEB2BF007D4C3C /* JLToastView.swift */; };
 		81A4C8441CFF427D007D4C3C /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8431CFF427C007D4C3C /* DLRadioButton.m */; };
-		81A4C84C1CFF7B1F007D4C3C /* DLRadioButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81A4C8491CFF495C007D4C3C /* DLRadioButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F121CEB995600B2838A /* AppDelegate.swift */; };
 		81A89F151CEB995600B2838A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F141CEB995600B2838A /* ViewController.swift */; };
 		81A89F181CEB995600B2838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F161CEB995600B2838A /* Main.storyboard */; };
@@ -50,13 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		81A4C84D1CFF7B20007D4C3C /* Embed Frameworks */ = {
+		81582D5E1D0DFE0E0089C2E1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				81A4C84C1CFF7B1F007D4C3C /* DLRadioButton.framework in Embed Frameworks */,
+				81582D5D1D0DFE0E0089C2E1 /* DLRadioButton.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		81582D5A1D0DFDF00089C2E1 /* DLRadioButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = "<group>"; };
 		81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		81690D6D1D0C994100787F1D /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
 		81690D6F1D0C9A8000787F1D /* JLToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastWindow.swift; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		81A4C8281CFEB2BF007D4C3C /* JLToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastView.swift; sourceTree = "<group>"; };
 		81A4C8421CFF427C007D4C3C /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = ../DLRadioButton.h; sourceTree = "<group>"; };
 		81A4C8431CFF427C007D4C3C /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = ../DLRadioButton.m; sourceTree = "<group>"; };
-		81A4C8491CFF495C007D4C3C /* DLRadioButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = "<group>"; };
 		81A89F0D1CEB995600B2838A /* TraderMathTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraderMathTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F111CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F121CEB995600B2838A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		81A89F041CEB995600B2838A = {
 			isa = PBXGroup;
 			children = (
-				81A4C8491CFF495C007D4C3C /* DLRadioButton.framework */,
+				81582D5A1D0DFDF00089C2E1 /* DLRadioButton.framework */,
 				81FFBE1F1D05DC6D00530947 /* highscores.db */,
 				81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */,
 				81A4C81B1CFE73CE007D4C3C /* easyseq.txt */,
@@ -215,7 +215,7 @@
 				81A89F091CEB995600B2838A /* Sources */,
 				81A89F0A1CEB995600B2838A /* Frameworks */,
 				81A89F0B1CEB995600B2838A /* Resources */,
-				81A4C84D1CFF7B20007D4C3C /* Embed Frameworks */,
+				81582D5E1D0DFE0E0089C2E1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -502,10 +502,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -522,10 +519,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";

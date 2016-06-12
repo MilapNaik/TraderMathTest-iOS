@@ -21,7 +21,7 @@ class CountdownController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+                timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(CountdownController.update), userInfo: nil, repeats: true)
 
     }
     
@@ -29,7 +29,7 @@ class CountdownController: UIViewController {
     func update() {
         
         if(count > 0) {
-            countDownLabel.text = String(count--)
+            countDownLabel.text = String(count-=1)
         }
         else {
             timer.invalidate()

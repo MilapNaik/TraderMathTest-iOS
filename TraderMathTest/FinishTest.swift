@@ -107,9 +107,9 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // Read user defaults. If none exist, they are set to Easy and 5 questions
     func readUserDefaults(){
-        testType = preferences.stringForKey(testtypeKey)!
-        difficulty = preferences.stringForKey(difficultyKey)!
-        PoT = preferences.stringForKey(PoTKey)!
+        testType = preferences.stringForKey(testtypeKey)! ?? "MATH"
+        difficulty = preferences.stringForKey(difficultyKey)! ?? "EASY"
+        PoT = preferences.stringForKey(PoTKey)! ?? "Practice"
         if PoT == "Test"{
             if testType == "SEQ"{
                 questionNum = 50
@@ -119,7 +119,7 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         else{
-            questionNum = preferences.integerForKey(questionnumKey)
+            questionNum = preferences.integerForKey(questionnumKey) ?? 5
         }
 
     }

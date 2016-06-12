@@ -12,18 +12,23 @@ import UIKit
 class MathTestController: UIViewController {
 
     // MARK: Properties
-    var filepath:String = "easymath"
+    var data:String?
     var i:Int = 0
     var questionNumber:Int = 1
+    
+    
     var correctAnswer: String?
     var answer: String?
     var correctAnswerDouble: Double = 0.0
     var answerDouble: Double? = 0.0
+    
     var highscore:Int = 0
+    
     var finishtime:String = "0"
     var timer = NSTimer()
     var time: Double = 0
     var startTime: NSTimeInterval = 0.0
+    
 
     
     
@@ -41,6 +46,7 @@ class MathTestController: UIViewController {
     var questionNum: Int = 5
     var PoT:String = "Practice"
     var testType:String = "MATH"
+    var filepath:String = "easymath"
     
 
     override func viewDidLoad() {
@@ -66,9 +72,9 @@ class MathTestController: UIViewController {
     // Read user defaults. If none exist, they are set to Easy and 5 questions
     func readUserDefaults(){
         
-        let testType = preferences.stringForKey(testtypeKey)
-        let difficulty = preferences.stringForKey(difficultyKey)
-        let PoT = preferences.stringForKey(PoTKey)
+        testType = preferences.stringForKey(testtypeKey) ?? "MATH"
+        difficulty = preferences.stringForKey(difficultyKey) ?? "EASY"
+        PoT = preferences.stringForKey(PoTKey) ?? "Practice"
         if PoT == "Test"{
             if testType == "SEQ"{
                 questionNum = 50
@@ -78,7 +84,7 @@ class MathTestController: UIViewController {
             }
         }
         else{
-            let questionNum = preferences.integerForKey(questionnumKey)
+            questionNum = preferences.integerForKey(questionnumKey) ?? 5
         }
     }
     
@@ -86,33 +92,38 @@ class MathTestController: UIViewController {
     func readFile(){
         if testType == "Seq"{
             if difficulty == "HARD"{
-                filepath = "hardseq"
+                filepath = "hardseq.txt"
             }
                 
             else if difficulty == "MEDIUM"{
-                filepath = "mediumseq"
+                filepath = "mediumseq.txt"
             }
                 
             else{
-                filepath = "easyseq"
+                filepath = "easyseq.txt"
             }
         }
         else{
             if difficulty == "HARD"{
-                filepath = "hardmath"
+                filepath = "hardmath.txt"
             }
         
             else if difficulty == "MEDIUM"{
-                filepath = "mediummath"
+                filepath = "mediummath.txt"
             }
             
             else{
-                filepath = "easymath"
+                filepath = "easymath.txt"
             }
         }
         
-        if let path = NSBundle.mainBundle().pathForResource(filepath, ofType: "txt"){
-            var data = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)
+        if let dir = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
+            let path = NSURL(fileURLWithPath: dir).URLByAppendingPathComponent(filepath)
+            do{
+                data = try NSString(contentsOfURL: path, encoding: NSUTF8StringEncoding)
+            } catch {
+                
+            }
             
             if let content = data {
                 let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())

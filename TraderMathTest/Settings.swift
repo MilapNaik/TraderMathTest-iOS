@@ -34,7 +34,7 @@ class SettingsController: UIViewController {
     }
     
     func readUserDefaults(){
-        difficulty = preferences.stringForKey(difficultyKey)!
+        difficulty = preferences.stringForKey(difficultyKey) ?? "EASY"
         
     }
     
@@ -55,10 +55,6 @@ class SettingsController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: UITextFieldDelegate
-    
-    
     
     
     // MARK: Actions
