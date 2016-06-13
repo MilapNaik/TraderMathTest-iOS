@@ -14,27 +14,28 @@ class CountdownController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var countDownLabel: UILabel!
     
-    var timer = NSTimer()
+    var timer:NSTimer?
     var count = 3
     var testType:String?
-    var PoT:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(CountdownController.update), userInfo: nil, repeats: true)
-
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            self.timer = NSTimer(timeInterval: 1.0, target: self, selector: #selector(CountdownController.update), userInfo: nil, repeats: true)
+            NSRunLoop.currentRunLoop().addTimer(self.timer!, forMode: NSRunLoopCommonModes)
+        }
     }
     
     
     func update() {
-        
         if(count > 0) {
-            countDownLabel.text = String(count-=1)
+            countDownLabel.text = String(count)
+            count-=1
         }
         else {
-            timer.invalidate()
-            self.performSegueWithIdentifier("goestoMathTest", sender: self)
-        
+            timer!.invalidate()
+        self.performSegueWithIdentifier("goestoMathTest", sender: self)
         }
     }
     

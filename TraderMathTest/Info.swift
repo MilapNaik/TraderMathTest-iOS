@@ -20,9 +20,6 @@ class InfoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        InfoText.editable = false
-        TraderTest.editable = false
-        
     }
     
     override func didReceiveMemoryWarning() {

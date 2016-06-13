@@ -120,7 +120,7 @@ class MathTestController: UIViewController {
         if let dir = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
             let path = NSURL(fileURLWithPath: dir).URLByAppendingPathComponent(filepath)
             do{
-                data = try NSString(contentsOfURL: path, encoding: NSUTF8StringEncoding)
+                data = try NSString(contentsOfURL: path, encoding: NSUTF8StringEncoding) as String
             } catch {
                 
             }
