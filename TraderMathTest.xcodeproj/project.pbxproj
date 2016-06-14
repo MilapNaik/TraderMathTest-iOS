@@ -31,11 +31,11 @@
 		81A89F181CEB995600B2838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F161CEB995600B2838A /* Main.storyboard */; };
 		81A89F1A1CEB995600B2838A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F191CEB995600B2838A /* Images.xcassets */; };
 		81A89F291CEB995600B2838A /* TraderMathTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F281CEB995600B2838A /* TraderMathTestTests.swift */; };
-		81AA26631CF4B3D7001DE1D0 /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81AA26621CF4B3D7001DE1D0 /* easymath.txt */; };
 		81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */; };
 		81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26671CF4DFC2001DE1D0 /* Countdown.swift */; };
 		81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26691CF4E4B6001DE1D0 /* MathTest.swift */; };
 		81AA522D1CF5ED820078D58B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA522C1CF5ED820078D58B /* Question.swift */; };
+		81EF87131D0FCDEE0038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87121D0FCDEE0038A38C /* easymath.txt */; };
 		81FFBE201D05DC6D00530947 /* highscores.db in Resources */ = {isa = PBXBuildFile; fileRef = 81FFBE1F1D05DC6D00530947 /* highscores.db */; };
 /* End PBXBuildFile section */
 
@@ -95,11 +95,11 @@
 		81A89F221CEB995600B2838A /* TraderMathTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraderMathTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F271CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F281CEB995600B2838A /* TraderMathTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraderMathTestTests.swift; sourceTree = "<group>"; };
-		81AA26621CF4B3D7001DE1D0 /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easymath.txt; sourceTree = "<group>"; };
 		81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeOrTest.swift; sourceTree = "<group>"; };
 		81AA26671CF4DFC2001DE1D0 /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		81AA26691CF4E4B6001DE1D0 /* MathTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTest.swift; sourceTree = "<group>"; };
 		81AA522C1CF5ED820078D58B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		81EF87121D0FCDEE0038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easymath.txt; sourceTree = "<group>"; };
 		81FFBE1F1D05DC6D00530947 /* highscores.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = highscores.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +133,7 @@
 				81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */,
 				81A4C8011CFBBE63007D4C3C /* hardmath.txt */,
 				81A4C8021CFBBE63007D4C3C /* mediummath.txt */,
-				81AA26621CF4B3D7001DE1D0 /* easymath.txt */,
+				81EF87121D0FCDEE0038A38C /* easymath.txt */,
 				81A89F0F1CEB995600B2838A /* TraderMathTest */,
 				81A89F251CEB995600B2838A /* TraderMathTestTests */,
 				81A89F0E1CEB995600B2838A /* Products */,
@@ -292,11 +292,11 @@
 				81A4C81F1CFE73CE007D4C3C /* hardseq.txt in Resources */,
 				81A89F1A1CEB995600B2838A /* Images.xcassets in Resources */,
 				81A4C8201CFE73CE007D4C3C /* mediumseq.txt in Resources */,
-				81AA26631CF4B3D7001DE1D0 /* easymath.txt in Resources */,
 				81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */,
 				81FFBE201D05DC6D00530947 /* highscores.db in Resources */,
 				81A4C81E1CFE73CE007D4C3C /* easyseq.txt in Resources */,
 				81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */,
+				81EF87131D0FCDEE0038A38C /* easymath.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

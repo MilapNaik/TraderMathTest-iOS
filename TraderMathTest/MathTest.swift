@@ -12,11 +12,11 @@ import UIKit
 class MathTestController: UIViewController {
 
     // MARK: Properties
-    var data:String?
+    //var data:String?
     var i:Int = 0
     var questionNumber:Int = 1
     
-    
+    var myQuestions = [String]()
     var correctAnswer: String?
     var answer: String?
     var correctAnswerDouble: Double = 0.0
@@ -46,7 +46,7 @@ class MathTestController: UIViewController {
     var questionNum: Int = 5
     var PoT:String = "Practice"
     var testType:String = "MATH"
-    var filepath:String = "easymath"
+    var filename:String = "easymath"
     
 
     override func viewDidLoad() {
@@ -85,57 +85,38 @@ class MathTestController: UIViewController {
         }
         else{
             questionNum = preferences.integerForKey(questionnumKey) ?? 5
+            if questionNum == 0{
+                questionNum = 5
+            }
         }
     }
     
     // Read selected file
     func readFile(){
-        if testType == "Seq"{
-            if difficulty == "HARD"{
-                filepath = "hardseq.txt"
-            }
-                
-            else if difficulty == "MEDIUM"{
-                filepath = "mediumseq.txt"
-            }
-                
-            else{
-                filepath = "easyseq.txt"
-            }
-        }
-        else{
-            if difficulty == "HARD"{
-                filepath = "hardmath.txt"
-            }
-        
-            else if difficulty == "MEDIUM"{
-                filepath = "mediummath.txt"
-            }
+        filename = difficulty.lowercaseString + testType.lowercaseString
+
             
-            else{
-                filepath = "easymath.txt"
+        if let path = NSBundle.mainBundle().pathForResource(filename, ofType: "txt"){
+            do {
+                let data = try String(contentsOfFile:path, encoding: NSUTF8StringEncoding)
+                myQuestions = data.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                
+                newQuestion()
+                
+            } catch{
+                print("Error: \(error)")
             }
         }
-        
-        if let dir = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
-            let path = NSURL(fileURLWithPath: dir).URLByAppendingPathComponent(filepath)
-            do{
-                data = try NSString(contentsOfURL: path, encoding: NSUTF8StringEncoding) as String
-            } catch {
-                
-            }
-            
-            if let content = data {
-                let myStrings = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-                
-                
-                let randomIndex = Int(arc4random_uniform(UInt32(myStrings.count/2))) * 2
-                questionLabel.text = myStrings[randomIndex]
-                correctAnswer = myStrings[randomIndex + 1]
-            }
-        }
-        
     }
+    
+    func newQuestion(){
+        let randomIndex = Int(arc4random_uniform(UInt32(myQuestions.count/2))) * 2
+        questionLabel.text = myQuestions[randomIndex]
+        correctAnswer = myQuestions[randomIndex + 1]
+        
+        qnumLabel.text = "\(questionNumber)/\(questionNum)"
+    }
+    
 
     // MARK: Actions
     @IBAction func n1Button(sender: UIButton) {
@@ -178,7 +159,6 @@ class MathTestController: UIViewController {
     
     
     
-    
     @IBAction func clearButton(sender: UIButton) {
         answerLabel.text = ""
     }
@@ -202,13 +182,11 @@ class MathTestController: UIViewController {
             else{
                 JLToast.makeText("Incorrect: \(correctAnswer!)").show()
             }
-            readFile()
+            newQuestion()
         }
-        
-        qnumLabel.text = "\(questionNumber)/\(questionNum)"
-        
     }
     
+    //Calculate total time took during test and transition to end of test screen.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         time = Double(round(1000*time)/1000)
         let minutes = UInt8(time/60.0)
