@@ -30,9 +30,6 @@ class MathTestController: UIViewController {
     var startTime: NSTimeInterval = 0.0
     
 
-    
-    
-    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var qnumLabel: UILabel!

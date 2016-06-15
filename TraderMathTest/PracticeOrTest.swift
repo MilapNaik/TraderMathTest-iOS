@@ -12,7 +12,6 @@ import UIKit
 class PoTController: UIViewController {
     
     // MARK: Properties
-    var testType:String?
     var PoT:String?
     
     // Preferences for Practice or Test
@@ -29,8 +28,8 @@ class PoTController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
 }
-
-// MARK: UITextFieldDelegate
+  
+    // MARK: Actions
 
     @IBAction func PracticeButton(sender: UIButton) {
         preferences.setObject("Practice", forKey: PoTKey)
@@ -38,26 +37,6 @@ class PoTController: UIViewController {
     @IBAction func TestButton(sender: UIButton) {
         preferences.setObject("Test", forKey: PoTKey)
     }
-
-
-
-
-// MARK: Actions
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
-        if (segue.identifier == "goestoCountdownPractice") {
-            let secondViewController = segue.destinationViewController as! CountdownController
-            //let testType = sender as! String
-            secondViewController.testType = testType
-        }
-        
-        if (segue.identifier == "goestoCountdownTest") {
-            let secondViewController = segue.destinationViewController as! CountdownController
-            //let testType = sender as! String
-            secondViewController.testType = testType
-        }
-    }
-
 
 }
 

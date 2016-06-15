@@ -28,30 +28,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: UITextFieldDelegate
-
-    
- 
 
     // MARK: Actions
-
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
         if (segue.identifier == "goestoPoTMath") {
             testType = "MATH"
-            let secondViewController = segue.destinationViewController as! PoTController
-            //let testType = sender as String
-            secondViewController.testType = testType
         }
         
         if (segue.identifier == "goestoPoTSeq") {
             testType = "SEQ"
-            let secondViewController = segue.destinationViewController as! PoTController
-            //let testType = sender as String
-            secondViewController.testType = testType
         }
         preferences.setObject(testType, forKey: testtypeKey)
     }

@@ -35,6 +35,9 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var correctAnswers: UILabel!
     @IBOutlet weak var finishTime: UILabel!
     
+    @IBOutlet weak var Test: UILabel!
+    @IBOutlet weak var Leaderboard: UILabel!
+    
     @IBOutlet var tableView: UITableView!
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -65,6 +68,12 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
         readUserDefaults()
         addhighscore()
         loadhighscores()
+        
+        testType = testType.capitalizedString
+        difficulty = difficulty.capitalizedString
+        
+        Test.text = "\(testType) \(PoT)"
+        Leaderboard.text = "\(questionNum) \(difficulty) Questions"
     }
     
     override func viewDidAppear(animated: Bool) {

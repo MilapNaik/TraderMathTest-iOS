@@ -13,13 +13,32 @@ class CountdownController: UIViewController {
     
     // MARK: Properties
     @IBOutlet weak var countDownLabel: UILabel!
+    @IBOutlet weak var Test: UILabel!
+    @IBOutlet weak var Leaderboard: UILabel!
     
     var timer:NSTimer?
     var count = 3
-    var testType:String?
+
+    
+    let preferences = NSUserDefaults.standardUserDefaults()
+    let difficultyKey = "Difficulty"
+    let questionnumKey = "QuestionNum"
+    let PoTKey = "PoT"
+    let testtypeKey = "TestType"
+    var difficulty: String = "EASY"
+    var questionNum: Int = 5
+    var PoT:String = "Practice"
+    var testType:String = "MATH"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        readUserDefaults()
+        testType = testType.capitalizedString
+        difficulty = difficulty.capitalizedString
+        
+        Test.text = "\(testType) \(PoT)"
+        Leaderboard.text = "\(questionNum) \(difficulty) Questions"
         
         dispatch_async(dispatch_get_main_queue()) {
             self.timer = NSTimer(timeInterval: 1.0, target: self, selector: #selector(CountdownController.update), userInfo: nil, repeats: true)
@@ -44,19 +63,23 @@ class CountdownController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    // MARK: Actions
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
-        if (segue.identifier == "goestoMathTest") {
-            let secondViewController = segue.destinationViewController as! MathTestController
-            //let testType = sender as String
-            secondViewController.testType = testType!
-            
-            
+    // Read user defaults. If none exist, they are set to Easy and 5 questions
+    func readUserDefaults(){
+        testType = preferences.stringForKey(testtypeKey)! ?? "MATH"
+        difficulty = preferences.stringForKey(difficultyKey)! ?? "EASY"
+        PoT = preferences.stringForKey(PoTKey)! ?? "Practice"
+        if PoT == "Test"{
+            if testType == "SEQ"{
+                questionNum = 50
+            }
+            else{
+                questionNum = 80
+            }
         }
+        else{
+            questionNum = preferences.integerForKey(questionnumKey) ?? 5
+        }
+        
     }
-    
     
 }
