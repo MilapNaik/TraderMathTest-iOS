@@ -96,9 +96,9 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
                 
         for row in result
         {
-            bestScore[i] = row["Score"]! as! String
+            bestScore[i] = String(row["Score"]!)
             print(bestScore[i])
-            bestTime[i] = row["Time"]! as! String
+            bestTime[i] = String(row["Time"]!)
             print(bestTime[i])
                     
             i += 1
