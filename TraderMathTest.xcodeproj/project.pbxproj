@@ -35,8 +35,8 @@
 		81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26671CF4DFC2001DE1D0 /* Countdown.swift */; };
 		81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26691CF4E4B6001DE1D0 /* MathTest.swift */; };
 		81AA522D1CF5ED820078D58B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA522C1CF5ED820078D58B /* Question.swift */; };
-		81EF87131D0FCDEE0038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87121D0FCDEE0038A38C /* easymath.txt */; };
 		81EF87151D10E2310038A38C /* highscores.db in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87141D10E2310038A38C /* highscores.db */; };
+		81EF87171D110A090038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87161D110A090038A38C /* easymath.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +99,8 @@
 		81AA26671CF4DFC2001DE1D0 /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		81AA26691CF4E4B6001DE1D0 /* MathTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTest.swift; sourceTree = "<group>"; };
 		81AA522C1CF5ED820078D58B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		81EF87121D0FCDEE0038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easymath.txt; sourceTree = "<group>"; };
 		81EF87141D10E2310038A38C /* highscores.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = highscores.db; sourceTree = "<group>"; };
+		81EF87161D110A090038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easymath.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 				81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */,
 				81A4C8011CFBBE63007D4C3C /* hardmath.txt */,
 				81A4C8021CFBBE63007D4C3C /* mediummath.txt */,
-				81EF87121D0FCDEE0038A38C /* easymath.txt */,
+				81EF87161D110A090038A38C /* easymath.txt */,
 				81A89F0F1CEB995600B2838A /* TraderMathTest */,
 				81A89F251CEB995600B2838A /* TraderMathTestTests */,
 				81A89F0E1CEB995600B2838A /* Products */,
@@ -290,13 +290,13 @@
 			files = (
 				81A89F181CEB995600B2838A /* Main.storyboard in Resources */,
 				81A4C81F1CFE73CE007D4C3C /* hardseq.txt in Resources */,
+				81EF87171D110A090038A38C /* easymath.txt in Resources */,
 				81A89F1A1CEB995600B2838A /* Images.xcassets in Resources */,
 				81A4C8201CFE73CE007D4C3C /* mediumseq.txt in Resources */,
 				81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */,
 				81A4C81E1CFE73CE007D4C3C /* easyseq.txt in Resources */,
 				81EF87151D10E2310038A38C /* highscores.db in Resources */,
 				81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */,
-				81EF87131D0FCDEE0038A38C /* easymath.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
