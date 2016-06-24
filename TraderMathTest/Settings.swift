@@ -34,7 +34,9 @@ class SettingsController: UIViewController {
     }
     
     func readUserDefaults(){
-        difficulty = preferences.stringForKey(difficultyKey) ?? "EASY"
+        if preferences.stringForKey(difficultyKey) != nil{
+            difficulty = preferences.stringForKey(difficultyKey)!
+        }
         
     }
     

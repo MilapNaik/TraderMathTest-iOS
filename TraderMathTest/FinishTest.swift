@@ -101,14 +101,11 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func loadhighscores(){
         let result = db.query("SELECT * from \(difficulty)_\(testType)_\(questionNum) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
-        print("===============================")
                 
         for row in result
         {
             bestScore[i] = String(row["Score"]!)
-            print(bestScore[i])
             bestTime[i] = String(row["Time"]!)
-            print(bestTime[i])
                     
             i += 1
         }
@@ -116,9 +113,18 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // Read user defaults. If none exist, they are set to Easy and 5 questions
     func readUserDefaults(){
-        testType = preferences.stringForKey(testtypeKey)! ?? "MATH"
-        difficulty = preferences.stringForKey(difficultyKey)! ?? "EASY"
-        PoT = preferences.stringForKey(PoTKey)! ?? "Practice"
+        if preferences.stringForKey(testtypeKey) != nil{
+            testType = preferences.stringForKey(testtypeKey)!
+        }
+        
+        if preferences.stringForKey(difficultyKey) != nil{
+            difficulty = preferences.stringForKey(difficultyKey)!
+        }
+        
+        if preferences.stringForKey(PoTKey) != nil{
+            PoT = preferences.stringForKey(PoTKey)!
+        }
+        
         if PoT == "Test"{
             if testType == "SEQ"{
                 questionNum = 50
@@ -128,11 +134,14 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         else{
-            questionNum = preferences.integerForKey(questionnumKey) ?? 5
+            if preferences.integerForKey(questionnumKey) == 0{
+                questionNum = 5
+            }
+            else {
+                questionNum = preferences.integerForKey(questionnumKey)
+            }
         }
-
+        
     }
-
-    
-}
+} //EOF
     
