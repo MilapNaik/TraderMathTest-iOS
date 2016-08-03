@@ -123,6 +123,8 @@ class MathTestController: UIViewController {
         correctAnswer = myQuestions[randomIndex + 1]
         
         qnumLabel.text = "\(questionNumber)/\(questionNum)"
+        answerLabel.text = ""
+        
     }
     
 
@@ -170,6 +172,7 @@ class MathTestController: UIViewController {
     @IBAction func clearButton(sender: UIButton) {
         answerLabel.text = ""
     }
+    
     @IBAction func enterButton(sender: UIButton) {
         answer = answerLabel.text
         questionNumber += 1
@@ -178,11 +181,7 @@ class MathTestController: UIViewController {
         answerDouble = (answer! as NSString).doubleValue
         correctAnswerDouble = (correctAnswer! as NSString).doubleValue
         
-        if questionNumber > questionNum{
-            time = NSDate.timeIntervalSinceReferenceDate() - startTime
-            self.performSegueWithIdentifier("goestoFinishTest", sender: highscore)
-        }
-        else {
+        if questionNumber <= questionNum{
             if correctAnswerDouble == answerDouble{
                 JLToast.makeText("Correct!").show()
                 highscore += 1
@@ -191,6 +190,12 @@ class MathTestController: UIViewController {
                 JLToast.makeText("Incorrect: \(correctAnswer!)").show()
             }
             newQuestion()
+            
+        }
+        else {
+            
+            time = NSDate.timeIntervalSinceReferenceDate() - startTime
+            self.performSegueWithIdentifier("goestoFinishTest", sender: highscore)
         }
     }
     

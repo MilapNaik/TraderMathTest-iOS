@@ -90,10 +90,18 @@
                             <constraint firstItem="l7B-hB-QtB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fVQ-vl-wmg"/>
                             <constraint firstItem="ZSD-wv-Iy5" firstAttribute="top" secondItem="UqA-M4-0sI" secondAttribute="top" id="gI9-zD-HBR"/>
                             <constraint firstItem="NmA-9n-Rtm" firstAttribute="trailing" secondItem="8AQ-sp-SX9" secondAttribute="trailing" id="h7R-sl-9CT"/>
+                            <constraint firstItem="NmA-9n-Rtm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="15" id="hTy-pw-cNM"/>
                             <constraint firstItem="8AQ-sp-SX9" firstAttribute="top" secondItem="NmA-9n-Rtm" secondAttribute="bottom" id="kkA-Zc-btE"/>
                             <constraint firstItem="NmA-9n-Rtm" firstAttribute="leading" secondItem="l7B-hB-QtB" secondAttribute="leading" id="m6u-Wr-Sap"/>
+                            <constraint firstItem="NmA-9n-Rtm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oyH-oa-xUF"/>
                             <constraint firstItem="l7B-hB-QtB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sTS-li-uiI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dTg-1N-8Oi"/>
+                                <exclude reference="oyH-oa-xUF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="Info" destination="UqA-M4-0sI" id="Wr5-Qn-CHH"/>
@@ -179,7 +187,7 @@
                                     <constraint firstAttribute="height" constant="21" id="i6t-EQ-XnE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJY-kr-1UL">
@@ -190,7 +198,7 @@
                                     <constraint firstAttribute="height" constant="21" id="gg9-9Q-KOK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -629,7 +637,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wQ-u7-tnJ">
                                                     <rect key="frame" x="506" y="6" width="46" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -684,7 +692,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="hxs-Sg-M8U"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -699,7 +707,7 @@
                                     <constraint firstAttribute="width" constant="300" id="xpA-2F-Mpq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1318,8 +1326,8 @@
         <image name="Settings" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DbL-KR-rWH"/>
         <segue reference="caa-ug-K1N"/>
-        <segue reference="qkA-P5-P8m"/>
+        <segue reference="Kfy-cF-ecq"/>
+        <segue reference="DbL-KR-rWH"/>
     </inferredMetricsTieBreakers>
 </document>
