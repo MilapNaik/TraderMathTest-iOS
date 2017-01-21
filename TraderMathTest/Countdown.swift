@@ -16,11 +16,11 @@ class CountdownController: UIViewController {
     @IBOutlet weak var Test: UILabel!
     @IBOutlet weak var Leaderboard: UILabel!
     
-    var timer:NSTimer?
+    var timer:Timer?
     var count = 3
 
     
-    let preferences = NSUserDefaults.standardUserDefaults()
+    let preferences = UserDefaults.standard
     let difficultyKey = "Difficulty"
     let questionnumKey = "QuestionNum"
     let PoTKey = "PoT"
@@ -34,15 +34,15 @@ class CountdownController: UIViewController {
         super.viewDidLoad()
         
         readUserDefaults()
-        testType = testType.capitalizedString
-        difficulty = difficulty.capitalizedString
+        testType = testType.capitalized
+        difficulty = difficulty.capitalized
         
         Test.text = "\(testType) \(PoT)"
         Leaderboard.text = "\(questionNum) \(difficulty) Questions"
         
-        dispatch_async(dispatch_get_main_queue()) {
-            self.timer = NSTimer(timeInterval: 1.0, target: self, selector: #selector(CountdownController.update), userInfo: nil, repeats: true)
-            NSRunLoop.currentRunLoop().addTimer(self.timer!, forMode: NSRunLoopCommonModes)
+        DispatchQueue.main.async {
+            self.timer = Timer(timeInterval: 1.0, target: self, selector: #selector(CountdownController.update), userInfo: nil, repeats: true)
+            RunLoop.current.add(self.timer!, forMode: RunLoopMode.commonModes)
         }
     }
     
@@ -54,7 +54,7 @@ class CountdownController: UIViewController {
         }
         else {
             timer!.invalidate()
-        self.performSegueWithIdentifier("goestoMathTest", sender: self)
+        self.performSegue(withIdentifier: "goestoMathTest", sender: self)
         }
     }
     
@@ -65,16 +65,16 @@ class CountdownController: UIViewController {
     
     // Read user defaults. If none exist, they are set to Easy and 5 questions
     func readUserDefaults(){
-        if preferences.stringForKey(testtypeKey) != nil{
-            testType = preferences.stringForKey(testtypeKey)!
+        if preferences.string(forKey: testtypeKey) != nil{
+            testType = preferences.string(forKey: testtypeKey)!
         }
 
-        if preferences.stringForKey(difficultyKey) != nil{
-            difficulty = preferences.stringForKey(difficultyKey)!
+        if preferences.string(forKey: difficultyKey) != nil{
+            difficulty = preferences.string(forKey: difficultyKey)!
         }
         
-        if preferences.stringForKey(PoTKey) != nil{
-            PoT = preferences.stringForKey(PoTKey)!
+        if preferences.string(forKey: PoTKey) != nil{
+            PoT = preferences.string(forKey: PoTKey)!
         }
         
         if PoT == "Test"{
@@ -86,11 +86,11 @@ class CountdownController: UIViewController {
             }
         }
         else{
-            if preferences.integerForKey(questionnumKey) == 0{
+            if preferences.integer(forKey: questionnumKey) == 0{
                 questionNum = 5
             }
             else {
-                questionNum = preferences.integerForKey(questionnumKey)
+                questionNum = preferences.integer(forKey: questionnumKey)
             }
         }
         

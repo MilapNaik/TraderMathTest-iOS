@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class ViewController: UIViewController {
     
     // MARK: Properties
-    let preferences = NSUserDefaults.standardUserDefaults()
+    let preferences = UserDefaults.standard
     let testtypeKey = "TestType"
     var testType:String?
 
@@ -31,16 +32,22 @@ class ViewController: UIViewController {
 
     // MARK: Actions
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         
         if (segue.identifier == "goestoPoTMath") {
             testType = "MATH"
+            let title = "Math"
+            FIRAnalytics.logEvent( withName: kFIREventSelectContent, parameters: [
+                kFIRParameterItemID: "id-\(title)" as NSObject,
+                kFIRParameterItemName: title as NSObject,
+                kFIRParameterContentType: "cont" as NSObject
+                ])
         }
         
         if (segue.identifier == "goestoPoTSeq") {
             testType = "SEQ"
         }
-        preferences.setObject(testType, forKey: testtypeKey)
+        preferences.set(testType, forKey: testtypeKey)
     }
 
     

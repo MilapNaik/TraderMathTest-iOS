@@ -12,8 +12,17 @@
 		81690D701D0C9A8000787F1D /* JLToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81690D6F1D0C9A8000787F1D /* JLToastWindow.swift */; };
 		818520661CF3EB4900063BFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520651CF3EB4900063BFC /* Settings.swift */; };
 		818520681CF3ED3C00063BFC /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520671CF3ED3C00063BFC /* Info.swift */; };
+		8188AAC61E30838200489281 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AAC51E30838200489281 /* GoogleMobileAds.framework */; };
+		8188AAE11E30845000489281 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AADB1E30845000489281 /* FirebaseAnalytics.framework */; };
+		8188AAE21E30845000489281 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AADC1E30845000489281 /* FirebaseCore.framework */; };
+		8188AAE31E30845000489281 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AADD1E30845000489281 /* FirebaseInstanceID.framework */; };
+		8188AAE41E30845000489281 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AADE1E30845000489281 /* GoogleInterchangeUtilities.framework */; };
+		8188AAE51E30845000489281 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AADF1E30845000489281 /* GoogleSymbolUtilities.framework */; };
+		8188AAE61E30845000489281 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AAE01E30845000489281 /* GoogleToolboxForMac.framework */; };
+		8188AAE81E30847E00489281 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AAE71E30847E00489281 /* FirebaseMessaging.framework */; };
 		818B534F1CF6CC350085346A /* FinishTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B534E1CF6CC350085346A /* FinishTest.swift */; };
 		819347CA1D022033002EA835 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819347C91D022033002EA835 /* TableViewCell.swift */; };
+		8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8199DF471E341A68006E95CE /* GoogleService-Info.plist */; };
 		81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8011CFBBE63007D4C3C /* hardmath.txt */; };
 		81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8021CFBBE63007D4C3C /* mediummath.txt */; };
 		81A4C8131CFDE4AD007D4C3C /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */; };
@@ -55,8 +64,18 @@
 		81690D6F1D0C9A8000787F1D /* JLToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastWindow.swift; sourceTree = "<group>"; };
 		818520651CF3EB4900063BFC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		818520671CF3ED3C00063BFC /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		8188AAC11E307F3600489281 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = ../../../Downloads/Firebase/Firebase.h; sourceTree = "<group>"; };
+		8188AAC51E30838200489281 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		8188AADB1E30845000489281 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		8188AADC1E30845000489281 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		8188AADD1E30845000489281 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		8188AADE1E30845000489281 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		8188AADF1E30845000489281 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		8188AAE01E30845000489281 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		8188AAE71E30847E00489281 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseMessaging.framework; sourceTree = "<group>"; };
 		818B534E1CF6CC350085346A /* FinishTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishTest.swift; sourceTree = "<group>"; };
 		819347C91D022033002EA835 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../TableViewCell.swift; sourceTree = "<group>"; };
+		8199DF471E341A68006E95CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81A4C8011CFBBE63007D4C3C /* hardmath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardmath.txt; sourceTree = "<group>"; };
 		81A4C8021CFBBE63007D4C3C /* mediummath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediummath.txt; sourceTree = "<group>"; };
 		81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -93,7 +112,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8188AAE21E30845000489281 /* FirebaseCore.framework in Frameworks */,
+				8188AAC61E30838200489281 /* GoogleMobileAds.framework in Frameworks */,
+				8188AAE31E30845000489281 /* FirebaseInstanceID.framework in Frameworks */,
+				8188AAE51E30845000489281 /* GoogleSymbolUtilities.framework in Frameworks */,
+				8188AAE41E30845000489281 /* GoogleInterchangeUtilities.framework in Frameworks */,
+				8188AAE61E30845000489281 /* GoogleToolboxForMac.framework in Frameworks */,
+				8188AAE81E30847E00489281 /* FirebaseMessaging.framework in Frameworks */,
 				81690D6C1D0C986800787F1D /* libsqlite3.0.tbd in Frameworks */,
+				8188AAE11E30845000489281 /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +137,14 @@
 		81A89F041CEB995600B2838A = {
 			isa = PBXGroup;
 			children = (
+				8188AAE71E30847E00489281 /* FirebaseMessaging.framework */,
+				8188AADB1E30845000489281 /* FirebaseAnalytics.framework */,
+				8188AADC1E30845000489281 /* FirebaseCore.framework */,
+				8188AADD1E30845000489281 /* FirebaseInstanceID.framework */,
+				8188AADE1E30845000489281 /* GoogleInterchangeUtilities.framework */,
+				8188AADF1E30845000489281 /* GoogleSymbolUtilities.framework */,
+				8188AAE01E30845000489281 /* GoogleToolboxForMac.framework */,
+				8188AAC51E30838200489281 /* GoogleMobileAds.framework */,
 				81582D5A1D0DFDF00089C2E1 /* DLRadioButton.framework */,
 				81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */,
 				81EF87141D10E2310038A38C /* highscores.db */,
@@ -119,6 +154,7 @@
 				81A4C8011CFBBE63007D4C3C /* hardmath.txt */,
 				81A4C8021CFBBE63007D4C3C /* mediummath.txt */,
 				81EF87161D110A090038A38C /* easymath.txt */,
+				8199DF471E341A68006E95CE /* GoogleService-Info.plist */,
 				81A89F0F1CEB995600B2838A /* TraderMathTest */,
 				81A89F251CEB995600B2838A /* TraderMathTestTests */,
 				81A89F0E1CEB995600B2838A /* Products */,
@@ -137,6 +173,7 @@
 		81A89F0F1CEB995600B2838A /* TraderMathTest */ = {
 			isa = PBXGroup;
 			children = (
+				8188AAC11E307F3600489281 /* Firebase.h */,
 				81A4C8421CFF427C007D4C3C /* DLRadioButton.h */,
 				81A4C8431CFF427C007D4C3C /* DLRadioButton.m */,
 				81A4C8251CFEB2BF007D4C3C /* JLToast.h */,
@@ -235,15 +272,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Gamelap Studios";
 				TargetAttributes = {
 					81A89F0C1CEB995600B2838A = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 5CUMW2JF9P;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 					};
 					81A89F211CEB995600B2838A = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5CUMW2JF9P;
+						LastSwiftMigration = 0820;
 						TestTargetID = 81A89F0C1CEB995600B2838A;
 					};
 				};
@@ -279,6 +320,7 @@
 				81A4C8201CFE73CE007D4C3C /* mediumseq.txt in Resources */,
 				81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */,
 				81A4C81E1CFE73CE007D4C3C /* easyseq.txt in Resources */,
+				8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */,
 				81EF87151D10E2310038A38C /* highscores.db in Resources */,
 				81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */,
 			);
@@ -362,11 +404,14 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -409,8 +454,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Milap Naik (5CUMW2JF9P)";
@@ -431,6 +478,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -439,22 +487,32 @@
 		81A89F2D1CEB995600B2838A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Milap Naik (N3P8GD663F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Milap Naik (N3P8GD663F)";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DEVELOPMENT_TEAM = 5CUMW2JF9P;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TraderMathTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.milapnaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTest;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "801f4a8a-1b9a-4cbb-98e4-f5e1dcab818b";
+				PROVISIONING_PROFILE_SPECIFIER = "Trader Math Test Development";
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTest/TraderMathTest/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -462,22 +520,33 @@
 		81A89F2E1CEB995600B2838A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Milap Naik (5CUMW2JF9P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Milap Naik (5CUMW2JF9P)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Milap Naik (N3P8GD663F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DEVELOPMENT_TEAM = 5CUMW2JF9P;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TraderMathTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
+				"OTHER_LDFLAGS[arch=*]" = " $(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.milapnaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTest;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "801f4a8a-1b9a-4cbb-98e4-f5e1dcab818b";
+				PROVISIONING_PROFILE_SPECIFIER = "Trader Math Test Development";
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTest/TraderMathTest/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -486,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5CUMW2JF9P;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -495,6 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTestTests;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraderMathTest.app/TraderMathTest";
 			};
 			name = Debug;
@@ -508,6 +579,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTestTests;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraderMathTest.app/TraderMathTest";
 			};
 			name = Release;

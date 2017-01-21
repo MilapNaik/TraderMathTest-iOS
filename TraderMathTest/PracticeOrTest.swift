@@ -15,7 +15,7 @@ class PoTController: UIViewController {
     var PoT:String?
     
     // Preferences for Practice or Test
-    let preferences = NSUserDefaults.standardUserDefaults()
+    let preferences = UserDefaults.standard
     let PoTKey = "PoT"
     
     
@@ -31,11 +31,11 @@ class PoTController: UIViewController {
   
     // MARK: Actions
 
-    @IBAction func PracticeButton(sender: UIButton) {
-        preferences.setObject("Practice", forKey: PoTKey)
+    @IBAction func PracticeButton(_ sender: UIButton) {
+        preferences.set("Practice", forKey: PoTKey)
     }
-    @IBAction func TestButton(sender: UIButton) {
-        preferences.setObject("Test", forKey: PoTKey)
+    @IBAction func TestButton(_ sender: UIButton) {
+        preferences.set("Test", forKey: PoTKey)
     }
 
 }

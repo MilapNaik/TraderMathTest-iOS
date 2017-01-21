@@ -25,16 +25,16 @@ class MathTestController: UIViewController {
     var highscore:Int = 0
     
     var finishtime:String = "0"
-    var timer = NSTimer()
+    var timer = Timer()
     var time: Double = 0
-    var startTime: NSTimeInterval = 0.0
+    var startTime: TimeInterval = 0.0
     
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var qnumLabel: UILabel!
     
-    let preferences = NSUserDefaults.standardUserDefaults()
+    let preferences = UserDefaults.standard
     let difficultyKey = "Difficulty"
     let questionnumKey = "QuestionNum"
     let PoTKey = "PoT"
@@ -51,11 +51,11 @@ class MathTestController: UIViewController {
     }
     
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         readUserDefaults()
         readFile()
         qnumLabel.text = "\(questionNumber)/\(questionNum)"
-        startTime = NSDate.timeIntervalSinceReferenceDate()
+        startTime = Date.timeIntervalSinceReferenceDate
         
     }
     
@@ -68,16 +68,16 @@ class MathTestController: UIViewController {
     
     // Read user defaults. If none exist, they are set to Easy and 5 questions
     func readUserDefaults(){
-        if preferences.stringForKey(testtypeKey) != nil{
-            testType = preferences.stringForKey(testtypeKey)!
+        if preferences.string(forKey: testtypeKey) != nil{
+            testType = preferences.string(forKey: testtypeKey)!
         }
         
-        if preferences.stringForKey(difficultyKey) != nil{
-            difficulty = preferences.stringForKey(difficultyKey)!
+        if preferences.string(forKey: difficultyKey) != nil{
+            difficulty = preferences.string(forKey: difficultyKey)!
         }
         
-        if preferences.stringForKey(PoTKey) != nil{
-            PoT = preferences.stringForKey(PoTKey)!
+        if preferences.string(forKey: PoTKey) != nil{
+            PoT = preferences.string(forKey: PoTKey)!
         }
         
         if PoT == "Test"{
@@ -89,11 +89,11 @@ class MathTestController: UIViewController {
             }
         }
         else{
-            if preferences.integerForKey(questionnumKey) == 0{
+            if preferences.integer(forKey: questionnumKey) == 0{
                 questionNum = 5
             }
             else {
-                questionNum = preferences.integerForKey(questionnumKey)
+                questionNum = preferences.integer(forKey: questionnumKey)
             }
         }
         
@@ -101,13 +101,13 @@ class MathTestController: UIViewController {
     
     // Read selected file
     func readFile(){
-        filename = difficulty.lowercaseString + testType.lowercaseString
+        filename = difficulty.lowercased() + testType.lowercased()
 
             
-        if let path = NSBundle.mainBundle().pathForResource(filename, ofType: "txt"){
+        if let path = Bundle.main.path(forResource: filename, ofType: "txt"){
             do {
-                let data = try String(contentsOfFile:path, encoding: NSUTF8StringEncoding)
-                myQuestions = data.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
+                myQuestions = data.components(separatedBy: CharacterSet.newlines)
                 
                 newQuestion()
                 
@@ -129,51 +129,51 @@ class MathTestController: UIViewController {
     
 
     // MARK: Actions
-    @IBAction func n1Button(sender: UIButton) {
+    @IBAction func n1Button(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "1"
     }
-    @IBAction func n2Button(sender: UIButton) {
+    @IBAction func n2Button(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "2"
     }
-    @IBAction func n3Button(sender: UIButton) {
+    @IBAction func n3Button(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "3"
     }
-    @IBAction func n4Button(sender: UIButton) {
+    @IBAction func n4Button(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "4"
     }
-    @IBAction func n5Button(sender: UIButton) {
+    @IBAction func n5Button(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "5"
     }
-    @IBAction func n6Button(sender: UIButton) {
+    @IBAction func n6Button(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "6"
     }
-    @IBAction func n7Button(sender: UIButton) {
+    @IBAction func n7Button(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "7"
     }
-    @IBAction func n8Button(sender: UIButton) {
+    @IBAction func n8Button(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "8"
     }
-    @IBAction func n9Button(sender: UIButton) {
+    @IBAction func n9Button(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "9"
     }
-    @IBAction func n0Button(sender: UIButton) {
+    @IBAction func n0Button(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "0"
     }
-    @IBAction func ndotButton(sender: UIButton) {
+    @IBAction func ndotButton(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "."
     }
-    @IBAction func ndashButton(sender: UIButton) {
+    @IBAction func ndashButton(_ sender: UIButton) {
         answerLabel.text = answerLabel.text! + "-"
     }
 
     
     
     
-    @IBAction func clearButton(sender: UIButton) {
+    @IBAction func clearButton(_ sender: UIButton) {
         answerLabel.text = ""
     }
     
-    @IBAction func enterButton(sender: UIButton) {
+    @IBAction func enterButton(_ sender: UIButton) {
         answer = answerLabel.text
         questionNumber += 1
         
@@ -194,21 +194,21 @@ class MathTestController: UIViewController {
         }
         else {
             
-            time = NSDate.timeIntervalSinceReferenceDate() - startTime
-            self.performSegueWithIdentifier("goestoFinishTest", sender: highscore)
+            time = Date.timeIntervalSinceReferenceDate - startTime
+            self.performSegue(withIdentifier: "goestoFinishTest", sender: highscore)
         }
     }
     
     //Calculate total time took during test and transition to end of test screen.
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         time = Double(round(1000*time)/1000)
         let minutes = UInt8(time/60.0)
         let seconds = UInt8(time) - (minutes*60)
-        let milliseconds = Int((time*1000) % 1000)
+        let milliseconds = Int((time*1000).truncatingRemainder(dividingBy: 1000))
         finishtime = String(format: "%02d:%02d.%03d", minutes, seconds, milliseconds)
         
         if (segue.identifier == "goestoFinishTest") {
-            let secondViewController = segue.destinationViewController as! FinishTestController
+            let secondViewController = segue.destination as! FinishTestController
             let highscore = sender as! Int
             secondViewController.highscore = highscore
             secondViewController.finishtime = "\(finishtime)"

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
 
 class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -16,12 +17,12 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     var highscore:Int?
     var finishtime:String?
     
-    let db = SQLiteDB.sharedInstance()
+    let db = SQLiteDB.sharedInstance
     var bestRank: [String] = ["1", "2", "3", "4", "5"]
     var bestScore: [String] = ["-----", "-----", "-----", "-----", "-----"]
     var bestTime: [String] = ["-----", "-----", "-----", "-----", "-----"]
     
-    let preferences = NSUserDefaults.standardUserDefaults()
+    let preferences = UserDefaults.standard
     let difficultyKey = "Difficulty"
     let questionnumKey = "QuestionNum"
     let PoTKey = "PoT"
@@ -31,6 +32,7 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     var PoT:String = "Practice"
     var testType:String = "MATH"
 
+    @IBOutlet weak var bannerView: GADBannerView!
 
     @IBOutlet weak var correctAnswers: UILabel!
     @IBOutlet weak var finishTime: UILabel!
@@ -40,16 +42,16 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet var tableView: UITableView!
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bestRank.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
         cell.column1.text = self.bestRank[indexPath.row]
         cell.column2.text = self.bestScore[indexPath.row]
@@ -58,25 +60,29 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //Real Ad unit: ca-app-pub-3095210410543033/2188670103
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
         readUserDefaults()
         addhighscore()
         loadhighscores()
         
-        testType = testType.capitalizedString
-        difficulty = difficulty.capitalizedString
+        testType = testType.capitalized
+        difficulty = difficulty.capitalized
         
         Test.text = "\(testType) \(PoT)"
         Leaderboard.text = "\(questionNum) \(difficulty) Questions"
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         correctAnswers.text = "Score: \(highscore!)"
         finishTime.text = "Time: \(finishtime!)"
         
@@ -89,23 +95,23 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     // MARK: Actions
-    @IBAction func Menu(sender: UIButton) {
-        self.performSegueWithIdentifier("goestoMenu", sender: self)
+    @IBAction func Menu(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goestoMenu", sender: self)
     }
     
     
     func addhighscore(){
-        db.execute("INSERT INTO \(difficulty)_\(testType)_\(questionNum) (Score, Time) Values ('\(highscore!)', '\(finishtime!)'); ", parameters:nil)
+        db.execute(sql: "INSERT INTO \(difficulty)_\(testType)_\(questionNum) (Score, Time) Values ('\(highscore!)', '\(finishtime!)'); ", parameters:nil)
 
     }
     
     func loadhighscores(){
-        let result = db.query("SELECT * from \(difficulty)_\(testType)_\(questionNum) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
+        let result = db.query(sql: "SELECT * from \(difficulty)_\(testType)_\(questionNum) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
                 
         for row in result
         {
-            bestScore[i] = String(row["Score"]!)
-            bestTime[i] = String(row["Time"]!)
+            bestScore[i] = String(describing: row["Score"]!)
+            bestTime[i] = String(describing: row["Time"]!)
                     
             i += 1
         }
@@ -113,16 +119,16 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // Read user defaults. If none exist, they are set to Easy and 5 questions
     func readUserDefaults(){
-        if preferences.stringForKey(testtypeKey) != nil{
-            testType = preferences.stringForKey(testtypeKey)!
+        if preferences.string(forKey: testtypeKey) != nil{
+            testType = preferences.string(forKey: testtypeKey)!
         }
         
-        if preferences.stringForKey(difficultyKey) != nil{
-            difficulty = preferences.stringForKey(difficultyKey)!
+        if preferences.string(forKey: difficultyKey) != nil{
+            difficulty = preferences.string(forKey: difficultyKey)!
         }
         
-        if preferences.stringForKey(PoTKey) != nil{
-            PoT = preferences.stringForKey(PoTKey)!
+        if preferences.string(forKey: PoTKey) != nil{
+            PoT = preferences.string(forKey: PoTKey)!
         }
         
         if PoT == "Test"{
@@ -134,11 +140,11 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         else{
-            if preferences.integerForKey(questionnumKey) == 0{
+            if preferences.integer(forKey: questionnumKey) == 0{
                 questionNum = 5
             }
             else {
-                questionNum = preferences.integerForKey(questionnumKey)
+                questionNum = preferences.integer(forKey: questionnumKey)
             }
         }
         

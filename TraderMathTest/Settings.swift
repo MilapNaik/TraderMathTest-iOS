@@ -13,7 +13,7 @@ class SettingsController: UIViewController {
     // MARK: Properties
     
     // Preferences for difficulty level of questions
-    let preferences = NSUserDefaults.standardUserDefaults()
+    let preferences = UserDefaults.standard
     let difficultyKey = "Difficulty"
     let questionnumKey = "QuestionNum"
     var difficulty: String = "EASY"
@@ -34,21 +34,21 @@ class SettingsController: UIViewController {
     }
     
     func readUserDefaults(){
-        if preferences.stringForKey(difficultyKey) != nil{
-            difficulty = preferences.stringForKey(difficultyKey)!
+        if preferences.string(forKey: difficultyKey) != nil{
+            difficulty = preferences.string(forKey: difficultyKey)!
         }
         
     }
     
     func setDifficulty(){
         if difficulty == "HARD"{
-            Hard.selected = true
+            Hard.isSelected = true
         }
         else if difficulty == "MEDIUM"{
-            Medium.selected = true
+            Medium.isSelected = true
         }
         else{
-            Easy.selected = true
+            Easy.isSelected = true
         }
         
     }
@@ -60,31 +60,31 @@ class SettingsController: UIViewController {
     
     
     // MARK: Actions
-    @IBAction func easyButton(sender: DLRadioButton) {
-        preferences.setObject("EASY", forKey: difficultyKey)
+    @IBAction func easyButton(_ sender: DLRadioButton) {
+        preferences.set("EASY", forKey: difficultyKey)
         JLToast.makeText("Difficulty: Easy").show()
     }
     
-    @IBAction func mediumButton(sender: DLRadioButton) {
-        preferences.setObject("MEDIUM", forKey: difficultyKey)
+    @IBAction func mediumButton(_ sender: DLRadioButton) {
+        preferences.set("MEDIUM", forKey: difficultyKey)
         JLToast.makeText("Difficulty: Medium").show()
     }
     
-    @IBAction func hardButton(sender: DLRadioButton) {
-        preferences.setObject("HARD", forKey: difficultyKey)
+    @IBAction func hardButton(_ sender: DLRadioButton) {
+        preferences.set("HARD", forKey: difficultyKey)
         JLToast.makeText("Difficulty: Hard").show()
     }
     
-    @IBAction func fiveButton(sender: UIButton) {
-        preferences.setInteger(5, forKey: questionnumKey)
+    @IBAction func fiveButton(_ sender: UIButton) {
+        preferences.set(5, forKey: questionnumKey)
         JLToast.makeText("Set to 5 questions").show()
     }
-    @IBAction func tenButton(sender: UIButton) {
-        preferences.setInteger(10, forKey: questionnumKey)
+    @IBAction func tenButton(_ sender: UIButton) {
+        preferences.set(10, forKey: questionnumKey)
         JLToast.makeText("Set to 10 questions").show()
     }
-    @IBAction func twentyButton(sender: UIButton) {
-        preferences.setInteger(20, forKey: questionnumKey)
+    @IBAction func twentyButton(_ sender: UIButton) {
+        preferences.set(20, forKey: questionnumKey)
         JLToast.makeText("Set to 20 questions").show()
     }
 
