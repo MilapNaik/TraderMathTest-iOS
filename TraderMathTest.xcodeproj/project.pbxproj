@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		81690D6C1D0C986800787F1D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */; };
 		81690D6E1D0C994100787F1D /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81690D6D1D0C994100787F1D /* SQLTable.swift */; };
-		81690D701D0C9A8000787F1D /* JLToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81690D6F1D0C9A8000787F1D /* JLToastWindow.swift */; };
+		81731ADC1E7F0AAC004FB627 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81731AD71E7F0AAC004FB627 /* Toast.swift */; };
+		81731ADD1E7F0AAC004FB627 /* ToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81731AD81E7F0AAC004FB627 /* ToastCenter.swift */; };
+		81731ADE1E7F0AAC004FB627 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81731ADA1E7F0AAC004FB627 /* ToastView.swift */; };
+		81731ADF1E7F0AAC004FB627 /* ToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81731ADB1E7F0AAC004FB627 /* ToastWindow.swift */; };
 		818520661CF3EB4900063BFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520651CF3EB4900063BFC /* Settings.swift */; };
 		818520681CF3ED3C00063BFC /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520671CF3ED3C00063BFC /* Info.swift */; };
 		8188AAC61E30838200489281 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AAC51E30838200489281 /* GoogleMobileAds.framework */; };
@@ -30,9 +33,6 @@
 		81A4C81E1CFE73CE007D4C3C /* easyseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81B1CFE73CE007D4C3C /* easyseq.txt */; };
 		81A4C81F1CFE73CE007D4C3C /* hardseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81C1CFE73CE007D4C3C /* hardseq.txt */; };
 		81A4C8201CFE73CE007D4C3C /* mediumseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */; };
-		81A4C8291CFEB2BF007D4C3C /* JLToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8261CFEB2BF007D4C3C /* JLToast.swift */; };
-		81A4C82A1CFEB2BF007D4C3C /* JLToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8271CFEB2BF007D4C3C /* JLToastCenter.swift */; };
-		81A4C82B1CFEB2BF007D4C3C /* JLToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8281CFEB2BF007D4C3C /* JLToastView.swift */; };
 		81A4C8441CFF427D007D4C3C /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8431CFF427C007D4C3C /* DLRadioButton.m */; };
 		81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F121CEB995600B2838A /* AppDelegate.swift */; };
 		81A89F151CEB995600B2838A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F141CEB995600B2838A /* ViewController.swift */; };
@@ -61,7 +61,11 @@
 		81582D5A1D0DFDF00089C2E1 /* DLRadioButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = "<group>"; };
 		81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		81690D6D1D0C994100787F1D /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
-		81690D6F1D0C9A8000787F1D /* JLToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastWindow.swift; sourceTree = "<group>"; };
+		81731AD71E7F0AAC004FB627 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		81731AD81E7F0AAC004FB627 /* ToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastCenter.swift; sourceTree = "<group>"; };
+		81731AD91E7F0AAC004FB627 /* Toaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toaster.h; sourceTree = "<group>"; };
+		81731ADA1E7F0AAC004FB627 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		81731ADB1E7F0AAC004FB627 /* ToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastWindow.swift; sourceTree = "<group>"; };
 		818520651CF3EB4900063BFC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		818520671CF3ED3C00063BFC /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		8188AAC11E307F3600489281 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = ../../../Downloads/Firebase/Firebase.h; sourceTree = "<group>"; };
@@ -84,10 +88,6 @@
 		81A4C81B1CFE73CE007D4C3C /* easyseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easyseq.txt; sourceTree = "<group>"; };
 		81A4C81C1CFE73CE007D4C3C /* hardseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardseq.txt; sourceTree = "<group>"; };
 		81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediumseq.txt; sourceTree = "<group>"; };
-		81A4C8251CFEB2BF007D4C3C /* JLToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLToast.h; sourceTree = "<group>"; };
-		81A4C8261CFEB2BF007D4C3C /* JLToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToast.swift; sourceTree = "<group>"; };
-		81A4C8271CFEB2BF007D4C3C /* JLToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastCenter.swift; sourceTree = "<group>"; };
-		81A4C8281CFEB2BF007D4C3C /* JLToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastView.swift; sourceTree = "<group>"; };
 		81A4C8421CFF427C007D4C3C /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = ../DLRadioButton.h; sourceTree = "<group>"; };
 		81A4C8431CFF427C007D4C3C /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = ../DLRadioButton.m; sourceTree = "<group>"; };
 		81A89F0D1CEB995600B2838A /* TraderMathTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraderMathTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,12 +176,12 @@
 				8188AAC11E307F3600489281 /* Firebase.h */,
 				81A4C8421CFF427C007D4C3C /* DLRadioButton.h */,
 				81A4C8431CFF427C007D4C3C /* DLRadioButton.m */,
-				81A4C8251CFEB2BF007D4C3C /* JLToast.h */,
-				81A4C8261CFEB2BF007D4C3C /* JLToast.swift */,
-				81A4C8271CFEB2BF007D4C3C /* JLToastCenter.swift */,
-				81A4C8281CFEB2BF007D4C3C /* JLToastView.swift */,
-				81690D6F1D0C9A8000787F1D /* JLToastWindow.swift */,
 				81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */,
+				81731AD71E7F0AAC004FB627 /* Toast.swift */,
+				81731AD81E7F0AAC004FB627 /* ToastCenter.swift */,
+				81731AD91E7F0AAC004FB627 /* Toaster.h */,
+				81731ADA1E7F0AAC004FB627 /* ToastView.swift */,
+				81731ADB1E7F0AAC004FB627 /* ToastWindow.swift */,
 				81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */,
 				81690D6D1D0C994100787F1D /* SQLTable.swift */,
 				81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */,
@@ -340,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81731ADE1E7F0AAC004FB627 /* ToastView.swift in Sources */,
 				818B534F1CF6CC350085346A /* FinishTest.swift in Sources */,
 				81690D6E1D0C994100787F1D /* SQLTable.swift in Sources */,
 				819347CA1D022033002EA835 /* TableViewCell.swift in Sources */,
@@ -347,15 +348,14 @@
 				81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */,
 				81AA522D1CF5ED820078D58B /* Question.swift in Sources */,
 				818520661CF3EB4900063BFC /* Settings.swift in Sources */,
+				81731ADC1E7F0AAC004FB627 /* Toast.swift in Sources */,
+				81731ADD1E7F0AAC004FB627 /* ToastCenter.swift in Sources */,
 				818520681CF3ED3C00063BFC /* Info.swift in Sources */,
-				81A4C8291CFEB2BF007D4C3C /* JLToast.swift in Sources */,
+				81731ADF1E7F0AAC004FB627 /* ToastWindow.swift in Sources */,
 				81A89F151CEB995600B2838A /* ViewController.swift in Sources */,
 				81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */,
-				81A4C82B1CFEB2BF007D4C3C /* JLToastView.swift in Sources */,
-				81A4C82A1CFEB2BF007D4C3C /* JLToastCenter.swift in Sources */,
 				81A4C8131CFDE4AD007D4C3C /* SQLiteDB.swift in Sources */,
 				81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */,
-				81690D701D0C9A8000787F1D /* JLToastWindow.swift in Sources */,
 				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,
 				81A4C8141CFDE4AD007D4C3C /* String-Extras.swift in Sources */,
 			);

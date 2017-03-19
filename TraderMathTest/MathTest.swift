@@ -183,11 +183,13 @@ class MathTestController: UIViewController {
         
         if questionNumber <= questionNum{
             if correctAnswerDouble == answerDouble{
-                JLToast.makeText("Correct!").show()
+                let correctToast = Toast(text: "Correct!", duration: Delay.short)
+                correctToast.show()
                 highscore += 1
             }
             else{
-                JLToast.makeText("Incorrect: \(correctAnswer!)").show()
+                let incorrectToast = Toast(text: "Incorrect: \(correctAnswer!)", duration: Delay.short)
+                incorrectToast.show()
             }
             newQuestion()
             

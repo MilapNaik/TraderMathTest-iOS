@@ -62,30 +62,36 @@ class SettingsController: UIViewController {
     // MARK: Actions
     @IBAction func easyButton(_ sender: DLRadioButton) {
         preferences.set("EASY", forKey: difficultyKey)
-        JLToast.makeText("Difficulty: Easy").show()
+        let easyToast = Toast(text: "Difficulty: Easy", duration: Delay.long)
+        easyToast.show()
     }
     
     @IBAction func mediumButton(_ sender: DLRadioButton) {
         preferences.set("MEDIUM", forKey: difficultyKey)
-        JLToast.makeText("Difficulty: Medium").show()
+        let mediumToast = Toast(text: "Difficulty: Medium", duration: Delay.long)
+        mediumToast.show()
     }
     
     @IBAction func hardButton(_ sender: DLRadioButton) {
         preferences.set("HARD", forKey: difficultyKey)
-        JLToast.makeText("Difficulty: Hard").show()
+        let hardToast = Toast(text: "Difficulty: Hard", duration: Delay.long)
+        hardToast.show()
     }
     
     @IBAction func fiveButton(_ sender: UIButton) {
         preferences.set(5, forKey: questionnumKey)
-        JLToast.makeText("Set to 5 questions").show()
+        let fiveToast = Toast(text: "Set to 5 questions", duration: Delay.long)
+        fiveToast.show()
     }
     @IBAction func tenButton(_ sender: UIButton) {
         preferences.set(10, forKey: questionnumKey)
-        JLToast.makeText("Set to 10 questions").show()
+        let tenToast = Toast(text: "Set to 10 questions", duration: Delay.long)
+        tenToast.show()
     }
     @IBAction func twentyButton(_ sender: UIButton) {
         preferences.set(20, forKey: questionnumKey)
-        JLToast.makeText("Set to 20 questions").show()
+        let twentyToast = Toast(text: "Set to 20 questions", duration: Delay.long)
+        twentyToast.show()
     }
 
     
