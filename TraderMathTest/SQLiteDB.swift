@@ -20,7 +20,7 @@ private let SQLITE_TRANSIENT = unsafeBitCast(-1, to:sqlite3_destructor_type.self
 // MARK:- SQLiteDB Class - Does all the work
 @objc(SQLiteDB)
 class SQLiteDB:NSObject {
-    let DB_NAME = "data.db"
+    let DB_NAME = "highscores.db"
     let QUEUE_LABEL = "SQLiteDB"
     static let sharedInstance = SQLiteDB()
     private var db:OpaquePointer? = nil
