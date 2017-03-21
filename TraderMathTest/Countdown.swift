@@ -37,6 +37,7 @@ class CountdownController: UIViewController {
         testType = testType.capitalized
         difficulty = difficulty.capitalized
         
+        countDownLabel.textAlignment = .center
         Test.text = "\(testType) \(PoT)"
         Leaderboard.text = "\(questionNum) \(difficulty) Questions"
         
