@@ -1285,7 +1285,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGP-Wt-a0C">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="                              " selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGP-Wt-a0C">
                                 <rect key="frame" x="20" y="67" width="374" height="235"/>
                                 <color key="backgroundColor" red="0.99777102470397949" green="0.89938759803771973" blue="0.76550084352493286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1293,7 +1293,6 @@
                                     <constraint firstAttribute="width" constant="290" id="W4R-Qa-wrB"/>
                                     <constraint firstAttribute="height" constant="167" id="zBv-M0-6n1"/>
                                 </constraints>
-                                <string key="text">This app is meant to help practice for the math portion of interviews with finance firms. Pick your difficulty setting and amount of questions for quick, randomized practice sessions; or go for the full test and see how you do. Enjoy!                                 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
@@ -1311,13 +1310,13 @@
                             <constraint firstAttribute="centerX" secondItem="PGP-Wt-a0C" secondAttribute="centerX" id="CD6-O3-Fuu"/>
                             <constraint firstAttribute="centerX" secondItem="1q2-ao-3hI" secondAttribute="centerX" id="IeJ-O3-8SH"/>
                             <constraint firstItem="1q2-ao-3hI" firstAttribute="top" secondItem="S5Y-RF-s9M" secondAttribute="bottom" constant="18" id="L8x-AR-TA8"/>
-                            <constraint firstItem="PGP-Wt-a0C" firstAttribute="leading" secondItem="7CK-dc-zc3" secondAttribute="leadingMargin" id="NWc-hE-CRg"/>
-                            <constraint firstItem="PGP-Wt-a0C" firstAttribute="trailing" secondItem="7CK-dc-zc3" secondAttribute="trailingMargin" id="RxR-Uj-HD7"/>
+                            <constraint firstItem="PGP-Wt-a0C" firstAttribute="leading" secondItem="7CK-dc-zc3" secondAttribute="leadingMargin" id="RC0-nc-kJ8"/>
                             <constraint firstAttribute="centerX" secondItem="ufw-Cl-1A3" secondAttribute="centerX" id="Uee-hW-nTX"/>
                             <constraint firstAttribute="centerY" secondItem="qdq-qp-rsn" secondAttribute="centerY" id="Ui9-rT-G5p"/>
                             <constraint firstItem="1q2-ao-3hI" firstAttribute="top" secondItem="S5Y-RF-s9M" secondAttribute="bottom" constant="5" id="YQ7-Ku-rHo"/>
                             <constraint firstItem="PGP-Wt-a0C" firstAttribute="top" secondItem="FB8-YN-gmt" secondAttribute="bottom" constant="47" id="alI-h4-QH4"/>
                             <constraint firstItem="1q2-ao-3hI" firstAttribute="centerY" secondItem="7CK-dc-zc3" secondAttribute="centerY" id="b2a-bE-yNW"/>
+                            <constraint firstItem="PGP-Wt-a0C" firstAttribute="trailing" secondItem="7CK-dc-zc3" secondAttribute="trailingMargin" id="ceX-gL-96h"/>
                             <constraint firstItem="qdq-qp-rsn" firstAttribute="top" secondItem="1q2-ao-3hI" secondAttribute="bottom" constant="44" id="gEY-pB-Hjb"/>
                             <constraint firstItem="ufw-Cl-1A3" firstAttribute="top" secondItem="qdq-qp-rsn" secondAttribute="bottom" constant="5" id="l0J-LL-ojc"/>
                             <constraint firstAttribute="centerX" secondItem="ufw-Cl-1A3" secondAttribute="centerX" id="lC3-H7-gFR"/>
@@ -1337,6 +1336,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="InfoText" destination="PGP-Wt-a0C" id="F4W-N8-z0g"/>
                         <outlet property="TraderTest" destination="ufw-Cl-1A3" id="7MS-z7-8ws"/>
                     </connections>
                 </viewController>
@@ -1353,6 +1353,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="DbL-KR-rWH"/>
         <segue reference="caa-ug-K1N"/>
-        <segue reference="qkA-P5-P8m"/>
+        <segue reference="wg7-I0-DGr"/>
     </inferredMetricsTieBreakers>
 </document>
