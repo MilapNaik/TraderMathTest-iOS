@@ -66,9 +66,9 @@
 		81731AD91E7F0AAC004FB627 /* Toaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toaster.h; sourceTree = "<group>"; };
 		81731ADA1E7F0AAC004FB627 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		81731ADB1E7F0AAC004FB627 /* ToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastWindow.swift; sourceTree = "<group>"; };
+		81731AE01E8220F6004FB627 /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		818520651CF3EB4900063BFC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		818520671CF3ED3C00063BFC /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
-		8188AAC11E307F3600489281 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = ../../../Downloads/Firebase/Firebase.h; sourceTree = "<group>"; };
 		8188AAC51E30838200489281 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		8188AADB1E30845000489281 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		8188AADC1E30845000489281 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		81A89F0F1CEB995600B2838A /* TraderMathTest */ = {
 			isa = PBXGroup;
 			children = (
-				8188AAC11E307F3600489281 /* Firebase.h */,
+				81731AE01E8220F6004FB627 /* Firebase.h */,
 				81A4C8421CFF427C007D4C3C /* DLRadioButton.h */,
 				81A4C8431CFF427C007D4C3C /* DLRadioButton.m */,
 				81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */,
