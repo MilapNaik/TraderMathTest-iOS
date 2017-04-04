@@ -22,7 +22,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,25 +30,15 @@ class ViewController: UIViewController {
     }
 
     // MARK: Actions
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        
         if (segue.identifier == "goestoPoTMath") {
-            testType = "MATH"
-            let title = "Math"
-            FIRAnalytics.logEvent( withName: kFIREventSelectContent, parameters: [
-                kFIRParameterItemID: "id-\(title)" as NSObject,
-                kFIRParameterItemName: title as NSObject,
-                kFIRParameterContentType: "cont" as NSObject
-                ])
+            testType = "math"
         }
         
         if (segue.identifier == "goestoPoTSeq") {
-            testType = "SEQ"
+            testType = "sequence"
         }
         preferences.set(testType, forKey: testtypeKey)
     }
-
-    
 }
 

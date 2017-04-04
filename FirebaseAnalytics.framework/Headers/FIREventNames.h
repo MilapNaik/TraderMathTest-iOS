@@ -224,6 +224,10 @@ static NSString *const kFIREventSearch = @"search";
 ///     <li>@c kFIRParameterItemID (NSString)</li>
 /// </ul>
 static NSString *const kFIREventSelectContent = @"select_content";
+//User made:
+static NSString *const kFIREventTestFinished = @"test_finished";
+static NSString *const kFIREventQuestionAnswered = @"question_answered";
+
 
 /// Share event. Apps with social features can log the Share event to identify the most viral
 /// content. Params:

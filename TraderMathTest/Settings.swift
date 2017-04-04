@@ -16,7 +16,7 @@ class SettingsController: UIViewController {
     let preferences = UserDefaults.standard
     let difficultyKey = "Difficulty"
     let questionnumKey = "QuestionNum"
-    var difficulty: String = "EASY"
+    var difficulty: String = "easy"
 
     
     @IBOutlet weak var Easy: DLRadioButton!
@@ -41,10 +41,10 @@ class SettingsController: UIViewController {
     }
     
     func setDifficulty(){
-        if difficulty == "HARD"{
+        if difficulty == "hard"{
             Hard.isSelected = true
         }
-        else if difficulty == "MEDIUM"{
+        else if difficulty == "medium"{
             Medium.isSelected = true
         }
         else{
@@ -61,19 +61,19 @@ class SettingsController: UIViewController {
     
     // MARK: Actions
     @IBAction func easyButton(_ sender: DLRadioButton) {
-        preferences.set("EASY", forKey: difficultyKey)
+        preferences.set("easy", forKey: difficultyKey)
         let easyToast = Toast(text: "Difficulty: Easy", duration: Delay.long)
         easyToast.show()
     }
     
     @IBAction func mediumButton(_ sender: DLRadioButton) {
-        preferences.set("MEDIUM", forKey: difficultyKey)
+        preferences.set("medium", forKey: difficultyKey)
         let mediumToast = Toast(text: "Difficulty: Medium", duration: Delay.long)
         mediumToast.show()
     }
     
     @IBAction func hardButton(_ sender: DLRadioButton) {
-        preferences.set("HARD", forKey: difficultyKey)
+        preferences.set("hard", forKey: difficultyKey)
         let hardToast = Toast(text: "Difficulty: Hard", duration: Delay.long)
         hardToast.show()
     }
@@ -93,7 +93,4 @@ class SettingsController: UIViewController {
         let twentyToast = Toast(text: "Set to 20 questions", duration: Delay.long)
         twentyToast.show()
     }
-
-    
-    
 }

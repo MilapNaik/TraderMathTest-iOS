@@ -35,6 +35,13 @@ static NSString *const kFIRParameterCharacter = @"character";
 ///     };
 /// </pre>
 static NSString *const kFIRParameterContentType = @"content_type";
+//User made:
+static NSString *const kFIRParameterTestType = @"test_type";
+static NSString *const kFIRParameterTestDifficulty = @"test_difficulty";
+static NSString *const kFIRParameterTestLength = @"test_length";
+static NSString *const kFIRParameterTestPoT = @"test_PoT";
+static NSString *const kFIRParameterAnswerCorrect = @"answer_correct";
+static NSString *const kFIRParameterQuestionsCorrect = @"questions_correct";
 
 /// Coupon code for a purchasable item (NSString).
 /// <pre>

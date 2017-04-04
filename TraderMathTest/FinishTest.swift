@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import GoogleMobileAds
+import FirebaseAnalytics
 
 
 class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -27,10 +28,10 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     let questionnumKey = "QuestionNum"
     let PoTKey = "PoT"
     let testtypeKey = "TestType"
-    var difficulty: String = "EASY"
+    var difficulty: String = "easy"
     var questionNum: Int = 5
     var PoT:String = "Practice"
-    var testType:String = "MATH"
+    var testType:String = "math"
 
     @IBOutlet weak var bannerView: GADBannerView!
 
@@ -61,7 +62,6 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
     
     override func viewDidLoad() {
@@ -86,6 +86,15 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
         correctAnswers.text = "Score: \(highscore!)"
         finishTime.text = "Time: \(finishtime!)"
         
+        //Analytics
+        FIRAnalytics.logEvent( withName: kFIREventTestFinished, parameters: [
+            kFIRParameterItemID: "id-test_finished" as NSObject,
+            kFIRParameterTestType: testType as NSObject, //Default: Math
+            kFIRParameterTestDifficulty: difficulty as NSObject, //Default: easy
+            kFIRParameterTestLength: questionNum as NSObject, //Default: 5
+            kFIRParameterTestPoT: PoT as NSObject, //Default: Practice
+            kFIRParameterQuestionsCorrect: highscore! as NSObject
+            ])
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,7 +111,6 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func addhighscore(){
         db.execute(sql: "INSERT INTO \(difficulty)_\(testType)_\(questionNum) (Score, Time) Values ('\(highscore!)', '\(finishtime!)'); ", parameters:nil)
-
     }
     
     func loadhighscores(){
@@ -132,7 +140,7 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         if PoT == "Test"{
-            if testType == "SEQ"{
+            if testType == "sequence"{
                 questionNum = 50
             }
             else{
@@ -147,7 +155,6 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
                 questionNum = preferences.integer(forKey: questionnumKey)
             }
         }
-        
     }
 } //EOF
     

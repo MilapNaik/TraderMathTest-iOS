@@ -25,10 +25,10 @@ class CountdownController: UIViewController {
     let questionnumKey = "QuestionNum"
     let PoTKey = "PoT"
     let testtypeKey = "TestType"
-    var difficulty: String = "EASY"
+    var difficulty: String = "easy"
     var questionNum: Int = 5
     var PoT:String = "Practice"
-    var testType:String = "MATH"
+    var testType:String = "math"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +79,7 @@ class CountdownController: UIViewController {
         }
         
         if PoT == "Test"{
-            if testType == "SEQ"{
+            if testType == "sequence"{
                 questionNum = 50
             }
             else{
@@ -94,7 +94,5 @@ class CountdownController: UIViewController {
                 questionNum = preferences.integer(forKey: questionnumKey)
             }
         }
-        
     }
-    
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseAnalytics
 
 class MathTestController: UIViewController {
 
@@ -21,6 +22,7 @@ class MathTestController: UIViewController {
     var answer: String?
     var correctAnswerDouble: Double = 0.0
     var answerDouble: Double? = 0.0
+    var answerCorrect: Bool?
     
     var highscore:Int = 0
     
@@ -39,10 +41,10 @@ class MathTestController: UIViewController {
     let questionnumKey = "QuestionNum"
     let PoTKey = "PoT"
     let testtypeKey = "TestType"
-    var difficulty: String = "EASY"
+    var difficulty: String = "easy"
     var questionNum: Int = 5
     var PoT:String = "Practice"
-    var testType:String = "MATH"
+    var testType:String = "math"
     var filename:String = "easymath"
     
 
@@ -56,7 +58,14 @@ class MathTestController: UIViewController {
         readFile()
         qnumLabel.text = "\(questionNumber)/\(questionNum)"
         startTime = Date.timeIntervalSinceReferenceDate
-        
+
+        FIRAnalytics.logEvent( withName: kFIREventSelectContent, parameters: [
+            kFIRParameterItemID: "id-test_started" as NSObject,
+            kFIRParameterTestType: testType as NSObject, //Default: Math
+            kFIRParameterTestDifficulty: difficulty as NSObject, //Default: easy
+            kFIRParameterTestLength: questionNum as NSObject, //Default: 5
+            kFIRParameterTestPoT: PoT as NSObject //Default: Practice
+        ])
     }
     
 
@@ -81,7 +90,7 @@ class MathTestController: UIViewController {
         }
         
         if PoT == "Test"{
-            if testType == "SEQ"{
+            if testType == "sequence"{
                 questionNum = 50
             }
             else{
@@ -96,7 +105,6 @@ class MathTestController: UIViewController {
                 questionNum = preferences.integer(forKey: questionnumKey)
             }
         }
-        
     }
     
     // Read selected file
@@ -124,7 +132,6 @@ class MathTestController: UIViewController {
         
         qnumLabel.text = "\(questionNumber)/\(questionNum)"
         answerLabel.text = ""
-        
     }
     
 
@@ -186,16 +193,24 @@ class MathTestController: UIViewController {
                 let correctToast = Toast(text: "Correct!", duration: Delay.short)
                 correctToast.show()
                 highscore += 1
+                answerCorrect = true
             }
             else{
                 let incorrectToast = Toast(text: "Incorrect: \(correctAnswer!)", duration: Delay.short)
                 incorrectToast.show()
+                answerCorrect = false
             }
             newQuestion()
             
+            //Analytics answerCorrect
+            FIRAnalytics.logEvent( withName: kFIREventQuestionAnswered, parameters: [
+                kFIRParameterItemID: "id-question_answered" as NSObject,
+                kFIRParameterTestType: testType as NSObject, //Default: Math
+                kFIRParameterTestDifficulty: difficulty as NSObject, //Default: easy
+                kFIRParameterAnswerCorrect: answerCorrect! as NSObject
+                ])
         }
         else {
-            
             time = Date.timeIntervalSinceReferenceDate - startTime
             self.performSegue(withIdentifier: "goestoFinishTest", sender: highscore)
         }
@@ -214,9 +229,7 @@ class MathTestController: UIViewController {
             let highscore = sender as! Int
             secondViewController.highscore = highscore
             secondViewController.finishtime = "\(finishtime)"
-
         }
     }
-    
 }
 
