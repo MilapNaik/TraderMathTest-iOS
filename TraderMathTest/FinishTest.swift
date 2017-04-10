@@ -110,7 +110,8 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func addhighscore(){
-        db.execute(sql: "INSERT INTO \(difficulty)_\(testType)_\(questionNum) (Score, Time) Values ('\(highscore!)', '\(finishtime!)'); ", parameters:nil)
+        // _ is set to avoid warning
+        _ = db.execute(sql: "INSERT INTO \(difficulty)_\(testType)_\(questionNum) (Score, Time) Values ('\(highscore!)', '\(finishtime!)'); ", parameters:nil)
     }
     
     func loadhighscores(){
