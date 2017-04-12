@@ -4,6 +4,8 @@
 <dict>
 	<key>FirebaseAutomaticScreenReportingEnabled</key>
 	<string>NO</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<string>NO</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

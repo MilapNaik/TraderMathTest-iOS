@@ -227,6 +227,7 @@ static NSString *const kFIREventSelectContent = @"select_content";
 //User made:
 static NSString *const kFIREventTestFinished = @"test_finished";
 static NSString *const kFIREventQuestionAnswered = @"question_answered";
+static NSString *const kFIREventScreenDidLoad = @"screen_loaded";
 
 
 /// Share event. Apps with social features can log the Share event to identify the most viral
