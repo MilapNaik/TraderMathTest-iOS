@@ -30,9 +30,9 @@
 		81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8021CFBBE63007D4C3C /* mediummath.txt */; };
 		81A4C8131CFDE4AD007D4C3C /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */; };
 		81A4C8141CFDE4AD007D4C3C /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */; };
-		81A4C81E1CFE73CE007D4C3C /* easyseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81B1CFE73CE007D4C3C /* easyseq.txt */; };
-		81A4C81F1CFE73CE007D4C3C /* hardseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81C1CFE73CE007D4C3C /* hardseq.txt */; };
-		81A4C8201CFE73CE007D4C3C /* mediumseq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */; };
+		81A4C81E1CFE73CE007D4C3C /* easysequence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81B1CFE73CE007D4C3C /* easysequence.txt */; };
+		81A4C81F1CFE73CE007D4C3C /* hardsequence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81C1CFE73CE007D4C3C /* hardsequence.txt */; };
+		81A4C8201CFE73CE007D4C3C /* mediumsequence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81D1CFE73CE007D4C3C /* mediumsequence.txt */; };
 		81A4C8441CFF427D007D4C3C /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8431CFF427C007D4C3C /* DLRadioButton.m */; };
 		81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F121CEB995600B2838A /* AppDelegate.swift */; };
 		81A89F151CEB995600B2838A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F141CEB995600B2838A /* ViewController.swift */; };
@@ -85,9 +85,9 @@
 		81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
 		81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
-		81A4C81B1CFE73CE007D4C3C /* easyseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easyseq.txt; sourceTree = "<group>"; };
-		81A4C81C1CFE73CE007D4C3C /* hardseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardseq.txt; sourceTree = "<group>"; };
-		81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediumseq.txt; sourceTree = "<group>"; };
+		81A4C81B1CFE73CE007D4C3C /* easysequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easysequence.txt; sourceTree = "<group>"; };
+		81A4C81C1CFE73CE007D4C3C /* hardsequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardsequence.txt; sourceTree = "<group>"; };
+		81A4C81D1CFE73CE007D4C3C /* mediumsequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediumsequence.txt; sourceTree = "<group>"; };
 		81A4C8421CFF427C007D4C3C /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = ../DLRadioButton.h; sourceTree = "<group>"; };
 		81A4C8431CFF427C007D4C3C /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = ../DLRadioButton.m; sourceTree = "<group>"; };
 		81A89F0D1CEB995600B2838A /* TraderMathTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraderMathTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,9 +148,9 @@
 				81582D5A1D0DFDF00089C2E1 /* DLRadioButton.framework */,
 				81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */,
 				81EF87141D10E2310038A38C /* highscores.db */,
-				81A4C81B1CFE73CE007D4C3C /* easyseq.txt */,
-				81A4C81C1CFE73CE007D4C3C /* hardseq.txt */,
-				81A4C81D1CFE73CE007D4C3C /* mediumseq.txt */,
+				81A4C81B1CFE73CE007D4C3C /* easysequence.txt */,
+				81A4C81C1CFE73CE007D4C3C /* hardsequence.txt */,
+				81A4C81D1CFE73CE007D4C3C /* mediumsequence.txt */,
 				81A4C8011CFBBE63007D4C3C /* hardmath.txt */,
 				81A4C8021CFBBE63007D4C3C /* mediummath.txt */,
 				81EF87161D110A090038A38C /* easymath.txt */,
@@ -314,12 +314,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A89F181CEB995600B2838A /* Main.storyboard in Resources */,
-				81A4C81F1CFE73CE007D4C3C /* hardseq.txt in Resources */,
+				81A4C81F1CFE73CE007D4C3C /* hardsequence.txt in Resources */,
 				81EF87171D110A090038A38C /* easymath.txt in Resources */,
 				81A89F1A1CEB995600B2838A /* Images.xcassets in Resources */,
-				81A4C8201CFE73CE007D4C3C /* mediumseq.txt in Resources */,
+				81A4C8201CFE73CE007D4C3C /* mediumsequence.txt in Resources */,
 				81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */,
-				81A4C81E1CFE73CE007D4C3C /* easyseq.txt in Resources */,
+				81A4C81E1CFE73CE007D4C3C /* easysequence.txt in Resources */,
 				8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */,
 				81EF87151D10E2310038A38C /* highscores.db in Resources */,
 				81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */,
