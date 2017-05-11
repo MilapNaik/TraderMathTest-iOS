@@ -33,10 +33,10 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "goestoPoTMath") {
             testType = "math"
-        }
-        
-        if (segue.identifier == "goestoPoTSeq") {
+        } else if (segue.identifier == "goestoPoTSeq") {
             testType = "sequence"
+        } else{
+            testType = "percent"
         }
         preferences.set(testType, forKey: testtypeKey)
     }

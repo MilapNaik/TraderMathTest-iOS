@@ -59,6 +59,7 @@ class MathTestController: UIViewController {
         qnumLabel.text = "\(questionNumber)/\(questionNum)"
         startTime = Date.timeIntervalSinceReferenceDate
 
+        //Analytics
         FIRAnalytics.logEvent( withName: kFIREventSelectContent, parameters: [
             kFIRParameterItemID: "id-test_started" as NSObject,
             kFIRParameterTestType: testType as NSObject, //Default: Math
