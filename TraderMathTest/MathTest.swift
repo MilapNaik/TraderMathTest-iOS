@@ -62,6 +62,8 @@ class MathTestController: UIViewController {
         //Analytics
         FIRAnalytics.logEvent( withName: kFIREventSelectContent, parameters: [
             kFIRParameterItemID: "id-test_started" as NSObject,
+            kFIRParameterItemName: testType as NSObject,
+            kFIRParameterContentType: testType as NSObject,
             kFIRParameterTestType: testType as NSObject, //Default: Math
             kFIRParameterTestDifficulty: difficulty as NSObject, //Default: easy
             kFIRParameterTestLength: questionNum as NSObject, //Default: 5
