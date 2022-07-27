@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import GoogleMobileAds
-
+import FirebaseAnalytics
 
 
 class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -67,8 +67,6 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let isSuccess = SQLiteDB.shared.open(dbPath: "highscores.db", copyFile: true, inMemory: true)
-        print(isSuccess)
         bannerView.adUnitID = "ca-app-pub-3095210410543033/2188670103" //Real Ad unit: ca-app-pub-3095210410543033/2188670103
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
@@ -90,14 +88,14 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
         
         //Analytics
         //TODO: Firebase
-//        FIRAnalytics.logEvent( withName: kFIREventTestFinished, parameters: [
-//            kFIRParameterItemID: "id-test_finished" as NSObject,
-//            kFIRParameterTestType: testType as NSObject, //Default: Math
-//            kFIRParameterTestDifficulty: difficulty as NSObject, //Default: easy
-//            kFIRParameterTestLength: questionNum as NSObject, //Default: 5
-//            kFIRParameterTestPoT: PoT as NSObject, //Default: Practice
-//            kFIRParameterQuestionsCorrect: highscore! as NSObject
-//            ])
+        Analytics.logEvent("kFIREventTestFinished", parameters: [
+            AnalyticsParameterItemID: "id-test_finished" as NSObject,
+            "kFIRParameterTestType": testType as NSObject, //Default: Math
+            "kFIRParameterTestDifficulty": difficulty as NSObject, //Default: easy
+            "kFIRParameterTestLength": questionNum as NSObject, //Default: 5
+            "kFIRParameterTestPoT": PoT as NSObject, //Default: Practice
+            "kFIRParameterQuestionsCorrect": highscore! as NSObject
+            ])
     }
     
     override func didReceiveMemoryWarning() {

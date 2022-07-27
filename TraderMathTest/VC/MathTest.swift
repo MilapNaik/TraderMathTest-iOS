@@ -62,15 +62,15 @@ class MathTestController: UIViewController {
 
         //Analytics
         //TODO: Firebase
-//        FIRAnalytics.logEvent( withName: kFIREventSelectContent, parameters: [
-//            kFIRParameterItemID: "id-test_started" as NSObject,
-//            kFIRParameterItemName: testType as NSObject,
-//            kFIRParameterContentType: testType as NSObject,
-//            kFIRParameterTestType: testType as NSObject, //Default: Math
-//            kFIRParameterTestDifficulty: difficulty as NSObject, //Default: easy
-//            kFIRParameterTestLength: questionNum as NSObject, //Default: 5
-//            kFIRParameterTestPoT: PoT as NSObject //Default: Practice
-//        ])
+        Analytics.logEvent("kFIREventSelectContent", parameters: [
+            AnalyticsParameterItemID: "id-test_started" as NSObject,
+            AnalyticsParameterItemName: testType as NSObject,
+            AnalyticsParameterContentType: testType as NSObject,
+            "kFIRParameterTestType": testType as NSObject, //Default: Math
+            "kFIRParameterTestDifficulty": difficulty as NSObject, //Default: easy
+            "kFIRParameterTestLength": questionNum as NSObject, //Default: 5
+            "kFIRParameterTestPoT": PoT as NSObject //Default: Practice
+        ])
     }
     
 
@@ -209,12 +209,12 @@ class MathTestController: UIViewController {
             
             //Analytics answerCorrect
             //TODO: Firebase
-//            FIRAnalytics.logEvent( withName: kFIREventQuestionAnswered, parameters: [
-//                kFIRParameterItemID: "id-question_answered" as NSObject,
-//                kFIRParameterTestType: testType as NSObject, //Default: Math
-//                kFIRParameterTestDifficulty: difficulty as NSObject, //Default: easy
-//                kFIRParameterAnswerCorrect: answerCorrect! as NSObject
-//                ])
+            Analytics.logEvent("kFIREventQuestionAnswered", parameters: [
+                AnalyticsParameterItemID: "id-question_answered" as NSObject,
+                "kFIRParameterTestType": testType as NSObject, //Default: Math
+                "kFIRParameterTestDifficulty": difficulty as NSObject, //Default: easy
+                "kFIRParameterAnswerCorrect": answerCorrect! as NSObject
+                ])
         }
         else {
             time = Date.timeIntervalSinceReferenceDate - startTime
