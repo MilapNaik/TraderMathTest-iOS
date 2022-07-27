@@ -7,37 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71C24D9ACB05CB9C729CA201 /* Pods_TraderMathTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD98C5F23E4CB9C67AAD8E /* Pods_TraderMathTest.framework */; };
 		81690D6C1D0C986800787F1D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */; };
-		81690D6E1D0C994100787F1D /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81690D6D1D0C994100787F1D /* SQLTable.swift */; };
-		81731ADC1E7F0AAC004FB627 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81731AD71E7F0AAC004FB627 /* Toast.swift */; };
-		81731ADD1E7F0AAC004FB627 /* ToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81731AD81E7F0AAC004FB627 /* ToastCenter.swift */; };
-		81731ADE1E7F0AAC004FB627 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81731ADA1E7F0AAC004FB627 /* ToastView.swift */; };
-		81731ADF1E7F0AAC004FB627 /* ToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81731ADB1E7F0AAC004FB627 /* ToastWindow.swift */; };
 		818520661CF3EB4900063BFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520651CF3EB4900063BFC /* Settings.swift */; };
 		818520681CF3ED3C00063BFC /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520671CF3ED3C00063BFC /* Info.swift */; };
-		8188AAC61E30838200489281 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AAC51E30838200489281 /* GoogleMobileAds.framework */; };
-		8188AAE11E30845000489281 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AADB1E30845000489281 /* FirebaseAnalytics.framework */; };
-		8188AAE21E30845000489281 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AADC1E30845000489281 /* FirebaseCore.framework */; };
-		8188AAE31E30845000489281 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AADD1E30845000489281 /* FirebaseInstanceID.framework */; };
-		8188AAE41E30845000489281 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AADE1E30845000489281 /* GoogleInterchangeUtilities.framework */; };
-		8188AAE51E30845000489281 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AADF1E30845000489281 /* GoogleSymbolUtilities.framework */; };
-		8188AAE61E30845000489281 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AAE01E30845000489281 /* GoogleToolboxForMac.framework */; };
-		8188AAE81E30847E00489281 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188AAE71E30847E00489281 /* FirebaseMessaging.framework */; };
 		818B534F1CF6CC350085346A /* FinishTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B534E1CF6CC350085346A /* FinishTest.swift */; };
 		819347CA1D022033002EA835 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819347C91D022033002EA835 /* TableViewCell.swift */; };
 		8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8199DF471E341A68006E95CE /* GoogleService-Info.plist */; };
 		81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8011CFBBE63007D4C3C /* hardmath.txt */; };
 		81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8021CFBBE63007D4C3C /* mediummath.txt */; };
-		81A4C8131CFDE4AD007D4C3C /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */; };
 		81A4C8141CFDE4AD007D4C3C /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */; };
 		81A4C81E1CFE73CE007D4C3C /* easysequence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81B1CFE73CE007D4C3C /* easysequence.txt */; };
 		81A4C81F1CFE73CE007D4C3C /* hardsequence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81C1CFE73CE007D4C3C /* hardsequence.txt */; };
 		81A4C8201CFE73CE007D4C3C /* mediumsequence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81D1CFE73CE007D4C3C /* mediumsequence.txt */; };
-		81A4C8441CFF427D007D4C3C /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8431CFF427C007D4C3C /* DLRadioButton.m */; };
 		81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F121CEB995600B2838A /* AppDelegate.swift */; };
 		81A89F151CEB995600B2838A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F141CEB995600B2838A /* ViewController.swift */; };
 		81A89F181CEB995600B2838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F161CEB995600B2838A /* Main.storyboard */; };
-		81A89F1A1CEB995600B2838A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F191CEB995600B2838A /* Images.xcassets */; };
 		81A89F291CEB995600B2838A /* TraderMathTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F281CEB995600B2838A /* TraderMathTestTests.swift */; };
 		81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */; };
 		81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26671CF4DFC2001DE1D0 /* Countdown.swift */; };
@@ -45,6 +30,12 @@
 		81AA522D1CF5ED820078D58B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA522C1CF5ED820078D58B /* Question.swift */; };
 		81EF87151D10E2310038A38C /* highscores.db in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87141D10E2310038A38C /* highscores.db */; };
 		81EF87171D110A090038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87161D110A090038A38C /* easymath.txt */; };
+		DB9C9D4C2891519900216347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9C9D4B2891519900216347 /* Assets.xcassets */; };
+		DB9C9D4E289151C300216347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */; };
+		DBB8D01C28914A2B006FC66C /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D01928914A2B006FC66C /* SQLTable.swift */; };
+		DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D01A28914A2B006FC66C /* SQLiteBase.swift */; };
+		DBB8D01E28914A2B006FC66C /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D01B28914A2B006FC66C /* SQLiteDB.swift */; };
+		DBB8D02228914A8D006FC66C /* CloudDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D02128914A8D006FC66C /* CloudDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,44 +49,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		81582D5A1D0DFDF00089C2E1 /* DLRadioButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = "<group>"; };
+		3EFD98C5F23E4CB9C67AAD8E /* Pods_TraderMathTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraderMathTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49E58C782817E80F9C5507C7 /* Pods-TraderMathTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraderMathTest.debug.xcconfig"; path = "Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest.debug.xcconfig"; sourceTree = "<group>"; };
 		81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		81690D6D1D0C994100787F1D /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
-		81731AD71E7F0AAC004FB627 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		81731AD81E7F0AAC004FB627 /* ToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastCenter.swift; sourceTree = "<group>"; };
-		81731AD91E7F0AAC004FB627 /* Toaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toaster.h; sourceTree = "<group>"; };
-		81731ADA1E7F0AAC004FB627 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
-		81731ADB1E7F0AAC004FB627 /* ToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastWindow.swift; sourceTree = "<group>"; };
-		81731AE01E8220F6004FB627 /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		818520651CF3EB4900063BFC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		818520671CF3ED3C00063BFC /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
-		8188AAC51E30838200489281 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		8188AADB1E30845000489281 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		8188AADC1E30845000489281 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
-		8188AADD1E30845000489281 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		8188AADE1E30845000489281 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		8188AADF1E30845000489281 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		8188AAE01E30845000489281 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
-		8188AAE71E30847E00489281 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseMessaging.framework; sourceTree = "<group>"; };
 		818B534E1CF6CC350085346A /* FinishTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishTest.swift; sourceTree = "<group>"; };
-		819347C91D022033002EA835 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../TableViewCell.swift; sourceTree = "<group>"; };
+		819347C91D022033002EA835 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8199DF471E341A68006E95CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81A4C8011CFBBE63007D4C3C /* hardmath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardmath.txt; sourceTree = "<group>"; };
 		81A4C8021CFBBE63007D4C3C /* mediummath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediummath.txt; sourceTree = "<group>"; };
 		81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
 		81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
 		81A4C81B1CFE73CE007D4C3C /* easysequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easysequence.txt; sourceTree = "<group>"; };
 		81A4C81C1CFE73CE007D4C3C /* hardsequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardsequence.txt; sourceTree = "<group>"; };
 		81A4C81D1CFE73CE007D4C3C /* mediumsequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediumsequence.txt; sourceTree = "<group>"; };
-		81A4C8421CFF427C007D4C3C /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = ../DLRadioButton.h; sourceTree = "<group>"; };
-		81A4C8431CFF427C007D4C3C /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = ../DLRadioButton.m; sourceTree = "<group>"; };
 		81A89F0D1CEB995600B2838A /* TraderMathTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraderMathTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F111CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F121CEB995600B2838A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A89F141CEB995600B2838A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81A89F171CEB995600B2838A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		81A89F191CEB995600B2838A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		81A89F221CEB995600B2838A /* TraderMathTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraderMathTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F271CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F281CEB995600B2838A /* TraderMathTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraderMathTestTests.swift; sourceTree = "<group>"; };
@@ -105,6 +78,13 @@
 		81AA522C1CF5ED820078D58B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		81EF87141D10E2310038A38C /* highscores.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = highscores.db; sourceTree = "<group>"; };
 		81EF87161D110A090038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easymath.txt; sourceTree = "<group>"; };
+		DB9C9D4B2891519900216347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBB8D01928914A2B006FC66C /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		DBB8D01A28914A2B006FC66C /* SQLiteBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteBase.swift; sourceTree = "<group>"; };
+		DBB8D01B28914A2B006FC66C /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		DBB8D02128914A8D006FC66C /* CloudDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDB.swift; sourceTree = "<group>"; };
+		F090790E9D11CC1C967E1F8E /* Pods-TraderMathTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraderMathTest.release.xcconfig"; path = "Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,15 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8188AAE21E30845000489281 /* FirebaseCore.framework in Frameworks */,
-				8188AAC61E30838200489281 /* GoogleMobileAds.framework in Frameworks */,
-				8188AAE31E30845000489281 /* FirebaseInstanceID.framework in Frameworks */,
-				8188AAE51E30845000489281 /* GoogleSymbolUtilities.framework in Frameworks */,
-				8188AAE41E30845000489281 /* GoogleInterchangeUtilities.framework in Frameworks */,
-				8188AAE61E30845000489281 /* GoogleToolboxForMac.framework in Frameworks */,
-				8188AAE81E30847E00489281 /* FirebaseMessaging.framework in Frameworks */,
 				81690D6C1D0C986800787F1D /* libsqlite3.0.tbd in Frameworks */,
-				8188AAE11E30845000489281 /* FirebaseAnalytics.framework in Frameworks */,
+				71C24D9ACB05CB9C729CA201 /* Pods_TraderMathTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,18 +107,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		548E903E1CD083F35AEA1952 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49E58C782817E80F9C5507C7 /* Pods-TraderMathTest.debug.xcconfig */,
+				F090790E9D11CC1C967E1F8E /* Pods-TraderMathTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		81A89F041CEB995600B2838A = {
 			isa = PBXGroup;
 			children = (
-				8188AAE71E30847E00489281 /* FirebaseMessaging.framework */,
-				8188AADB1E30845000489281 /* FirebaseAnalytics.framework */,
-				8188AADC1E30845000489281 /* FirebaseCore.framework */,
-				8188AADD1E30845000489281 /* FirebaseInstanceID.framework */,
-				8188AADE1E30845000489281 /* GoogleInterchangeUtilities.framework */,
-				8188AADF1E30845000489281 /* GoogleSymbolUtilities.framework */,
-				8188AAE01E30845000489281 /* GoogleToolboxForMac.framework */,
-				8188AAC51E30838200489281 /* GoogleMobileAds.framework */,
-				81582D5A1D0DFDF00089C2E1 /* DLRadioButton.framework */,
 				81690D6B1D0C986800787F1D /* libsqlite3.0.tbd */,
 				81EF87141D10E2310038A38C /* highscores.db */,
 				81A4C81B1CFE73CE007D4C3C /* easysequence.txt */,
@@ -158,6 +131,8 @@
 				81A89F0F1CEB995600B2838A /* TraderMathTest */,
 				81A89F251CEB995600B2838A /* TraderMathTestTests */,
 				81A89F0E1CEB995600B2838A /* Products */,
+				548E903E1CD083F35AEA1952 /* Pods */,
+				C62608B3AA031B2667283DF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,41 +148,16 @@
 		81A89F0F1CEB995600B2838A /* TraderMathTest */ = {
 			isa = PBXGroup;
 			children = (
-				81731AE01E8220F6004FB627 /* Firebase.h */,
-				81A4C8421CFF427C007D4C3C /* DLRadioButton.h */,
-				81A4C8431CFF427C007D4C3C /* DLRadioButton.m */,
+				DBB8D02628914C06006FC66C /* Helper */,
+				DBB8D02528914BF8006FC66C /* AppDelegate */,
 				81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */,
-				81731AD71E7F0AAC004FB627 /* Toast.swift */,
-				81731AD81E7F0AAC004FB627 /* ToastCenter.swift */,
-				81731AD91E7F0AAC004FB627 /* Toaster.h */,
-				81731ADA1E7F0AAC004FB627 /* ToastView.swift */,
-				81731ADB1E7F0AAC004FB627 /* ToastWindow.swift */,
-				81A4C8111CFDE4AD007D4C3C /* SQLiteDB.swift */,
-				81690D6D1D0C994100787F1D /* SQLTable.swift */,
-				81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */,
-				81A89F161CEB995600B2838A /* Main.storyboard */,
-				81A89F121CEB995600B2838A /* AppDelegate.swift */,
-				81A89F141CEB995600B2838A /* ViewController.swift */,
-				81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */,
-				81AA26671CF4DFC2001DE1D0 /* Countdown.swift */,
-				81AA26691CF4E4B6001DE1D0 /* MathTest.swift */,
-				818B534E1CF6CC350085346A /* FinishTest.swift */,
-				819347C91D022033002EA835 /* TableViewCell.swift */,
-				81A89F191CEB995600B2838A /* Images.xcassets */,
-				81A89F101CEB995600B2838A /* Supporting Files */,
-				81AA522C1CF5ED820078D58B /* Question.swift */,
-				818520651CF3EB4900063BFC /* Settings.swift */,
-				818520671CF3ED3C00063BFC /* Info.swift */,
+				81A89F111CEB995600B2838A /* Info.plist */,
+				DBB8D02428914BDA006FC66C /* Storyboard */,
+				DBB8D02328914BAE006FC66C /* VC */,
+				DBB8D01F28914A30006FC66C /* Vendor */,
+				DB9C9D4B2891519900216347 /* Assets.xcassets */,
 			);
 			path = TraderMathTest;
-			sourceTree = "<group>";
-		};
-		81A89F101CEB995600B2838A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				81A89F111CEB995600B2838A /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		81A89F251CEB995600B2838A /* TraderMathTestTests */ = {
@@ -227,6 +177,98 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C62608B3AA031B2667283DF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD98C5F23E4CB9C67AAD8E /* Pods_TraderMathTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBB8D01F28914A30006FC66C /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8D02028914A39006FC66C /* SQLite */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		DBB8D02028914A39006FC66C /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8D01A28914A2B006FC66C /* SQLiteBase.swift */,
+				DBB8D01B28914A2B006FC66C /* SQLiteDB.swift */,
+				DBB8D01928914A2B006FC66C /* SQLTable.swift */,
+				DBB8D02128914A8D006FC66C /* CloudDB.swift */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		DBB8D02328914BAE006FC66C /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				81A89F141CEB995600B2838A /* ViewController.swift */,
+				81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */,
+				81AA26671CF4DFC2001DE1D0 /* Countdown.swift */,
+				81AA26691CF4E4B6001DE1D0 /* MathTest.swift */,
+				818B534E1CF6CC350085346A /* FinishTest.swift */,
+				818520651CF3EB4900063BFC /* Settings.swift */,
+				818520671CF3ED3C00063BFC /* Info.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		DBB8D02428914BDA006FC66C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				81A89F161CEB995600B2838A /* Main.storyboard */,
+				DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DBB8D02528914BF8006FC66C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				81A89F121CEB995600B2838A /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DBB8D02628914C06006FC66C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8D02828914C1B006FC66C /* Extension */,
+				DBB8D02928914C20006FC66C /* Cell */,
+				DBB8D02728914C13006FC66C /* Models */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		DBB8D02728914C13006FC66C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81AA522C1CF5ED820078D58B /* Question.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBB8D02828914C1B006FC66C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DBB8D02928914C20006FC66C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				819347C91D022033002EA835 /* TableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81A89F2C1CEB995600B2838A /* Build configuration list for PBXNativeTarget "TraderMathTest" */;
 			buildPhases = (
+				68404C2ACEDD7A9AF041377B /* [CP] Check Pods Manifest.lock */,
 				81A89F091CEB995600B2838A /* Sources */,
 				81A89F0A1CEB995600B2838A /* Frameworks */,
 				81A89F0B1CEB995600B2838A /* Resources */,
+				370E10AC67A82E760CE1693D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,26 +316,27 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = "Gamelap Studios";
 				TargetAttributes = {
 					81A89F0C1CEB995600B2838A = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 5CUMW2JF9P;
-						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 5J96YT53E3;
+						LastSwiftMigration = 1340;
+						ProvisioningStyle = Automatic;
 					};
 					81A89F211CEB995600B2838A = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 5CUMW2JF9P;
+						DevelopmentTeam = 5J96YT53E3;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 81A89F0C1CEB995600B2838A;
 					};
 				};
 			};
 			buildConfigurationList = 81A89F081CEB995600B2838A /* Build configuration list for PBXProject "TraderMathTest" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -315,12 +360,13 @@
 			files = (
 				81A89F181CEB995600B2838A /* Main.storyboard in Resources */,
 				81A4C81F1CFE73CE007D4C3C /* hardsequence.txt in Resources */,
+				DB9C9D4C2891519900216347 /* Assets.xcassets in Resources */,
 				81EF87171D110A090038A38C /* easymath.txt in Resources */,
-				81A89F1A1CEB995600B2838A /* Images.xcassets in Resources */,
 				81A4C8201CFE73CE007D4C3C /* mediumsequence.txt in Resources */,
 				81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */,
 				81A4C81E1CFE73CE007D4C3C /* easysequence.txt in Resources */,
 				8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */,
+				DB9C9D4E289151C300216347 /* LaunchScreen.storyboard in Resources */,
 				81EF87151D10E2310038A38C /* highscores.db in Resources */,
 				81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */,
 			);
@@ -335,29 +381,89 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		370E10AC67A82E760CE1693D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseMessaging/FirebaseMessaging.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreInternal.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseMessaging.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68404C2ACEDD7A9AF041377B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TraderMathTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81A89F091CEB995600B2838A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81731ADE1E7F0AAC004FB627 /* ToastView.swift in Sources */,
+				DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */,
 				818B534F1CF6CC350085346A /* FinishTest.swift in Sources */,
-				81690D6E1D0C994100787F1D /* SQLTable.swift in Sources */,
 				819347CA1D022033002EA835 /* TableViewCell.swift in Sources */,
-				81A4C8441CFF427D007D4C3C /* DLRadioButton.m in Sources */,
 				81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */,
 				81AA522D1CF5ED820078D58B /* Question.swift in Sources */,
 				818520661CF3EB4900063BFC /* Settings.swift in Sources */,
-				81731ADC1E7F0AAC004FB627 /* Toast.swift in Sources */,
-				81731ADD1E7F0AAC004FB627 /* ToastCenter.swift in Sources */,
+				DBB8D01C28914A2B006FC66C /* SQLTable.swift in Sources */,
 				818520681CF3ED3C00063BFC /* Info.swift in Sources */,
-				81731ADF1E7F0AAC004FB627 /* ToastWindow.swift in Sources */,
+				DBB8D02228914A8D006FC66C /* CloudDB.swift in Sources */,
 				81A89F151CEB995600B2838A /* ViewController.swift in Sources */,
 				81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */,
-				81A4C8131CFDE4AD007D4C3C /* SQLiteDB.swift in Sources */,
 				81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */,
 				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,
 				81A4C8141CFDE4AD007D4C3C /* String-Extras.swift in Sources */,
+				DBB8D01E28914A2B006FC66C /* SQLiteDB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,18 +501,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -431,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -445,18 +561,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -474,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -486,53 +612,63 @@
 		};
 		81A89F2D1CEB995600B2838A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E58C782817E80F9C5507C7 /* Pods-TraderMathTest.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Milap Naik (N3P8GD663F)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Milap Naik (N3P8GD663F)";
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = default;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DEVELOPMENT_TEAM = 5CUMW2JF9P;
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = 5J96YT53E3;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = TraderMathTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TraderMathTest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.milapnaik.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.milapnaik.TraderMathTest1;
 				PRODUCT_NAME = TraderMathTest;
-				PROVISIONING_PROFILE = "801f4a8a-1b9a-4cbb-98e4-f5e1dcab818b";
-				PROVISIONING_PROFILE_SPECIFIER = "Trader Math Test Development";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTest/TraderMathTest/Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "TraderMathTest/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		81A89F2E1CEB995600B2838A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F090790E9D11CC1C967E1F8E /* Pods-TraderMathTest.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Milap Naik (N3P8GD663F)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = default;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DEVELOPMENT_TEAM = 5CUMW2JF9P;
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = 5J96YT53E3;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = TraderMathTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TraderMathTest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -540,13 +676,13 @@
 					"-ObjC",
 				);
 				"OTHER_LDFLAGS[arch=*]" = " $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.milapnaik.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.milapnaik.TraderMathTest1;
 				PRODUCT_NAME = TraderMathTest;
-				PROVISIONING_PROFILE = "d14f8e17-181f-41f3-be8b-51ed5b8184c6";
-				PROVISIONING_PROFILE_SPECIFIER = "Trader Math Test Distribution";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MilapNaik/iOSApps/TraderMathTest/TraderMathTest/Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "TraderMathTest/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -555,7 +691,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5CUMW2JF9P;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5J96YT53E3;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -565,7 +704,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTestTests;
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraderMathTest.app/TraderMathTest";
 			};
 			name = Debug;
@@ -574,12 +715,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5J96YT53E3;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTestTests;
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraderMathTest.app/TraderMathTest";
 			};
 			name = Release;
