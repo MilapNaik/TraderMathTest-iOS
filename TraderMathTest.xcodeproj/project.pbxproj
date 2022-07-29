@@ -38,6 +38,7 @@
 		DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D01A28914A2B006FC66C /* SQLiteBase.swift */; };
 		DBB8D01E28914A2B006FC66C /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D01B28914A2B006FC66C /* SQLiteDB.swift */; };
 		DBB8D02228914A8D006FC66C /* CloudDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D02128914A8D006FC66C /* CloudDB.swift */; };
+		DBCF555328941482008F711F /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = DBCF555228941481008F711F /* data.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		DBB8D01A28914A2B006FC66C /* SQLiteBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteBase.swift; sourceTree = "<group>"; };
 		DBB8D01B28914A2B006FC66C /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
 		DBB8D02128914A8D006FC66C /* CloudDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDB.swift; sourceTree = "<group>"; };
+		DBCF555228941481008F711F /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = SOURCE_ROOT; };
 		F090790E9D11CC1C967E1F8E /* Pods-TraderMathTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraderMathTest.release.xcconfig"; path = "Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 		81A89F0F1CEB995600B2838A /* TraderMathTest */ = {
 			isa = PBXGroup;
 			children = (
+				DBCF555228941481008F711F /* data.db */,
 				DBB8D02628914C06006FC66C /* Helper */,
 				DBB8D02528914BF8006FC66C /* AppDelegate */,
 				DBB8D02428914BDA006FC66C /* Storyboard */,
@@ -389,6 +392,7 @@
 				81A4C81E1CFE73CE007D4C3C /* easysequence.txt in Resources */,
 				8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */,
 				DB9C9D4E289151C300216347 /* LaunchScreen.storyboard in Resources */,
+				DBCF555328941482008F711F /* data.db in Resources */,
 				81EF87151D10E2310038A38C /* data.db in Resources */,
 				81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */,
 			);

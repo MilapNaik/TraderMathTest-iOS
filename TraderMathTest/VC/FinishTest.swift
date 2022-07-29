@@ -67,6 +67,7 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let _ = db.open()
         bannerView.adUnitID = "ca-app-pub-3095210410543033/2188670103" //Real Ad unit: ca-app-pub-3095210410543033/2188670103
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
