@@ -95,4 +95,8 @@ class SettingsController: UIViewController {
         let twentyToast = Toast(text: "Set to 20 questions", duration: Delay.long)
         twentyToast.show()
     }
+    @IBAction func menuClicked() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }

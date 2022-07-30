@@ -107,7 +107,8 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // MARK: Actions
     @IBAction func Menu(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goestoMenu", sender: self)
+//        self.performSegue(withIdentifier: "goestoMenu", sender: self)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     
@@ -160,4 +161,3 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
 } //EOF
-    
