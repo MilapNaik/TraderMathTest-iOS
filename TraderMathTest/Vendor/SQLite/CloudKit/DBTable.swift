@@ -277,7 +277,7 @@ extension DBTableProtocol where Self: DBTable {
 		let operation = CKModifyRecordsOperation(recordsToSave: records, recordIDsToDelete: [])
 		operation.modifyRecordsCompletionBlock = {(saved, deleted, error) in
 			guard error == nil else {
-				guard let ckerror = error as? CKError else {
+				guard let _ = error as? CKError else {
 					completion(error)
 					return
 				}
