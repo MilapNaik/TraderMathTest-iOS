@@ -12,7 +12,7 @@ import GoogleMobileAds
 import FirebaseAnalytics
 
 
-class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FinishTestController: UIViewController {
     // MARK: Properties
     var i: Int = 0
     var highscore:Int?
@@ -42,36 +42,13 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var Leaderboard: UILabel!
     
     @IBOutlet var tableView: UITableView!
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bestRank.count;
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
-        cell.column1.text = self.bestRank[indexPath.row]
-        cell.column2.text = self.bestScore[indexPath.row]
-        cell.column3.text = self.bestTime[indexPath.row]
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let _ = db.open()
-        bannerView.adUnitID = "ca-app-pub-3095210410543033/2188670103" //Real Ad unit: ca-app-pub-3095210410543033/2188670103
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+        _ = db.open()
         
+        loadAds()
         readUserDefaults()
         addhighscore()
         loadhighscores()
@@ -87,27 +64,11 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
         correctAnswers.text = "Score: \(highscore!)"
         finishTime.text = "Time: \(finishtime!)"
         
-        //Analytics
-        //TODO: Firebase
-        Analytics.logEvent("kFIREventTestFinished", parameters: [
-            AnalyticsParameterItemID: "id-test_finished" as NSObject,
-            "kFIRParameterTestType": testType as NSObject, //Default: Math
-            "kFIRParameterTestDifficulty": difficulty as NSObject, //Default: easy
-            "kFIRParameterTestLength": questionNum as NSObject, //Default: 5
-            "kFIRParameterTestPoT": PoT as NSObject, //Default: Practice
-            "kFIRParameterQuestionsCorrect": highscore! as NSObject
-            ])
+        logToAnalytics()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+        
     // MARK: Actions
     @IBAction func Menu(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: "goestoMenu", sender: self)
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -160,4 +121,58 @@ class FinishTestController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
-} //EOF
+    
+    func logToAnalytics() {
+        
+        //Analytics
+        Analytics.logEvent("kFIREventTestFinished", parameters: [
+            AnalyticsParameterItemID: "id-test_finished" as NSObject,
+            "kFIRParameterTestType": testType as NSObject, //Default: Math
+            "kFIRParameterTestDifficulty": difficulty as NSObject, //Default: easy
+            "kFIRParameterTestLength": questionNum as NSObject, //Default: 5
+            "kFIRParameterTestPoT": PoT as NSObject, //Default: Practice
+            "kFIRParameterQuestionsCorrect": highscore! as NSObject
+            ])
+        
+    }
+    
+    func loadAds() {
+        bannerView.adUnitID = "ca-app-pub-3095210410543033/2188670103" //Real Ad unit: ca-app-pub-3095210410543033/2188670103
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+}
+
+extension FinishTestController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return bestRank.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        
+        cell.column1.text = self.bestRank[indexPath.row]
+        cell.column2.text = self.bestScore[indexPath.row]
+        cell.column3.text = self.bestTime[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+    
+}
