@@ -58,13 +58,13 @@
 		818B534E1CF6CC350085346A /* FinishTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishTest.swift; sourceTree = "<group>"; };
 		819347C91D022033002EA835 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8199DF471E341A68006E95CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		81A4C8011CFBBE63007D4C3C /* hardmath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardmath.txt; sourceTree = "<group>"; };
-		81A4C8021CFBBE63007D4C3C /* mediummath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediummath.txt; sourceTree = "<group>"; };
+		81A4C8011CFBBE63007D4C3C /* hardmath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hardmath.txt; path = "question-bank/hardmath.txt"; sourceTree = "<group>"; };
+		81A4C8021CFBBE63007D4C3C /* mediummath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mediummath.txt; path = "question-bank/mediummath.txt"; sourceTree = "<group>"; };
 		81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
-		81A4C81B1CFE73CE007D4C3C /* easysequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easysequence.txt; sourceTree = "<group>"; };
-		81A4C81C1CFE73CE007D4C3C /* hardsequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hardsequence.txt; sourceTree = "<group>"; };
-		81A4C81D1CFE73CE007D4C3C /* mediumsequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediumsequence.txt; sourceTree = "<group>"; };
+		81A4C81B1CFE73CE007D4C3C /* easysequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = easysequence.txt; path = "question-bank/easysequence.txt"; sourceTree = "<group>"; };
+		81A4C81C1CFE73CE007D4C3C /* hardsequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hardsequence.txt; path = "question-bank/hardsequence.txt"; sourceTree = "<group>"; };
+		81A4C81D1CFE73CE007D4C3C /* mediumsequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mediumsequence.txt; path = "question-bank/mediumsequence.txt"; sourceTree = "<group>"; };
 		81A89F0D1CEB995600B2838A /* TraderMathTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraderMathTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F111CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F121CEB995600B2838A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		81AA26691CF4E4B6001DE1D0 /* MathTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTest.swift; sourceTree = "<group>"; };
 		81AA522C1CF5ED820078D58B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		81EF87141D10E2310038A38C /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
-		81EF87161D110A090038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = easymath.txt; sourceTree = "<group>"; };
+		81EF87161D110A090038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = easymath.txt; path = "question-bank/easymath.txt"; sourceTree = "<group>"; };
 		DB9C9D4B2891519900216347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB9C9D512891563B00216347 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -647,12 +647,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 5CUMW2JF9P;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TraderMathTest/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 2.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(OTHER_LDFLAGS)",
@@ -682,12 +684,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 5CUMW2JF9P;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TraderMathTest/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 2.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(OTHER_LDFLAGS)",
