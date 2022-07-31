@@ -343,13 +343,13 @@
 				TargetAttributes = {
 					81A89F0C1CEB995600B2838A = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 5J96YT53E3;
+						DevelopmentTeam = 5CUMW2JF9P;
 						LastSwiftMigration = 1340;
 						ProvisioningStyle = Automatic;
 					};
 					81A89F211CEB995600B2838A = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 5J96YT53E3;
+						DevelopmentTeam = 5CUMW2JF9P;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 81A89F0C1CEB995600B2838A;
@@ -647,7 +647,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DEVELOPMENT_TEAM = 5J96YT53E3;
+				DEVELOPMENT_TEAM = 5CUMW2JF9P;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TraderMathTest/Info.plist";
@@ -682,7 +682,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DEVELOPMENT_TEAM = 5J96YT53E3;
+				DEVELOPMENT_TEAM = 5CUMW2JF9P;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TraderMathTest/Info.plist";
@@ -710,9 +710,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5J96YT53E3;
+				DEVELOPMENT_TEAM = 5CUMW2JF9P;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -736,7 +736,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5J96YT53E3;
+				DEVELOPMENT_TEAM = 5CUMW2JF9P;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
