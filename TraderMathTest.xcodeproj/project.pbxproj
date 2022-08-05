@@ -339,7 +339,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 1340;
-				ORGANIZATIONNAME = "Gamelap Studios";
+				ORGANIZATIONNAME = "Gamelap Studios LLC";
 				TargetAttributes = {
 					81A89F0C1CEB995600B2838A = {
 						CreatedOnToolsVersion = 6.4;
