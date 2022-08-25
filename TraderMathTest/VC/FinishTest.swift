@@ -3,7 +3,7 @@
 //  TraderMathTestiOS
 //
 //  Created by Milap Naik on 5/26/16.
-//  Copyright (c) 2016 Gamelap Studios. All rights reserved.
+//  Copyright (c) 2016 Gamelap Studios LLC. All rights reserved.
 //
 
 import Foundation
