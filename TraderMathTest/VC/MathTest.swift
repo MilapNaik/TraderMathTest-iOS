@@ -61,7 +61,6 @@ class MathTestController: UIViewController {
         startTime = Date.timeIntervalSinceReferenceDate
 
         //Analytics
-        //TODO: Firebase
         Analytics.logEvent("kFIREventSelectContent", parameters: [
             AnalyticsParameterItemID: "id-test_started" as NSObject,
             AnalyticsParameterItemName: testType as NSObject,
