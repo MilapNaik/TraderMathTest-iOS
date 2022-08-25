@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import GoogleMobileAds
 import FirebaseAnalytics
-
+import AppTrackingTransparency
+import AdSupport
 
 class FinishTestController: UIViewController {
     // MARK: Properties
@@ -48,7 +49,7 @@ class FinishTestController: UIViewController {
         
         _ = db.open()
         
-        loadAds()
+        requestIDFA()
         readUserDefaults()
         addhighscore()
         loadhighscores()
@@ -134,6 +135,17 @@ class FinishTestController: UIViewController {
             "kFIRParameterQuestionsCorrect": highscore! as NSObject
             ])
         
+    }
+    
+    func requestIDFA() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                self.loadAds()
+            }
+        } else {
+            // Fallback on earlier versions
+            self.loadAds()
+        }
     }
     
     func loadAds() {
