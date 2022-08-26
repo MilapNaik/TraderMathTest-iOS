@@ -134,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-Ks-oQm">
-                                <rect key="frame" x="0.0" y="0.0" width="207" height="770"/>
+                                <rect key="frame" x="0.0" y="0.0" width="207" height="736"/>
                                 <color key="backgroundColor" red="0.99170845746994019" green="0.58130258321762085" blue="0.033975753933191299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Practice">
@@ -170,7 +170,7 @@
                             <constraint firstItem="pKe-Nn-Ixx" firstAttribute="height" secondItem="LXG-C0-Dfj" secondAttribute="height" id="YQl-iQ-5KW"/>
                             <constraint firstItem="bDZ-Ks-oQm" firstAttribute="width" secondItem="LXG-C0-Dfj" secondAttribute="width" multiplier="0.5" id="ebI-Hk-69c"/>
                             <constraint firstItem="pKe-Nn-Ixx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bDZ-Ks-oQm" secondAttribute="trailing" id="fQt-Q5-7aI"/>
-                            <constraint firstItem="yVE-JJ-DwD" firstAttribute="top" secondItem="bDZ-Ks-oQm" secondAttribute="bottom" constant="-34" id="jmY-RW-0f6"/>
+                            <constraint firstAttribute="bottom" secondItem="bDZ-Ks-oQm" secondAttribute="bottom" id="iCZ-Kp-yZm"/>
                             <constraint firstItem="pKe-Nn-Ixx" firstAttribute="width" secondItem="LXG-C0-Dfj" secondAttribute="width" multiplier="0.5" id="qwE-DW-XFa"/>
                         </constraints>
                     </view>

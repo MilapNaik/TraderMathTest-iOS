@@ -32,8 +32,17 @@
 	<string>ca-app-pub-3095210410543033~8235203706</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-    <key>NSUserTrackingUsageDescription</key>
-    <string>This identifier will be used to deliver personalized ads to you.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsForMedia</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>This identifier will be used to deliver personalized ads to you.</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
