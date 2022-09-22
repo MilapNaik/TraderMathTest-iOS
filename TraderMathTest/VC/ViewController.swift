@@ -24,9 +24,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        requestIDFA()
+       
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        requestIDFA()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
