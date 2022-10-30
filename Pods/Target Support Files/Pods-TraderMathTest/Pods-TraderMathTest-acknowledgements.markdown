@@ -24,11 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## FirebaseAnalytics
-
-Copyright 2022 Google
-
-## FirebaseCore
+## Firebase
 
 
                                  Apache License
@@ -234,7 +230,11 @@ Copyright 2022 Google
    limitations under the License.
 
 
-## FirebaseCoreDiagnostics
+## FirebaseAnalytics
+
+Copyright 2022 Google
+
+## FirebaseCore
 
 
                                  Apache License
@@ -1274,7 +1274,7 @@ Copyright 2022 Google
 
 ## GoogleUserMessagingPlatform
 
-Copyright 2021 Google
+Copyright 2022 Google
 
 ## GoogleUtilities
 
