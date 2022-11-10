@@ -18,18 +18,11 @@ class PoTController: UIViewController {
     let preferences = UserDefaults.standard
     let PoTKey = "PoT"
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-  
     // MARK: Actions
-
     @IBAction func PracticeButton(_ sender: UIButton) {
         preferences.set("Practice", forKey: PoTKey)
     }
