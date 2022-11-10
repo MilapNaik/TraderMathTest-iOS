@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="LogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="l7B-hB-QtB">
-                                <rect key="frame" x="0.0" y="32" width="414" height="175"/>
+                                <rect key="frame" x="0.0" y="32.000000000000007" width="414" height="116.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="234" id="EB0-D1-NZE"/>
                                 </constraints>
@@ -1380,7 +1380,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Info" width="112.5" height="112.5"/>
-        <image name="LogoImage" width="425" height="175"/>
+        <image name="LogoImage" width="283.33334350585938" height="116.66666412353516"/>
         <image name="Settings" width="45" height="45"/>
     </resources>
 </document>
