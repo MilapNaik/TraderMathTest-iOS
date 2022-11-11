@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgw-cd-gN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2600" y="271.46739130434787"/>
+            <point key="canvasLocation" x="2912" y="256"/>
         </scene>
         <!--Math Test Controller-->
         <scene sceneID="epv-kv-aB4">
@@ -1375,11 +1375,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pY9-3f-mAa"/>
+        <segue reference="DbL-KR-rWH"/>
         <segue reference="caa-ug-K1N"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Info" width="112.5" height="112.5"/>
+        <image name="Info" width="23" height="23"/>
         <image name="LogoImage" width="283.33334350585938" height="116.66666412353516"/>
         <image name="Settings" width="45" height="45"/>
     </resources>
