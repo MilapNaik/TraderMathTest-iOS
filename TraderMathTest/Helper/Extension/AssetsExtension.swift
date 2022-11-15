@@ -9,7 +9,12 @@
 import UIKit
 
 extension UIColor {
-    class var primary: UIColor { UIColor(named: "Primary")! }
+    class var primary: UIColor { UIColor(named: "PrimaryColor")! }
     class var lightPrimary: UIColor { UIColor(named: "LightPrimary")! }
     class var accent: UIColor { UIColor(named: "AccentColor")! }
+}
+
+extension UIImage {
+    class var mainLogo: UIImage { UIImage(named: "LogoImage")! }
+    class var leaderboardIcon: UIImage { UIImage(named: "leaderboard_icon_small")! }
 }

@@ -29,7 +29,8 @@
 		81AA522D1CF5ED820078D58B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA522C1CF5ED820078D58B /* Question.swift */; };
 		81EF87151D10E2310038A38C /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87141D10E2310038A38C /* data.db */; };
 		81EF87171D110A090038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87161D110A090038A38C /* easymath.txt */; };
-		DB3ADF11291F88E10040A3C9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADF10291F88E10040A3C9 /* ColorExtension.swift */; };
+		DB3ADF11291F88E10040A3C9 /* AssetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */; };
+		DB9682D52923894C00E72766 /* MathTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9682D42923894C00E72766 /* MathTestVC.swift */; };
 		DB9C9D4C2891519900216347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9C9D4B2891519900216347 /* Assets.xcassets */; };
 		DB9C9D4E289151C300216347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */; };
 		DB9C9D522891563B00216347 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9C9D512891563B00216347 /* libsqlite3.0.tbd */; };
@@ -46,6 +47,7 @@
 		DBD6F51A291CE2EF00759726 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F519291CE2EF00759726 /* Inter-Bold.ttf */; };
 		DBD6F51C291CE9C300759726 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F51B291CE9C300759726 /* Inter-Medium.ttf */; };
 		DBD6F51E291CED9B00759726 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6F51D291CED9B00759726 /* ViewExtension.swift */; };
+		DBDD48AA292370CF00F120FC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD48A9292370CF00F120FC /* BaseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +89,8 @@
 		81AA522C1CF5ED820078D58B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		81EF87141D10E2310038A38C /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
 		81EF87161D110A090038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = easymath.txt; path = "question-bank/easymath.txt"; sourceTree = "<group>"; };
-		DB3ADF10291F88E10040A3C9 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsExtension.swift; sourceTree = "<group>"; };
+		DB9682D42923894C00E72766 /* MathTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTestVC.swift; sourceTree = "<group>"; };
 		DB9C9D4B2891519900216347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB9C9D512891563B00216347 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -104,6 +107,7 @@
 		DBD6F519291CE2EF00759726 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		DBD6F51B291CE9C300759726 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		DBD6F51D291CED9B00759726 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		DBDD48A9292370CF00F120FC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		DBECA42728B89BD00054FFB1 /* TraderMathTestRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TraderMathTestRelease.entitlements; sourceTree = "<group>"; };
 		DBECA42828B89BDC0054FFB1 /* TraderMathTestDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TraderMathTestDebug.entitlements; sourceTree = "<group>"; };
 		F090790E9D11CC1C967E1F8E /* Pods-TraderMathTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraderMathTest.release.xcconfig"; path = "Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,9 +254,11 @@
 			isa = PBXGroup;
 			children = (
 				81A89F141CEB995600B2838A /* MainVC.swift */,
+				DBDD48A9292370CF00F120FC /* BaseVC.swift */,
 				81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */,
 				81AA26671CF4DFC2001DE1D0 /* Countdown.swift */,
 				81AA26691CF4E4B6001DE1D0 /* MathTest.swift */,
+				DB9682D42923894C00E72766 /* MathTestVC.swift */,
 				818B534E1CF6CC350085346A /* FinishTest.swift */,
 				818520651CF3EB4900063BFC /* Settings.swift */,
 				818520671CF3ED3C00063BFC /* Info.swift */,
@@ -302,7 +308,7 @@
 				81A4C8121CFDE4AD007D4C3C /* StringExtension.swift */,
 				DBD6F517291CE2B100759726 /* FontExtension.swift */,
 				DBD6F51D291CED9B00759726 /* ViewExtension.swift */,
-				DB3ADF10291F88E10040A3C9 /* ColorExtension.swift */,
+				DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 				DB9C9D5728915B6800216347 /* DBTable.swift in Sources */,
 				DBB8D01C28914A2B006FC66C /* SQLTable.swift in Sources */,
 				818520681CF3ED3C00063BFC /* Info.swift in Sources */,
+				DB9682D52923894C00E72766 /* MathTestVC.swift in Sources */,
 				DBB8D02228914A8D006FC66C /* CloudDB.swift in Sources */,
 				81A89F151CEB995600B2838A /* MainVC.swift in Sources */,
 				DB9C9D5828915B6800216347 /* DBManager.swift in Sources */,
@@ -537,7 +544,8 @@
 				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,
 				81A4C8141CFDE4AD007D4C3C /* StringExtension.swift in Sources */,
 				DBB8D01E28914A2B006FC66C /* SQLiteDB.swift in Sources */,
-				DB3ADF11291F88E10040A3C9 /* ColorExtension.swift in Sources */,
+				DBDD48AA292370CF00F120FC /* BaseVC.swift in Sources */,
+				DB3ADF11291F88E10040A3C9 /* AssetsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
