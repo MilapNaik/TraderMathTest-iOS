@@ -24,10 +24,15 @@ enum Test {
         case fifteen = 15
     }
     enum TType: String {
-        case practice = "Practice"
+        case practice = "practice"
         case test = "test"
     }
+    enum Category: String {
+        case math = "math"
+        case sequence = "sequence"
+    }
 }
+
 class MainVC: UIViewController {
     
     // MARK: Constants
@@ -49,6 +54,12 @@ class MainVC: UIViewController {
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var bottomSelectionView: UIView!
     @IBOutlet weak var settingsView: UIView!
+    @IBOutlet weak var fiveQuestionsBtn: UIButton!
+    @IBOutlet weak var tenQuestionsBtn: UIButton!
+    @IBOutlet weak var fifteenQuestionsBtn: UIButton!
+    @IBOutlet weak var easyLevelBtn: UIButton!
+    @IBOutlet weak var mediumLevelBtn: UIButton!
+    @IBOutlet weak var hardLevelBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +73,10 @@ class MainVC: UIViewController {
         testBtn.roundedBorders(radius: 4)
         startBtn.roundedBorders(radius: 4)
         settingsView.dropShadow()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        readUserDefaults()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -81,8 +96,8 @@ class MainVC: UIViewController {
     
     @IBAction func questionsCountClicked(_ sender: DLRadioButton) {
         guard let intVal = Int(sender.titleLabel!.text!) else { return }
-        let qCount = Test.Count(rawValue: intVal)
-        preferences.set(qCount!.rawValue, forKey: questionnumKey)
+        let count = Test.Count(rawValue: intVal)
+        preferences.set(count!.rawValue, forKey: questionnumKey)
     }
     
     @IBAction func levelDifficultyClicked(_ sender: DLRadioButton) {
@@ -92,7 +107,11 @@ class MainVC: UIViewController {
     }
     
     @IBAction func startClicked() {
-        print("Start Test")
+        self.performSegue(withIdentifier: "GoToMathTestView", sender: nil)
+    }
+    
+    @IBAction func closeSettingsView() {
+        showBottomSelectionView()
     }
     
     // MARK: View
@@ -102,6 +121,7 @@ class MainVC: UIViewController {
     
     func showBottomSelectionView() {
         bottomSelectionView.isHidden = false
+        settingsView.isHidden = true
     }
     
     func showSettingsView() {
@@ -119,23 +139,63 @@ class MainVC: UIViewController {
     }
     
     @objc func sequenceClicked() {
+        sequenceTestView.backgroundColor = .lightPrimary
+        mathTestView.backgroundColor = .white
+        preferences.set(Test.Category.sequence.rawValue, forKey: testtypeKey)
         showBottomSelectionView()
     }
     
     @objc func mathTestClicked() {
+        sequenceTestView.backgroundColor = .white
+        mathTestView.backgroundColor = .lightPrimary
+        preferences.set(Test.Category.math.rawValue, forKey: testtypeKey)
         showBottomSelectionView()
     }
     
-    // MARK: Segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "goestoPoTMath") {
-            testType = "math"
-        } else if (segue.identifier == "goestoPoTSeq") {
-            testType = "sequence"
-        } else{
-            testType = "percent"
+    //MARK: User Defaults
+    func readUserDefaults() {
+        //Default settings not saved - first run of the app
+        if !preferences.bool(forKey: "SETTINGS_SAVED_KEY") {
+            saveDefaultValues()
         }
-        preferences.set(testType, forKey: testtypeKey)
+        else {
+            readQuestionCountDefaults()
+            readDifficultyUserDefaults()
+        }
+    }
+    
+    fileprivate func readDifficultyUserDefaults() {
+        if let difficultyString = preferences.object(forKey: difficultyKey) as? String,
+           let levelType = Test.Level(rawValue: difficultyString) {
+            switch levelType {
+            case .easy:
+                easyLevelBtn.isSelected = true
+            case .medium:
+                mediumLevelBtn.isSelected = true
+            case .hard:
+                hardLevelBtn.isSelected = true
+            }
+        }
+    }
+    
+    fileprivate func readQuestionCountDefaults() {
+        let savedQuestionsCount = preferences.integer(forKey: questionnumKey)
+        if savedQuestionsCount > 0, let countType = Test.Count(rawValue: savedQuestionsCount) {
+            switch countType {
+            case .five:
+                fiveQuestionsBtn.isSelected = true
+            case .ten:
+                tenQuestionsBtn.isSelected = true
+            case .fifteen:
+                fifteenQuestionsBtn.isSelected = true
+            }
+        }
+    }
+    
+    fileprivate func saveDefaultValues() {
+        preferences.set(Test.Count.five.rawValue, forKey: questionnumKey)
+        preferences.set(Test.Level.easy.rawValue, forKey: difficultyKey)
+        preferences.set(true, forKey: "SETTINGS_SAVED_KEY")
     }
     
     //MARK: IDFA

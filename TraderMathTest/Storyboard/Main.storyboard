@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wc9-uZ-3y1">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -191,7 +191,7 @@ of the math test</string>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" name="TransyPrimary"/>
+                                <color key="backgroundColor" name="MediumPrimary"/>
                                 <constraints>
                                     <constraint firstItem="4qu-Y4-AQa" firstAttribute="leading" secondItem="1Qz-o7-0Vq" secondAttribute="leading" constant="16" id="GQT-Xl-lLT"/>
                                     <constraint firstAttribute="trailing" secondItem="4qu-Y4-AQa" secondAttribute="trailing" constant="16" id="WCx-dM-QXz"/>
@@ -200,31 +200,35 @@ of the math test</string>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hqj-hd-lH7">
-                                <rect key="frame" x="16" y="403.66666666666674" width="361" height="383.33333333333326"/>
+                                <rect key="frame" x="16" y="352" width="361" height="435"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxw-wK-KuL">
-                                        <rect key="frame" x="143" y="16" width="75" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <rect key="frame" x="142.33333333333334" y="16" width="76.333333333333343" height="23"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qe-oo-Hgn">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qe-oo-Hgn">
                                         <rect key="frame" x="279" y="9" width="89" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" name="AccentColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="close_icon"/>
+                                        <connections>
+                                            <action selector="closeSettingsView" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5kW-Pd-LiC"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gHC-qv-Xwb">
-                                        <rect key="frame" x="100.33333333333333" y="56" width="160.66666666666669" height="141.66666666666666"/>
+                                        <rect key="frame" x="99" y="55" width="163" height="142"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Practice Questions?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbP-5j-Uxr">
-                                                <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="21.666666666666668"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Practice Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbP-5j-Uxr">
+                                                <rect key="frame" x="0.0" y="0.0" width="163" height="22"/>
+                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U24-Xf-RdB" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="25.666666666666629" width="160.66666666666666" height="36"/>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U24-Xf-RdB" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="26" width="163" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="5">
@@ -248,7 +252,7 @@ of the math test</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpX-Nq-iIh" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="65.666666666666686" width="160.66666666666666" height="36"/>
+                                                <rect key="frame" x="0.0" y="66" width="163" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="10">
@@ -270,7 +274,7 @@ of the math test</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfE-Uh-3Gd" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="105.66666666666669" width="160.66666666666666" height="36"/>
+                                                <rect key="frame" x="0.0" y="106" width="163" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="15">
@@ -294,16 +298,16 @@ of the math test</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-Be-a6I">
-                                        <rect key="frame" x="117.33333333333334" y="213.66666666666669" width="126.66666666666666" height="141.66666666666669"/>
+                                        <rect key="frame" x="99" y="229" width="127.66666666666669" height="142"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty Level?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUo-gV-Mxy">
-                                                <rect key="frame" x="0.0" y="0.0" width="126.66666666666667" height="21.666666666666668"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUo-gV-Mxy">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="22"/>
+                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbv-bR-y2H" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="25.666666666666629" width="126.66666666666667" height="36"/>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbv-bR-y2H" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="26" width="127.66666666666667" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" name="AccentColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -327,8 +331,8 @@ of the math test</string>
                                                     <outletCollection property="otherButtons" destination="WoW-TQ-DIv" id="3pA-Hs-WT5"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKb-vu-FEv" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="65.666666666666629" width="126.66666666666667" height="36"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKb-vu-FEv" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="66" width="127.66666666666667" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" name="AccentColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -350,8 +354,8 @@ of the math test</string>
                                                     <action selector="levelDifficultyClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SPp-DW-rh9"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoW-TQ-DIv" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="105.66666666666663" width="126.66666666666667" height="36"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoW-TQ-DIv" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="106" width="127.66666666666667" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" name="AccentColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -376,7 +380,7 @@ of the math test</string>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wf-qd-Xpv">
-                                        <rect key="frame" x="130.66666666666666" y="363.33333333333331" width="100" height="40"/>
+                                        <rect key="frame" x="130.66666666666666" y="387" width="100" height="40"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="ArA-0g-x8B"/>
@@ -393,13 +397,14 @@ of the math test</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Uhk-Be-a6I" firstAttribute="top" secondItem="gHC-qv-Xwb" secondAttribute="bottom" constant="16" id="48k-6M-71x"/>
+                                    <constraint firstItem="Uhk-Be-a6I" firstAttribute="top" secondItem="gHC-qv-Xwb" secondAttribute="bottom" constant="32" id="48k-6M-71x"/>
                                     <constraint firstItem="Uxw-wK-KuL" firstAttribute="top" secondItem="Hqj-hd-lH7" secondAttribute="top" constant="16" id="5I0-lh-6DD"/>
-                                    <constraint firstItem="8wf-qd-Xpv" firstAttribute="centerX" secondItem="Uhk-Be-a6I" secondAttribute="centerX" id="6MF-c3-awU"/>
-                                    <constraint firstItem="Uhk-Be-a6I" firstAttribute="centerX" secondItem="gHC-qv-Xwb" secondAttribute="centerX" id="Hpe-hs-67s"/>
-                                    <constraint firstItem="8wf-qd-Xpv" firstAttribute="top" secondItem="Uhk-Be-a6I" secondAttribute="bottom" constant="8.0000000000000568" id="Llv-Ju-BA4"/>
+                                    <constraint firstItem="8wf-qd-Xpv" firstAttribute="top" secondItem="Uhk-Be-a6I" secondAttribute="bottom" constant="16" id="Llv-Ju-BA4"/>
+                                    <constraint firstItem="Uhk-Be-a6I" firstAttribute="leading" secondItem="gHC-qv-Xwb" secondAttribute="leading" id="NEc-J3-oxz"/>
                                     <constraint firstItem="gHC-qv-Xwb" firstAttribute="centerX" secondItem="Hqj-hd-lH7" secondAttribute="centerX" id="bOM-xE-nxL"/>
+                                    <constraint firstItem="8wf-qd-Xpv" firstAttribute="centerX" secondItem="Hqj-hd-lH7" secondAttribute="centerX" id="emU-me-ygE"/>
                                     <constraint firstItem="gHC-qv-Xwb" firstAttribute="top" secondItem="Uxw-wK-KuL" secondAttribute="bottom" constant="16" id="rd2-a2-sQ5"/>
+                                    <constraint firstAttribute="bottom" secondItem="8wf-qd-Xpv" secondAttribute="bottom" constant="8" id="rhb-14-Zr5"/>
                                     <constraint firstItem="Uxw-wK-KuL" firstAttribute="centerX" secondItem="Hqj-hd-lH7" secondAttribute="centerX" id="ryV-j9-VU8"/>
                                 </constraints>
                             </view>
@@ -419,6 +424,9 @@ of the math test</string>
                                                 <rect key="frame" x="338" y="0.0" width="23" height="23"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="Info"/>
+                                                <connections>
+                                                    <segue destination="xSZ-pA-KSI" kind="show" id="JXZ-Jn-Ss5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -456,27 +464,141 @@ of the math test</string>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="AEs-V6-7qY" secondAttribute="bottom" id="r7i-df-B3F"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vyy-pU-BFb" secondAttribute="trailing" constant="32" id="rs7-1L-izc"/>
                             <constraint firstItem="vyy-pU-BFb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="ryi-WL-P2h"/>
-                            <constraint firstItem="Hqj-hd-lH7" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.45" id="vBJ-Nk-vkP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9gA-2m-KUp"/>
                     <connections>
                         <outlet property="bottomSelectionView" destination="1Qz-o7-0Vq" id="qaq-9p-O7P"/>
+                        <outlet property="easyLevelBtn" destination="nbv-bR-y2H" id="0Op-JW-shv"/>
+                        <outlet property="fifteenQuestionsBtn" destination="dfE-Uh-3Gd" id="jWq-Si-SrF"/>
+                        <outlet property="fiveQuestionsBtn" destination="U24-Xf-RdB" id="eCF-Hm-aHP"/>
+                        <outlet property="hardLevelBtn" destination="WoW-TQ-DIv" id="ibT-yb-wVS"/>
                         <outlet property="mathTestView" destination="HA6-GL-hhS" id="S1x-Hd-ldu"/>
+                        <outlet property="mediumLevelBtn" destination="MKb-vu-FEv" id="qZD-tb-RZo"/>
                         <outlet property="practiceBtn" destination="KGW-so-v3g" id="Dvh-cD-zbg"/>
                         <outlet property="sequenceTestView" destination="WwN-y7-7wl" id="zkR-qg-gc8"/>
                         <outlet property="settingsView" destination="Hqj-hd-lH7" id="AfI-UO-6Pk"/>
                         <outlet property="startBtn" destination="8wf-qd-Xpv" id="cpm-Hy-kzN"/>
+                        <outlet property="tenQuestionsBtn" destination="YpX-Nq-iIh" id="6Bs-dp-PP0"/>
                         <outlet property="testBtn" destination="Nrl-H8-SrL" id="jG0-Ba-Zcz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="954.96183206106866" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bG7-LF-Bsc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wc9-uZ-3y1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mGx-B7-FnM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Bur-XJ-ybd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZs-cr-OCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="28.244274809160306" y="-2.1126760563380285"/>
+        </scene>
+        <!--Info Controller-->
+        <scene sceneID="Jpc-Ix-L0W">
+            <objects>
+                <viewController id="xSZ-pA-KSI" customClass="InfoController" customModule="TraderMathTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kw0-7y-rA1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="TMS-dE-fSm">
+                                <rect key="frame" x="16" y="75" width="137.66666666666666" height="56.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TMS-dE-fSm" secondAttribute="height" multiplier="284:117" id="lmW-q2-iTF"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHV-uA-zNw">
+                                <rect key="frame" x="343.66666666666669" y="86.666666666666671" width="33.333333333333314" height="33.333333333333329"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="leaderboard_icon_small"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOV-ts-5CK">
+                                <rect key="frame" x="15.999999999999996" y="139.66666666666666" width="44.666666666666657" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Back" image="chevron.backward" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mdn-WA-ski">
+                                <rect key="frame" x="138.33333333333334" y="173.66666666666666" width="116.66666666666666" height="44.333333333333343"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hgV-0H-xRN">
+                                        <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="23"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jr-w9-SZd">
+                                                <rect key="frame" x="0.0" y="0.0" width="23" height="23"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="Info"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About TMT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afN-uW-Wla">
+                                                <rect key="frame" x="31.000000000000007" y="0.0" width="85.666666666666686" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version 2.1.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAG-c0-8ad">
+                                        <rect key="frame" x="0.0" y="30.999999999999996" width="116.66666666666667" height="13.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="baf-GO-bGY">
+                                <rect key="frame" x="16" y="234" width="361" height="552"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="00v-TV-jVR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mdn-WA-ski" firstAttribute="top" secondItem="HOV-ts-5CK" secondAttribute="bottom" constant="16" id="3aC-2z-rri"/>
+                            <constraint firstItem="00v-TV-jVR" firstAttribute="bottom" secondItem="baf-GO-bGY" secondAttribute="bottom" constant="32" id="4in-lr-8la"/>
+                            <constraint firstItem="00v-TV-jVR" firstAttribute="trailing" secondItem="baf-GO-bGY" secondAttribute="trailing" constant="16" id="6Sa-gH-aqJ"/>
+                            <constraint firstItem="kHV-uA-zNw" firstAttribute="centerY" secondItem="TMS-dE-fSm" secondAttribute="centerY" id="Fld-8f-PAh"/>
+                            <constraint firstItem="TMS-dE-fSm" firstAttribute="width" secondItem="kw0-7y-rA1" secondAttribute="width" multiplier="0.35" id="Rcp-Pq-BBX"/>
+                            <constraint firstItem="00v-TV-jVR" firstAttribute="trailing" secondItem="kHV-uA-zNw" secondAttribute="trailing" constant="16" id="TAe-2I-98E"/>
+                            <constraint firstItem="TMS-dE-fSm" firstAttribute="leading" secondItem="00v-TV-jVR" secondAttribute="leading" constant="16" id="X0g-37-Rwg"/>
+                            <constraint firstItem="Mdn-WA-ski" firstAttribute="centerX" secondItem="00v-TV-jVR" secondAttribute="centerX" id="ZIT-2V-rfv"/>
+                            <constraint firstItem="TMS-dE-fSm" firstAttribute="top" secondItem="00v-TV-jVR" secondAttribute="top" constant="16" id="gS5-zi-1th"/>
+                            <constraint firstItem="HOV-ts-5CK" firstAttribute="leading" secondItem="00v-TV-jVR" secondAttribute="leading" constant="16" id="gj2-JH-X1v"/>
+                            <constraint firstItem="baf-GO-bGY" firstAttribute="top" secondItem="Mdn-WA-ski" secondAttribute="bottom" constant="16" id="mHf-8J-HAv"/>
+                            <constraint firstItem="HOV-ts-5CK" firstAttribute="top" secondItem="TMS-dE-fSm" secondAttribute="bottom" constant="8" id="mWH-uy-dkJ"/>
+                            <constraint firstItem="baf-GO-bGY" firstAttribute="leading" secondItem="00v-TV-jVR" secondAttribute="leading" constant="16" id="psE-17-wl9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="J1d-am-JVe"/>
+                    <connections>
+                        <outlet property="InfoText" destination="baf-GO-bGY" id="Vrf-Jn-yo7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hI9-oe-SdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="663"/>
         </scene>
     </scenes>
     <resources>
         <image name="Info" width="23" height="23"/>
         <image name="LogoImage" width="283.33334350585938" height="116.66666412353516"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="close_icon" width="13.333333015441895" height="13.333333015441895"/>
         <image name="leaderboard_icon_small" width="33.333332061767578" height="33.333332061767578"/>
         <image name="math_test_placeholder_img" width="134.33332824707031" height="142.66667175292969"/>
@@ -487,9 +609,12 @@ of the math test</string>
         <namedColor name="GrayColor">
             <color red="0.49399998784065247" green="0.49399998784065247" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="TransyPrimary">
+        <namedColor name="MediumPrimary">
             <color red="0.98799997568130493" green="0.64300000667572021" blue="0.016000000759959221" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
