@@ -28,7 +28,11 @@ class BaseVC: UIViewController {
         return UIBarButtonItem(image: .leaderboardIcon, style: .done, target: self, action: #selector(BaseVC.showLearboardView))
     }()
     
-    public var hidesRightBarBtnItem : Bool = false
+    public var hidesRightBarBtnItem : Bool = false {
+        didSet {
+            self.navigationItem.rightBarButtonItem = hidesRightBarBtnItem ? nil : rightBarBtnItem
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +46,7 @@ class BaseVC: UIViewController {
             nav.navigationItem.hidesBackButton = true
             
             self.navigationItem.leftBarButtonItem = leftBarBtnItem
-            if !hidesRightBarBtnItem {
-                self.navigationItem.rightBarButtonItem = rightBarBtnItem
-            }
+            self.navigationItem.rightBarButtonItem = hidesRightBarBtnItem ? nil : rightBarBtnItem
         }
     }
     

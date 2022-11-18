@@ -33,7 +33,7 @@ enum Test {
     }
 }
 
-class MainVC: UIViewController {
+class MainVC: BaseVC {
     
     // MARK: Constants
     let preferences = UserDefaults.standard
@@ -107,7 +107,7 @@ class MainVC: UIViewController {
     }
     
     @IBAction func startClicked() {
-        self.performSegue(withIdentifier: "GoToMathTestView", sender: nil)
+        self.performSegue(withIdentifier: "MathTest", sender: nil)
     }
     
     @IBAction func closeSettingsView() {

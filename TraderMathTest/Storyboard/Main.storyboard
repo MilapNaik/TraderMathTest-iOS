@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wc9-uZ-3y1">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -20,20 +20,20 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="MainVC" customModule="TraderMathTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vyy-pU-BFb">
-                                <rect key="frame" x="32" y="91" width="329" height="82.333333333333314"/>
+                                <rect key="frame" x="32" y="79" width="311" height="82.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCw-Fu-zpw">
-                                        <rect key="frame" x="100.00000000000001" y="0.0" width="129.33333333333337" height="36"/>
+                                        <rect key="frame" x="91.000000000000014" y="0.0" width="129.33333333333337" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjE-AN-M7e">
-                                        <rect key="frame" x="28.666666666666657" y="44" width="272" height="38.333333333333343"/>
+                                        <rect key="frame" x="19.666666666666657" y="44" width="272" height="38.333333333333343"/>
                                         <string key="text">A short welcome message to users to
 make them want to use the app</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -43,28 +43,28 @@ make them want to use the app</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vPA-Hc-XtD">
-                                <rect key="frame" x="16" y="189.33333333333334" width="361" height="356.66666666666663"/>
+                                <rect key="frame" x="16" y="177.33333333333334" width="343" height="348.66666666666663"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwN-y7-7wl">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="170.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="162.33333333333334"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qFh-Jg-DTI">
-                                                <rect key="frame" x="8" y="8" width="345" height="154.33333333333334"/>
+                                                <rect key="frame" x="8" y="8" width="327" height="146.33333333333334"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="sequence_placeholder_img" translatesAutoresizingMaskIntoConstraints="NO" id="Eqq-V0-3mY">
-                                                        <rect key="frame" x="0.0" y="6" width="134.33333333333334" height="142.66666666666666"/>
+                                                        <rect key="frame" x="0.0" y="2" width="134.33333333333334" height="142.66666666666666"/>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1eF-hQ-fGy">
-                                                        <rect key="frame" x="150.33333333333337" y="36.666666666666657" width="194.66666666666663" height="81"/>
+                                                        <rect key="frame" x="150.33333333333337" y="32.666666666666657" width="176.66666666666663" height="81"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Sequence Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETa-JV-yIu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="194.66666666666666" height="24.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="24.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW9-M7-R5E">
-                                                                <rect key="frame" x="0.0" y="40.333333333333314" width="194.66666666666666" height="40.666666666666657"/>
+                                                                <rect key="frame" x="0.0" y="40.333333333333314" width="176.66666666666666" height="40.666666666666657"/>
                                                                 <string key="text">A short description
 of the sequence test</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -86,25 +86,25 @@ of the sequence test</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HA6-GL-hhS">
-                                        <rect key="frame" x="0.0" y="186.33333333333331" width="361" height="170.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="178.33333333333331" width="343" height="170.33333333333331"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="f2Q-di-QA7">
-                                                <rect key="frame" x="8" y="8" width="345" height="154.33333333333334"/>
+                                                <rect key="frame" x="8" y="8" width="327" height="154.33333333333334"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="math_test_placeholder_img" translatesAutoresizingMaskIntoConstraints="NO" id="RT7-z9-ay4">
                                                         <rect key="frame" x="0.0" y="6" width="134.33333333333334" height="142.66666666666666"/>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hGO-8L-J9s">
-                                                        <rect key="frame" x="150.33333333333337" y="36.666666666666629" width="194.66666666666663" height="81"/>
+                                                        <rect key="frame" x="150.33333333333337" y="36.666666666666629" width="176.66666666666663" height="81"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Math Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5B-Wf-lMz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="194.66666666666666" height="24.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="24.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyE-IT-6yW">
-                                                                <rect key="frame" x="0.0" y="40.333333333333371" width="194.66666666666666" height="40.666666666666657"/>
+                                                                <rect key="frame" x="0.0" y="40.333333333333371" width="176.66666666666666" height="40.666666666666657"/>
                                                                 <string key="text">A short description
 of the math test</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -128,16 +128,16 @@ of the math test</string>
                                 </subviews>
                             </stackView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Qz-o7-0Vq">
-                                <rect key="frame" x="0.0" y="680" width="393" height="172"/>
+                                <rect key="frame" x="0.0" y="623.33333333333337" width="375" height="188.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4qu-Y4-AQa">
-                                        <rect key="frame" x="16" y="32" width="361" height="76"/>
+                                        <rect key="frame" x="16" y="32.000000000000007" width="343" height="92.666666666666686"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z1p-q9-hzF">
-                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="76"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="92.666666666666671"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGW-so-v3g">
-                                                        <rect key="frame" x="43.000000000000007" y="0.0" width="86.666666666666686" height="34.333333333333336"/>
+                                                        <rect key="frame" x="38.333333333333336" y="0.0" width="86.666666666666657" height="34.333333333333336"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Practice">
@@ -148,7 +148,7 @@ of the math test</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A short description of the practice sequence test." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2C-Bg-rCd">
-                                                        <rect key="frame" x="2" y="42.333333333333371" width="168.33333333333334" height="33.666666666666657"/>
+                                                        <rect key="frame" x="7.6666666666666714" y="42.333333333333258" width="148" height="50.333333333333343"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" name="GrayColor"/>
                                                         <nil key="highlightedColor"/>
@@ -156,10 +156,10 @@ of the math test</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Nv-fU-6vA">
-                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="76"/>
+                                                <rect key="frame" x="179.66666666666663" y="0.0" width="163.33333333333337" height="92.666666666666671"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrl-H8-SrL">
-                                                        <rect key="frame" x="58.000000000000028" y="0.0" width="56.333333333333343" height="34.333333333333336"/>
+                                                        <rect key="frame" x="53.333333333333343" y="0.0" width="56.333333333333343" height="51"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Test">
@@ -170,7 +170,7 @@ of the math test</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A short description of the test." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ida-5y-nHd">
-                                                        <rect key="frame" x="14.333333333333343" y="42.333333333333371" width="143.66666666666666" height="33.666666666666657"/>
+                                                        <rect key="frame" x="9.6666666666666856" y="59" width="143.66666666666666" height="33.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" name="GrayColor"/>
                                                         <nil key="highlightedColor"/>
@@ -189,10 +189,10 @@ of the math test</string>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hqj-hd-lH7">
-                                <rect key="frame" x="16" y="352" width="361" height="435"/>
+                                <rect key="frame" x="16" y="312" width="343" height="435"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxw-wK-KuL">
-                                        <rect key="frame" x="142.33333333333334" y="16" width="76.333333333333343" height="23"/>
+                                        <rect key="frame" x="133.33333333333334" y="16" width="76.333333333333343" height="23"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -208,7 +208,7 @@ of the math test</string>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gHC-qv-Xwb">
-                                        <rect key="frame" x="99" y="55" width="163" height="142"/>
+                                        <rect key="frame" x="90" y="55" width="163" height="142"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Practice Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbP-5j-Uxr">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="22"/>
@@ -287,7 +287,7 @@ of the math test</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-Be-a6I">
-                                        <rect key="frame" x="99" y="229" width="127.66666666666669" height="142"/>
+                                        <rect key="frame" x="90" y="229" width="127.66666666666669" height="142"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUo-gV-Mxy">
                                                 <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="22"/>
@@ -369,7 +369,7 @@ of the math test</string>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wf-qd-Xpv">
-                                        <rect key="frame" x="130.66666666666666" y="387" width="100" height="40"/>
+                                        <rect key="frame" x="121.66666666666666" y="387" width="100" height="40"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="ArA-0g-x8B"/>
@@ -398,19 +398,19 @@ of the math test</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEs-V6-7qY">
-                                <rect key="frame" x="0.0" y="795" width="393" height="23"/>
+                                <rect key="frame" x="0.0" y="755" width="375" height="23"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PV2-UH-ME8">
-                                        <rect key="frame" x="16" y="0.0" width="361" height="23"/>
+                                        <rect key="frame" x="16" y="0.0" width="343" height="23"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="© Copyright Information Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70c-Bj-1G2">
-                                                <rect key="frame" x="0.0" y="0.0" width="338" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" name="GrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQh-lq-fLG">
-                                                <rect key="frame" x="338" y="0.0" width="23" height="23"/>
+                                                <rect key="frame" x="320" y="0.0" width="23" height="23"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="Info"/>
                                                 <connections>
@@ -477,65 +477,172 @@ of the math test</string>
             <objects>
                 <viewController id="U8K-TT-Xdn" customClass="MathTestVC" customModule="TraderMathTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K9O-yl-uWE">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-VD-i4Y">
-                                <rect key="frame" x="64" y="91" width="265" height="104"/>
+                                <rect key="frame" x="64" y="79" width="247" height="192"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/80" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3P-IU-9gb">
+                                        <rect key="frame" x="0.0" y="0.0" width="247" height="19.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" name="GrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkA-zm-fGQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="27.333333333333329" width="247" height="28.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b2-EZ-SGq">
-                                        <rect key="frame" x="0.0" y="44" width="265" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qk-K7-eB4">
+                                        <rect key="frame" x="0.0" y="64" width="247" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="6b2-EZ-SGq">
+                                                <rect key="frame" x="16" y="16" width="215" height="96"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="sIQ-1W-54F"/>
+                                            <constraint firstItem="6b2-EZ-SGq" firstAttribute="top" secondItem="0Qk-K7-eB4" secondAttribute="top" constant="16" id="GI6-er-xXE"/>
+                                            <constraint firstAttribute="bottom" secondItem="6b2-EZ-SGq" secondAttribute="bottom" constant="16" id="lTN-6B-sAr"/>
+                                            <constraint firstItem="6b2-EZ-SGq" firstAttribute="leading" secondItem="0Qk-K7-eB4" secondAttribute="leading" constant="16" id="wOY-ma-oiC"/>
+                                            <constraint firstAttribute="trailing" secondItem="6b2-EZ-SGq" secondAttribute="trailing" constant="16" id="zZd-8O-epS"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </view>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91C-ky-U4k">
+                                <rect key="frame" x="0.0" y="812" width="375" height="0.0"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="SYy-hy-Oec"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jnE-FJ-2hl">
-                                <rect key="frame" x="64" y="707.66666666666663" width="265" height="78.333333333333371"/>
+                                <rect key="frame" x="64" y="672.66666666666663" width="247" height="78.333333333333371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qff-Kq-NJH">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="247" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TYPE HERE" borderStyle="line" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJm-gH-lEB">
-                                        <rect key="frame" x="0.0" y="28.333333333333371" width="265" height="50"/>
+                                        <rect key="frame" x="0.0" y="28.333333333333371" width="247" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="jB6-rK-4xa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
+                                </subviews>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcz-ut-zES">
+                                <rect key="frame" x="0.0" y="767" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="zVW-w7-eRm"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="G6k-5s-IFn"/>
+                                    <barButtonItem style="done" systemItem="done" id="NKT-Ca-u8P"/>
+                                </items>
+                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ccP-yI-Hlo">
+                                <rect key="frame" x="32" y="303" width="311" height="337.66666666666674"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nK7-HA-ccd">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="337.66666666666669"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35j-hQ-lL6">
+                                                <rect key="frame" x="16" y="0.0" width="279" height="22"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Use the draft board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLg-LH-7o6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="260.33333333333331" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" name="GrayColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0I-H1-9ws">
+                                                        <rect key="frame" x="260.33333333333331" y="0.0" width="18.666666666666686" height="22"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="chevron.down" catalog="system"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCC-q8-832">
+                                                <rect key="frame" x="0.0" y="38" width="311" height="299.66666666666669"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="35j-hQ-lL6" firstAttribute="leading" secondItem="nK7-HA-ccd" secondAttribute="leading" constant="16" id="6Vz-g9-fot"/>
+                                            <constraint firstItem="iCC-q8-832" firstAttribute="leading" secondItem="nK7-HA-ccd" secondAttribute="leading" id="Qaf-je-CuF"/>
+                                            <constraint firstAttribute="trailing" secondItem="iCC-q8-832" secondAttribute="trailing" id="TuY-8e-2rt"/>
+                                            <constraint firstItem="iCC-q8-832" firstAttribute="top" secondItem="35j-hQ-lL6" secondAttribute="bottom" constant="16" id="dVE-Aq-Qm1"/>
+                                            <constraint firstAttribute="trailing" secondItem="35j-hQ-lL6" secondAttribute="trailing" constant="16" id="ldj-xc-4Sh"/>
+                                            <constraint firstItem="35j-hQ-lL6" firstAttribute="top" secondItem="nK7-HA-ccd" secondAttribute="top" id="qjY-EH-ZZv"/>
+                                            <constraint firstAttribute="bottom" secondItem="iCC-q8-832" secondAttribute="bottom" id="rox-tQ-qcO"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ULj-gg-fmk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ULj-gg-fmk" firstAttribute="bottom" secondItem="jnE-FJ-2hl" secondAttribute="bottom" constant="32" id="7TN-1o-TMe"/>
+                            <constraint firstItem="ccP-yI-Hlo" firstAttribute="leading" secondItem="ULj-gg-fmk" secondAttribute="leading" constant="32" id="30c-Th-5gc"/>
+                            <constraint firstItem="bcz-ut-zES" firstAttribute="top" secondItem="jnE-FJ-2hl" secondAttribute="bottom" constant="16" id="3t3-94-qnR"/>
+                            <constraint firstItem="bcz-ut-zES" firstAttribute="trailing" secondItem="ULj-gg-fmk" secondAttribute="trailing" id="5aA-iJ-whE"/>
                             <constraint firstItem="ULj-gg-fmk" firstAttribute="trailing" secondItem="jnE-FJ-2hl" secondAttribute="trailing" constant="64" id="9dx-9C-sEd"/>
+                            <constraint firstItem="jnE-FJ-2hl" firstAttribute="top" secondItem="ccP-yI-Hlo" secondAttribute="bottom" constant="32" id="A9N-Ky-V6N"/>
+                            <constraint firstItem="ULj-gg-fmk" firstAttribute="trailing" secondItem="ccP-yI-Hlo" secondAttribute="trailing" constant="32" id="H1E-Iv-elB"/>
+                            <constraint firstItem="ccP-yI-Hlo" firstAttribute="top" secondItem="Hv4-VD-i4Y" secondAttribute="bottom" constant="32" id="IiN-mG-EGd"/>
                             <constraint firstItem="ULj-gg-fmk" firstAttribute="trailing" secondItem="Hv4-VD-i4Y" secondAttribute="trailing" constant="64" id="Kwo-XD-3mT"/>
                             <constraint firstItem="Hv4-VD-i4Y" firstAttribute="leading" secondItem="ULj-gg-fmk" secondAttribute="leading" constant="64" id="UMr-cV-pmf"/>
                             <constraint firstItem="jnE-FJ-2hl" firstAttribute="leading" secondItem="ULj-gg-fmk" secondAttribute="leading" constant="64" id="WvG-kW-Ee0"/>
+                            <constraint firstItem="91C-ky-U4k" firstAttribute="top" secondItem="bcz-ut-zES" secondAttribute="bottom" id="aRo-8X-y8g"/>
+                            <constraint firstAttribute="bottom" secondItem="91C-ky-U4k" secondAttribute="bottom" id="cox-4m-quh"/>
                             <constraint firstItem="Hv4-VD-i4Y" firstAttribute="top" secondItem="ULj-gg-fmk" secondAttribute="top" constant="32" id="dwe-Il-Z3S"/>
+                            <constraint firstItem="91C-ky-U4k" firstAttribute="leading" secondItem="ULj-gg-fmk" secondAttribute="leading" id="knV-sq-I7N"/>
+                            <constraint firstItem="bcz-ut-zES" firstAttribute="leading" secondItem="ULj-gg-fmk" secondAttribute="leading" id="mi5-wV-VRP"/>
+                            <constraint firstItem="ULj-gg-fmk" firstAttribute="trailing" secondItem="91C-ky-U4k" secondAttribute="trailing" id="q9C-zG-QQL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dOi-yi-LoC"/>
+                    <connections>
+                        <outlet property="answerTf" destination="eJm-gH-lEB" id="mYF-QN-oFd"/>
+                        <outlet property="keyboardHeightConstraint" destination="SYy-hy-Oec" id="8IX-Ne-0Oy"/>
+                        <outlet property="qnumLabel" destination="C3P-IU-9gb" id="IHF-hI-AuY"/>
+                        <outlet property="questionLbl" destination="6b2-EZ-SGq" id="r7N-4U-NQb"/>
+                        <outlet property="questionViewContainer" destination="0Qk-K7-eB4" id="Xq0-ez-yWs"/>
+                        <outlet property="testTypeLbl" destination="rkA-zm-fGQ" id="4eP-Ys-seS"/>
+                        <segue destination="Rjz-eS-c6A" kind="show" identifier="FinishTest" id="ij4-bT-6Zb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVS-K7-AjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1746" y="-1"/>
+        </scene>
+        <!--Finish TestVC-->
+        <scene sceneID="bnb-z9-m5g">
+            <objects>
+                <viewController id="Rjz-eS-c6A" customClass="FinishTestVC" customModule="TraderMathTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B36-o9-5tZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vrr-mb-rIU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EFv-ey-jl2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOr-6K-YwP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486" y="-21"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bG7-LF-Bsc">
@@ -559,11 +666,11 @@ of the math test</string>
             <objects>
                 <viewController id="xSZ-pA-KSI" customClass="InfoVC" customModule="TraderMathTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kw0-7y-rA1">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOV-ts-5CK">
-                                <rect key="frame" x="15.999999999999996" y="91" width="44.666666666666657" height="18"/>
+                                <rect key="frame" x="15.999999999999996" y="79" width="44.666666666666657" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Back" image="chevron.backward" catalog="system">
@@ -574,7 +681,7 @@ of the math test</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mdn-WA-ski">
-                                <rect key="frame" x="138.33333333333334" y="124.99999999999999" width="116.66666666666666" height="44.333333333333329"/>
+                                <rect key="frame" x="129.33333333333334" y="112.99999999999999" width="116.66666666666666" height="44.333333333333329"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hgV-0H-xRN">
                                         <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="23"/>
@@ -601,7 +708,7 @@ of the math test</string>
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="baf-GO-bGY">
-                                <rect key="frame" x="16" y="185.33333333333331" width="361" height="600.66666666666674"/>
+                                <rect key="frame" x="16" y="173.33333333333331" width="343" height="572.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -635,6 +742,7 @@ of the math test</string>
     <resources>
         <image name="Info" width="23" height="23"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="close_icon" width="13.333333015441895" height="13.333333015441895"/>
         <image name="math_test_placeholder_img" width="134.33332824707031" height="142.66667175292969"/>
         <image name="sequence_placeholder_img" width="134.33332824707031" height="142.66667175292969"/>

@@ -29,6 +29,7 @@
 		81AA522D1CF5ED820078D58B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA522C1CF5ED820078D58B /* Question.swift */; };
 		81EF87151D10E2310038A38C /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87141D10E2310038A38C /* data.db */; };
 		81EF87171D110A090038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87161D110A090038A38C /* easymath.txt */; };
+		DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */; };
 		DB3ADF11291F88E10040A3C9 /* AssetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */; };
 		DB9682D52923894C00E72766 /* MathTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9682D42923894C00E72766 /* MathTestVC.swift */; };
 		DB9C9D4C2891519900216347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9C9D4B2891519900216347 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		81AA522C1CF5ED820078D58B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		81EF87141D10E2310038A38C /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
 		81EF87161D110A090038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = easymath.txt; path = "question-bank/easymath.txt"; sourceTree = "<group>"; };
+		DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTestVC.swift; sourceTree = "<group>"; };
 		DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsExtension.swift; sourceTree = "<group>"; };
 		DB9682D42923894C00E72766 /* MathTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTestVC.swift; sourceTree = "<group>"; };
 		DB9C9D4B2891519900216347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				81AA26691CF4E4B6001DE1D0 /* MathTest.swift */,
 				DB9682D42923894C00E72766 /* MathTestVC.swift */,
 				818B534E1CF6CC350085346A /* FinishTest.swift */,
+				DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */,
 				818520651CF3EB4900063BFC /* Settings.swift */,
 				818520671CF3ED3C00063BFC /* Info.swift */,
 			);
@@ -527,6 +530,7 @@
 				DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */,
 				818B534F1CF6CC350085346A /* FinishTest.swift in Sources */,
 				819347CA1D022033002EA835 /* TableViewCell.swift in Sources */,
+				DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */,
 				DBD6F518291CE2B100759726 /* FontExtension.swift in Sources */,
 				81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */,
 				81AA522D1CF5ED820078D58B /* Question.swift in Sources */,
