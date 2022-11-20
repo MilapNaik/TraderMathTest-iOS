@@ -16,5 +16,6 @@ extension UIColor {
 
 extension UIImage {
     class var mainLogo: UIImage { UIImage(named: "LogoImage")! }
-    class var leaderboardIcon: UIImage { UIImage(named: "leaderboard_icon_small")! }
+    class var leaderboardIcon: UIImage { UIImage(named: "leaderboard_icon")! }
+    class var leaderboardIconSelected: UIImage { UIImage(named: "leaderboard_icon_selected")! }
 }

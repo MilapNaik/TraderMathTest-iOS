@@ -48,6 +48,7 @@
 		DBDD48AA292370CF00F120FC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD48A9292370CF00F120FC /* BaseVC.swift */; };
 		DBE779A62929E612000ADD51 /* HighScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE779A42929E612000ADD51 /* HighScoreCell.swift */; };
 		DBE779A72929E612000ADD51 /* HighScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE779A52929E612000ADD51 /* HighScoreCell.xib */; };
+		DBE779AB292A05F1000ADD51 /* LeaderboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE779AA292A05F1000ADD51 /* LeaderboardVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		DBDD48A9292370CF00F120FC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		DBE779A42929E612000ADD51 /* HighScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreCell.swift; sourceTree = "<group>"; };
 		DBE779A52929E612000ADD51 /* HighScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighScoreCell.xib; sourceTree = "<group>"; };
+		DBE779AA292A05F1000ADD51 /* LeaderboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardVC.swift; sourceTree = "<group>"; };
 		DBECA42728B89BD00054FFB1 /* TraderMathTestRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TraderMathTestRelease.entitlements; sourceTree = "<group>"; };
 		DBECA42828B89BDC0054FFB1 /* TraderMathTestDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TraderMathTestDebug.entitlements; sourceTree = "<group>"; };
 		F090790E9D11CC1C967E1F8E /* Pods-TraderMathTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraderMathTest.release.xcconfig"; path = "Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				81AA26671CF4DFC2001DE1D0 /* Countdown.swift */,
 				DB9682D42923894C00E72766 /* MathTestVC.swift */,
 				DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */,
+				DBE779AA292A05F1000ADD51 /* LeaderboardVC.swift */,
 				818520651CF3EB4900063BFC /* Settings.swift */,
 				818520671CF3ED3C00063BFC /* Info.swift */,
 			);
@@ -551,6 +554,7 @@
 				DBE779A62929E612000ADD51 /* HighScoreCell.swift in Sources */,
 				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,
 				81A4C8141CFDE4AD007D4C3C /* StringExtension.swift in Sources */,
+				DBE779AB292A05F1000ADD51 /* LeaderboardVC.swift in Sources */,
 				DBB8D01E28914A2B006FC66C /* SQLiteDB.swift in Sources */,
 				DBDD48AA292370CF00F120FC /* BaseVC.swift in Sources */,
 				DB3ADF11291F88E10040A3C9 /* AssetsExtension.swift in Sources */,
