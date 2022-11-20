@@ -22,14 +22,12 @@ extension UIView {
         layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
   
-    func roundedBorders(radius: CGFloat) {
-        let layer = self.layer
-        layer.cornerRadius = radius
+    func roundedBorders(radius: CGFloat = 0.0) {
+        layer.cornerRadius = radius > 0 ? radius : bounds.width/2.0
         layer.masksToBounds = true
     }
     
     func border(color: UIColor = .black, width: Float = 1.0) {
-        let layer = self.layer
         layer.borderColor = color.cgColor
         layer.borderWidth = CGFloat(width)
     }

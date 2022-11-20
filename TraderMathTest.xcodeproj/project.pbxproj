@@ -11,7 +11,6 @@
 		818520661CF3EB4900063BFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520651CF3EB4900063BFC /* Settings.swift */; };
 		818520681CF3ED3C00063BFC /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520671CF3ED3C00063BFC /* Info.swift */; };
 		818B534F1CF6CC350085346A /* FinishTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B534E1CF6CC350085346A /* FinishTest.swift */; };
-		819347CA1D022033002EA835 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819347C91D022033002EA835 /* TableViewCell.swift */; };
 		8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8199DF471E341A68006E95CE /* GoogleService-Info.plist */; };
 		81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8011CFBBE63007D4C3C /* hardmath.txt */; };
 		81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8021CFBBE63007D4C3C /* mediummath.txt */; };
@@ -49,6 +48,8 @@
 		DBD6F51C291CE9C300759726 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F51B291CE9C300759726 /* Inter-Medium.ttf */; };
 		DBD6F51E291CED9B00759726 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6F51D291CED9B00759726 /* ViewExtension.swift */; };
 		DBDD48AA292370CF00F120FC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD48A9292370CF00F120FC /* BaseVC.swift */; };
+		DBE779A62929E612000ADD51 /* HighScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE779A42929E612000ADD51 /* HighScoreCell.swift */; };
+		DBE779A72929E612000ADD51 /* HighScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE779A52929E612000ADD51 /* HighScoreCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,6 @@
 		818520651CF3EB4900063BFC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		818520671CF3ED3C00063BFC /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		818B534E1CF6CC350085346A /* FinishTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishTest.swift; sourceTree = "<group>"; };
-		819347C91D022033002EA835 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8199DF471E341A68006E95CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81A4C8011CFBBE63007D4C3C /* hardmath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hardmath.txt; path = "question-bank/hardmath.txt"; sourceTree = "<group>"; };
 		81A4C8021CFBBE63007D4C3C /* mediummath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mediummath.txt; path = "question-bank/mediummath.txt"; sourceTree = "<group>"; };
@@ -110,6 +110,8 @@
 		DBD6F51B291CE9C300759726 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		DBD6F51D291CED9B00759726 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		DBDD48A9292370CF00F120FC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		DBE779A42929E612000ADD51 /* HighScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreCell.swift; sourceTree = "<group>"; };
+		DBE779A52929E612000ADD51 /* HighScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighScoreCell.xib; sourceTree = "<group>"; };
 		DBECA42728B89BD00054FFB1 /* TraderMathTestRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TraderMathTestRelease.entitlements; sourceTree = "<group>"; };
 		DBECA42828B89BDC0054FFB1 /* TraderMathTestDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TraderMathTestDebug.entitlements; sourceTree = "<group>"; };
 		F090790E9D11CC1C967E1F8E /* Pods-TraderMathTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraderMathTest.release.xcconfig"; path = "Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -319,7 +321,7 @@
 		DBB8D02928914C20006FC66C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				819347C91D022033002EA835 /* TableViewCell.swift */,
+				DBE779A92929F4E1000ADD51 /* Score */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -342,6 +344,15 @@
 				DBD6F51B291CE9C300759726 /* Inter-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DBE779A92929F4E1000ADD51 /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				DBE779A42929E612000ADD51 /* HighScoreCell.swift */,
+				DBE779A52929E612000ADD51 /* HighScoreCell.xib */,
+			);
+			path = Score;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +454,7 @@
 				DBD6F516291CE20100759726 /* Inter-Regular.ttf in Resources */,
 				81A4C8201CFE73CE007D4C3C /* mediumsequence.txt in Resources */,
 				81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */,
+				DBE779A72929E612000ADD51 /* HighScoreCell.xib in Resources */,
 				81A4C81E1CFE73CE007D4C3C /* easysequence.txt in Resources */,
 				8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */,
 				DBD6F51C291CE9C300759726 /* Inter-Medium.ttf in Resources */,
@@ -529,7 +541,6 @@
 			files = (
 				DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */,
 				818B534F1CF6CC350085346A /* FinishTest.swift in Sources */,
-				819347CA1D022033002EA835 /* TableViewCell.swift in Sources */,
 				DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */,
 				DBD6F518291CE2B100759726 /* FontExtension.swift in Sources */,
 				81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */,
@@ -545,6 +556,7 @@
 				81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */,
 				81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */,
 				DBD6F51E291CED9B00759726 /* ViewExtension.swift in Sources */,
+				DBE779A62929E612000ADD51 /* HighScoreCell.swift in Sources */,
 				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,
 				81A4C8141CFDE4AD007D4C3C /* StringExtension.swift in Sources */,
 				DBB8D01E28914A2B006FC66C /* SQLiteDB.swift in Sources */,

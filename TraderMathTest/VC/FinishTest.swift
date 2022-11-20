@@ -190,11 +190,11 @@ extension FinishTestController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UITableViewCell
         
-        cell.column1.text = self.bestRank[indexPath.row]
-        cell.column2.text = self.bestScore[indexPath.row]
-        cell.column3.text = self.bestTime[indexPath.row]
+//        cell.column1.text = self.bestRank[indexPath.row]
+//        cell.column2.text = self.bestScore[indexPath.row]
+//        cell.column3.text = self.bestTime[indexPath.row]
         
         return cell
     }

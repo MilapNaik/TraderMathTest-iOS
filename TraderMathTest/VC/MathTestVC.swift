@@ -6,6 +6,7 @@
 //  Copyright © 2022 Gamelap Studios LLC. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Toaster
 import FirebaseAnalytics
@@ -57,10 +58,6 @@ class MathTestVC: BaseVC {
               object: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
     override func viewWillLayoutSubviews() {
         questionViewContainer.border()
     }
@@ -68,9 +65,11 @@ class MathTestVC: BaseVC {
     override func viewWillDisappear(_ animated: Bool) {
         self.hidesRightBarBtnItem = false
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         readUserDefaults()
         readFile()
+        startTime = Date.timeIntervalSinceReferenceDate
         answerTf.becomeFirstResponder()
         answerTf.delegate = self
     }
@@ -92,30 +91,25 @@ class MathTestVC: BaseVC {
             print(PoT)
         }
         
-        if PoT == "Test"{
-            if testType == "sequence"{
+        if PoT == "Test" {
+            questionNum = 80
+            if testType == "sequence" {
                 questionNum = 50
             }
-            else{
-                questionNum = 80
-            }
         }
-        else{
-            if preferences.integer(forKey: questionnumKey) == 0{
+        else {
+            questionNum = preferences.integer(forKey: questionnumKey)
+            if questionNum == 0 {
                 questionNum = 5
             }
-            else {
-                questionNum = preferences.integer(forKey: questionnumKey)
-            }
         }
+        print(questionNum)
         testTypeLbl.text = PoT.capitalized
     }
     
     // Read selected file
     func readFile(){
         filename = difficulty.lowercased() + testType.lowercased()
-
-            
         if let path = Bundle.main.path(forResource: filename, ofType: "txt"){
             do {
                 let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
