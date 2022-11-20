@@ -10,7 +10,6 @@
 		71C24D9ACB05CB9C729CA201 /* Pods_TraderMathTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD98C5F23E4CB9C67AAD8E /* Pods_TraderMathTest.framework */; };
 		818520661CF3EB4900063BFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520651CF3EB4900063BFC /* Settings.swift */; };
 		818520681CF3ED3C00063BFC /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520671CF3ED3C00063BFC /* Info.swift */; };
-		818B534F1CF6CC350085346A /* FinishTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B534E1CF6CC350085346A /* FinishTest.swift */; };
 		8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8199DF471E341A68006E95CE /* GoogleService-Info.plist */; };
 		81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8011CFBBE63007D4C3C /* hardmath.txt */; };
 		81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8021CFBBE63007D4C3C /* mediummath.txt */; };
@@ -24,7 +23,6 @@
 		81A89F291CEB995600B2838A /* TraderMathTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F281CEB995600B2838A /* TraderMathTestTests.swift */; };
 		81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */; };
 		81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26671CF4DFC2001DE1D0 /* Countdown.swift */; };
-		81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26691CF4E4B6001DE1D0 /* MathTest.swift */; };
 		81AA522D1CF5ED820078D58B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA522C1CF5ED820078D58B /* Question.swift */; };
 		81EF87151D10E2310038A38C /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87141D10E2310038A38C /* data.db */; };
 		81EF87171D110A090038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87161D110A090038A38C /* easymath.txt */; };
@@ -67,7 +65,6 @@
 		49E58C782817E80F9C5507C7 /* Pods-TraderMathTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraderMathTest.debug.xcconfig"; path = "Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest.debug.xcconfig"; sourceTree = "<group>"; };
 		818520651CF3EB4900063BFC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		818520671CF3ED3C00063BFC /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
-		818B534E1CF6CC350085346A /* FinishTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishTest.swift; sourceTree = "<group>"; };
 		8199DF471E341A68006E95CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81A4C8011CFBBE63007D4C3C /* hardmath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hardmath.txt; path = "question-bank/hardmath.txt"; sourceTree = "<group>"; };
 		81A4C8021CFBBE63007D4C3C /* mediummath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mediummath.txt; path = "question-bank/mediummath.txt"; sourceTree = "<group>"; };
@@ -86,7 +83,6 @@
 		81A89F281CEB995600B2838A /* TraderMathTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraderMathTestTests.swift; sourceTree = "<group>"; };
 		81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeOrTest.swift; sourceTree = "<group>"; };
 		81AA26671CF4DFC2001DE1D0 /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
-		81AA26691CF4E4B6001DE1D0 /* MathTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTest.swift; sourceTree = "<group>"; };
 		81AA522C1CF5ED820078D58B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		81EF87141D10E2310038A38C /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
 		81EF87161D110A090038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = easymath.txt; path = "question-bank/easymath.txt"; sourceTree = "<group>"; };
@@ -261,9 +257,7 @@
 				DBDD48A9292370CF00F120FC /* BaseVC.swift */,
 				81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */,
 				81AA26671CF4DFC2001DE1D0 /* Countdown.swift */,
-				81AA26691CF4E4B6001DE1D0 /* MathTest.swift */,
 				DB9682D42923894C00E72766 /* MathTestVC.swift */,
-				818B534E1CF6CC350085346A /* FinishTest.swift */,
 				DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */,
 				818520651CF3EB4900063BFC /* Settings.swift */,
 				818520671CF3ED3C00063BFC /* Info.swift */,
@@ -540,7 +534,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */,
-				818B534F1CF6CC350085346A /* FinishTest.swift in Sources */,
 				DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */,
 				DBD6F518291CE2B100759726 /* FontExtension.swift in Sources */,
 				81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */,
@@ -554,7 +547,6 @@
 				81A89F151CEB995600B2838A /* MainVC.swift in Sources */,
 				DB9C9D5828915B6800216347 /* DBManager.swift in Sources */,
 				81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */,
-				81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */,
 				DBD6F51E291CED9B00759726 /* ViewExtension.swift in Sources */,
 				DBE779A62929E612000ADD51 /* HighScoreCell.swift in Sources */,
 				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,
