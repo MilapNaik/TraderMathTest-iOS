@@ -11,23 +11,28 @@ import AppTrackingTransparency
 import AdSupport
 import DLRadioButton
 
-enum Test {
+enum Test: CaseIterable {
     
-    enum Level: String {
+    enum Level: String, CaseIterable  {
         case easy = "easy"
         case medium = "medium"
         case hard = "hard"
     }
-    enum Count: Int {
+    
+    enum Count: Int, CaseIterable  {
         case five = 5
         case ten = 10
         case fifteen = 15
+        case fifty = 50
+        case eighty = 80
     }
-    enum TType: String {
+    
+    enum TType: String, CaseIterable  {
         case practice = "practice"
         case test = "test"
     }
-    enum Category: String {
+    
+    enum Category: String, CaseIterable  {
         case math = "math"
         case sequence = "sequence"
     }
@@ -95,15 +100,16 @@ class MainVC: BaseVC {
     }
     
     @IBAction func questionsCountClicked(_ sender: DLRadioButton) {
-        guard let intVal = Int(sender.titleLabel!.text!) else { return }
-        let count = Test.Count(rawValue: intVal)
-        preferences.set(count!.rawValue, forKey: questionnumKey)
+        guard let intVal = Int(sender.titleLabel!.text!),
+        let count = Test.Count(rawValue: intVal) else { return }
+        
+        preferences.set(count.rawValue, forKey: questionnumKey)
     }
     
     @IBAction func levelDifficultyClicked(_ sender: DLRadioButton) {
-        guard let senderString = sender.titleLabel?.text?.lowercased() else { return }
-        let level = Test.Level(rawValue: senderString)
-        preferences.set(level!.rawValue, forKey: difficultyKey)
+        guard let senderString = sender.titleLabel?.text?.lowercased(), let level = Test.Level(rawValue: senderString) else { return }
+    
+        preferences.set(level.rawValue, forKey: difficultyKey)
     }
     
     @IBAction func startClicked() {
@@ -188,6 +194,8 @@ class MainVC: BaseVC {
                 tenQuestionsBtn.isSelected = true
             case .fifteen:
                 fifteenQuestionsBtn.isSelected = true
+            default:
+                print("Unknown")
             }
         }
     }

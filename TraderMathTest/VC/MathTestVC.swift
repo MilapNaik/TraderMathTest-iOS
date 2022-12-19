@@ -91,7 +91,7 @@ class MathTestVC: BaseVC {
             print(PoT)
         }
         
-        if PoT == "Test" {
+        if PoT == "test" {
             questionNum = 80
             if testType == "sequence" {
                 questionNum = 50

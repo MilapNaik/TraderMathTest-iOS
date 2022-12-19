@@ -57,8 +57,9 @@ class BaseVC: UIViewController {
     
     @objc fileprivate func showLearboardView() {
         if !isLeaderboardVC() {
-            let vc = LeaderboardVC()
-            self.navigationController?.pushViewController(vc, animated: false)
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "LEADERBOARD_VC") as? LeaderboardVC {
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
         }
         else {
             self.navigationController?.popViewController(animated: false)
