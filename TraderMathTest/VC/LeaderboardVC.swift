@@ -11,10 +11,10 @@ import UIKit
 class LeaderboardVC: BaseVC {
 
     // MARK: Properties
-    let db = SQLiteDB.shared
-    var bestRank: [String] = ["1", "2", "3", "4", "5"]
-    var bestScore: [String] = ["-----", "-----", "-----", "-----", "-----"]
-    var bestTime: [String] = ["-----", "-----", "-----", "-----", "-----"]
+    private let db = SQLiteDB.shared
+    private let maxResults = 5
+    private var bestScore: [String] = []
+    private var bestTime: [String] = []
     
     var level: Test.Level = Test.Level.easy {
         didSet {
@@ -40,7 +40,6 @@ class LeaderboardVC: BaseVC {
         }
     }
     
-    
     @IBOutlet weak var testTypeView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scoreTypeControl: TMTSegmentedControl!
@@ -50,11 +49,22 @@ class LeaderboardVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    fileprivate func setup() {
         _ = db.open()
         loadSQL()
-        tableView.register(UINib(nibName: "HighScoreCell", bundle: nil), forCellReuseIdentifier: "HighScoreCell")
+        setupTableView()
         loadhighscores()
-        
+        setupSegmentedControl()
+    }
+    
+    fileprivate func setupTableView() {
+        tableView.register(UINib(nibName: "HighScoreCell", bundle: nil), forCellReuseIdentifier: "HighScoreCell")
+    }
+    
+    fileprivate func setupSegmentedControl() {
         scoreTypeControl.setButtonTitles(buttonTitles: Test.ScoreType.allCases.map { $0.rawValue.uppercased() })
         scoreTypeControl.delegate = self
         testTypeControl.setButtonTitles(buttonTitles: Test.Category.allCases.map { $0.rawValue.uppercased() })
@@ -64,24 +74,19 @@ class LeaderboardVC: BaseVC {
         questionsControl.setButtonTitles(buttonTitles: Test.Count.allCases.map { "\($0.rawValue)" })
         questionsControl.delegate = self
     }
-    
 }
 
 //MARK: UITableView Delegate
 extension LeaderboardVC: UITableViewDelegate, UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bestRank.count;
+        return maxResults;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreCell", for: indexPath) as! HighScoreCell
         
-        cell.rankLbl.text = self.bestRank[indexPath.row]
+        cell.rankLbl.text = "\(indexPath.row + 1)"
         cell.scoreDetailsLbl.text = "Score: \(self.bestScore[indexPath.row]) Time: \(self.bestTime[indexPath.row])"
         
         return cell
@@ -100,7 +105,7 @@ extension LeaderboardVC {
         bestScore = ["-----", "-----", "-----", "-----", "-----"]
         bestTime = ["-----", "-----", "-----", "-----", "-----"]
         
-        let result = db.query(sql: "SELECT * from \(level.rawValue)_\(testType.rawValue)_\(questionNum.rawValue) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
+        let result = db.query(sql: "SELECT * from \(level.rawValue)_\(testType.rawValue)_\(questionNum.rawValue) ORDER BY Score DESC, Time ASC LIMIT \(maxResults)", parameters: nil)
                 
         for (index,row) in result.enumerated() {
             bestScore[index] = String(describing: row["Score"]!)
