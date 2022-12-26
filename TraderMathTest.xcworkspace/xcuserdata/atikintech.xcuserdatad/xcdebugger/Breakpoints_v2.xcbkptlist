@@ -13,10 +13,26 @@
             continueAfterRunningActions = "No"
             filePath = "TraderMathTest/VC/FinishTestVC.swift"
             startingColumnNumber = "59"
-            endingColumnNumber = "68"
+            endingColumnNumber = "59"
             startingLineNumber = "104"
             endingLineNumber = "104"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93367B9F-33D9-4115-94DC-C114CE2A2B48"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TraderMathTest/VC/FinishTestVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

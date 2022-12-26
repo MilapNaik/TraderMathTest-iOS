@@ -25,6 +25,7 @@
 		81EF87171D110A090038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87161D110A090038A38C /* easymath.txt */; };
 		DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */; };
 		DB3ADF11291F88E10040A3C9 /* AssetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */; };
+		DB3DEB7C295A0E3E0063E2A6 /* TMSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */; };
 		DB9682D52923894C00E72766 /* MathTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9682D42923894C00E72766 /* MathTestVC.swift */; };
 		DB9C9D4C2891519900216347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9C9D4B2891519900216347 /* Assets.xcassets */; };
 		DB9C9D4E289151C300216347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */; };
@@ -83,6 +84,7 @@
 		81EF87161D110A090038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = easymath.txt; path = "question-bank/easymath.txt"; sourceTree = "<group>"; };
 		DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTestVC.swift; sourceTree = "<group>"; };
 		DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsExtension.swift; sourceTree = "<group>"; };
+		DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMSegmentControl.swift; sourceTree = "<group>"; };
 		DB9682D42923894C00E72766 /* MathTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTestVC.swift; sourceTree = "<group>"; };
 		DB9C9D4B2891519900216347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				DB9682D42923894C00E72766 /* MathTestVC.swift */,
 				DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */,
 				DBE779AA292A05F1000ADD51 /* LeaderboardVC.swift */,
+				DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */,
 				818520671CF3ED3C00063BFC /* Info.swift */,
 			);
 			path = VC;
@@ -529,6 +532,7 @@
 			files = (
 				DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */,
 				DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */,
+				DB3DEB7C295A0E3E0063E2A6 /* TMSegmentControl.swift in Sources */,
 				DBD6F518291CE2B100759726 /* FontExtension.swift in Sources */,
 				81AA522D1CF5ED820078D58B /* Question.swift in Sources */,
 				DB9C9D5728915B6800216347 /* DBTable.swift in Sources */,
