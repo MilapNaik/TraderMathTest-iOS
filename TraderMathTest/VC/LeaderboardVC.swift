@@ -16,31 +16,55 @@ class LeaderboardVC: BaseVC {
     var bestScore: [String] = ["-----", "-----", "-----", "-----", "-----"]
     var bestTime: [String] = ["-----", "-----", "-----", "-----", "-----"]
     
-    let preferences = UserDefaults.standard
-    let difficultyKey = "Difficulty"
-    let questionnumKey = "QuestionNum"
-    let PoTKey = "PoT"
-    let testtypeKey = "TestType"
-    var difficulty: String = "easy"
-    var questionNum: Int = 5
-    var PoT:String = "practice"
-    var testType:String = "math"
+    var level: Test.Level = Test.Level.easy {
+        didSet {
+            loadhighscores()
+        }
+    }
+    
+    var questionNum: Test.Count = Test.Count.five {
+        didSet {
+            loadhighscores()
+        }
+    }
+    
+//    var PoT: Test.TType = Test.TType.practice {
+//        didSet {
+//            loadhighscores()
+//        }
+//    }
+    
+    var testType: Test.Category = Test.Category.math {
+        didSet {
+            loadhighscores()
+        }
+    }
+    
     
     @IBOutlet weak var testTypeView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var scoreTypeControl: TMTSegmentedControl!
+    @IBOutlet weak var testTypeControl: TMTSegmentedControl!
+    @IBOutlet weak var levelTypeControl: TMTSegmentedControl!
+    @IBOutlet weak var questionsControl: TMTSegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         _ = db.open()
-        
+        loadSQL()
         tableView.register(UINib(nibName: "HighScoreCell", bundle: nil), forCellReuseIdentifier: "HighScoreCell")
-
-//        readUserDefaults()
         loadhighscores()
-        testTypeView.isHidden = true
-        testType = testType.capitalized
-        difficulty = difficulty.capitalized
+        
+        scoreTypeControl.setButtonTitles(buttonTitles: Test.ScoreType.allCases.map { $0.rawValue.uppercased() })
+        scoreTypeControl.delegate = self
+        testTypeControl.setButtonTitles(buttonTitles: Test.Category.allCases.map { $0.rawValue.uppercased() })
+        testTypeControl.delegate = self
+        levelTypeControl.setButtonTitles(buttonTitles: Test.Level.allCases.map { $0.rawValue.uppercased() })
+        levelTypeControl.delegate = self
+        questionsControl.setButtonTitles(buttonTitles: Test.Count.allCases.map { "\($0.rawValue)" })
+        questionsControl.delegate = self
     }
+    
 }
 
 //MARK: UITableView Delegate
@@ -67,21 +91,47 @@ extension LeaderboardVC: UITableViewDelegate, UITableViewDataSource {
         return 50
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
-    
 }
 
 //MARK: DB
 extension LeaderboardVC {
     
-    func loadhighscores(){
-        let result = db.query(sql: "SELECT * from \(difficulty)_\(testType)_\(questionNum) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
+    func loadhighscores() {
+        bestScore = ["-----", "-----", "-----", "-----", "-----"]
+        bestTime = ["-----", "-----", "-----", "-----", "-----"]
+        
+        let result = db.query(sql: "SELECT * from \(level.rawValue)_\(testType.rawValue)_\(questionNum.rawValue) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
                 
         for (index,row) in result.enumerated() {
             bestScore[index] = String(describing: row["Score"]!)
             bestTime[index] = String(describing: row["Time"]!)
         }
+        tableView.reloadData()
     }
     
+    func loadSQL() {
+        let result = db.query(sql: "SELECT * FROM \(level.rawValue)_\(testType.rawValue)_\(questionNum.rawValue)")
+        print(result.debugDescription)
+    }
+}
+
+extension LeaderboardVC: TMTSegmentedControlDelegate {
+    func change(control: TMTSegmentedControl, to index: Int) {
+        switch control {
+        case levelTypeControl:
+            if let level = Test.Level(rawValue: control.selectedVal.lowercased()) {
+                self.level = level
+            }
+        case testTypeControl:
+            if let testType = Test.Category(rawValue: control.selectedVal.lowercased()) {
+                self.testType = testType
+            }
+        case questionsControl:
+            if let questionNum = Test.Count(rawValue: Int(control.selectedVal) ?? Test.Count.five.rawValue) {
+                self.questionNum = questionNum
+            }
+        default:
+            print("functionality")
+        }
+    }
 }

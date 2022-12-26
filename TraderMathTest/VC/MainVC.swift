@@ -13,6 +13,10 @@ import DLRadioButton
 
 enum Test: CaseIterable {
     
+    enum ScoreType: String, CaseIterable {
+        case local = "local"
+        case global = "global"
+    }
     enum Level: String, CaseIterable  {
         case easy = "easy"
         case medium = "medium"

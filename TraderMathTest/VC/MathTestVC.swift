@@ -184,7 +184,6 @@ extension MathTestVC {
             newQuestion()
             
             //Analytics answerCorrect
-            //TODO: Firebase
             Analytics.logEvent("kFIREventQuestionAnswered", parameters: [
                 AnalyticsParameterItemID: "id-question_answered" as NSObject,
                 "kFIRParameterTestType": testType as NSObject, //Default: Math
