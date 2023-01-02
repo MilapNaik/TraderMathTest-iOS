@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Firebase.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>FirebaseAnalytics.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,12 +24,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FirebaseInstallations.xcscheme</key>
+		<key>FirebaseDatabase.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FirebaseMessaging.xcscheme</key>
+		<key>FirebaseInstallations.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -45,11 +40,6 @@
 			<false/>
 		</dict>
 		<key>GoogleAppMeasurement.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>GoogleDataTransport.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -75,6 +65,11 @@
 			<false/>
 		</dict>
 		<key>Toaster.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>leveldb-library.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

@@ -7,9 +7,7 @@ target 'TraderMathTest' do
   pod 'DLRadioButton', '~> 1.4'
   pod 'Google-Mobile-Ads-SDK'
   pod 'Toaster'
-  pod 'Firebase'
-  pod 'FirebaseCore'
   pod 'FirebaseAnalytics'
-  pod 'FirebaseMessaging'
+  pod 'FirebaseDatabase'
 
 end
