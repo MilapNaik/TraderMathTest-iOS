@@ -11,17 +11,18 @@ import BarChartKit
 import FirebaseDatabase
 
 class LeaderboardVC: BaseVC {
-
+    
     // MARK: Properties
     private let db = SQLiteDB.shared
     private let maxResults = 5
     private var bestScore: [String] = []
     private var bestTime: [String] = []
-        
+    
     @IBOutlet weak var barChartContainerView: UIView!
     @IBOutlet weak var barChartStackView: UIStackView!
     @IBOutlet weak var testTypeView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var scoreTypeControl: TMTSegmentedControl!
     @IBOutlet weak var testTypeControl: TMTSegmentedControl!
     @IBOutlet weak var levelTypeControl: TMTSegmentedControl!
@@ -105,13 +106,13 @@ class LeaderboardVC: BaseVC {
                             value: 10,
                             color: .red)
                         ]
-                )
+                  )
                 ], selectionColor: .red)
-
-
+        
+        
         let barChart = BarChartView()
         barChart.dataSet = chartDataSet
-
+        
         barChartContainerView.addSubview(barChart)
         barChart.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -161,7 +162,7 @@ extension LeaderboardVC {
         bestTime = ["-----", "-----", "-----", "-----", "-----"]
         
         let result = db.query(sql: "SELECT * from \(level.rawValue)_\(testType.rawValue)_\(questionNum.rawValue) ORDER BY Score DESC, Time ASC LIMIT \(maxResults)", parameters: nil)
-                
+        
         for (index,row) in result.enumerated() {
             bestScore[index] = String(describing: row["Score"]!)
             bestTime[index] = String(describing: row["Time"]!)

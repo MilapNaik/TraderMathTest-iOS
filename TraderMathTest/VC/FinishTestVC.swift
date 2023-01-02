@@ -14,7 +14,7 @@ import AppTrackingTransparency
 import AdSupport
 
 class FinishTestVC: BaseVC {
-
+    
     @IBOutlet weak var scoreView: UIView!
     @IBOutlet weak var scoreLbl: UILabel!
     
@@ -23,6 +23,11 @@ class FinishTestVC: BaseVC {
     
     @IBOutlet weak var correctAnswersView: UIView!
     @IBOutlet weak var correctAnswersLbl: UILabel!
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var leaderboardLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     var highscore: Int = 0
     var finishtime: String = ""
@@ -33,20 +38,33 @@ class FinishTestVC: BaseVC {
     var bestScore: [String] = ["-----", "-----", "-----", "-----", "-----"]
     var bestTime: [String] = ["-----", "-----", "-----", "-----", "-----"]
     
-    let preferences = UserDefaults.standard
-    let difficultyKey = "Difficulty"
-    let questionnumKey = "QuestionNum"
-    let PoTKey = "PoT"
-    let testtypeKey = "TestType"
-    var difficulty: String = "easy"
-    var questionNum: Int = 5
-    var PoT:String = "Practice"
-    var testType:String = "math"
-
-    @IBOutlet weak var bannerView: GADBannerView!
-    @IBOutlet weak var Test: UILabel!
-    @IBOutlet weak var Leaderboard: UILabel!
-    @IBOutlet var tableView: UITableView!
+    var difficulty: Test.Level {
+        if let string = UserDefaults.standard.string(forKey: Test.Key.DIFFICULTY_KEY.val),
+           let type = Test.Level(rawValue: string) {
+            return type
+        }
+        return .easy
+    }
+    
+    var questionNum: Test.Count {
+        readQuestionNum()
+    }
+    
+    var PoT: Test.TType {
+        if let string = UserDefaults.standard.string(forKey: Test.Key.POT_KEY.val),
+           let type = Test.TType(rawValue: string) {
+            return type
+        }
+        return .practice
+    }
+    
+    var testType: Test.Category {
+        if let string = UserDefaults.standard.string(forKey: Test.Key.TEST_TYPE_KEY.val),
+           let type = Test.Category(rawValue: string) {
+            return type
+        }
+        return .math
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,16 +72,11 @@ class FinishTestVC: BaseVC {
         _ = db.open()
         
         tableView.register(UINib(nibName: "HighScoreCell", bundle: nil), forCellReuseIdentifier: "HighScoreCell")
-//        requestIDFA()
-        readUserDefaults()
+        //        requestIDFA()
         addhighscore()
         loadhighscores()
-        
-        testType = testType.capitalized
-        difficulty = difficulty.capitalized
-        
-//        Test.text = "\(testType) \(PoT)"
-//        Leaderboard.text = "\(questionNum) \(difficulty) Questions"
+        //        Test.text = "\(testType) \(PoT)"
+        //        Leaderboard.text = "\(questionNum) \(difficulty) Questions"
         print("\(highscore) \(finishtime)")
     }
     
@@ -73,18 +86,18 @@ class FinishTestVC: BaseVC {
         correctAnswersView.border(color: .black)
         correctAnswersView.roundedBorders()
         
-//        scoreView.dropShadow()
-//        timeView.dropShadow()
-//        correctAnswersView.dropShadow()
+        //        scoreView.dropShadow()
+        //        timeView.dropShadow()
+        //        correctAnswersView.dropShadow()
     }
-        
+    
     override func viewDidAppear(_ animated: Bool) {
         correctAnswersLbl.text = String(highscore)
         scoreLbl.text = String(highscore)
         timeLbl.text = String(finishtime)
         logToAnalytics()
     }
-        
+    
     // MARK: Actions
     @IBAction func tryAgainClicked(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
@@ -115,9 +128,6 @@ extension FinishTestVC: UITableViewDelegate, UITableViewDataSource {
         return 50
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
-    
 }
 
 //MARK: DB
@@ -125,25 +135,24 @@ extension FinishTestVC {
     
     func addhighscore(){
         // _ is set to avoid warning
-        _ = db.execute(sql: "INSERT INTO \(difficulty)_\(testType)_\(questionNum) (Score, Time) Values ('\(highscore)', '\(finishtime)'); ", parameters:nil)
+        _ = db.execute(sql: "INSERT INTO \(difficulty.rawValue)_\(testType.rawValue)_\(questionNum.rawValue) (Score, Time) Values ('\(highscore)', '\(finishtime)'); ", parameters:nil)
         
         //don't sync the practice scores
-        
-        if PoT.lowercased() == "test" {
+        if PoT == .test {
             let ref = Database.database().reference()
             ref.child("leaderboard").childByAutoId().setValue(
                 [ "date" : Date().description,
                   "score" : highscore,
-                  "difficulty" : difficulty,
-                  "testtype" : testType,
-                  "numbers" : questionNum,
+                  "difficulty" : difficulty.rawValue,
+                  "testtype" : testType.rawValue,
+                  "numbers" : questionNum.rawValue,
                   "time" : finishtime ] )
         }
     }
     
     func loadhighscores(){
         let result = db.query(sql: "SELECT * from \(difficulty)_\(testType)_\(questionNum) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
-                
+        
         for (index,row) in result.enumerated() {
             bestScore[index] = String(describing: row["Score"]!)
             bestTime[index] = String(describing: row["Time"]!)
@@ -155,36 +164,18 @@ extension FinishTestVC {
 //MARK: User Defaults
 extension FinishTestVC {
     /// Read user defaults. If none exist, they are set to Easy and 5 questions
-    func readUserDefaults() {
-        if preferences.string(forKey: testtypeKey) != nil{
-            testType = preferences.string(forKey: testtypeKey)!
+    ///
+    func readQuestionNum() -> Test.Count {
+        if PoT == .test {
+            return testType == .math ? .eighty : .fifty
         }
-        
-        if preferences.string(forKey: difficultyKey) != nil{
-            difficulty = preferences.string(forKey: difficultyKey)!
+        let integer = UserDefaults.standard.integer(forKey: Test.Key.QUESTNUM_KEY.val)
+        if let type = Test.Count(rawValue: integer) {
+            return type
         }
-        
-        if preferences.string(forKey: PoTKey) != nil{
-            PoT = preferences.string(forKey: PoTKey)!
-        }
-        
-        if PoT == "Test"{
-            if testType == "sequence"{
-                questionNum = 50
-            }
-            else{
-                questionNum = 80
-            }
-        }
-        else{
-            if preferences.integer(forKey: questionnumKey) == 0{
-                questionNum = 5
-            }
-            else {
-                questionNum = preferences.integer(forKey: questionnumKey)
-            }
-        }
+        return .five
     }
+
 }
 
 //MARK: Ads
@@ -192,28 +183,28 @@ extension FinishTestVC {
     
     func requestIDFA() {
         if #available(iOS 14, *) {
-                ATTrackingManager.requestTrackingAuthorization { status in
-                    switch status {
-                    case .authorized:
-                        // Tracking authorization dialog was shown
-                        // and we are authorized
-                        print("Authorized")
-                        self.loadAds()
-                        // Now that we are authorized we can get the IDFA
-                        print(ASIdentifierManager.shared().advertisingIdentifier)
-                    case .denied:
-                        // Tracking authorization dialog was
-                        // shown and permission is denied
-                        print("Denied")
-                    case .notDetermined:
-                        // Tracking authorization dialog has not been shown
-                        print("Not Determined")
-                    case .restricted:
-                        print("Restricted")
-                    @unknown default:
-                        print("Unknown")
-                    }
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                case .authorized:
+                    // Tracking authorization dialog was shown
+                    // and we are authorized
+                    print("Authorized")
+                    self.loadAds()
+                    // Now that we are authorized we can get the IDFA
+                    print(ASIdentifierManager.shared().advertisingIdentifier)
+                case .denied:
+                    // Tracking authorization dialog was
+                    // shown and permission is denied
+                    print("Denied")
+                case .notDetermined:
+                    // Tracking authorization dialog has not been shown
+                    print("Not Determined")
+                case .restricted:
+                    print("Restricted")
+                @unknown default:
+                    print("Unknown")
                 }
+            }
         } else {
             // Fallback on earlier versions
             self.loadAds()
@@ -234,12 +225,12 @@ extension FinishTestVC {
         //Analytics
         Analytics.logEvent("kFIREventTestFinished", parameters: [
             AnalyticsParameterItemID: "id-test_finished" as NSObject,
-            "kFIRParameterTestType": testType as NSObject, //Default: Math
-            "kFIRParameterTestDifficulty": difficulty as NSObject, //Default: easy
-            "kFIRParameterTestLength": questionNum as NSObject, //Default: 5
-            "kFIRParameterTestPoT": PoT as NSObject, //Default: Practice
+            "kFIRParameterTestType": testType.rawValue as NSObject, //Default: Math
+            "kFIRParameterTestDifficulty": difficulty.rawValue as NSObject, //Default: easy
+            "kFIRParameterTestLength": questionNum.rawValue as NSObject, //Default: 5
+            "kFIRParameterTestPoT": PoT.rawValue as NSObject, //Default: Practice
             "kFIRParameterQuestionsCorrect": highscore as NSObject
-            ])
+        ])
         
     }
 }

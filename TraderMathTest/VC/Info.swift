@@ -14,7 +14,7 @@ class InfoVC: BaseVC {
     // MARK: Properties
     @IBOutlet weak var InfoText: UITextView!
     @IBOutlet weak var versionLbl: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()

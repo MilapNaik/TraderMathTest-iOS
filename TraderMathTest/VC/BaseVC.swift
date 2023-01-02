@@ -9,7 +9,7 @@
 import UIKit
 
 class BaseVC: UIViewController {
-
+    
     fileprivate lazy var leftBarBtnItem: UIBarButtonItem = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: logoImageView.bounds.width, height: logoImageView.bounds.height))
         view.clipsToBounds = false

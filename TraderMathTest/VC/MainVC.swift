@@ -40,20 +40,28 @@ enum Test: CaseIterable {
         case math = "math"
         case sequence = "sequence"
     }
+    
+    enum Key: String, CaseIterable {
+        case DIFFICULTY_KEY = "Difficulty_Key"
+        case QUESTNUM_KEY = "Question_Num_Key"
+        case POT_KEY = "PoT_Key"
+        case TEST_TYPE_KEY = "Test_Type_Key"
+        case SETTINGS_SAVED_KEY = "SETTINGS_SAVED_KEY"
+        
+        var val : String {
+            return self.rawValue
+        }
+    }
 }
 
 class MainVC: BaseVC {
     
     // MARK: Constants
     let preferences = UserDefaults.standard
-    let difficultyKey = "Difficulty"
-    let questionnumKey = "QuestionNum"
-    let PoTKey = "PoT"
     
     // MARK: Properties
-    private let testtypeKey = "TestType"
-    private var testType:String?
-    private var difficulty: String = "easy"
+    private var testType: Test.TType = .practice
+    private var difficulty: Test.Level = .easy
     
     //MARK: IBOutlets
     @IBOutlet weak var sequenceTestView: UIView!
@@ -94,26 +102,28 @@ class MainVC: BaseVC {
     
     // MARK: IBActions
     @IBAction func practiceClicked() {
-        preferences.set(Test.TType.practice.rawValue, forKey: PoTKey)
+        preferences.set(Test.TType.practice.rawValue, forKey: Test.Key.POT_KEY.val)
         showSettingsView()
     }
     
     @IBAction func testClicked() {
-        preferences.set(Test.TType.test.rawValue, forKey: PoTKey)
+        preferences.set(Test.TType.test.rawValue, forKey: Test.Key.POT_KEY.val)
         showSettingsView()
     }
     
     @IBAction func questionsCountClicked(_ sender: DLRadioButton) {
-        guard let intVal = Int(sender.titleLabel!.text!),
-        let count = Test.Count(rawValue: intVal) else { return }
         
-        preferences.set(count.rawValue, forKey: questionnumKey)
+        guard let intVal = Int(sender.titleLabel!.text!),
+              let count = Test.Count(rawValue: intVal) else { return }
+        
+        preferences.set(count.rawValue, forKey: Test.Key.POT_KEY.val)
     }
     
     @IBAction func levelDifficultyClicked(_ sender: DLRadioButton) {
-        guard let senderString = sender.titleLabel?.text?.lowercased(), let level = Test.Level(rawValue: senderString) else { return }
-    
-        preferences.set(level.rawValue, forKey: difficultyKey)
+        
+        guard let senderString = sender.titleLabel?.text?.lowercased(),
+              let level = Test.Level(rawValue: senderString) else { return }
+        preferences.set(level.rawValue, forKey: Test.Key.DIFFICULTY_KEY.val)
     }
     
     @IBAction func startClicked() {
@@ -149,23 +159,34 @@ class MainVC: BaseVC {
     }
     
     @objc func sequenceClicked() {
+        
         sequenceTestView.backgroundColor = .lightPrimary
         mathTestView.backgroundColor = .white
-        preferences.set(Test.Category.sequence.rawValue, forKey: testtypeKey)
+        
+        //Save preferences
+        preferences.set(
+            Test.Category.sequence.rawValue,
+            forKey: Test.Key.TEST_TYPE_KEY.val)
+        
         showBottomSelectionView()
     }
     
     @objc func mathTestClicked() {
+        
         sequenceTestView.backgroundColor = .white
         mathTestView.backgroundColor = .lightPrimary
-        preferences.set(Test.Category.math.rawValue, forKey: testtypeKey)
+        //Save preferences
+        preferences.set(
+            Test.Category.math.rawValue,
+            forKey: Test.Key.TEST_TYPE_KEY.val)
+        
         showBottomSelectionView()
     }
     
     //MARK: User Defaults
     func readUserDefaults() {
         //Default settings not saved - first run of the app
-        if !preferences.bool(forKey: "SETTINGS_SAVED_KEY") {
+        if !preferences.bool(forKey: Test.Key.SETTINGS_SAVED_KEY.val) {
             saveDefaultValues()
         }
         else {
@@ -175,7 +196,7 @@ class MainVC: BaseVC {
     }
     
     fileprivate func readDifficultyUserDefaults() {
-        if let difficultyString = preferences.object(forKey: difficultyKey) as? String,
+        if let difficultyString = preferences.object(forKey: Test.Key.DIFFICULTY_KEY.val) as? String,
            let levelType = Test.Level(rawValue: difficultyString) {
             switch levelType {
             case .easy:
@@ -189,7 +210,7 @@ class MainVC: BaseVC {
     }
     
     fileprivate func readQuestionCountDefaults() {
-        let savedQuestionsCount = preferences.integer(forKey: questionnumKey)
+        let savedQuestionsCount = preferences.integer(forKey: Test.Key.QUESTNUM_KEY.val)
         if savedQuestionsCount > 0, let countType = Test.Count(rawValue: savedQuestionsCount) {
             switch countType {
             case .five:
@@ -205,9 +226,9 @@ class MainVC: BaseVC {
     }
     
     fileprivate func saveDefaultValues() {
-        preferences.set(Test.Count.five.rawValue, forKey: questionnumKey)
-        preferences.set(Test.Level.easy.rawValue, forKey: difficultyKey)
-        preferences.set(true, forKey: "SETTINGS_SAVED_KEY")
+        preferences.set(Test.Count.five.rawValue, forKey: Test.Key.QUESTNUM_KEY.val)
+        preferences.set(Test.Level.easy.rawValue, forKey: Test.Key.DIFFICULTY_KEY.val)
+        preferences.set(true, forKey: Test.Key.SETTINGS_SAVED_KEY.val)
     }
     
     //MARK: IDFA
@@ -216,10 +237,10 @@ class MainVC: BaseVC {
             ATTrackingManager.requestTrackingAuthorization { status in
                 switch status {
                 case .authorized:
-                    #if DEBUG
+#if DEBUG
                     print("Authorized")
                     print(ASIdentifierManager.shared().advertisingIdentifier)
-                    #endif
+#endif
                 default:
                     print("Unknown")
                 }

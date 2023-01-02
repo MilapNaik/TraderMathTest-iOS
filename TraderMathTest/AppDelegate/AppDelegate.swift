@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         UIFont.overrideInitialize()
-            //.configure( withApplicationID: "ca-app-pub-3095210410543033~8235203706")
+        //.configure( withApplicationID: "ca-app-pub-3095210410543033~8235203706")
         return true
     }
 

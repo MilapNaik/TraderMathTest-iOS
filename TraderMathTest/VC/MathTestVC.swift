@@ -6,13 +6,14 @@
 //  Copyright © 2022 Gamelap Studios LLC. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
+import Foundation
 import Toaster
 import FirebaseAnalytics
 
 class MathTestVC: BaseVC {
-
+    
     var i:Int = 0
     var questionNumber:Int = 1
     
@@ -38,14 +39,35 @@ class MathTestVC: BaseVC {
     @IBOutlet weak var keyboardHeightConstraint: NSLayoutConstraint!
     
     let preferences = UserDefaults.standard
-    let difficultyKey = "Difficulty"
-    let questionnumKey = "QuestionNum"
-    let PoTKey = "PoT"
-    let testtypeKey = "TestType"
-    var difficulty: String = "easy"
-    var questionNum: Int = 5
-    var PoT:String = "Practice"
-    var testType:String = "math"
+    
+    var difficulty: Test.Level {
+        if let string = UserDefaults.standard.string(forKey: Test.Key.DIFFICULTY_KEY.val),
+           let type = Test.Level(rawValue: string) {
+            return type
+        }
+        return .easy
+    }
+    
+    var questionNum: Test.Count {
+        readQuestionNum()
+    }
+    
+    var PoT: Test.TType {
+        if let string = UserDefaults.standard.string(forKey: Test.Key.POT_KEY.val),
+           let type = Test.TType(rawValue: string) {
+            return type
+        }
+        return .practice
+    }
+    
+    var testType: Test.Category {
+        if let string = UserDefaults.standard.string(forKey: Test.Key.TEST_TYPE_KEY.val),
+           let type = Test.Category(rawValue: string) {
+            return type
+        }
+        return .math
+    }
+    
     var filename:String = "easymath"
     
     override func viewDidLoad() {
@@ -53,9 +75,9 @@ class MathTestVC: BaseVC {
         self.hidesRightBarBtnItem = true
         
         NotificationCenter.default.addObserver(self,
-              selector: #selector(self.keyboardNotification(notification:)),
-              name: UIResponder.keyboardWillChangeFrameNotification,
-              object: nil)
+                                               selector: #selector(self.keyboardNotification(notification:)),
+                                               name: UIResponder.keyboardWillChangeFrameNotification,
+                                               object: nil)
     }
     
     override func viewWillLayoutSubviews() {
@@ -67,56 +89,33 @@ class MathTestVC: BaseVC {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        readUserDefaults()
+        //        readUserDefaults()
         readFile()
         startTime = Date.timeIntervalSinceReferenceDate
         answerTf.becomeFirstResponder()
         answerTf.delegate = self
     }
     
-    // Read user defaults. If none exist, they are set to Easy and 5 questions
-    func readUserDefaults(){
-        if preferences.string(forKey: testtypeKey) != nil{
-            testType = preferences.string(forKey: testtypeKey)!
-            print(testType)
+    // Read user defaults
+    func readQuestionNum() -> Test.Count {
+        if PoT == .test {
+            return testType == .math ? .eighty : .fifty
         }
-        
-        if preferences.string(forKey: difficultyKey) != nil{
-            difficulty = preferences.string(forKey: difficultyKey)!
-            print(difficulty)
+        let integer = UserDefaults.standard.integer(forKey: Test.Key.QUESTNUM_KEY.val)
+        if let type = Test.Count(rawValue: integer) {
+            return type
         }
-        
-        if preferences.string(forKey: PoTKey) != nil{
-            PoT = preferences.string(forKey: PoTKey)!
-            print(PoT)
-        }
-        
-        if PoT == "test" {
-            questionNum = 80
-            if testType == "sequence" {
-                questionNum = 50
-            }
-        }
-        else {
-            questionNum = preferences.integer(forKey: questionnumKey)
-            if questionNum == 0 {
-                questionNum = 5
-            }
-        }
-        print(questionNum)
-        testTypeLbl.text = PoT.capitalized
+        return .five
     }
     
     // Read selected file
     func readFile(){
-        filename = difficulty.lowercased() + testType.lowercased()
+        filename = difficulty.rawValue + testType.rawValue
         if let path = Bundle.main.path(forResource: filename, ofType: "txt"){
             do {
                 let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
                 myQuestions = data.components(separatedBy: CharacterSet.newlines)
-                
                 newQuestion()
-                
             } catch{
                 print("Error: \(error)")
             }
@@ -128,37 +127,34 @@ class MathTestVC: BaseVC {
         questionLbl.text = myQuestions[randomIndex]
         correctAnswer = myQuestions[randomIndex + 1]
         
-        qnumLabel.text = "\(questionNumber)/\(questionNum)"
+        qnumLabel.text = "\(questionNumber)/\(questionNum.rawValue)"
         answerTf.text = ""
     }
-    
-    
-    
 }
 
 extension MathTestVC {
     @objc func keyboardNotification(notification: NSNotification) {
-      guard let userInfo = notification.userInfo else { return }
-
-      let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-      let endFrameY = endFrame?.origin.y ?? 0
-      let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
-      let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
-      let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
-      let animationCurve:UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
-
-      if endFrameY >= UIScreen.main.bounds.size.height {
-          self.keyboardHeightConstraint.constant = 0.0
-      } else {
-          self.keyboardHeightConstraint.constant = endFrame?.size.height ?? 0.0
-      }
-
-      UIView.animate(
-        withDuration: duration,
-        delay: TimeInterval(0),
-        options: animationCurve,
-        animations: { self.view.layoutIfNeeded() },
-        completion: nil)
+        guard let userInfo = notification.userInfo else { return }
+        
+        let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        let endFrameY = endFrame?.origin.y ?? 0
+        let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+        let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+        let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
+        let animationCurve:UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
+        
+        if endFrameY >= UIScreen.main.bounds.size.height {
+            self.keyboardHeightConstraint.constant = 0.0
+        } else {
+            self.keyboardHeightConstraint.constant = endFrame?.size.height ?? 0.0
+        }
+        
+        UIView.animate(
+            withDuration: duration,
+            delay: TimeInterval(0),
+            options: animationCurve,
+            animations: { self.view.layoutIfNeeded() },
+            completion: nil)
     }
     
     func checkAnswer() {
@@ -169,7 +165,7 @@ extension MathTestVC {
         answerDouble = (answer! as NSString).doubleValue
         correctAnswerDouble = (correctAnswer! as NSString).doubleValue
         
-        if questionNumber <= questionNum{
+        if questionNumber <= questionNum.rawValue {
             if correctAnswerDouble == answerDouble{
                 let correctToast = Toast(text: "Correct!", duration: Delay.short)
                 correctToast.show()
@@ -186,10 +182,10 @@ extension MathTestVC {
             //Analytics answerCorrect
             Analytics.logEvent("kFIREventQuestionAnswered", parameters: [
                 AnalyticsParameterItemID: "id-question_answered" as NSObject,
-                "kFIRParameterTestType": testType as NSObject, //Default: Math
-                "kFIRParameterTestDifficulty": difficulty as NSObject, //Default: easy
+                "kFIRParameterTestType": testType.rawValue as NSObject, //Default: Math
+                "kFIRParameterTestDifficulty": difficulty.rawValue as NSObject, //Default: easy
                 "kFIRParameterAnswerCorrect": answerCorrect! as NSObject
-                ])
+            ])
         }
         else {
             time = Date.timeIntervalSinceReferenceDate - startTime
@@ -201,8 +197,8 @@ extension MathTestVC {
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         
         time = Double(round(1000*time)/1000)
-        let minutes = UInt8(time/60.0)
-        let seconds = UInt8(time) - (minutes*60)
+        let minutes = UInt16(time/60.0)
+        let seconds = UInt16(time) - (minutes*60)
         let milliseconds = Int((time*1000).truncatingRemainder(dividingBy: 1000))
         finishtime = String(format: "%02d:%02d.%03d", minutes, seconds, milliseconds)
         
@@ -224,5 +220,4 @@ extension MathTestVC: UITextFieldDelegate {
         }
         return false
     }
-    
 }
