@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import GoogleMobileAds
 import FirebaseAnalytics
+import FirebaseDatabase
 import AppTrackingTransparency
 import AdSupport
 
@@ -125,6 +126,19 @@ extension FinishTestVC {
     func addhighscore(){
         // _ is set to avoid warning
         _ = db.execute(sql: "INSERT INTO \(difficulty)_\(testType)_\(questionNum) (Score, Time) Values ('\(highscore)', '\(finishtime)'); ", parameters:nil)
+        
+        //don't sync the practice scores
+        
+        if PoT.lowercased() == "test" {
+            let ref = Database.database().reference()
+            ref.child("leaderboard").childByAutoId().setValue(
+                [ "date" : Date().description,
+                  "score" : highscore,
+                  "difficulty" : difficulty,
+                  "testtype" : testType,
+                  "numbers" : questionNum,
+                  "time" : finishtime ] )
+        }
     }
     
     func loadhighscores(){
