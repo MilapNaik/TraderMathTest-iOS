@@ -8,6 +8,8 @@
 
 import UIKit
 import BarChartKit
+import FirebaseDatabase
+
 class LeaderboardVC: BaseVC {
 
     // MARK: Properties
@@ -84,17 +86,37 @@ class LeaderboardVC: BaseVC {
     
     fileprivate func loadBarChartView() {
         
-        let mockBarChartDataSet: BarChartView.DataSet? = BarChartView.DataSet(elements: [BarChartView.DataSet.DataElement(date: nil, xLabel: "", bars: [BarChartView.DataSet.DataElement.Bar(value: 40, color: UIColor.black), BarChartView.DataSet.DataElement.Bar(value: 30, color:UIColor.black), BarChartView.DataSet.DataElement.Bar(value: 20, color:UIColor.black), BarChartView.DataSet.DataElement.Bar(value: 50, color:UIColor.black)])], selectionColor: UIColor.black)
+        let chartDataSet = BarChartView.DataSet(
+            elements:
+                [ BarChartView.DataSet.DataElement(
+                    date: nil,
+                    xLabel: "Other's Score",
+                    bars:
+                        [ BarChartView.DataSet.DataElement.Bar (
+                            value: 40,
+                            color: .black)
+                        ]
+                ),
+                  BarChartView.DataSet.DataElement(
+                    date: nil,
+                    xLabel: "Your Score",
+                    bars:
+                        [ BarChartView.DataSet.DataElement.Bar (
+                            value: 10,
+                            color: .red)
+                        ]
+                )
+                ], selectionColor: .red)
 
 
         let barChart = BarChartView()
-        barChart.dataSet = mockBarChartDataSet
+        barChart.dataSet = chartDataSet
 
         barChartContainerView.addSubview(barChart)
         barChart.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            barChart.leadingAnchor.constraint(equalTo: barChartContainerView.leadingAnchor),
-            barChart.trailingAnchor.constraint(equalTo: barChartContainerView.trailingAnchor),
+            barChart.leadingAnchor.constraint(equalTo: barChartContainerView.leadingAnchor, constant: 16),
+            barChart.trailingAnchor.constraint(equalTo: barChartContainerView.trailingAnchor, constant: 16),
             barChart.topAnchor.constraint(equalTo: barChartContainerView.topAnchor),
             barChart.bottomAnchor.constraint(equalTo: barChartContainerView.bottomAnchor)
         ])
@@ -130,9 +152,10 @@ extension LeaderboardVC {
         
         if scoreType == .global {
             barChartStackView.isHidden = false
-            loadBarChartView()
+            loadScoresFromFirebase()
             return
         }
+        
         barChartStackView.isHidden = true
         bestScore = ["-----", "-----", "-----", "-----", "-----"]
         bestTime = ["-----", "-----", "-----", "-----", "-----"]
@@ -144,6 +167,23 @@ extension LeaderboardVC {
             bestTime[index] = String(describing: row["Time"]!)
         }
         tableView.reloadData()
+    }
+    
+    func loadScoresFromFirebase() {
+        let ref = Database.database().reference()
+        ref.child("leaderboard").observeSingleEvent(of: .value) { snapshot in
+            if snapshot.exists() {
+                DispatchQueue.main.async {
+                    for child in snapshot.children {
+                        if let snap = child as? DataSnapshot,
+                           let val = snap.value as? [String: Any] {
+                            print("Key:\t\(snap.key)\nValue:\t\(val)")
+                        }
+                    }
+                    self.loadBarChartView()
+                }
+            }
+        }
     }
     
     func loadSQL() {
@@ -172,7 +212,7 @@ extension LeaderboardVC: TMTSegmentedControlDelegate {
                 self.questionNum = questionNum
             }
         default:
-            print("functionality")
+            print("Unknown")
         }
     }
 }
