@@ -17,6 +17,7 @@ enum Test: CaseIterable {
         case local = "local"
         case global = "global"
     }
+    
     enum Level: String, CaseIterable  {
         case easy = "easy"
         case medium = "medium"
@@ -52,6 +53,7 @@ enum Test: CaseIterable {
             return self.rawValue
         }
     }
+    
 }
 
 class MainVC: BaseVC {
@@ -66,11 +68,15 @@ class MainVC: BaseVC {
     //MARK: IBOutlets
     @IBOutlet weak var sequenceTestView: UIView!
     @IBOutlet weak var mathTestView: UIView!
+    @IBOutlet weak var bottomSelectionView: UIView!
+    @IBOutlet weak var settingsView: UIView!
+    
+    //Bottom Selection View
     @IBOutlet weak var practiceBtn: UIButton!
     @IBOutlet weak var testBtn: UIButton!
     @IBOutlet weak var startBtn: UIButton!
-    @IBOutlet weak var bottomSelectionView: UIView!
-    @IBOutlet weak var settingsView: UIView!
+    
+    //Settings Screen
     @IBOutlet weak var fiveQuestionsBtn: UIButton!
     @IBOutlet weak var tenQuestionsBtn: UIButton!
     @IBOutlet weak var fifteenQuestionsBtn: UIButton!
