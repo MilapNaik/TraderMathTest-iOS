@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import BarChartKit
 class LeaderboardVC: BaseVC {
 
     // MARK: Properties
@@ -15,7 +15,17 @@ class LeaderboardVC: BaseVC {
     private let maxResults = 5
     private var bestScore: [String] = []
     private var bestTime: [String] = []
+        
+    @IBOutlet weak var barChartContainerView: UIView!
+    @IBOutlet weak var barChartStackView: UIStackView!
+    @IBOutlet weak var testTypeView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var scoreTypeControl: TMTSegmentedControl!
+    @IBOutlet weak var testTypeControl: TMTSegmentedControl!
+    @IBOutlet weak var levelTypeControl: TMTSegmentedControl!
+    @IBOutlet weak var questionsControl: TMTSegmentedControl!
     
+    //Property Observers
     var level: Test.Level = Test.Level.easy {
         didSet {
             loadhighscores()
@@ -28,24 +38,17 @@ class LeaderboardVC: BaseVC {
         }
     }
     
-//    var PoT: Test.TType = Test.TType.practice {
-//        didSet {
-//            loadhighscores()
-//        }
-//    }
+    var scoreType: Test.ScoreType = Test.ScoreType.local {
+        didSet {
+            loadhighscores()
+        }
+    }
     
     var testType: Test.Category = Test.Category.math {
         didSet {
             loadhighscores()
         }
     }
-    
-    @IBOutlet weak var testTypeView: UIView!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var scoreTypeControl: TMTSegmentedControl!
-    @IBOutlet weak var testTypeControl: TMTSegmentedControl!
-    @IBOutlet weak var levelTypeControl: TMTSegmentedControl!
-    @IBOutlet weak var questionsControl: TMTSegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,14 +68,44 @@ class LeaderboardVC: BaseVC {
     }
     
     fileprivate func setupSegmentedControl() {
+        
+        //Setup data for segment control buttons
         scoreTypeControl.setButtonTitles(buttonTitles: Test.ScoreType.allCases.map { $0.rawValue.uppercased() })
-        scoreTypeControl.delegate = self
         testTypeControl.setButtonTitles(buttonTitles: Test.Category.allCases.map { $0.rawValue.uppercased() })
-        testTypeControl.delegate = self
         levelTypeControl.setButtonTitles(buttonTitles: Test.Level.allCases.map { $0.rawValue.uppercased() })
-        levelTypeControl.delegate = self
         questionsControl.setButtonTitles(buttonTitles: Test.Count.allCases.map { "\($0.rawValue)" })
+        
+        //Set delegate for segmented control
         questionsControl.delegate = self
+        levelTypeControl.delegate = self
+        testTypeControl.delegate = self
+        scoreTypeControl.delegate = self
+    }
+    
+    fileprivate func loadBarChartView() {
+        
+        let mockBarChartDataSet: BarChartView.DataSet? = BarChartView.DataSet(elements: [
+            BarChartView.DataSet.DataElement(date: nil, xLabel: "Jan", bars: [BarChartView.DataSet.DataElement.Bar(value: 20000, color: UIColor.green), BarChartView.DataSet.DataElement.Bar(value: 15000, color: UIColor.blue)]),
+            BarChartView.DataSet.DataElement(date: nil, xLabel: "Feb", bars: [BarChartView.DataSet.DataElement.Bar(value: 0, color: UIColor.green)]),
+            BarChartView.DataSet.DataElement(date: nil, xLabel: "Mar", bars: [BarChartView.DataSet.DataElement.Bar(value: 10000, color: UIColor.green), BarChartView.DataSet.DataElement.Bar(value: 5000, color: UIColor.blue)]),
+            BarChartView.DataSet.DataElement(date: nil, xLabel: "Apr", bars: [BarChartView.DataSet.DataElement.Bar(value: 20000, color: UIColor.green), BarChartView.DataSet.DataElement.Bar(value: 15000, color: UIColor.blue)]),
+            BarChartView.DataSet.DataElement(date: nil, xLabel: "May", bars: [BarChartView.DataSet.DataElement.Bar(value: 32000, color: UIColor.green), BarChartView.DataSet.DataElement.Bar(value: 15000, color: UIColor.blue)]),
+            BarChartView.DataSet.DataElement(date: nil, xLabel: "Jun", bars: [BarChartView.DataSet.DataElement.Bar(value: 20000, color: UIColor.green)]),
+            BarChartView.DataSet.DataElement(date: nil, xLabel: "Jul", bars: [BarChartView.DataSet.DataElement.Bar(value: 20000, color: UIColor.green), BarChartView.DataSet.DataElement.Bar(value: 0.5555, color: UIColor.blue)])
+            ], selectionColor: UIColor.yellow)
+
+
+        let barChart = BarChartView()
+        barChart.dataSet = mockBarChartDataSet
+
+        barChartContainerView.addSubview(barChart)
+        barChart.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            barChart.leadingAnchor.constraint(equalTo: barChartContainerView.leadingAnchor),
+            barChart.trailingAnchor.constraint(equalTo: barChartContainerView.trailingAnchor),
+            barChart.topAnchor.constraint(equalTo: barChartContainerView.topAnchor),
+            barChart.bottomAnchor.constraint(equalTo: barChartContainerView.bottomAnchor)
+        ])
     }
 }
 
@@ -102,6 +135,13 @@ extension LeaderboardVC: UITableViewDelegate, UITableViewDataSource {
 extension LeaderboardVC {
     
     func loadhighscores() {
+        
+        if scoreType == .global {
+            barChartStackView.isHidden = false
+            loadBarChartView()
+            return
+        }
+        barChartStackView.isHidden = true
         bestScore = ["-----", "-----", "-----", "-----", "-----"]
         bestTime = ["-----", "-----", "-----", "-----", "-----"]
         
@@ -123,6 +163,10 @@ extension LeaderboardVC {
 extension LeaderboardVC: TMTSegmentedControlDelegate {
     func change(control: TMTSegmentedControl, to index: Int) {
         switch control {
+        case scoreTypeControl:
+            if let scoreType = Test.ScoreType(rawValue: control.selectedVal.lowercased()) {
+                self.scoreType = scoreType
+            }
         case levelTypeControl:
             if let level = Test.Level(rawValue: control.selectedVal.lowercased()) {
                 self.level = level

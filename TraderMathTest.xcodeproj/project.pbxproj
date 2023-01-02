@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		81EF87151D10E2310038A38C /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87141D10E2310038A38C /* data.db */; };
 		81EF87171D110A090038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87161D110A090038A38C /* easymath.txt */; };
 		DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */; };
+		DB34645B2962B677007E07EE /* BarChartKit-static in Frameworks */ = {isa = PBXBuildFile; productRef = DB34645A2962B677007E07EE /* BarChartKit-static */; };
 		DB3ADF11291F88E10040A3C9 /* AssetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */; };
 		DB3DEB7C295A0E3E0063E2A6 /* TMSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */; };
 		DB9682D52923894C00E72766 /* MathTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9682D42923894C00E72766 /* MathTestVC.swift */; };
@@ -117,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71C24D9ACB05CB9C729CA201 /* Pods_TraderMathTest.framework in Frameworks */,
+				DB34645B2962B677007E07EE /* BarChartKit-static in Frameworks */,
 				DB9C9D522891563B00216347 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +366,9 @@
 			dependencies = (
 			);
 			name = TraderMathTest;
+			packageProductDependencies = (
+				DB34645A2962B677007E07EE /* BarChartKit-static */,
+			);
 			productName = TraderMathTest;
 			productReference = 81A89F0D1CEB995600B2838A /* TraderMathTest.app */;
 			productType = "com.apple.product-type.application";
@@ -420,6 +425,9 @@
 				Base,
 			);
 			mainGroup = 81A89F041CEB995600B2838A;
+			packageReferences = (
+				DB3464592962B677007E07EE /* XCRemoteSwiftPackageReference "BarChart" */,
+			);
 			productRefGroup = 81A89F0E1CEB995600B2838A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -690,7 +698,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -715,7 +724,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TraderMathTest/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 2.0.0;
 				OTHER_LDFLAGS = (
@@ -753,7 +762,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TraderMathTest/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 2.0.0;
 				OTHER_LDFLAGS = (
@@ -787,7 +796,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTestTests;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -807,7 +820,11 @@
 				DEVELOPMENT_TEAM = 5CUMW2JF9P;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTestTests;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -848,6 +865,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB3464592962B677007E07EE /* XCRemoteSwiftPackageReference "BarChart" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marekpridal/BarChart";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB34645A2962B677007E07EE /* BarChartKit-static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB3464592962B677007E07EE /* XCRemoteSwiftPackageReference "BarChart" */;
+			productName = "BarChartKit-static";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81A89F051CEB995600B2838A /* Project object */;
 }
