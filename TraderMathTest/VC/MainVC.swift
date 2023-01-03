@@ -10,6 +10,7 @@ import UIKit
 import AppTrackingTransparency
 import AdSupport
 import DLRadioButton
+import FirebaseDatabase
 
 enum Test: CaseIterable {
     
@@ -86,6 +87,18 @@ class MainVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Mock Data
+//        let ref = Database.database().reference()
+//        for _ in 1...20 {
+//            ref.child("leaderboard").childByAutoId().setValue(
+//                [ "date" : Date().description,
+//                  "score" : Int.random(in: 10..<50),
+//                  "difficulty" : Test.Level.hard.rawValue,
+//                  "test_type" : Test.Category.sequence.rawValue,
+//                  "total_questions" : 50,
+//                  "time" : "00:54.280"] )
+//        }
         viewSetup()
     }
     

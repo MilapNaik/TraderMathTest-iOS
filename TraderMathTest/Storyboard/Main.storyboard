@@ -185,6 +185,7 @@
                         <outlet property="barChartContainerView" destination="dab-WN-NEM" id="PJI-rR-ULo"/>
                         <outlet property="barChartStackView" destination="cFi-QB-K59" id="h2P-t5-nx3"/>
                         <outlet property="levelTypeControl" destination="fSz-cI-Juq" id="1yk-t4-Pwm"/>
+                        <outlet property="questionCountView" destination="eYc-42-L3B" id="boJ-Ny-cW1"/>
                         <outlet property="questionsControl" destination="Fvx-sT-Rt7" id="hA2-hn-nne"/>
                         <outlet property="scoreTypeControl" destination="gdu-Fg-yLN" id="nvW-6n-4WD"/>
                         <outlet property="tableView" destination="TdY-LV-BY0" id="mzs-dJ-egX"/>
@@ -827,7 +828,7 @@ of the math test</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cmc-yb-zwH">
-                                        <rect key="frame" x="16" y="42.666666666666671" width="195" height="194.66666666666663"/>
+                                        <rect key="frame" x="16" y="42.666666666666686" width="195" height="194.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7CD-DZ-mP9">
                                                 <rect key="frame" x="0.0" y="39.666666666666671" width="195" height="115.00000000000001"/>

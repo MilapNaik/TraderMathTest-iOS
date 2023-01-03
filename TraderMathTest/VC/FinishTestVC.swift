@@ -133,24 +133,26 @@ extension FinishTestVC: UITableViewDelegate, UITableViewDataSource {
 //MARK: DB
 extension FinishTestVC {
     
-    func addhighscore(){
+    func addhighscore() {
         // _ is set to avoid warning
         _ = db.execute(sql: "INSERT INTO \(difficulty.rawValue)_\(testType.rawValue)_\(questionNum.rawValue) (Score, Time) Values ('\(highscore)', '\(finishtime)'); ", parameters:nil)
         
         //don't sync the practice scores
         if PoT == .test {
             let ref = Database.database().reference()
-            ref.child("leaderboard").childByAutoId().setValue(
+            ref.child("leaderboard")
+                .childByAutoId()
+                .setValue (
                 [ "date" : Date().description,
                   "score" : highscore,
                   "difficulty" : difficulty.rawValue,
-                  "testtype" : testType.rawValue,
-                  "numbers" : questionNum.rawValue,
+                  "test_type" : testType.rawValue,
+                  "total_questions" : questionNum.rawValue,
                   "time" : finishtime ] )
         }
     }
     
-    func loadhighscores(){
+    func loadhighscores() {
         let result = db.query(sql: "SELECT * from \(difficulty)_\(testType)_\(questionNum) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
         
         for (index,row) in result.enumerated() {

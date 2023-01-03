@@ -15,12 +15,15 @@ class LeaderboardVC: BaseVC {
     // MARK: Properties
     private let db = SQLiteDB.shared
     private let maxResults = 5
-    private var bestScore: [String] = []
-    private var bestTime: [String] = []
+    private var bestScore: [String] = ["-----", "-----", "-----", "-----", "-----"]
+    private var bestTime: [String] = ["-----", "-----", "-----", "-----", "-----"]
+    private var barChartView:BarChartView?
     
+    //MARK: IBOutlets
     @IBOutlet weak var barChartContainerView: UIView!
     @IBOutlet weak var barChartStackView: UIStackView!
     @IBOutlet weak var testTypeView: UIView!
+    @IBOutlet weak var questionCountView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var scoreTypeControl: TMTSegmentedControl!
@@ -85,42 +88,40 @@ class LeaderboardVC: BaseVC {
         scoreTypeControl.delegate = self
     }
     
-    fileprivate func loadBarChartView() {
+    fileprivate func loadBarChartView(scores: [Int]) {
         
-        let chartDataSet = BarChartView.DataSet(
-            elements:
-                [ BarChartView.DataSet.DataElement(
-                    date: nil,
-                    xLabel: "Other's Score",
-                    bars:
-                        [ BarChartView.DataSet.DataElement.Bar (
-                            value: 40,
-                            color: .black)
-                        ]
-                ),
-                  BarChartView.DataSet.DataElement(
-                    date: nil,
-                    xLabel: "Your Score",
-                    bars:
-                        [ BarChartView.DataSet.DataElement.Bar (
-                            value: 10,
-                            color: .red)
-                        ]
-                  )
-                ], selectionColor: .red)
+        if barChartView == nil {
+            barChartView = BarChartView()
+            barChartContainerView.addSubview(barChartView!)
+            barChartView!.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                barChartView!.leadingAnchor.constraint(equalTo: barChartContainerView.leadingAnchor, constant: 16),
+                barChartView!.trailingAnchor.constraint(equalTo: barChartContainerView.trailingAnchor, constant: 16),
+                barChartView!.topAnchor.constraint(equalTo: barChartContainerView.topAnchor),
+                barChartView!.bottomAnchor.constraint(equalTo: barChartContainerView.bottomAnchor)
+            ])
+        }
         
+        var elements: [BarChartView.DataSet.DataElement] = []
+
+        for score in scores {
+            let element = BarChartView.DataSet.DataElement(date: nil, xLabel: "", bars: [
+                BarChartView.DataSet.DataElement.Bar ( value: Double(score), color: .black) ])
+            elements.append(element)
+        }
         
-        let barChart = BarChartView()
-        barChart.dataSet = chartDataSet
+        if let localBestScore = Double(bestScore.first!) {
+            let element = BarChartView.DataSet.DataElement(date: nil, xLabel: "Your Score", bars: [
+                BarChartView.DataSet.DataElement.Bar ( value: localBestScore, color: .red) ])
+            elements.append(element)
+            let chartDataSet = BarChartView.DataSet(elements: elements, selectionColor: .red)
+            barChartView!.dataSet = chartDataSet
+        }
+        else {
+            let chartDataSet = BarChartView.DataSet(elements: elements, selectionColor: .black)
+            barChartView!.dataSet = chartDataSet
+        }
         
-        barChartContainerView.addSubview(barChart)
-        barChart.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            barChart.leadingAnchor.constraint(equalTo: barChartContainerView.leadingAnchor, constant: 16),
-            barChart.trailingAnchor.constraint(equalTo: barChartContainerView.trailingAnchor, constant: 16),
-            barChart.topAnchor.constraint(equalTo: barChartContainerView.topAnchor),
-            barChart.bottomAnchor.constraint(equalTo: barChartContainerView.bottomAnchor)
-        ])
     }
 }
 
@@ -151,13 +152,9 @@ extension LeaderboardVC {
     
     func loadhighscores() {
         
-        if scoreType == .global {
-            barChartStackView.isHidden = false
-            loadScoresFromFirebase()
-            return
-        }
+        barChartStackView.isHidden = scoreType == .local
+        questionCountView.isHidden = scoreType == .global
         
-        barChartStackView.isHidden = true
         bestScore = ["-----", "-----", "-----", "-----", "-----"]
         bestTime = ["-----", "-----", "-----", "-----", "-----"]
         
@@ -167,21 +164,35 @@ extension LeaderboardVC {
             bestScore[index] = String(describing: row["Score"]!)
             bestTime[index] = String(describing: row["Time"]!)
         }
+        
         tableView.reloadData()
+        
+        if scoreType == .global {
+            loadScoresFromFirebase()
+        }
     }
     
     func loadScoresFromFirebase() {
         let ref = Database.database().reference()
-        ref.child("leaderboard").observeSingleEvent(of: .value) { snapshot in
+        ref.child("leaderboard")
+            .observeSingleEvent(of: .value) { snapshot in
             if snapshot.exists() {
                 DispatchQueue.main.async {
+                    var scores: [Int] = []
                     for child in snapshot.children {
                         if let snap = child as? DataSnapshot,
                            let val = snap.value as? [String: Any] {
-                            print("Key:\t\(snap.key)\nValue:\t\(val)")
+                            if let testCategory = val["test_type"] as? String,
+                               let difficulty = val["difficulty"] as? String,
+                               let score = val["score"] as? Int,
+                               difficulty == self.level.rawValue,
+                               testCategory == self.testType.rawValue {
+                                scores.append(score)
+                                print("Key:\t\(snap.key)\nValue:\t\(val)")
+                            }
                         }
                     }
-                    self.loadBarChartView()
+                    self.loadBarChartView(scores: scores)
                 }
             }
         }
@@ -199,6 +210,9 @@ extension LeaderboardVC: TMTSegmentedControlDelegate {
         case scoreTypeControl:
             if let scoreType = Test.ScoreType(rawValue: control.selectedVal.lowercased()) {
                 self.scoreType = scoreType
+            }
+            if scoreType == .global {
+                questionNum = testType == .math ? .eighty : .fifty
             }
         case levelTypeControl:
             if let level = Test.Level(rawValue: control.selectedVal.lowercased()) {
