@@ -321,8 +321,8 @@
 		DBB8D01F28914A30006FC66C /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				DB34645C2962CB57007E07EE /* BarChartKit */,
 				DBB8D02028914A39006FC66C /* SQLite */,
+				DB34645C2962CB57007E07EE /* BarChartKit */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";

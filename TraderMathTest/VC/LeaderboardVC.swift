@@ -6,8 +6,7 @@
 //  Copyright © 2022 Gamelap Studios LLC. All rights reserved.
 //
 
-import UIKit
-import BarChartKit
+import UIKit 
 import FirebaseDatabase
 
 class LeaderboardVC: BaseVC {
