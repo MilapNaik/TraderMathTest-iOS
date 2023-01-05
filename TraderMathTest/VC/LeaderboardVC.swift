@@ -164,9 +164,7 @@ extension LeaderboardVC {
             bestScore[index] = String(describing: row["Score"]!)
             bestTime[index] = String(describing: row["Time"]!)
         }
-        
         tableView.reloadData()
-        
         if scoreType == .global {
             loadScoresFromFirebase()
         }
@@ -188,7 +186,6 @@ extension LeaderboardVC {
                                difficulty == self.level.rawValue,
                                testCategory == self.testType.rawValue {
                                 scores.append(score)
-                                print("Key:\t\(snap.key)\nValue:\t\(val)")
                             }
                         }
                     }
