@@ -14,22 +14,23 @@ import FirebaseAnalytics
 
 class MathTestVC: BaseVC {
     
-    let preferences = UserDefaults.standard
+    //MARK: Constants
+    private let preferences = UserDefaults.standard
     
-    var i:Int = 0
-    var questionNumber:Int = 1
-    
-    var myQuestions = [String]()
-    var correctAnswer: String?
-    var answer: String?
-    var correctAnswerDouble: Double = 0.0
-    var answerDouble: Double? = 0.0
-    var answerCorrect: Bool?
-    var highscore:Int = 0
-    var finishtime:String = "0"
-    var timer = Timer()
-    var time: Double = 0
-    var startTime: TimeInterval = 0.0
+    //MARK: Variables
+    private var questionNumber:Int = 1
+    private var myQuestions = [String]()
+    private var correctAnswer: String?
+    private var answer: String?
+    private var correctAnswerDouble: Double = 0.0
+    private var answerDouble: Double? = 0.0
+    private var answerCorrect: Bool?
+    private var highscore:Int = 0
+    private var finishtime:String = "0"
+    private var timer = Timer()
+    private var time: Double = 0
+    private var startTime: TimeInterval = 0.0
+    private var filename:String = "easymath"
     
     //MARK: IBOutlets
     @IBOutlet weak var testTypeLbl: UILabel!
@@ -39,6 +40,7 @@ class MathTestVC: BaseVC {
     @IBOutlet weak var qnumLabel: UILabel!
     @IBOutlet weak var keyboardHeightConstraint: NSLayoutConstraint!
     
+    //MARK: Computed Properties
     var difficulty: Test.Level {
         if let string = UserDefaults.standard.string(forKey: Test.Key.DIFFICULTY_KEY.val),
            let type = Test.Level(rawValue: string) {
@@ -66,9 +68,7 @@ class MathTestVC: BaseVC {
         }
         return .math
     }
-    
-    var filename:String = "easymath"
-    
+        
     //MARK: Overridden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,17 +93,10 @@ class MathTestVC: BaseVC {
     }
     
     //MARK: Segue
-    //Calculate total time took during test and transition to end of test screen.
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         
-        time = Double(round(1000*time)/1000)
-        let minutes = UInt16(time/60.0)
-        let seconds = UInt16(time) - (minutes*60)
-        let milliseconds = Int((time*1000).truncatingRemainder(dividingBy: 1000))
-        finishtime = String(format: "%02d:%02d.%03d", minutes, seconds, milliseconds)
-        
+        calculateTimeAndScore()
         if let vc = segue.destination as? FinishTestVC {
-            let highscore = sender as! Int
             vc.highscore = highscore
             vc.finishtime = "\(finishtime)"
         }
@@ -112,7 +105,8 @@ class MathTestVC: BaseVC {
 
 //MARK: Q/A Management
 extension MathTestVC {
-    // Read user defaults
+    
+    // read user defaults
     func readQuestionNum() -> Test.Count {
         if PoT == .test {
             return testType == .math ? .eighty : .fifty
@@ -124,7 +118,7 @@ extension MathTestVC {
         return .five
     }
     
-    // Read selected file
+    // read selected file
     func readFile() {
         filename = difficulty.rawValue + testType.rawValue
         if let path = Bundle.main.path(forResource: filename, ofType: "txt"){
@@ -138,6 +132,7 @@ extension MathTestVC {
         }
     }
     
+    //read new question
     func newQuestion() {
         let randomIndex = Int(arc4random_uniform(UInt32(myQuestions.count/2))) * 2
         questionLbl.text = myQuestions[randomIndex]
@@ -147,7 +142,7 @@ extension MathTestVC {
         answerTf.text = ""
     }
     
-    
+    //check answer and update the view accordingly
     func checkAnswer() {
         answer = answerTf.text
         questionNumber += 1
@@ -182,6 +177,15 @@ extension MathTestVC {
             time = Date.timeIntervalSinceReferenceDate - startTime
             self.performSegue(withIdentifier: "FinishTest", sender: highscore)
         }
+    }
+    
+    //calculate total time after test
+    func calculateTimeAndScore() {
+        time = Double(round(1000*time)/1000)
+        let minutes = UInt16(time/60.0)
+        let seconds = UInt16(time) - (minutes*60)
+        let milliseconds = Int((time*1000).truncatingRemainder(dividingBy: 1000))
+        finishtime = String(format: "%02d:%02d.%03d", minutes, seconds, milliseconds)
     }
 }
 
