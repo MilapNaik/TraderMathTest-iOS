@@ -14,6 +14,8 @@ import FirebaseAnalytics
 
 class MathTestVC: BaseVC {
     
+    let preferences = UserDefaults.standard
+    
     var i:Int = 0
     var questionNumber:Int = 1
     
@@ -23,22 +25,19 @@ class MathTestVC: BaseVC {
     var correctAnswerDouble: Double = 0.0
     var answerDouble: Double? = 0.0
     var answerCorrect: Bool?
-    
     var highscore:Int = 0
-    
     var finishtime:String = "0"
     var timer = Timer()
     var time: Double = 0
     var startTime: TimeInterval = 0.0
     
+    //MARK: IBOutlets
     @IBOutlet weak var testTypeLbl: UILabel!
     @IBOutlet weak var questionLbl: UILabel!
     @IBOutlet weak var answerTf: UITextField!
     @IBOutlet weak var questionViewContainer: UIView!
     @IBOutlet weak var qnumLabel: UILabel!
     @IBOutlet weak var keyboardHeightConstraint: NSLayoutConstraint!
-    
-    let preferences = UserDefaults.standard
     
     var difficulty: Test.Level {
         if let string = UserDefaults.standard.string(forKey: Test.Key.DIFFICULTY_KEY.val),
@@ -70,14 +69,11 @@ class MathTestVC: BaseVC {
     
     var filename:String = "easymath"
     
+    //MARK: Overridden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hidesRightBarBtnItem = true
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.keyboardNotification(notification:)),
-                                               name: UIResponder.keyboardWillChangeFrameNotification,
-                                               object: nil)
     }
     
     override func viewWillLayoutSubviews() {
@@ -96,6 +92,26 @@ class MathTestVC: BaseVC {
         answerTf.delegate = self
     }
     
+    //MARK: Segue
+    //Calculate total time took during test and transition to end of test screen.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        
+        time = Double(round(1000*time)/1000)
+        let minutes = UInt16(time/60.0)
+        let seconds = UInt16(time) - (minutes*60)
+        let milliseconds = Int((time*1000).truncatingRemainder(dividingBy: 1000))
+        finishtime = String(format: "%02d:%02d.%03d", minutes, seconds, milliseconds)
+        
+        if let vc = segue.destination as? FinishTestVC {
+            let highscore = sender as! Int
+            vc.highscore = highscore
+            vc.finishtime = "\(finishtime)"
+        }
+    }
+}
+
+//MARK: Q/A Management
+extension MathTestVC {
     // Read user defaults
     func readQuestionNum() -> Test.Count {
         if PoT == .test {
@@ -109,7 +125,7 @@ class MathTestVC: BaseVC {
     }
     
     // Read selected file
-    func readFile(){
+    func readFile() {
         filename = difficulty.rawValue + testType.rawValue
         if let path = Bundle.main.path(forResource: filename, ofType: "txt"){
             do {
@@ -122,7 +138,7 @@ class MathTestVC: BaseVC {
         }
     }
     
-    func newQuestion(){
+    func newQuestion() {
         let randomIndex = Int(arc4random_uniform(UInt32(myQuestions.count/2))) * 2
         questionLbl.text = myQuestions[randomIndex]
         correctAnswer = myQuestions[randomIndex + 1]
@@ -130,32 +146,7 @@ class MathTestVC: BaseVC {
         qnumLabel.text = "\(questionNumber)/\(questionNum.rawValue)"
         answerTf.text = ""
     }
-}
-
-extension MathTestVC {
-    @objc func keyboardNotification(notification: NSNotification) {
-        guard let userInfo = notification.userInfo else { return }
-        
-        let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-        let endFrameY = endFrame?.origin.y ?? 0
-        let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
-        let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
-        let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
-        let animationCurve:UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
-        
-        if endFrameY >= UIScreen.main.bounds.size.height {
-            self.keyboardHeightConstraint.constant = 0.0
-        } else {
-            self.keyboardHeightConstraint.constant = endFrame?.size.height ?? 0.0
-        }
-        
-        UIView.animate(
-            withDuration: duration,
-            delay: TimeInterval(0),
-            options: animationCurve,
-            animations: { self.view.layoutIfNeeded() },
-            completion: nil)
-    }
+    
     
     func checkAnswer() {
         answer = answerTf.text
@@ -192,24 +183,44 @@ extension MathTestVC {
             self.performSegue(withIdentifier: "FinishTest", sender: highscore)
         }
     }
+}
+
+//MARK: Keyboard Management
+extension MathTestVC {
     
-    //Calculate total time took during test and transition to end of test screen.
-    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+    func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.keyboardNotification(notification:)),
+                                               name: UIResponder.keyboardWillChangeFrameNotification,
+                                               object: nil)
+    }
+    
+    @objc func keyboardNotification(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
         
-        time = Double(round(1000*time)/1000)
-        let minutes = UInt16(time/60.0)
-        let seconds = UInt16(time) - (minutes*60)
-        let milliseconds = Int((time*1000).truncatingRemainder(dividingBy: 1000))
-        finishtime = String(format: "%02d:%02d.%03d", minutes, seconds, milliseconds)
+        let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        let endFrameY = endFrame?.origin.y ?? 0
+        let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+        let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+        let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
+        let animationCurve:UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
         
-        if let vc = segue.destination as? FinishTestVC {
-            let highscore = sender as! Int
-            vc.highscore = highscore
-            vc.finishtime = "\(finishtime)"
+        if endFrameY >= UIScreen.main.bounds.size.height {
+            self.keyboardHeightConstraint.constant = 0.0
+        } else {
+            self.keyboardHeightConstraint.constant = endFrame?.size.height ?? 0.0
         }
+        
+        UIView.animate(
+            withDuration: duration,
+            delay: TimeInterval(0),
+            options: animationCurve,
+            animations: { self.view.layoutIfNeeded() },
+            completion: nil)
     }
 }
 
+//MARK: Textfield delegate
 extension MathTestVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text!.isEmpty == false {

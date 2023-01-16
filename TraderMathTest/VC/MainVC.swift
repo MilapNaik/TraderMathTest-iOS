@@ -113,6 +113,7 @@ class MainVC: BaseVC {
     
     override func viewWillAppear(_ animated: Bool) {
         readUserDefaults()
+        resetAllViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -166,6 +167,13 @@ class MainVC: BaseVC {
     func showSettingsView() {
         bottomSelectionView.isHidden = true
         settingsView.isHidden = false
+    }
+    
+    func resetAllViews() {
+        bottomSelectionView.isHidden = true
+        settingsView.isHidden = true
+        mathTestView.backgroundColor = .white
+        sequenceTestView.backgroundColor = .white
     }
     
     // MARK: Gesture

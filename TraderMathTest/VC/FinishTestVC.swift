@@ -27,6 +27,7 @@ class FinishTestVC: BaseVC {
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var leaderboardLabel: UILabel!
+    @IBOutlet weak var tryAgainBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     var highscore: Int = 0
