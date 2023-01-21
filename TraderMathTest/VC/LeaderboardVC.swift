@@ -88,50 +88,13 @@ class LeaderboardVC: BaseVC {
         scoreTypeControl.delegate = self
     }
     
-//    fileprivate func loadBarChartView(scores: [Int]) {
-//
-//        if barChartView == nil {
-//            barChartView = BarChartView()
-//            barChartContainerView.addSubview(barChartView!)
-//            barChartView!.translatesAutoresizingMaskIntoConstraints = false
-//            NSLayoutConstraint.activate([
-//                barChartView!.leadingAnchor.constraint(equalTo: barChartContainerView.leadingAnchor, constant: 16),
-//                barChartView!.trailingAnchor.constraint(equalTo: barChartContainerView.trailingAnchor, constant: -16),
-//                barChartView!.topAnchor.constraint(equalTo: barChartContainerView.topAnchor),
-//                barChartView!.bottomAnchor.constraint(equalTo: barChartContainerView.bottomAnchor)
-//            ])
-//        }
-//
-//        var elements: [BarChartView.DataSet.DataElement] = []
-//
-//        for score in scores {
-//            let element = BarChartView.DataSet.DataElement(date: nil, xLabel: "", bars: [
-//                BarChartView.DataSet.DataElement.Bar ( value: Double(score), color: .black) ])
-//            elements.append(element)
-//        }
-////        barChartView?.backgroundColor = .accent
-//        if let localBestScore = Double(bestScore.first!) {
-//            let element = BarChartView.DataSet.DataElement(date: nil, xLabel: "Your Score", bars: [
-//                BarChartView.DataSet.DataElement.Bar ( value: localBestScore, color: .red) ])
-//            elements.append(element)
-//            let chartDataSet = BarChartView.DataSet(elements: elements, selectionColor: .red)
-//            barChartView!.dataSet = chartDataSet
-//
-//        }
-//        else {
-//            let element = BarChartView.DataSet.DataElement(date: nil, xLabel: "Your Score", bars: [
-//                BarChartView.DataSet.DataElement.Bar (value: 0, color: .red) ])
-//            elements.append(element)
-//            let chartDataSet = BarChartView.DataSet(elements: elements, selectionColor: .black)
-//            barChartView!.dataSet = chartDataSet
-//        }
-//
-//    }
-    
     fileprivate func loadBarChartView(scores: [Int]) {
         
         if barChartView == nil {
             barChartView = BarChartView()
+            barChartView?.rightAxis.enabled = false
+            barChartView?.xAxis.labelPosition = .bottom
+            barChartView?.drawValueAboveBarEnabled = false
             barChartContainerView.addSubview(barChartView!)
             barChartView!.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
@@ -142,33 +105,22 @@ class LeaderboardVC: BaseVC {
             ])
         }
         
-        var elements: [BarChartDataEntry] = []
-        for (i,score) in scores.enumerated() {
-            let element = BarChartDataEntry(x: Double(i), y: Double(score))
-            elements.append(element)
-        }
+        let dataEntry1: [BarChartDataEntry] = scores.enumerated().map { BarChartDataEntry(x: Double($0), y: Double($1)) }
        
-        let set = BarChartDataSet(entries: elements, label: "Other's Scores")
-        set.drawValuesEnabled = false
-        set.colors = [NSUIColor.black]
-        var set2: BarChartDataSet?
+        let dataSet1 = BarChartDataSet(entries: dataEntry1, label: "Other's Scores")
+        dataSet1.drawValuesEnabled = false
+        dataSet1.colors = [NSUIColor.black]
+        
+        var dataSets: [BarChartDataSet] = [dataSet1]
+        
         if let localBestScore = Double(bestScore.first!) {
-            set2 = BarChartDataSet(entries: [BarChartDataEntry(x: Double(scores.count), y: localBestScore)], label: "Your Score")
-            set2!.drawValuesEnabled = false
-            set2!.colors = [NSUIColor.red]
+            let dataSet2 = BarChartDataSet(entries: [BarChartDataEntry(x: Double(scores.count), y: localBestScore)], label: "Your Score")
+            dataSet2.drawValuesEnabled = false
+            dataSet2.colors = [.red]
+            dataSets.append(dataSet2)
         }
         
-        if set2 == nil {
-            let data = BarChartData(dataSet: set)
-            barChartView?.data = data
-        }
-        else {
-            let data = BarChartData(dataSets: [set,set2!])
-            barChartView?.data = data
-        }
-        barChartView?.rightAxis.enabled = false
-        barChartView?.xAxis.labelPosition = .bottom
-        barChartView?.drawValueAboveBarEnabled = false
+        barChartView?.data = BarChartData(dataSets: dataSets)
     }
 }
 
