@@ -72,7 +72,7 @@ class MathTestVC: BaseVC {
     //MARK: Overridden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hidesRightBarBtnItem = true
+        self.setupRightBarBtnItem()
         registerForKeyboardNotifications()
     }
     
@@ -85,11 +85,12 @@ class MathTestVC: BaseVC {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //        readUserDefaults()
+        
         readFile()
         startTime = Date.timeIntervalSinceReferenceDate
         answerTf.becomeFirstResponder()
         answerTf.delegate = self
+        
     }
     
     //MARK: Segue
@@ -189,6 +190,27 @@ extension MathTestVC {
     }
 }
 
+//MARK: Navigation Bar
+extension MathTestVC {
+    
+    func setupRightBarBtnItem() {
+        self.customBarBtnItem = UIBarButtonItem(title: "Exit", style: .done, target: self, action: #selector(MathTestVC.finishTestClicked))
+    }
+    
+    @objc func finishTestClicked() {
+        let alert = UIAlertController(title: "Exit?", message: "Are you sure you want to end the test, your score won't be saved if you end it now?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "End Test", style: .default) { _ in
+            self.goHome()
+        })
+        alert.addAction(UIAlertAction(title: "Not Now", style: .cancel))
+        present(alert, animated: true)
+    }
+    
+    func goHome() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+}
 //MARK: Keyboard Management
 extension MathTestVC {
     

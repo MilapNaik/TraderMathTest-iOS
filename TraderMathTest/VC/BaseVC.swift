@@ -21,6 +21,7 @@ class BaseVC: UIViewController {
         let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 140, height: 50))
         logoImageView.image = .mainLogo
         logoImageView.contentMode = .scaleAspectFit
+        logoImageView.isUserInteractionEnabled = true
         return logoImageView
     }()
     
@@ -32,6 +33,11 @@ class BaseVC: UIViewController {
         return UIBarButtonItem(image: .leaderboardIconSelected, style: .done, target: self, action: nil)
     }()
     
+    public var customBarBtnItem: UIBarButtonItem? {
+        didSet {
+            self.navigationItem.rightBarButtonItem = customBarBtnItem != nil ? customBarBtnItem : rightBarBtnItem
+        }
+    }
     public var hidesRightBarBtnItem : Bool = false {
         didSet {
             self.navigationItem.rightBarButtonItem = hidesRightBarBtnItem ? nil : rightBarBtnItem
