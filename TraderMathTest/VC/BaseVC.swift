@@ -39,6 +39,7 @@ class BaseVC: UIViewController {
             self.navigationItem.rightBarButtonItem = customBarBtnItem != nil ? customBarBtnItem : rightBarBtnItem
         }
     }
+    
     public var hidesRightBarBtnItem : Bool = false {
         didSet {
             self.navigationItem.rightBarButtonItem = hidesRightBarBtnItem ? nil : rightBarBtnItem

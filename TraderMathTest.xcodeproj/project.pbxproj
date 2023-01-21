@@ -296,6 +296,14 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		DB7C2C5E297BA51500CD2D14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DB9C9D532891578100216347 /* question-bank */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,7 +355,6 @@
 				DB9682D42923894C00E72766 /* MathTestVC.swift */,
 				DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */,
 				DBE779AA292A05F1000ADD51 /* LeaderboardVC.swift */,
-				DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */,
 				818520671CF3ED3C00063BFC /* Info.swift */,
 			);
 			path = VC;
@@ -374,6 +381,7 @@
 		DBB8D02628914C06006FC66C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DB7C2C5E297BA51500CD2D14 /* View */,
 				DBB8D02828914C1B006FC66C /* Extension */,
 				DBB8D02928914C20006FC66C /* Cell */,
 				DBB8D02728914C13006FC66C /* Models */,

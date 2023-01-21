@@ -95,7 +95,7 @@ class LeaderboardVC: BaseVC {
             barChartView!.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 barChartView!.leadingAnchor.constraint(equalTo: barChartContainerView.leadingAnchor, constant: 16),
-                barChartView!.trailingAnchor.constraint(equalTo: barChartContainerView.trailingAnchor, constant: 16),
+                barChartView!.trailingAnchor.constraint(equalTo: barChartContainerView.trailingAnchor, constant: -16),
                 barChartView!.topAnchor.constraint(equalTo: barChartContainerView.topAnchor),
                 barChartView!.bottomAnchor.constraint(equalTo: barChartContainerView.bottomAnchor)
             ])
@@ -108,15 +108,19 @@ class LeaderboardVC: BaseVC {
                 BarChartView.DataSet.DataElement.Bar ( value: Double(score), color: .black) ])
             elements.append(element)
         }
-        
+//        barChartView?.backgroundColor = .accent
         if let localBestScore = Double(bestScore.first!) {
             let element = BarChartView.DataSet.DataElement(date: nil, xLabel: "Your Score", bars: [
                 BarChartView.DataSet.DataElement.Bar ( value: localBestScore, color: .red) ])
             elements.append(element)
             let chartDataSet = BarChartView.DataSet(elements: elements, selectionColor: .red)
             barChartView!.dataSet = chartDataSet
+            
         }
         else {
+            let element = BarChartView.DataSet.DataElement(date: nil, xLabel: "Your Score", bars: [
+                BarChartView.DataSet.DataElement.Bar (value: 0, color: .red) ])
+            elements.append(element)
             let chartDataSet = BarChartView.DataSet(elements: elements, selectionColor: .black)
             barChartView!.dataSet = chartDataSet
         }
@@ -217,6 +221,9 @@ extension LeaderboardVC: TMTSegmentedControlDelegate {
         case testTypeControl:
             if let testType = Test.Category(rawValue: control.selectedVal.lowercased()) {
                 self.testType = testType
+            }
+            if scoreType == .global {
+                questionNum = testType == .math ? .eighty : .fifty
             }
         case questionsControl:
             if let questionNum = Test.Count(rawValue: Int(control.selectedVal) ?? Test.Count.five.rawValue) {
