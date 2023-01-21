@@ -68,12 +68,12 @@ class MathTestVC: BaseVC {
         }
         return .math
     }
-        
+    
     //MARK: Overridden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hidesRightBarBtnItem = true
-        
+        registerForKeyboardNotifications()
     }
     
     override func viewWillLayoutSubviews() {
@@ -193,10 +193,7 @@ extension MathTestVC {
 extension MathTestVC {
     
     func registerForKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.keyboardNotification(notification:)),
-                                               name: UIResponder.keyboardWillChangeFrameNotification,
-                                               object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     @objc func keyboardNotification(notification: NSNotification) {
