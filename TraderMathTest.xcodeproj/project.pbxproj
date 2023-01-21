@@ -24,15 +24,6 @@
 		81EF87151D10E2310038A38C /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87141D10E2310038A38C /* data.db */; };
 		81EF87171D110A090038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87161D110A090038A38C /* easymath.txt */; };
 		DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */; };
-		DB34646D2962CB57007E07EE /* ChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB34645F2962CB57007E07EE /* ChartLabel.swift */; };
-		DB34646E2962CB57007E07EE /* LimitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3464602962CB57007E07EE /* LimitLabel.swift */; };
-		DB34646F2962CB57007E07EE /* BarParentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3464622962CB57007E07EE /* BarParentControl.swift */; };
-		DB3464702962CB57007E07EE /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3464642962CB57007E07EE /* UIViewPreview.swift */; };
-		DB3464712962CB57007E07EE /* DashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3464662962CB57007E07EE /* DashedView.swift */; };
-		DB3464722962CB57007E07EE /* LimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3464672962CB57007E07EE /* LimitView.swift */; };
-		DB3464732962CB57007E07EE /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3464682962CB57007E07EE /* BarChartView.swift */; };
-		DB3464742962CB57007E07EE /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB34646A2962CB57007E07EE /* Array+Extension.swift */; };
-		DB3464752962CB57007E07EE /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB34646C2962CB57007E07EE /* BarChart.swift */; };
 		DB3ADF11291F88E10040A3C9 /* AssetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */; };
 		DB3DEB7C295A0E3E0063E2A6 /* TMSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */; };
 		DB9682D52923894C00E72766 /* MathTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9682D42923894C00E72766 /* MathTestVC.swift */; };
@@ -92,15 +83,6 @@
 		81EF87141D10E2310038A38C /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
 		81EF87161D110A090038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = easymath.txt; path = "question-bank/easymath.txt"; sourceTree = "<group>"; };
 		DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTestVC.swift; sourceTree = "<group>"; };
-		DB34645F2962CB57007E07EE /* ChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartLabel.swift; sourceTree = "<group>"; };
-		DB3464602962CB57007E07EE /* LimitLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitLabel.swift; sourceTree = "<group>"; };
-		DB3464622962CB57007E07EE /* BarParentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarParentControl.swift; sourceTree = "<group>"; };
-		DB3464642962CB57007E07EE /* UIViewPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
-		DB3464662962CB57007E07EE /* DashedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashedView.swift; sourceTree = "<group>"; };
-		DB3464672962CB57007E07EE /* LimitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitView.swift; sourceTree = "<group>"; };
-		DB3464682962CB57007E07EE /* BarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
-		DB34646A2962CB57007E07EE /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
-		DB34646C2962CB57007E07EE /* BarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsExtension.swift; sourceTree = "<group>"; };
 		DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMSegmentControl.swift; sourceTree = "<group>"; };
 		DB9682D42923894C00E72766 /* MathTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTestVC.swift; sourceTree = "<group>"; };
@@ -224,78 +206,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DB34645C2962CB57007E07EE /* BarChartKit */ = {
-			isa = PBXGroup;
-			children = (
-				DB34645D2962CB57007E07EE /* UIKit */,
-				DB3464692962CB57007E07EE /* Foundation */,
-				DB34646B2962CB57007E07EE /* SwiftUI */,
-			);
-			path = BarChartKit;
-			sourceTree = "<group>";
-		};
-		DB34645D2962CB57007E07EE /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				DB34645E2962CB57007E07EE /* Labels */,
-				DB3464612962CB57007E07EE /* Controls */,
-				DB3464632962CB57007E07EE /* Preview */,
-				DB3464652962CB57007E07EE /* Views */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
-		DB34645E2962CB57007E07EE /* Labels */ = {
-			isa = PBXGroup;
-			children = (
-				DB34645F2962CB57007E07EE /* ChartLabel.swift */,
-				DB3464602962CB57007E07EE /* LimitLabel.swift */,
-			);
-			path = Labels;
-			sourceTree = "<group>";
-		};
-		DB3464612962CB57007E07EE /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-				DB3464622962CB57007E07EE /* BarParentControl.swift */,
-			);
-			path = Controls;
-			sourceTree = "<group>";
-		};
-		DB3464632962CB57007E07EE /* Preview */ = {
-			isa = PBXGroup;
-			children = (
-				DB3464642962CB57007E07EE /* UIViewPreview.swift */,
-			);
-			path = Preview;
-			sourceTree = "<group>";
-		};
-		DB3464652962CB57007E07EE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DB3464662962CB57007E07EE /* DashedView.swift */,
-				DB3464672962CB57007E07EE /* LimitView.swift */,
-				DB3464682962CB57007E07EE /* BarChartView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		DB3464692962CB57007E07EE /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				DB34646A2962CB57007E07EE /* Array+Extension.swift */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		DB34646B2962CB57007E07EE /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				DB34646C2962CB57007E07EE /* BarChart.swift */,
-			);
-			path = SwiftUI;
-			sourceTree = "<group>";
-		};
 		DB7C2C5E297BA51500CD2D14 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				DBB8D02028914A39006FC66C /* SQLite */,
-				DB34645C2962CB57007E07EE /* BarChartKit */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -571,6 +480,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework",
@@ -578,12 +488,14 @@
 				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftAlgorithms/Algorithms.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreInternal.framework",
@@ -591,6 +503,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Algorithms.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -639,23 +552,14 @@
 				818520681CF3ED3C00063BFC /* Info.swift in Sources */,
 				DB9682D52923894C00E72766 /* MathTestVC.swift in Sources */,
 				DBB8D02228914A8D006FC66C /* CloudDB.swift in Sources */,
-				DB3464712962CB57007E07EE /* DashedView.swift in Sources */,
-				DB3464742962CB57007E07EE /* Array+Extension.swift in Sources */,
 				81A89F151CEB995600B2838A /* MainVC.swift in Sources */,
 				DB9C9D5828915B6800216347 /* DBManager.swift in Sources */,
 				81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */,
-				DB3464752962CB57007E07EE /* BarChart.swift in Sources */,
 				DBD6F51E291CED9B00759726 /* ViewExtension.swift in Sources */,
-				DB34646E2962CB57007E07EE /* LimitLabel.swift in Sources */,
-				DB3464722962CB57007E07EE /* LimitView.swift in Sources */,
 				DBE779A62929E612000ADD51 /* HighScoreCell.swift in Sources */,
 				81A4C8141CFDE4AD007D4C3C /* StringExtension.swift in Sources */,
-				DB3464702962CB57007E07EE /* UIViewPreview.swift in Sources */,
 				DBE779AB292A05F1000ADD51 /* LeaderboardVC.swift in Sources */,
-				DB34646D2962CB57007E07EE /* ChartLabel.swift in Sources */,
 				DBB8D01E28914A2B006FC66C /* SQLiteDB.swift in Sources */,
-				DB3464732962CB57007E07EE /* BarChartView.swift in Sources */,
-				DB34646F2962CB57007E07EE /* BarParentControl.swift in Sources */,
 				DBDD48AA292370CF00F120FC /* BaseVC.swift in Sources */,
 				DB3ADF11291F88E10040A3C9 /* AssetsExtension.swift in Sources */,
 			);

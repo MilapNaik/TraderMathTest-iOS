@@ -9,5 +9,6 @@ target 'TraderMathTest' do
   pod 'Toaster'
   pod 'FirebaseAnalytics'
   pod 'FirebaseDatabase'
+  pod 'Charts'
 
 end
