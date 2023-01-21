@@ -147,32 +147,28 @@ class LeaderboardVC: BaseVC {
             let element = BarChartDataEntry(x: Double(i), y: Double(score))
             elements.append(element)
         }
+       
         let set = BarChartDataSet(entries: elements, label: "Other's Scores")
         set.drawValuesEnabled = false
         set.colors = [NSUIColor.black]
-        let data = BarChartData(dataSet: set)
-        barChartView?.data = data
+        var set2: BarChartDataSet?
+        if let localBestScore = Double(bestScore.first!) {
+            set2 = BarChartDataSet(entries: [BarChartDataEntry(x: Double(scores.count), y: localBestScore)], label: "Your Score")
+            set2!.drawValuesEnabled = false
+            set2!.colors = [NSUIColor.red]
+        }
         
+        if set2 == nil {
+            let data = BarChartData(dataSet: set)
+            barChartView?.data = data
+        }
+        else {
+            let data = BarChartData(dataSets: [set,set2!])
+            barChartView?.data = data
+        }
         barChartView?.rightAxis.enabled = false
         barChartView?.xAxis.labelPosition = .bottom
         barChartView?.drawValueAboveBarEnabled = false
-////        barChartView?.backgroundColor = .accent
-//        if let localBestScore = Double(bestScore.first!) {
-//            let element = BarChartView.DataSet.DataElement(date: nil, xLabel: "Your Score", bars: [
-//                BarChartView.DataSet.DataElement.Bar ( value: localBestScore, color: .red) ])
-//            elements.append(element)
-//            let chartDataSet = BarChartView.DataSet(elements: elements, selectionColor: .red)
-//            barChartView!.dataSet = chartDataSet
-//
-//        }
-//        else {
-//            let element = BarChartView.DataSet.DataElement(date: nil, xLabel: "Your Score", bars: [
-//                BarChartView.DataSet.DataElement.Bar (value: 0, color: .red) ])
-//            elements.append(element)
-//            let chartDataSet = BarChartView.DataSet(elements: elements, selectionColor: .black)
-//            barChartView!.dataSet = chartDataSet
-//        }
-        
     }
 }
 
