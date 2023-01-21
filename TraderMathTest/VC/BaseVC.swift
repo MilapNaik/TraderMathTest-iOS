@@ -22,6 +22,7 @@ class BaseVC: UIViewController {
         logoImageView.image = .mainLogo
         logoImageView.contentMode = .scaleAspectFit
         logoImageView.isUserInteractionEnabled = true
+        logoImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(BaseVC.goToHome)))
         return logoImageView
     }()
     
@@ -59,6 +60,15 @@ class BaseVC: UIViewController {
             self.navigationItem.leftBarButtonItem = leftBarBtnItem
             self.navigationItem.rightBarButtonItem = rightBarBtnItem
         }
+    }
+    
+    @objc func goToHome() {
+        let alert = UIAlertController(title: "Exit?", message: "Are you sure you want to go to the home screen, you will lose any unsaved scores or progress.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes, Confirm", style: .default) { _ in
+            self.navigationController?.popToRootViewController(animated: true)
+        })
+        alert.addAction(UIAlertAction(title: "Not Now", style: .cancel))
+        present(alert, animated: true)
     }
     
     @objc fileprivate func showLearboardView() {
