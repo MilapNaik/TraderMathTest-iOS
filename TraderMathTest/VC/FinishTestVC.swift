@@ -15,6 +15,7 @@ import AdSupport
 
 class FinishTestVC: BaseVC {
     
+    private let HIGH_SCORE_CELL = "HighScoreCell"
     @IBOutlet weak var scoreView: UIView!
     @IBOutlet weak var scoreLbl: UILabel!
     
@@ -72,13 +73,13 @@ class FinishTestVC: BaseVC {
         
         _ = db.open()
         
-        tableView.register(UINib(nibName: "HighScoreCell", bundle: nil), forCellReuseIdentifier: "HighScoreCell")
+        tableView.register(UINib(nibName: HIGH_SCORE_CELL, bundle: nil), forCellReuseIdentifier: HIGH_SCORE_CELL)
         //        requestIDFA()
         addhighscore()
         loadhighscores()
         //        Test.text = "\(testType) \(PoT)"
         //        Leaderboard.text = "\(questionNum) \(difficulty) Questions"
-        print("\(highscore) \(finishtime)")
+//        print("\(highscore) \(finishtime)")
     }
     
     override func viewWillLayoutSubviews() {
@@ -117,7 +118,7 @@ extension FinishTestVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreCell", for: indexPath) as! HighScoreCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: HIGH_SCORE_CELL, for: indexPath) as! HighScoreCell
         
         cell.rankLbl.text = self.bestRank[indexPath.row]
         cell.scoreDetailsLbl.text = "Score: \(self.bestScore[indexPath.row]) Time: \(self.bestTime[indexPath.row])"
@@ -154,7 +155,7 @@ extension FinishTestVC {
     }
     
     func loadhighscores() {
-        let result = db.query(sql: "SELECT * from \(difficulty)_\(testType)_\(questionNum) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
+        let result = db.query(sql: "SELECT * from \(difficulty.rawValue)_\(testType.rawValue)_\(questionNum.rawValue) ORDER BY Score DESC, Time ASC LIMIT 5", parameters: nil)
         
         for (index,row) in result.enumerated() {
             bestScore[index] = String(describing: row["Score"]!)
