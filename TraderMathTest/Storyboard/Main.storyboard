@@ -469,7 +469,7 @@ of the math test</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-Be-a6I">
-                                        <rect key="frame" x="90" y="229" width="127.66666666666669" height="142"/>
+                                        <rect key="frame" x="107.66666666666666" y="229" width="127.66666666666666" height="142"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUo-gV-Mxy">
                                                 <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="22"/>
@@ -570,8 +570,8 @@ of the math test</string>
                                 <constraints>
                                     <constraint firstItem="Uhk-Be-a6I" firstAttribute="top" secondItem="gHC-qv-Xwb" secondAttribute="bottom" constant="32" id="48k-6M-71x"/>
                                     <constraint firstItem="Uxw-wK-KuL" firstAttribute="top" secondItem="Hqj-hd-lH7" secondAttribute="top" constant="16" id="5I0-lh-6DD"/>
+                                    <constraint firstItem="Uhk-Be-a6I" firstAttribute="centerX" secondItem="Hqj-hd-lH7" secondAttribute="centerX" id="LHX-le-vi5"/>
                                     <constraint firstItem="8wf-qd-Xpv" firstAttribute="top" secondItem="Uhk-Be-a6I" secondAttribute="bottom" constant="16" id="Llv-Ju-BA4"/>
-                                    <constraint firstItem="Uhk-Be-a6I" firstAttribute="leading" secondItem="gHC-qv-Xwb" secondAttribute="leading" id="NEc-J3-oxz"/>
                                     <constraint firstItem="gHC-qv-Xwb" firstAttribute="centerX" secondItem="Hqj-hd-lH7" secondAttribute="centerX" id="bOM-xE-nxL"/>
                                     <constraint firstItem="8wf-qd-Xpv" firstAttribute="centerX" secondItem="Hqj-hd-lH7" secondAttribute="centerX" id="emU-me-ygE"/>
                                     <constraint firstItem="gHC-qv-Xwb" firstAttribute="top" secondItem="Uxw-wK-KuL" secondAttribute="bottom" constant="16" id="rd2-a2-sQ5"/>
@@ -642,6 +642,7 @@ of the math test</string>
                         <outlet property="mathTestView" destination="HA6-GL-hhS" id="S1x-Hd-ldu"/>
                         <outlet property="mediumLevelBtn" destination="MKb-vu-FEv" id="qZD-tb-RZo"/>
                         <outlet property="practiceBtn" destination="KGW-so-v3g" id="Dvh-cD-zbg"/>
+                        <outlet property="practiceQuestionsStackView" destination="gHC-qv-Xwb" id="bYW-jr-3m2"/>
                         <outlet property="sequenceTestView" destination="WwN-y7-7wl" id="zkR-qg-gc8"/>
                         <outlet property="settingsView" destination="Hqj-hd-lH7" id="AfI-UO-6Pk"/>
                         <outlet property="startBtn" destination="8wf-qd-Xpv" id="cpm-Hy-kzN"/>

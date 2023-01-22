@@ -15,17 +15,17 @@ import FirebaseDatabase
 class MainVC: BaseVC {
     
     // MARK: Constants
-    let preferences = UserDefaults.standard
+    private let preferences = UserDefaults.standard
     
     // MARK: Properties
     private var testType: Test.TType = .practice
-    private var difficulty: Test.Level = .easy
     
     //MARK: IBOutlets
     @IBOutlet weak var sequenceTestView: UIView!
     @IBOutlet weak var mathTestView: UIView!
     @IBOutlet weak var bottomSelectionView: UIView!
     @IBOutlet weak var settingsView: UIView!
+    @IBOutlet weak var practiceQuestionsStackView: UIView!
     
     //Bottom Selection View
     @IBOutlet weak var practiceBtn: UIButton!
@@ -43,7 +43,7 @@ class MainVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Mock Data
+        //Mock Data for testing purposes
 //        let ref = Database.database().reference()
 //        for _ in 1...20 {
 //            ref.child("leaderboard").childByAutoId().setValue(
@@ -77,12 +77,14 @@ class MainVC: BaseVC {
     
     // MARK: IBActions
     @IBAction func practiceClicked() {
-        preferences.set(Test.TType.practice.rawValue, forKey: Test.Key.POT_KEY.val)
+        testType = .practice
+        preferences.set(testType.rawValue, forKey: Test.Key.POT_KEY.val)
         showSettingsView()
     }
     
     @IBAction func testClicked() {
-        preferences.set(Test.TType.test.rawValue, forKey: Test.Key.POT_KEY.val)
+        testType = .test
+        preferences.set(testType.rawValue, forKey: Test.Key.POT_KEY.val)
         showSettingsView()
     }
     
@@ -122,6 +124,11 @@ class MainVC: BaseVC {
     func showSettingsView() {
         bottomSelectionView.isHidden = true
         settingsView.isHidden = false
+        updateSettingsView()
+    }
+    
+    func updateSettingsView() {
+        let _ = practiceQuestionsStackView.subviews.map { $0.isHidden = testType != .practice }
     }
     
     func resetAllViews() {
