@@ -741,7 +741,7 @@ of the math test</string>
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="405"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35j-hQ-lL6">
-                                                <rect key="frame" x="16" y="0.0" width="279" height="22"/>
+                                                <rect key="frame" x="16" y="16" width="279" height="22"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Use the draft board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLg-LH-7o6">
                                                         <rect key="frame" x="0.0" y="0.0" width="260.33333333333331" height="22"/>
@@ -757,8 +757,19 @@ of the math test</string>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCC-q8-832">
-                                                <rect key="frame" x="0.0" y="38.000000000000028" width="311" height="367"/>
+                                                <rect key="frame" x="0.0" y="54.000000000000028" width="311" height="351"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-7e-VNK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="311" height="351"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Pee-7e-VNK" firstAttribute="top" secondItem="iCC-q8-832" secondAttribute="top" id="JfX-ff-hIQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Pee-7e-VNK" secondAttribute="bottom" id="cLY-Yf-cs7"/>
+                                                    <constraint firstItem="Pee-7e-VNK" firstAttribute="leading" secondItem="iCC-q8-832" secondAttribute="leading" id="liy-fV-lx8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Pee-7e-VNK" secondAttribute="trailing" id="rfj-LQ-jbl"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -768,7 +779,7 @@ of the math test</string>
                                             <constraint firstAttribute="trailing" secondItem="iCC-q8-832" secondAttribute="trailing" id="TuY-8e-2rt"/>
                                             <constraint firstItem="iCC-q8-832" firstAttribute="top" secondItem="35j-hQ-lL6" secondAttribute="bottom" constant="16" id="dVE-Aq-Qm1"/>
                                             <constraint firstAttribute="trailing" secondItem="35j-hQ-lL6" secondAttribute="trailing" constant="16" id="ldj-xc-4Sh"/>
-                                            <constraint firstItem="35j-hQ-lL6" firstAttribute="top" secondItem="nK7-HA-ccd" secondAttribute="top" id="qjY-EH-ZZv"/>
+                                            <constraint firstItem="35j-hQ-lL6" firstAttribute="top" secondItem="nK7-HA-ccd" secondAttribute="top" constant="16" id="qjY-EH-ZZv"/>
                                             <constraint firstAttribute="bottom" secondItem="iCC-q8-832" secondAttribute="bottom" id="rox-tQ-qcO"/>
                                         </constraints>
                                     </view>
@@ -799,6 +810,7 @@ of the math test</string>
                     <navigationItem key="navigationItem" id="dOi-yi-LoC"/>
                     <connections>
                         <outlet property="answerTf" destination="eJm-gH-lEB" id="mYF-QN-oFd"/>
+                        <outlet property="draftBoardView" destination="nK7-HA-ccd" id="h86-iw-EJP"/>
                         <outlet property="keyboardHeightConstraint" destination="SYy-hy-Oec" id="8IX-Ne-0Oy"/>
                         <outlet property="qnumLabel" destination="C3P-IU-9gb" id="IHF-hI-AuY"/>
                         <outlet property="questionLbl" destination="6b2-EZ-SGq" id="r7N-4U-NQb"/>

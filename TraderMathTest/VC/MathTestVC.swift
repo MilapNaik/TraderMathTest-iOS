@@ -38,6 +38,7 @@ class MathTestVC: BaseVC {
     @IBOutlet weak var answerTf: UITextField!
     @IBOutlet weak var questionViewContainer: UIView!
     @IBOutlet weak var qnumLabel: UILabel!
+    @IBOutlet weak var draftBoardView: UIView!
     @IBOutlet weak var keyboardHeightConstraint: NSLayoutConstraint!
     
     //MARK: Computed Properties
@@ -78,6 +79,7 @@ class MathTestVC: BaseVC {
     
     override func viewWillLayoutSubviews() {
         questionViewContainer.border()
+        draftBoardView.border()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
