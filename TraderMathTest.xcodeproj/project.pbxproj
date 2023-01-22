@@ -36,6 +36,7 @@
 		DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D01A28914A2B006FC66C /* SQLiteBase.swift */; };
 		DBB8D01E28914A2B006FC66C /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D01B28914A2B006FC66C /* SQLiteDB.swift */; };
 		DBB8D02228914A8D006FC66C /* CloudDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D02128914A8D006FC66C /* CloudDB.swift */; };
+		DBD585AC297D21DB0050956E /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD585AB297D21DB0050956E /* TestModel.swift */; };
 		DBD6F510291CB1AD00759726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F50F291CB1AD00759726 /* Main.storyboard */; };
 		DBD6F512291CD9D500759726 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F511291CD9D500759726 /* ColorAssets.xcassets */; };
 		DBD6F516291CE20100759726 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F515291CE20100759726 /* Inter-Regular.ttf */; };
@@ -95,6 +96,7 @@
 		DBB8D01A28914A2B006FC66C /* SQLiteBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteBase.swift; sourceTree = "<group>"; };
 		DBB8D01B28914A2B006FC66C /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
 		DBB8D02128914A8D006FC66C /* CloudDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDB.swift; sourceTree = "<group>"; };
+		DBD585AB297D21DB0050956E /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		DBD6F50F291CB1AD00759726 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DBD6F511291CD9D500759726 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 		DBD6F515291CE20100759726 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				81AA522C1CF5ED820078D58B /* Question.swift */,
+				DBD585AB297D21DB0050956E /* TestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */,
 				DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */,
 				DB3DEB7C295A0E3E0063E2A6 /* TMSegmentControl.swift in Sources */,
+				DBD585AC297D21DB0050956E /* TestModel.swift in Sources */,
 				DBD6F518291CE2B100759726 /* FontExtension.swift in Sources */,
 				81AA522D1CF5ED820078D58B /* Question.swift in Sources */,
 				DB9C9D5728915B6800216347 /* DBTable.swift in Sources */,
