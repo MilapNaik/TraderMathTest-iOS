@@ -731,7 +731,11 @@ of the math test</string>
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="G6k-5s-IFn"/>
-                                    <barButtonItem style="done" systemItem="done" id="NKT-Ca-u8P"/>
+                                    <barButtonItem style="done" systemItem="done" id="NKT-Ca-u8P">
+                                        <connections>
+                                            <action selector="donePressed" destination="U8K-TT-Xdn" id="Jat-VO-iN4"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ccP-yI-Hlo">
@@ -744,15 +748,19 @@ of the math test</string>
                                                 <rect key="frame" x="16" y="16" width="279" height="22"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Use the draft board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLg-LH-7o6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="260.33333333333331" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="258.66666666666669" height="22"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" name="GrayColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0I-H1-9ws">
-                                                        <rect key="frame" x="260.33333333333331" y="0.0" width="18.666666666666686" height="22"/>
+                                                        <rect key="frame" x="258.66666666666669" y="0.0" width="20.333333333333314" height="22"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.down" catalog="system"/>
+                                                        <state key="normal" image="eraser.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="clearPressed" destination="U8K-TT-Xdn" eventType="touchUpInside" id="Ij2-bH-fbR"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -810,6 +818,8 @@ of the math test</string>
                     <navigationItem key="navigationItem" id="dOi-yi-LoC"/>
                     <connections>
                         <outlet property="answerTf" destination="eJm-gH-lEB" id="mYF-QN-oFd"/>
+                        <outlet property="doneToolbar" destination="bcz-ut-zES" id="Fks-rz-ijB"/>
+                        <outlet property="draftBoardImage" destination="Pee-7e-VNK" id="mQb-WX-tzx"/>
                         <outlet property="draftBoardView" destination="nK7-HA-ccd" id="h86-iw-EJP"/>
                         <outlet property="keyboardHeightConstraint" destination="SYy-hy-Oec" id="8IX-Ne-0Oy"/>
                         <outlet property="qnumLabel" destination="C3P-IU-9gb" id="IHF-hI-AuY"/>
@@ -1098,8 +1108,8 @@ of the math test</string>
     <resources>
         <image name="Info" width="23" height="23"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
-        <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="close_icon" width="13.333333015441895" height="13.333333015441895"/>
+        <image name="eraser.fill" catalog="system" width="128" height="119"/>
         <image name="math_test_placeholder_img" width="134.33332824707031" height="142.66667175292969"/>
         <image name="sequence_placeholder_img" width="134.33332824707031" height="142.66667175292969"/>
         <namedColor name="AccentColor">

@@ -13,7 +13,7 @@ import Toaster
 import FirebaseAnalytics
 
 class MathTestVC: BaseVC {
-    
+        
     //MARK: Constants
     private let preferences = UserDefaults.standard
     
@@ -31,6 +31,7 @@ class MathTestVC: BaseVC {
     private var time: Double = 0
     private var startTime: TimeInterval = 0.0
     private var filename:String = "easymath"
+    private var lastPoint : CGPoint!
     
     //MARK: IBOutlets
     @IBOutlet weak var testTypeLbl: UILabel!
@@ -39,7 +40,9 @@ class MathTestVC: BaseVC {
     @IBOutlet weak var questionViewContainer: UIView!
     @IBOutlet weak var qnumLabel: UILabel!
     @IBOutlet weak var draftBoardView: UIView!
+    @IBOutlet weak var draftBoardImage: UIImageView!
     @IBOutlet weak var keyboardHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var doneToolbar: UIToolbar!
     
     //MARK: Computed Properties
     var difficulty: Test.Level {
@@ -104,6 +107,16 @@ class MathTestVC: BaseVC {
             vc.finishtime = "\(finishtime)"
         }
     }
+    
+    //MARK: IBAction
+    @IBAction func donePressed() {
+        doneToolbar.isHidden = true
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func clearPressed() {
+        clear()
+    }
 }
 
 //MARK: Q/A Management
@@ -143,6 +156,7 @@ extension MathTestVC {
         
         qnumLabel.text = "\(questionNumber)/\(questionNum.rawValue)"
         answerTf.text = ""
+        clear()
     }
     
     //check answer and update the view accordingly
@@ -246,6 +260,7 @@ extension MathTestVC {
 
 //MARK: Textfield delegate
 extension MathTestVC: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text!.isEmpty == false {
             self.checkAnswer()
@@ -255,4 +270,50 @@ extension MathTestVC: UITextFieldDelegate {
         }
         return false
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        doneToolbar.isHidden = false
+    }
+    
+}
+
+extension MathTestVC {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            lastPoint = touch.location(in: self.draftBoardImage)
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let currentPoint = touch.location(in: self.draftBoardImage)
+            drawLine(from: lastPoint, to: currentPoint)
+            lastPoint = currentPoint
+        }
+    }
+    
+    func drawLine(from lastPoint : CGPoint, to newPoint : CGPoint) {
+        UIGraphicsBeginImageContext(self.draftBoardImage.bounds.size)
+        self.draftBoardImage.draw(self.draftBoardImage.bounds)
+        let context = UIGraphicsGetCurrentContext()
+        
+        context?.move(to: lastPoint)
+        context?.addLine(to: newPoint)
+        
+        context?.setBlendMode(CGBlendMode.normal)
+        context?.setLineCap(CGLineCap.round)
+        context?.setLineWidth(5)
+        context?.setStrokeColor(UIColor.black.cgColor)
+        
+        context?.strokePath()
+        
+        self.draftBoardImage.image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+    }
+    
+    func clear() {
+        self.draftBoardImage.image = nil
+    }
+    
 }
