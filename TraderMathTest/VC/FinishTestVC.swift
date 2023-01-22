@@ -122,12 +122,12 @@ extension FinishTestVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.rankLbl.text = self.bestRank[indexPath.row]
         cell.scoreDetailsLbl.text = "Score: \(self.bestScore[indexPath.row]) Time: \(self.bestTime[indexPath.row])"
-        
+        cell.setRow(index: indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 60
     }
     
 }

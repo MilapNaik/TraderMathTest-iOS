@@ -14,6 +14,7 @@ import Toaster
 class LeaderboardVC: BaseVC {
     
     // MARK: Properties
+    private let HIGH_SCORE_CELL = "HighScoreCell"
     private let db = SQLiteDB.shared
     private let maxResults = 5
     private var bestScore: [String] = ["-----", "-----", "-----", "-----", "-----"]
@@ -71,7 +72,7 @@ class LeaderboardVC: BaseVC {
     }
     
     fileprivate func setupTableView() {
-        tableView.register(UINib(nibName: "HighScoreCell", bundle: nil), forCellReuseIdentifier: "HighScoreCell")
+        tableView.register(UINib(nibName: HIGH_SCORE_CELL, bundle: nil), forCellReuseIdentifier: HIGH_SCORE_CELL)
     }
     
     fileprivate func setupSegmentedControl() {
@@ -133,16 +134,16 @@ extension LeaderboardVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreCell", for: indexPath) as! HighScoreCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: HIGH_SCORE_CELL, for: indexPath) as! HighScoreCell
         
         cell.rankLbl.text = "\(indexPath.row + 1)"
         cell.scoreDetailsLbl.text = "Score: \(self.bestScore[indexPath.row]) Time: \(self.bestTime[indexPath.row])"
-        
+        cell.setRow(index: indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 60
     }
     
 }
