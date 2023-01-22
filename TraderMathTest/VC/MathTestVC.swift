@@ -154,14 +154,13 @@ extension MathTestVC {
         
         if questionNumber <= questionNum.rawValue {
             if correctAnswerDouble == answerDouble{
-                let correctToast = Toast(text: "Correct!", duration: Delay.short)
-                correctToast.show()
+                Toast(text: "Correct!", duration: Delay.short).show()
                 highscore += 1
                 answerCorrect = true
             }
             else{
-                let incorrectToast = Toast(text: "Incorrect: \(correctAnswer!)", duration: Delay.short)
-                incorrectToast.show()
+                Toast(text: "Incorrect: \(correctAnswer!)",
+                      duration: Delay.short).show()
                 answerCorrect = false
             }
             newQuestion()

@@ -9,6 +9,7 @@
 import UIKit 
 import FirebaseDatabase
 import Charts
+import Toaster
 
 class LeaderboardVC: BaseVC {
     
@@ -188,7 +189,12 @@ extension LeaderboardVC {
                             }
                         }
                     }
-                    self.loadBarChartView(scores: scores)
+                    if scores.count > 0 {
+                        self.loadBarChartView(scores: scores)
+                    }
+                    else {
+                        Toast(text: "No Data Found").show()
+                    }
                 }
             }
         }
