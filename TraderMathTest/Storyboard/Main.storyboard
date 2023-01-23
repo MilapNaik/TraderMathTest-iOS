@@ -160,7 +160,17 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dab-WN-NEM">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="386.66666666666669"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Af6-a2-ppP">
+                                                <rect key="frame" x="153" y="175.00000000000006" width="37" height="37"/>
+                                                <color key="color" name="PrimaryColor"/>
+                                            </activityIndicatorView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Af6-a2-ppP" firstAttribute="centerY" secondItem="dab-WN-NEM" secondAttribute="centerY" id="i4d-o5-E56"/>
+                                            <constraint firstItem="Af6-a2-ppP" firstAttribute="centerX" secondItem="dab-WN-NEM" secondAttribute="centerX" id="jXJ-8q-e9u"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -185,6 +195,7 @@
                         <outlet property="barChartContainerView" destination="dab-WN-NEM" id="PJI-rR-ULo"/>
                         <outlet property="barChartStackView" destination="cFi-QB-K59" id="h2P-t5-nx3"/>
                         <outlet property="levelTypeControl" destination="fSz-cI-Juq" id="1yk-t4-Pwm"/>
+                        <outlet property="loadingIndicator" destination="Af6-a2-ppP" id="DJl-9D-FPw"/>
                         <outlet property="questionCountView" destination="eYc-42-L3B" id="boJ-Ny-cW1"/>
                         <outlet property="questionsControl" destination="Fvx-sT-Rt7" id="hA2-hn-nne"/>
                         <outlet property="scoreTypeControl" destination="gdu-Fg-yLN" id="nvW-6n-4WD"/>
@@ -842,7 +853,7 @@ of the math test</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sJo-ZV-U8H">
-                                <rect key="frame" x="0.0" y="412.33333333333326" width="375" height="317.66666666666674"/>
+                                <rect key="frame" x="0.0" y="412.33333333333326" width="375" height="259.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Rjz-eS-c6A" id="0n4-JX-Mer"/>
@@ -850,7 +861,7 @@ of the math test</string>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE0-dt-JM4">
-                                <rect key="frame" x="137.66666666666666" y="738" width="100" height="40"/>
+                                <rect key="frame" x="137.66666666666666" y="680" width="100" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="6G4-Bw-Ifq"/>
@@ -978,6 +989,13 @@ of the math test</string>
                                     <constraint firstItem="UcW-91-Jt7" firstAttribute="leading" secondItem="7Ea-SY-uJY" secondAttribute="trailing" constant="-10.666666666666657" id="zza-6V-Pbf"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxD-Ng-FXu" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="728" width="375" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xvb-AU-j1q"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vrr-mb-rIU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -986,16 +1004,20 @@ of the math test</string>
                             <constraint firstItem="NS8-IU-WyQ" firstAttribute="height" secondItem="B36-o9-5tZ" secondAttribute="height" multiplier="0.45" id="6GY-pM-HFW"/>
                             <constraint firstItem="NS8-IU-WyQ" firstAttribute="top" secondItem="vrr-mb-rIU" secondAttribute="top" id="89Y-wM-ebc"/>
                             <constraint firstItem="vrr-mb-rIU" firstAttribute="trailing" secondItem="sJo-ZV-U8H" secondAttribute="trailing" id="8OT-R8-USX"/>
+                            <constraint firstItem="vrr-mb-rIU" firstAttribute="bottom" secondItem="nxD-Ng-FXu" secondAttribute="bottom" id="FKQ-at-sx6"/>
                             <constraint firstItem="sJo-ZV-U8H" firstAttribute="leading" secondItem="vrr-mb-rIU" secondAttribute="leading" id="Grg-lo-jSM"/>
                             <constraint firstItem="DE0-dt-JM4" firstAttribute="top" secondItem="sJo-ZV-U8H" secondAttribute="bottom" constant="8" id="OP7-je-vfV"/>
                             <constraint firstItem="NS8-IU-WyQ" firstAttribute="leading" secondItem="vrr-mb-rIU" secondAttribute="leading" id="RsW-ML-vEV"/>
-                            <constraint firstItem="vrr-mb-rIU" firstAttribute="bottom" secondItem="DE0-dt-JM4" secondAttribute="bottom" id="cRc-ol-OqK"/>
+                            <constraint firstItem="nxD-Ng-FXu" firstAttribute="top" secondItem="DE0-dt-JM4" secondAttribute="bottom" constant="8" id="Xc6-ps-pwH"/>
+                            <constraint firstItem="nxD-Ng-FXu" firstAttribute="leading" secondItem="vrr-mb-rIU" secondAttribute="leading" id="aPQ-ff-c5T"/>
                             <constraint firstItem="DE0-dt-JM4" firstAttribute="centerX" secondItem="vrr-mb-rIU" secondAttribute="centerX" id="dxD-vO-BPJ"/>
+                            <constraint firstAttribute="trailing" secondItem="nxD-Ng-FXu" secondAttribute="trailing" id="ob8-h5-Lec"/>
                             <constraint firstItem="NS8-IU-WyQ" firstAttribute="trailing" secondItem="vrr-mb-rIU" secondAttribute="trailing" id="vTg-q3-onW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EFv-ey-jl2"/>
                     <connections>
+                        <outlet property="bannerView" destination="nxD-Ng-FXu" id="4KA-7x-yff"/>
                         <outlet property="correctAnswersLbl" destination="VmA-aC-iV7" id="veF-qp-61h"/>
                         <outlet property="correctAnswersView" destination="7Ea-SY-uJY" id="tfR-2e-WNp"/>
                         <outlet property="scoreLbl" destination="Tt3-CI-1B2" id="aen-O2-gJk"/>

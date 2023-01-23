@@ -70,16 +70,11 @@ class FinishTestVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         _ = db.open()
-        
-        tableView.register(UINib(nibName: HIGH_SCORE_CELL, bundle: nil), forCellReuseIdentifier: HIGH_SCORE_CELL)
-        //        requestIDFA()
+        setupTableView()
+        requestIDFA()
         addhighscore()
         loadhighscores()
-        //        Test.text = "\(testType) \(PoT)"
-        //        Leaderboard.text = "\(questionNum) \(difficulty) Questions"
-//        print("\(highscore) \(finishtime)")
     }
     
     override func viewWillLayoutSubviews() {
@@ -98,6 +93,11 @@ class FinishTestVC: BaseVC {
         scoreLbl.text = String(highscore)
         timeLbl.text = String(finishtime)
         logToAnalytics()
+    }
+    
+    //MARK: Tableview Setup
+    func setupTableView() {
+        tableView.register(UINib(nibName: HIGH_SCORE_CELL, bundle: nil), forCellReuseIdentifier: HIGH_SCORE_CELL)
     }
     
     // MARK: Actions
