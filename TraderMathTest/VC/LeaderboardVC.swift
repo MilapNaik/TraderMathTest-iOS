@@ -27,7 +27,7 @@ class LeaderboardVC: BaseVC {
     @IBOutlet weak var testTypeView: UIView!
     @IBOutlet weak var questionCountView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var scoreTypeControl: TMTSegmentedControl!
     @IBOutlet weak var testTypeControl: TMTSegmentedControl!
     @IBOutlet weak var levelTypeControl: TMTSegmentedControl!
@@ -108,7 +108,7 @@ class LeaderboardVC: BaseVC {
         }
         
         let dataEntry1: [BarChartDataEntry] = scores.enumerated().map { BarChartDataEntry(x: Double($0), y: Double($1)) }
-       
+        
         let dataSet1 = BarChartDataSet(entries: dataEntry1, label: "Other's Scores")
         dataSet1.drawValuesEnabled = false
         dataSet1.colors = [NSUIColor.black]
@@ -172,33 +172,38 @@ extension LeaderboardVC {
     }
     
     func loadScoresFromFirebase() {
+        self.loadingIndicator.startAnimating()
         let ref = Database.database().reference()
         ref.child("leaderboard")
             .observeSingleEvent(of: .value) { snapshot in
-            if snapshot.exists() {
-                DispatchQueue.main.async {
-                    var scores: [Int] = []
-                    for child in snapshot.children {
-                        if let snap = child as? DataSnapshot,
-                           let val = snap.value as? [String: Any] {
-                            if let testCategory = val["test_type"] as? String,
-                               let difficulty = val["difficulty"] as? String,
-                               let score = val["score"] as? Int,
-                               difficulty == self.level.rawValue,
-                               testCategory == self.testType.rawValue {
-                                scores.append(score)
+                if snapshot.exists() {
+                    DispatchQueue.main.async {
+                        var scores: [Int] = []
+                        for child in snapshot.children {
+                            if let snap = child as? DataSnapshot,
+                               let val = snap.value as? [String: Any] {
+                                if let testCategory = val["test_type"] as? String,
+                                   let difficulty = val["difficulty"] as? String,
+                                   let score = val["score"] as? Int,
+                                   difficulty == self.level.rawValue,
+                                   testCategory == self.testType.rawValue {
+                                    scores.append(score)
+                                }
                             }
                         }
-                    }
-                    if scores.count > 0 {
-                        self.loadBarChartView(scores: scores)
-                    }
-                    else {
-                        Toast(text: "No Data Found").show()
+                        self.loadingIndicator.stopAnimating()
+                        if scores.count > 0 {
+                            self.loadBarChartView(scores: scores)
+                        }
+                        else {
+                            Toast(text: "No Data Found").show()
+                        }
                     }
                 }
+                else {
+                    self.loadingIndicator.stopAnimating()
+                }
             }
-        }
     }
     
     func loadSQL() {
