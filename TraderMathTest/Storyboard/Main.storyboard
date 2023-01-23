@@ -853,7 +853,7 @@ of the math test</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sJo-ZV-U8H">
-                                <rect key="frame" x="0.0" y="412.33333333333326" width="375" height="259.66666666666674"/>
+                                <rect key="frame" x="0.0" y="371.66666666666674" width="375" height="300.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Rjz-eS-c6A" id="0n4-JX-Mer"/>
@@ -877,22 +877,22 @@ of the math test</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NS8-IU-WyQ">
-                                <rect key="frame" x="0.0" y="47" width="375" height="365.33333333333331"/>
+                                <rect key="frame" x="0.0" y="47" width="375" height="324.66666666666669"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZ3-8V-CkG">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZ3-8V-CkG">
                                         <rect key="frame" x="16.000000000000007" y="15.999999999999998" width="127.66666666666669" height="27.333333333333329"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIM-zu-Bdn">
-                                        <rect key="frame" x="16" y="42.666666666666671" width="195" height="194.66666666666663"/>
+                                        <rect key="frame" x="16" y="2" width="195" height="194.66666666666666"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Agl-C7-VBT">
-                                                <rect key="frame" x="0.0" y="39.666666666666671" width="195" height="115.00000000000001"/>
+                                                <rect key="frame" x="0.0" y="40" width="195" height="115"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTz-Hi-grA">
-                                                        <rect key="frame" x="63.333333333333336" y="0.0" width="68.333333333333314" height="19.333333333333332"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTz-Hi-grA">
+                                                        <rect key="frame" x="57.666666666666679" y="0.0" width="79.333333333333314" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -915,10 +915,10 @@ of the math test</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ea-SY-uJY">
-                                        <rect key="frame" x="137.66666666666666" y="257.33333333333331" width="100" height="100"/>
+                                        <rect key="frame" x="137.66666666666666" y="216.66666666666669" width="100" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UT5-pJ-3cq">
-                                                <rect key="frame" x="0.0" y="21.333333333333368" width="100" height="57.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="21.333333333333311" width="100" height="57.666666666666657"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct Answers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-B1-E3q">
                                                         <rect key="frame" x="18.999999999999996" y="0.0" width="61.666666666666657" height="38.333333333333336"/>
@@ -945,10 +945,10 @@ of the math test</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcW-91-Jt7">
-                                        <rect key="frame" x="227" y="129.33333333333334" width="128" height="128.00000000000003"/>
+                                        <rect key="frame" x="227" y="88.666666666666657" width="128" height="128"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dy0-7i-zok">
-                                                <rect key="frame" x="0.0" y="44.666666666666657" width="128" height="38.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="44.666666666666686" width="128" height="38.666666666666657"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajr-JG-pu0">
                                                         <rect key="frame" x="45.333333333333314" y="0.0" width="37" height="19.333333333333332"/>
@@ -957,7 +957,7 @@ of the math test</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:12.345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO7-4D-YFn">
-                                                        <rect key="frame" x="26" y="19.333333333333343" width="76" height="19.333333333333329"/>
+                                                        <rect key="frame" x="26" y="19.333333333333314" width="76" height="19.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1001,7 +1001,7 @@ of the math test</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sJo-ZV-U8H" firstAttribute="top" secondItem="NS8-IU-WyQ" secondAttribute="bottom" constant="-5.6843418860808015e-14" id="1dE-SQ-izs"/>
-                            <constraint firstItem="NS8-IU-WyQ" firstAttribute="height" secondItem="B36-o9-5tZ" secondAttribute="height" multiplier="0.45" id="6GY-pM-HFW"/>
+                            <constraint firstItem="NS8-IU-WyQ" firstAttribute="height" secondItem="B36-o9-5tZ" secondAttribute="height" multiplier="0.4" id="6GY-pM-HFW"/>
                             <constraint firstItem="NS8-IU-WyQ" firstAttribute="top" secondItem="vrr-mb-rIU" secondAttribute="top" id="89Y-wM-ebc"/>
                             <constraint firstItem="vrr-mb-rIU" firstAttribute="trailing" secondItem="sJo-ZV-U8H" secondAttribute="trailing" id="8OT-R8-USX"/>
                             <constraint firstItem="vrr-mb-rIU" firstAttribute="bottom" secondItem="nxD-Ng-FXu" secondAttribute="bottom" id="FKQ-at-sx6"/>
