@@ -390,12 +390,15 @@ of the math test</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qe-oo-Hgn">
-                                        <rect key="frame" x="279" y="9" width="89" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" name="AccentColor"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="close_icon"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qe-oo-Hgn">
+                                        <rect key="frame" x="295" y="8" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8TZ-L0-wf9"/>
+                                            <constraint firstAttribute="width" constant="40" id="go6-pU-fmG"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
                                         <connections>
                                             <action selector="closeSettingsView" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5kW-Pd-LiC"/>
                                         </connections>
@@ -581,10 +584,12 @@ of the math test</string>
                                 <constraints>
                                     <constraint firstItem="Uhk-Be-a6I" firstAttribute="top" secondItem="gHC-qv-Xwb" secondAttribute="bottom" constant="32" id="48k-6M-71x"/>
                                     <constraint firstItem="Uxw-wK-KuL" firstAttribute="top" secondItem="Hqj-hd-lH7" secondAttribute="top" constant="16" id="5I0-lh-6DD"/>
+                                    <constraint firstAttribute="trailing" secondItem="2qe-oo-Hgn" secondAttribute="trailing" constant="8" id="JzT-Xd-mEM"/>
                                     <constraint firstItem="Uhk-Be-a6I" firstAttribute="centerX" secondItem="Hqj-hd-lH7" secondAttribute="centerX" id="LHX-le-vi5"/>
                                     <constraint firstItem="8wf-qd-Xpv" firstAttribute="top" secondItem="Uhk-Be-a6I" secondAttribute="bottom" constant="16" id="Llv-Ju-BA4"/>
                                     <constraint firstItem="gHC-qv-Xwb" firstAttribute="centerX" secondItem="Hqj-hd-lH7" secondAttribute="centerX" id="bOM-xE-nxL"/>
                                     <constraint firstItem="8wf-qd-Xpv" firstAttribute="centerX" secondItem="Hqj-hd-lH7" secondAttribute="centerX" id="emU-me-ygE"/>
+                                    <constraint firstItem="2qe-oo-Hgn" firstAttribute="top" secondItem="Hqj-hd-lH7" secondAttribute="top" constant="8" id="fXl-z9-cXN"/>
                                     <constraint firstItem="gHC-qv-Xwb" firstAttribute="top" secondItem="Uxw-wK-KuL" secondAttribute="bottom" constant="16" id="rd2-a2-sQ5"/>
                                     <constraint firstAttribute="bottom" secondItem="8wf-qd-Xpv" secondAttribute="bottom" constant="8" id="rhb-14-Zr5"/>
                                     <constraint firstItem="Uxw-wK-KuL" firstAttribute="centerX" secondItem="Hqj-hd-lH7" secondAttribute="centerX" id="ryV-j9-VU8"/>
@@ -1132,10 +1137,10 @@ of the math test</string>
     <resources>
         <image name="Info" width="23" height="23"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
-        <image name="close_icon" width="13.333333015441895" height="13.333333015441895"/>
         <image name="eraser.fill" catalog="system" width="128" height="119"/>
         <image name="math_test_placeholder_img" width="134.33332824707031" height="142.66667175292969"/>
         <image name="sequence_placeholder_img" width="134.33332824707031" height="142.66667175292969"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.20000000000000001" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

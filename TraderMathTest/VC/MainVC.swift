@@ -138,6 +138,7 @@ class MainVC: BaseVC {
         settingsView.isHidden = true
         mathTestView.backgroundColor = .systemBackground
         sequenceTestView.backgroundColor = .systemBackground
+        settingsView.backgroundColor = .systemBackground
     }
     
     // MARK: Gesture
