@@ -26,8 +26,6 @@ class FinishTestVC: BaseVC {
     @IBOutlet weak var correctAnswersLbl: UILabel!
     
     @IBOutlet weak var bannerView: GADBannerView!
-    @IBOutlet weak var testLabel: UILabel!
-    @IBOutlet weak var leaderboardLabel: UILabel!
     @IBOutlet weak var tryAgainBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -78,14 +76,12 @@ class FinishTestVC: BaseVC {
     }
     
     override func viewWillLayoutSubviews() {
+        
         scoreView.roundedBorders()
         timeView.roundedBorders()
         correctAnswersView.border(color: .black)
         correctAnswersView.roundedBorders()
         
-        //        scoreView.dropShadow()
-        //        timeView.dropShadow()
-        //        correctAnswersView.dropShadow()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -142,15 +138,10 @@ extension FinishTestVC {
         //don't sync the practice scores
         if PoT == .test {
             let ref = Database.database().reference()
+            var scoreModel = ScoreModel(score: highscore, difficulty: difficulty.rawValue, testType: testType.rawValue, totalQuestions: questionNum.rawValue, time: finishtime)
             ref.child("leaderboard")
                 .childByAutoId()
-                .setValue (
-                [ "date" : Date().description,
-                  "score" : highscore,
-                  "difficulty" : difficulty.rawValue,
-                  "test_type" : testType.rawValue,
-                  "total_questions" : questionNum.rawValue,
-                  "time" : finishtime ] )
+                .setValue(scoreModel.dict)
         }
     }
     

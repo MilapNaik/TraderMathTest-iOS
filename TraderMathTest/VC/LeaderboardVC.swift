@@ -143,7 +143,7 @@ extension LeaderboardVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 55
     }
     
 }
@@ -171,6 +171,27 @@ extension LeaderboardVC {
         }
     }
     
+    fileprivate func checkScores(_ snapshot: DataSnapshot) {
+        var scores: [ScoreModel] = []
+        for child in snapshot.children {
+            if let snap = child as? DataSnapshot,
+               let val = snap.value as? [String: Any] {
+                let scoreModel = ScoreModel(dict: val)
+                if scoreModel.difficulty == self.level.rawValue,
+                   scoreModel.testType == self.testType.rawValue {
+                    scores.append(scoreModel)
+                }
+            }
+        }
+        self.loadingIndicator.stopAnimating()
+        if scores.count > 0 {
+            self.loadBarChartView(scores: scores.map { $0.score })
+        }
+        else {
+            Toast(text: "No Scores Found").show()
+        }
+    }
+    
     func loadScoresFromFirebase() {
         self.loadingIndicator.startAnimating()
         let ref = Database.database().reference()
@@ -178,37 +199,18 @@ extension LeaderboardVC {
             .observeSingleEvent(of: .value) { snapshot in
                 if snapshot.exists() {
                     DispatchQueue.main.async {
-                        var scores: [Int] = []
-                        for child in snapshot.children {
-                            if let snap = child as? DataSnapshot,
-                               let val = snap.value as? [String: Any] {
-                                if let testCategory = val["test_type"] as? String,
-                                   let difficulty = val["difficulty"] as? String,
-                                   let score = val["score"] as? Int,
-                                   difficulty == self.level.rawValue,
-                                   testCategory == self.testType.rawValue {
-                                    scores.append(score)
-                                }
-                            }
-                        }
-                        self.loadingIndicator.stopAnimating()
-                        if scores.count > 0 {
-                            self.loadBarChartView(scores: scores)
-                        }
-                        else {
-                            Toast(text: "No Data Found").show()
-                        }
+                        self.checkScores(snapshot)
                     }
                 }
                 else {
                     self.loadingIndicator.stopAnimating()
+                    Toast(text: "No Scores Found").show()
                 }
             }
     }
     
     func loadSQL() {
-        let result = db.query(sql: "SELECT * FROM \(level.rawValue)_\(testType.rawValue)_\(questionNum.rawValue)")
-        print(result.debugDescription)
+        let _ = db.query(sql: "SELECT * FROM \(level.rawValue)_\(testType.rawValue)_\(questionNum.rawValue)")
     }
 }
 
