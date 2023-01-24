@@ -79,7 +79,7 @@ class FinishTestVC: BaseVC {
         
         scoreView.roundedBorders()
         timeView.roundedBorders()
-        correctAnswersView.border(color: .black)
+        correctAnswersView.border()
         correctAnswersView.roundedBorders()
         
     }

@@ -111,7 +111,7 @@ class LeaderboardVC: BaseVC {
         
         let dataSet1 = BarChartDataSet(entries: dataEntry1, label: "Other's Scores")
         dataSet1.drawValuesEnabled = false
-        dataSet1.colors = [NSUIColor.black]
+        dataSet1.colors = [.label]
         
         var dataSets: [BarChartDataSet] = [dataSet1]
         

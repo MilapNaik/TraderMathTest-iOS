@@ -17,9 +17,18 @@ class TMTSegmentedControl: UIView {
     private var buttons: [UIButton]!
     private var selectorView: UIView!
     
-    var textColor:UIColor = .black
-    var selectorViewColor: UIColor = .black
-    var selectorTextColor: UIColor = .primary
+    var textColor:UIColor = .label
+    var selectorViewColor: UIColor = .label
+    var selectorTextColor: UIColor {
+        switch traitCollection.userInterfaceStyle {
+        case .light, .unspecified:
+            return .primary
+        case .dark:
+            return .accent
+        @unknown default:
+            return .primary
+        }
+    }
     
     weak var delegate:TMTSegmentedControlDelegate?
     
@@ -36,7 +45,7 @@ class TMTSegmentedControl: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = .systemBackground
         updateView()
     }
     

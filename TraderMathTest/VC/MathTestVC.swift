@@ -304,7 +304,7 @@ extension MathTestVC {
         context?.setBlendMode(CGBlendMode.normal)
         context?.setLineCap(CGLineCap.round)
         context?.setLineWidth(5)
-        context?.setStrokeColor(UIColor.black.cgColor)
+        context?.setStrokeColor(UIColor.label.cgColor)
         
         context?.strokePath()
         

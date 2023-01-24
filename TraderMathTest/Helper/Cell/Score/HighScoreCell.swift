@@ -14,17 +14,23 @@ class HighScoreCell: UITableViewCell {
     @IBOutlet weak var scoreDetailsLbl: UILabel!
     @IBOutlet weak var containerView: UIView!
     
+    var selectorTextColor: UIColor {
+        switch traitCollection.userInterfaceStyle {
+        case .light, .unspecified:
+            return .primary
+        case .dark:
+            return .accent
+        @unknown default:
+            return .primary
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func setRow(index: Int) {
-        if index % 2 == 0 {
-            containerView.border(color: .primary, width: 1.0)
-        }
-        else {
-            containerView.border(color: .black, width: 1.0)
-        }
+        containerView.border(color: index % 2 == 0 ? selectorTextColor : .label, width: 1.0)
     }
     
 }

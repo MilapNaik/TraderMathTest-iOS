@@ -53,6 +53,7 @@ class BaseVC: UIViewController {
     }
     
     fileprivate func setupNavbar() {
+        self.view.backgroundColor = .systemBackground
         if let nav = self.navigationController {
             //basic settings for navigation controller
             nav.isNavigationBarHidden = false

@@ -152,7 +152,7 @@ class MainVC: BaseVC {
     
     @objc func sequenceClicked() {
         
-        sequenceLbl.textColor = .systemBackground
+        sequenceLbl.textColor = .black
         mathTestLbl.textColor = .label
         sequenceTestView.backgroundColor = .lightPrimary
         mathTestView.backgroundColor = .systemBackground
@@ -168,7 +168,7 @@ class MainVC: BaseVC {
     @objc func mathTestClicked() {
         
         sequenceLbl.textColor = .label
-        mathTestLbl.textColor = .systemBackground
+        mathTestLbl.textColor = .black
         sequenceTestView.backgroundColor = .systemBackground
         mathTestView.backgroundColor = .lightPrimary
         //Save preferences
