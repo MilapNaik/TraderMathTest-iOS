@@ -21,6 +21,8 @@ class MainVC: BaseVC {
     private var testType: Test.TType = .practice
     
     //MARK: IBOutlets
+    @IBOutlet weak var sequenceLbl: UILabel!
+    @IBOutlet weak var mathTestLbl: UILabel!
     @IBOutlet weak var sequenceTestView: UIView!
     @IBOutlet weak var mathTestView: UIView!
     @IBOutlet weak var bottomSelectionView: UIView!
@@ -134,8 +136,8 @@ class MainVC: BaseVC {
     func resetAllViews() {
         bottomSelectionView.isHidden = true
         settingsView.isHidden = true
-        mathTestView.backgroundColor = .white
-        sequenceTestView.backgroundColor = .white
+        mathTestView.backgroundColor = .systemBackground
+        sequenceTestView.backgroundColor = .systemBackground
     }
     
     // MARK: Gesture
@@ -149,8 +151,10 @@ class MainVC: BaseVC {
     
     @objc func sequenceClicked() {
         
+        sequenceLbl.textColor = .systemBackground
+        mathTestLbl.textColor = .label
         sequenceTestView.backgroundColor = .lightPrimary
-        mathTestView.backgroundColor = .white
+        mathTestView.backgroundColor = .systemBackground
         
         //Save preferences
         preferences.set(
@@ -162,7 +166,9 @@ class MainVC: BaseVC {
     
     @objc func mathTestClicked() {
         
-        sequenceTestView.backgroundColor = .white
+        sequenceLbl.textColor = .label
+        mathTestLbl.textColor = .systemBackground
+        sequenceTestView.backgroundColor = .systemBackground
         mathTestView.backgroundColor = .lightPrimary
         //Save preferences
         preferences.set(
