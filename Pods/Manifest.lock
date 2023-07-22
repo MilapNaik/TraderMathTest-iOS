@@ -128,6 +128,7 @@ SPEC REPOS:
     - Toaster
 
 SPEC CHECKSUMS:
+  Charts: ce0768268078eee0336f122c3c4ca248e4e204c5
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   Firebase: 444b35a9c568a516666213c2f6cccd10cb12559f
   FirebaseAnalytics: 24cb27b52b2e11ad5013528195b4ca0755dec960
