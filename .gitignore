@@ -1,2 +1,4 @@
 # Xcode
 TraderMathTest.xcodeproj/*
+Pods/Pods.xcodeproj/xcuserdata/*
+Pods/Pods.xcodeproj/project.xcworkspace/*
