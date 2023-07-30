@@ -8,8 +8,7 @@
 
 import UIKit 
 import FirebaseDatabase
-import Charts
-import Toaster
+import DGCharts
 
 class LeaderboardVC: BaseVC {
     
@@ -19,7 +18,7 @@ class LeaderboardVC: BaseVC {
     private let maxResults = 5
     private var bestScore: [String] = ["-----", "-----", "-----", "-----", "-----"]
     private var bestTime: [String] = ["-----", "-----", "-----", "-----", "-----"]
-    private var barChartView:BarChartView?
+    private var barChartView: BarChartView?
     
     //MARK: IBOutlets
     @IBOutlet weak var barChartContainerView: UIView!
@@ -188,7 +187,7 @@ extension LeaderboardVC {
             self.loadBarChartView(scores: scores.map { $0.score })
         }
         else {
-            Toast(text: "No Scores Found").show()
+            ToastHelper.toast("No Scores Found", presenter: self)
         }
     }
     
@@ -204,7 +203,7 @@ extension LeaderboardVC {
                 }
                 else {
                     self.loadingIndicator.stopAnimating()
-                    Toast(text: "No Scores Found").show()
+                    ToastHelper.toast("No Scores Found", presenter: self)
                 }
             }
     }

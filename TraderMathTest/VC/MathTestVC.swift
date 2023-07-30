@@ -9,7 +9,6 @@
 
 import UIKit
 import Foundation
-import Toaster
 import FirebaseAnalytics
 
 class MathTestVC: BaseVC {
@@ -169,14 +168,13 @@ extension MathTestVC {
         correctAnswerDouble = (correctAnswer! as NSString).doubleValue
         
         if questionNumber <= questionNum.rawValue {
-            if correctAnswerDouble == answerDouble{
-                Toast(text: "Correct!", duration: Delay.short).show()
+            if correctAnswerDouble == answerDouble {
+                ToastHelper.toast("Correct!", presenter: self, type: .success)
                 highscore += 1
                 answerCorrect = true
             }
-            else{
-                Toast(text: "Incorrect: \(correctAnswer!)",
-                      duration: Delay.short).show()
+            else {
+                ToastHelper.toast("Incorrect: \(correctAnswer!)", presenter: self, type: .danger)
                 answerCorrect = false
             }
             newQuestion()
@@ -266,7 +264,7 @@ extension MathTestVC: UITextFieldDelegate {
             self.checkAnswer()
         }
         else {
-            Toast(text: "Please type your answer").show()
+            ToastHelper.toast("Please type your answer", presenter: self)
         }
         return false
     }
