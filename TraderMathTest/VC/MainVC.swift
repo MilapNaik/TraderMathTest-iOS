@@ -138,6 +138,8 @@ class MainVC: BaseVC {
         mathTestView.backgroundColor = .systemBackground
         sequenceTestView.backgroundColor = .systemBackground
         settingsView.backgroundColor = .systemBackground
+        sequenceLbl.textColor = .label
+        mathTestLbl.textColor = .label
     }
     
     // MARK: Gesture
