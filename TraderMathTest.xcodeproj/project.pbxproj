@@ -3,32 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71C24D9ACB05CB9C729CA201 /* Pods_TraderMathTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD98C5F23E4CB9C67AAD8E /* Pods_TraderMathTest.framework */; };
-		818520661CF3EB4900063BFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520651CF3EB4900063BFC /* Settings.swift */; };
 		818520681CF3ED3C00063BFC /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818520671CF3ED3C00063BFC /* Info.swift */; };
-		818B534F1CF6CC350085346A /* FinishTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B534E1CF6CC350085346A /* FinishTest.swift */; };
-		819347CA1D022033002EA835 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819347C91D022033002EA835 /* TableViewCell.swift */; };
 		8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8199DF471E341A68006E95CE /* GoogleService-Info.plist */; };
 		81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8011CFBBE63007D4C3C /* hardmath.txt */; };
 		81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C8021CFBBE63007D4C3C /* mediummath.txt */; };
-		81A4C8141CFDE4AD007D4C3C /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */; };
+		81A4C8141CFDE4AD007D4C3C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4C8121CFDE4AD007D4C3C /* StringExtension.swift */; };
 		81A4C81E1CFE73CE007D4C3C /* easysequence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81B1CFE73CE007D4C3C /* easysequence.txt */; };
 		81A4C81F1CFE73CE007D4C3C /* hardsequence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81C1CFE73CE007D4C3C /* hardsequence.txt */; };
 		81A4C8201CFE73CE007D4C3C /* mediumsequence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81A4C81D1CFE73CE007D4C3C /* mediumsequence.txt */; };
 		81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F121CEB995600B2838A /* AppDelegate.swift */; };
-		81A89F151CEB995600B2838A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F141CEB995600B2838A /* ViewController.swift */; };
-		81A89F181CEB995600B2838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F161CEB995600B2838A /* Main.storyboard */; };
+		81A89F151CEB995600B2838A /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F141CEB995600B2838A /* MainVC.swift */; };
+		81A89F181CEB995600B2838A /* Main-Legacy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A89F161CEB995600B2838A /* Main-Legacy.storyboard */; };
 		81A89F291CEB995600B2838A /* TraderMathTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A89F281CEB995600B2838A /* TraderMathTestTests.swift */; };
-		81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */; };
-		81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26671CF4DFC2001DE1D0 /* Countdown.swift */; };
-		81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA26691CF4E4B6001DE1D0 /* MathTest.swift */; };
 		81AA522D1CF5ED820078D58B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA522C1CF5ED820078D58B /* Question.swift */; };
 		81EF87151D10E2310038A38C /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87141D10E2310038A38C /* data.db */; };
 		81EF87171D110A090038A38C /* easymath.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81EF87161D110A090038A38C /* easymath.txt */; };
+		DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */; };
+		DB3ADF11291F88E10040A3C9 /* AssetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */; };
+		DB3DEB7C295A0E3E0063E2A6 /* TMSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */; };
+		DB750A0B2A760E19001EE4F4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DB750A0A2A760E19001EE4F4 /* FirebaseAnalytics */; };
+		DB750A0D2A760E19001EE4F4 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DB750A0C2A760E19001EE4F4 /* FirebaseDatabase */; };
+		DB750A102A760E9E001EE4F4 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = DB750A0F2A760E9E001EE4F4 /* DGCharts */; };
+		DB750A132A760FBB001EE4F4 /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB750A122A760FBB001EE4F4 /* NotificationBannerSwift */; };
+		DB750A162A760FD9001EE4F4 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DB750A152A760FD9001EE4F4 /* GoogleMobileAds */; };
+		DB750A182A7610BF001EE4F4 /* ToastHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750A172A7610BF001EE4F4 /* ToastHelper.swift */; };
+		DB750A1C2A761191001EE4F4 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DB750A1A2A761191001EE4F4 /* DLRadioButton.m */; };
+		DB9682D52923894C00E72766 /* MathTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9682D42923894C00E72766 /* MathTestVC.swift */; };
 		DB9C9D4C2891519900216347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9C9D4B2891519900216347 /* Assets.xcassets */; };
 		DB9C9D4E289151C300216347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */; };
 		DB9C9D522891563B00216347 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9C9D512891563B00216347 /* libsqlite3.0.tbd */; };
@@ -38,6 +42,19 @@
 		DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D01A28914A2B006FC66C /* SQLiteBase.swift */; };
 		DBB8D01E28914A2B006FC66C /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D01B28914A2B006FC66C /* SQLiteDB.swift */; };
 		DBB8D02228914A8D006FC66C /* CloudDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8D02128914A8D006FC66C /* CloudDB.swift */; };
+		DBD585AC297D21DB0050956E /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD585AB297D21DB0050956E /* TestModel.swift */; };
+		DBD6387A297EEBA3008E6482 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD63879297EEBA3008E6482 /* ScoreModel.swift */; };
+		DBD6F510291CB1AD00759726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F50F291CB1AD00759726 /* Main.storyboard */; };
+		DBD6F512291CD9D500759726 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F511291CD9D500759726 /* ColorAssets.xcassets */; };
+		DBD6F516291CE20100759726 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F515291CE20100759726 /* Inter-Regular.ttf */; };
+		DBD6F518291CE2B100759726 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6F517291CE2B100759726 /* FontExtension.swift */; };
+		DBD6F51A291CE2EF00759726 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F519291CE2EF00759726 /* Inter-Bold.ttf */; };
+		DBD6F51C291CE9C300759726 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBD6F51B291CE9C300759726 /* Inter-Medium.ttf */; };
+		DBD6F51E291CED9B00759726 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6F51D291CED9B00759726 /* ViewExtension.swift */; };
+		DBDD48AA292370CF00F120FC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD48A9292370CF00F120FC /* BaseVC.swift */; };
+		DBE779A62929E612000ADD51 /* HighScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE779A42929E612000ADD51 /* HighScoreCell.swift */; };
+		DBE779A72929E612000ADD51 /* HighScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE779A52929E612000ADD51 /* HighScoreCell.xib */; };
+		DBE779AB292A05F1000ADD51 /* LeaderboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE779AA292A05F1000ADD51 /* LeaderboardVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,34 +68,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3EFD98C5F23E4CB9C67AAD8E /* Pods_TraderMathTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraderMathTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		49E58C782817E80F9C5507C7 /* Pods-TraderMathTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraderMathTest.debug.xcconfig"; path = "Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest.debug.xcconfig"; sourceTree = "<group>"; };
-		818520651CF3EB4900063BFC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		818520671CF3ED3C00063BFC /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
-		818B534E1CF6CC350085346A /* FinishTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishTest.swift; sourceTree = "<group>"; };
-		819347C91D022033002EA835 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8199DF471E341A68006E95CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81A4C8011CFBBE63007D4C3C /* hardmath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hardmath.txt; path = "question-bank/hardmath.txt"; sourceTree = "<group>"; };
 		81A4C8021CFBBE63007D4C3C /* mediummath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mediummath.txt; path = "question-bank/mediummath.txt"; sourceTree = "<group>"; };
 		81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
+		81A4C8121CFDE4AD007D4C3C /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		81A4C81B1CFE73CE007D4C3C /* easysequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = easysequence.txt; path = "question-bank/easysequence.txt"; sourceTree = "<group>"; };
 		81A4C81C1CFE73CE007D4C3C /* hardsequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hardsequence.txt; path = "question-bank/hardsequence.txt"; sourceTree = "<group>"; };
 		81A4C81D1CFE73CE007D4C3C /* mediumsequence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mediumsequence.txt; path = "question-bank/mediumsequence.txt"; sourceTree = "<group>"; };
 		81A89F0D1CEB995600B2838A /* TraderMathTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraderMathTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F111CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F121CEB995600B2838A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81A89F141CEB995600B2838A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		81A89F171CEB995600B2838A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		81A89F141CEB995600B2838A /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		81A89F171CEB995600B2838A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-Legacy.storyboard"; sourceTree = "<group>"; };
 		81A89F221CEB995600B2838A /* TraderMathTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraderMathTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A89F271CEB995600B2838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A89F281CEB995600B2838A /* TraderMathTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraderMathTestTests.swift; sourceTree = "<group>"; };
-		81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeOrTest.swift; sourceTree = "<group>"; };
-		81AA26671CF4DFC2001DE1D0 /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
-		81AA26691CF4E4B6001DE1D0 /* MathTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTest.swift; sourceTree = "<group>"; };
 		81AA522C1CF5ED820078D58B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		81EF87141D10E2310038A38C /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
 		81EF87161D110A090038A38C /* easymath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = easymath.txt; path = "question-bank/easymath.txt"; sourceTree = "<group>"; };
+		DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTestVC.swift; sourceTree = "<group>"; };
+		DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsExtension.swift; sourceTree = "<group>"; };
+		DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMSegmentControl.swift; sourceTree = "<group>"; };
+		DB750A172A7610BF001EE4F4 /* ToastHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastHelper.swift; sourceTree = "<group>"; };
+		DB750A1A2A761191001EE4F4 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
+		DB750A1B2A761191001EE4F4 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		DB9682D42923894C00E72766 /* MathTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTestVC.swift; sourceTree = "<group>"; };
 		DB9C9D4B2891519900216347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB9C9D512891563B00216347 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -88,9 +104,21 @@
 		DBB8D01A28914A2B006FC66C /* SQLiteBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteBase.swift; sourceTree = "<group>"; };
 		DBB8D01B28914A2B006FC66C /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
 		DBB8D02128914A8D006FC66C /* CloudDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDB.swift; sourceTree = "<group>"; };
+		DBD585AB297D21DB0050956E /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		DBD63879297EEBA3008E6482 /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
+		DBD6F50F291CB1AD00759726 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DBD6F511291CD9D500759726 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
+		DBD6F515291CE20100759726 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		DBD6F517291CE2B100759726 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		DBD6F519291CE2EF00759726 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		DBD6F51B291CE9C300759726 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		DBD6F51D291CED9B00759726 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		DBDD48A9292370CF00F120FC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		DBE779A42929E612000ADD51 /* HighScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreCell.swift; sourceTree = "<group>"; };
+		DBE779A52929E612000ADD51 /* HighScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighScoreCell.xib; sourceTree = "<group>"; };
+		DBE779AA292A05F1000ADD51 /* LeaderboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardVC.swift; sourceTree = "<group>"; };
 		DBECA42728B89BD00054FFB1 /* TraderMathTestRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TraderMathTestRelease.entitlements; sourceTree = "<group>"; };
 		DBECA42828B89BDC0054FFB1 /* TraderMathTestDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TraderMathTestDebug.entitlements; sourceTree = "<group>"; };
-		F090790E9D11CC1C967E1F8E /* Pods-TraderMathTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraderMathTest.release.xcconfig"; path = "Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +126,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71C24D9ACB05CB9C729CA201 /* Pods_TraderMathTest.framework in Frameworks */,
+				DB750A132A760FBB001EE4F4 /* NotificationBannerSwift in Frameworks */,
 				DB9C9D522891563B00216347 /* libsqlite3.0.tbd in Frameworks */,
+				DB750A102A760E9E001EE4F4 /* DGCharts in Frameworks */,
+				DB750A0D2A760E19001EE4F4 /* FirebaseDatabase in Frameworks */,
+				DB750A0B2A760E19001EE4F4 /* FirebaseAnalytics in Frameworks */,
+				DB750A162A760FD9001EE4F4 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,15 +145,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		548E903E1CD083F35AEA1952 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				49E58C782817E80F9C5507C7 /* Pods-TraderMathTest.debug.xcconfig */,
-				F090790E9D11CC1C967E1F8E /* Pods-TraderMathTest.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		81A89F041CEB995600B2838A = {
 			isa = PBXGroup;
 			children = (
@@ -129,8 +152,6 @@
 				81A89F0F1CEB995600B2838A /* TraderMathTest */,
 				81A89F251CEB995600B2838A /* TraderMathTestTests */,
 				81A89F0E1CEB995600B2838A /* Products */,
-				548E903E1CD083F35AEA1952 /* Pods */,
-				C62608B3AA031B2667283DF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,11 +175,11 @@
 				DBB8D02328914BAE006FC66C /* VC */,
 				DBB8D01F28914A30006FC66C /* Vendor */,
 				DB9C9D532891578100216347 /* question-bank */,
-				DB9C9D512891563B00216347 /* libsqlite3.0.tbd */,
+				DBD6F513291CE1D000759726 /* Assets */,
 				8199DF471E341A68006E95CE /* GoogleService-Info.plist */,
 				81A4C8101CFDE4AD007D4C3C /* Bridging-Header.h */,
 				81A89F111CEB995600B2838A /* Info.plist */,
-				DB9C9D4B2891519900216347 /* Assets.xcassets */,
+				DB9C9D512891563B00216347 /* libsqlite3.0.tbd */,
 			);
 			path = TraderMathTest;
 			sourceTree = "<group>";
@@ -180,12 +201,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C62608B3AA031B2667283DF2 /* Frameworks */ = {
+		DB750A192A761191001EE4F4 /* DLRadioButton */ = {
 			isa = PBXGroup;
 			children = (
-				3EFD98C5F23E4CB9C67AAD8E /* Pods_TraderMathTest.framework */,
+				DB750A1A2A761191001EE4F4 /* DLRadioButton.m */,
+				DB750A1B2A761191001EE4F4 /* DLRadioButton.h */,
 			);
-			name = Frameworks;
+			path = DLRadioButton;
+			sourceTree = "<group>";
+		};
+		DB7C2C5E297BA51500CD2D14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB3DEB7B295A0E3E0063E2A6 /* TMSegmentControl.swift */,
+				DB750A172A7610BF001EE4F4 /* ToastHelper.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DB9C9D532891578100216347 /* question-bank */ = {
@@ -213,6 +244,7 @@
 		DBB8D01F28914A30006FC66C /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				DB750A192A761191001EE4F4 /* DLRadioButton */,
 				DBB8D02028914A39006FC66C /* SQLite */,
 			);
 			path = Vendor;
@@ -233,12 +265,11 @@
 		DBB8D02328914BAE006FC66C /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				81A89F141CEB995600B2838A /* ViewController.swift */,
-				81AA26651CF4DF7E001DE1D0 /* PracticeOrTest.swift */,
-				81AA26671CF4DFC2001DE1D0 /* Countdown.swift */,
-				81AA26691CF4E4B6001DE1D0 /* MathTest.swift */,
-				818B534E1CF6CC350085346A /* FinishTest.swift */,
-				818520651CF3EB4900063BFC /* Settings.swift */,
+				81A89F141CEB995600B2838A /* MainVC.swift */,
+				DBDD48A9292370CF00F120FC /* BaseVC.swift */,
+				DB9682D42923894C00E72766 /* MathTestVC.swift */,
+				DB2BEC89292697F0009A23B3 /* FinishTestVC.swift */,
+				DBE779AA292A05F1000ADD51 /* LeaderboardVC.swift */,
 				818520671CF3ED3C00063BFC /* Info.swift */,
 			);
 			path = VC;
@@ -247,7 +278,8 @@
 		DBB8D02428914BDA006FC66C /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				81A89F161CEB995600B2838A /* Main.storyboard */,
+				81A89F161CEB995600B2838A /* Main-Legacy.storyboard */,
+				DBD6F50F291CB1AD00759726 /* Main.storyboard */,
 				DB9C9D4D289151C300216347 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -264,6 +296,7 @@
 		DBB8D02628914C06006FC66C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DB7C2C5E297BA51500CD2D14 /* View */,
 				DBB8D02828914C1B006FC66C /* Extension */,
 				DBB8D02928914C20006FC66C /* Cell */,
 				DBB8D02728914C13006FC66C /* Models */,
@@ -275,6 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				81AA522C1CF5ED820078D58B /* Question.swift */,
+				DBD585AB297D21DB0050956E /* TestModel.swift */,
+				DBD63879297EEBA3008E6482 /* ScoreModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,7 +317,10 @@
 		DBB8D02828914C1B006FC66C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				81A4C8121CFDE4AD007D4C3C /* String-Extras.swift */,
+				81A4C8121CFDE4AD007D4C3C /* StringExtension.swift */,
+				DBD6F517291CE2B100759726 /* FontExtension.swift */,
+				DBD6F51D291CED9B00759726 /* ViewExtension.swift */,
+				DB3ADF10291F88E10040A3C9 /* AssetsExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -290,9 +328,38 @@
 		DBB8D02928914C20006FC66C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				819347C91D022033002EA835 /* TableViewCell.swift */,
+				DBE779A92929F4E1000ADD51 /* Score */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		DBD6F513291CE1D000759726 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DB9C9D4B2891519900216347 /* Assets.xcassets */,
+				DBD6F511291CD9D500759726 /* ColorAssets.xcassets */,
+				DBD6F514291CE1F200759726 /* Fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		DBD6F514291CE1F200759726 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DBD6F515291CE20100759726 /* Inter-Regular.ttf */,
+				DBD6F519291CE2EF00759726 /* Inter-Bold.ttf */,
+				DBD6F51B291CE9C300759726 /* Inter-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DBE779A92929F4E1000ADD51 /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				DBE779A42929E612000ADD51 /* HighScoreCell.swift */,
+				DBE779A52929E612000ADD51 /* HighScoreCell.xib */,
+			);
+			path = Score;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,17 +369,22 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81A89F2C1CEB995600B2838A /* Build configuration list for PBXNativeTarget "TraderMathTest" */;
 			buildPhases = (
-				68404C2ACEDD7A9AF041377B /* [CP] Check Pods Manifest.lock */,
 				81A89F091CEB995600B2838A /* Sources */,
 				81A89F0A1CEB995600B2838A /* Frameworks */,
 				81A89F0B1CEB995600B2838A /* Resources */,
-				370E10AC67A82E760CE1693D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TraderMathTest;
+			packageProductDependencies = (
+				DB750A0A2A760E19001EE4F4 /* FirebaseAnalytics */,
+				DB750A0C2A760E19001EE4F4 /* FirebaseDatabase */,
+				DB750A0F2A760E9E001EE4F4 /* DGCharts */,
+				DB750A122A760FBB001EE4F4 /* NotificationBannerSwift */,
+				DB750A152A760FD9001EE4F4 /* GoogleMobileAds */,
+			);
 			productName = TraderMathTest;
 			productReference = 81A89F0D1CEB995600B2838A /* TraderMathTest.app */;
 			productType = "com.apple.product-type.application";
@@ -341,8 +413,9 @@
 		81A89F051CEB995600B2838A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "Gamelap Studios LLC";
 				TargetAttributes = {
 					81A89F0C1CEB995600B2838A = {
@@ -369,6 +442,12 @@
 				Base,
 			);
 			mainGroup = 81A89F041CEB995600B2838A;
+			packageReferences = (
+				DB750A092A760E19001EE4F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DB750A0E2A760E9E001EE4F4 /* XCRemoteSwiftPackageReference "Charts" */,
+				DB750A112A760FBB001EE4F4 /* XCRemoteSwiftPackageReference "NotificationBanner" */,
+				DB750A142A760FD9001EE4F4 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = 81A89F0E1CEB995600B2838A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -384,14 +463,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81A89F181CEB995600B2838A /* Main.storyboard in Resources */,
+				81A89F181CEB995600B2838A /* Main-Legacy.storyboard in Resources */,
+				DBD6F512291CD9D500759726 /* ColorAssets.xcassets in Resources */,
 				81A4C81F1CFE73CE007D4C3C /* hardsequence.txt in Resources */,
 				DB9C9D4C2891519900216347 /* Assets.xcassets in Resources */,
+				DBD6F510291CB1AD00759726 /* Main.storyboard in Resources */,
 				81EF87171D110A090038A38C /* easymath.txt in Resources */,
+				DBD6F51A291CE2EF00759726 /* Inter-Bold.ttf in Resources */,
+				DBD6F516291CE20100759726 /* Inter-Regular.ttf in Resources */,
 				81A4C8201CFE73CE007D4C3C /* mediumsequence.txt in Resources */,
 				81A4C8041CFBBE63007D4C3C /* mediummath.txt in Resources */,
+				DBE779A72929E612000ADD51 /* HighScoreCell.xib in Resources */,
 				81A4C81E1CFE73CE007D4C3C /* easysequence.txt in Resources */,
 				8199DF481E341A68006E95CE /* GoogleService-Info.plist in Resources */,
+				DBD6F51C291CE9C300759726 /* Inter-Medium.ttf in Resources */,
 				DB9C9D4E289151C300216347 /* LaunchScreen.storyboard in Resources */,
 				81EF87151D10E2310038A38C /* data.db in Resources */,
 				81A4C8031CFBBE63007D4C3C /* hardmath.txt in Resources */,
@@ -407,89 +492,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		370E10AC67A82E760CE1693D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseMessaging/FirebaseMessaging.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreInternal.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseMessaging.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraderMathTest/Pods-TraderMathTest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		68404C2ACEDD7A9AF041377B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TraderMathTest-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		81A89F091CEB995600B2838A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DBB8D01D28914A2B006FC66C /* SQLiteBase.swift in Sources */,
-				818B534F1CF6CC350085346A /* FinishTest.swift in Sources */,
-				819347CA1D022033002EA835 /* TableViewCell.swift in Sources */,
-				81AA26661CF4DF7E001DE1D0 /* PracticeOrTest.swift in Sources */,
+				DB750A182A7610BF001EE4F4 /* ToastHelper.swift in Sources */,
+				DB2BEC8A292697F0009A23B3 /* FinishTestVC.swift in Sources */,
+				DB3DEB7C295A0E3E0063E2A6 /* TMSegmentControl.swift in Sources */,
+				DBD585AC297D21DB0050956E /* TestModel.swift in Sources */,
+				DBD6F518291CE2B100759726 /* FontExtension.swift in Sources */,
 				81AA522D1CF5ED820078D58B /* Question.swift in Sources */,
-				818520661CF3EB4900063BFC /* Settings.swift in Sources */,
 				DB9C9D5728915B6800216347 /* DBTable.swift in Sources */,
 				DBB8D01C28914A2B006FC66C /* SQLTable.swift in Sources */,
 				818520681CF3ED3C00063BFC /* Info.swift in Sources */,
+				DB9682D52923894C00E72766 /* MathTestVC.swift in Sources */,
 				DBB8D02228914A8D006FC66C /* CloudDB.swift in Sources */,
-				81A89F151CEB995600B2838A /* ViewController.swift in Sources */,
+				81A89F151CEB995600B2838A /* MainVC.swift in Sources */,
+				DB750A1C2A761191001EE4F4 /* DLRadioButton.m in Sources */,
+				DBD6387A297EEBA3008E6482 /* ScoreModel.swift in Sources */,
 				DB9C9D5828915B6800216347 /* DBManager.swift in Sources */,
 				81A89F131CEB995600B2838A /* AppDelegate.swift in Sources */,
-				81AA266A1CF4E4B6001DE1D0 /* MathTest.swift in Sources */,
-				81AA26681CF4DFC2001DE1D0 /* Countdown.swift in Sources */,
-				81A4C8141CFDE4AD007D4C3C /* String-Extras.swift in Sources */,
+				DBD6F51E291CED9B00759726 /* ViewExtension.swift in Sources */,
+				DBE779A62929E612000ADD51 /* HighScoreCell.swift in Sources */,
+				81A4C8141CFDE4AD007D4C3C /* StringExtension.swift in Sources */,
+				DBE779AB292A05F1000ADD51 /* LeaderboardVC.swift in Sources */,
 				DBB8D01E28914A2B006FC66C /* SQLiteDB.swift in Sources */,
+				DBDD48AA292370CF00F120FC /* BaseVC.swift in Sources */,
+				DB3ADF11291F88E10040A3C9 /* AssetsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,12 +543,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		81A89F161CEB995600B2838A /* Main.storyboard */ = {
+		81A89F161CEB995600B2838A /* Main-Legacy.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				81A89F171CEB995600B2838A /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Main-Legacy.storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -630,7 +661,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -638,7 +670,6 @@
 		};
 		81A89F2D1CEB995600B2838A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49E58C782817E80F9C5507C7 /* Pods-TraderMathTest.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -655,7 +686,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TraderMathTest/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 2.0.0;
 				OTHER_LDFLAGS = (
@@ -676,7 +707,6 @@
 		};
 		81A89F2E1CEB995600B2838A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F090790E9D11CC1C967E1F8E /* Pods-TraderMathTest.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -693,7 +723,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TraderMathTest/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 2.0.0;
 				OTHER_LDFLAGS = (
@@ -727,7 +757,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTestTests;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -747,7 +781,11 @@
 				DEVELOPMENT_TEAM = 5CUMW2JF9P;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TraderMathTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "MilapNaik.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraderMathTestTests;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -788,6 +826,69 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB750A092A760E19001EE4F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		DB750A0E2A760E9E001EE4F4 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		DB750A112A760FBB001EE4F4 /* XCRemoteSwiftPackageReference "NotificationBanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Daltron/NotificationBanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		DB750A142A760FD9001EE4F4 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB750A0A2A760E19001EE4F4 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB750A092A760E19001EE4F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		DB750A0C2A760E19001EE4F4 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB750A092A760E19001EE4F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		DB750A0F2A760E9E001EE4F4 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB750A0E2A760E9E001EE4F4 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+		DB750A122A760FBB001EE4F4 /* NotificationBannerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB750A112A760FBB001EE4F4 /* XCRemoteSwiftPackageReference "NotificationBanner" */;
+			productName = NotificationBannerSwift;
+		};
+		DB750A152A760FD9001EE4F4 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB750A142A760FD9001EE4F4 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81A89F051CEB995600B2838A /* Project object */;
 }

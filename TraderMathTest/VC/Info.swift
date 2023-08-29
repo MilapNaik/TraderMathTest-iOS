@@ -9,30 +9,23 @@
 import Foundation
 import UIKit
 
-class InfoController: UIViewController {
+class InfoVC: BaseVC {
     
     // MARK: Properties
     @IBOutlet weak var InfoText: UITextView!
-    @IBOutlet weak var TraderTest: UITextView!
-
-
+    @IBOutlet weak var versionLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        InfoText.text = "This app is meant to help practice for the math portion of interviews with finance firms. Pick your difficulty setting and amount of questions for quick, randomized practice sessions; or go for the full test and see how you do. Enjoy!"
-        InfoText.textAlignment = .center
-        InfoText.textColor = UIColor.black
-        
+        setup()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setup() {
+        InfoText.text = "This app is meant to help practice for the math portion of interviews with finance firms. Pick your difficulty setting and amount of questions for quick, randomized practice sessions; or go for the full test and see how you do. Enjoy!"
     }
-
-    @IBAction func menuClicked() {
+    
+    @IBAction func backClicked() {
         self.navigationController?.popViewController(animated: true)
     }
-    
     
 }

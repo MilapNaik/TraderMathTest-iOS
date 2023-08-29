@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
-import Firebase
+import FirebaseCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-            //.configure( withApplicationID: "ca-app-pub-3095210410543033~8235203706")
+        UIFont.overrideInitialize()
+        //.configure( withApplicationID: "ca-app-pub-3095210410543033~8235203706")
         return true
     }
 

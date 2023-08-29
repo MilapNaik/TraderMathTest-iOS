@@ -1,30 +1,30 @@
 {
   "pins" : [
     {
-      "identity" : "abseil-cpp-swiftpm",
+      "identity" : "abseil-cpp-binary",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/firebase/abseil-cpp-SwiftPM.git",
+      "location" : "https://github.com/google/abseil-cpp-binary.git",
       "state" : {
-        "revision" : "583de9bd60f66b40e78d08599cc92036c2e7e4e1",
-        "version" : "0.20220203.2"
+        "revision" : "bfc0b6f81adc06ce5121eb23f628473638d67c5c",
+        "version" : "1.2022062300.0"
       }
     },
     {
-      "identity" : "boringssl-swiftpm",
+      "identity" : "charts",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/firebase/boringssl-SwiftPM.git",
+      "location" : "https://github.com/danielgindi/Charts.git",
       "state" : {
-        "revision" : "dd3eda2b05a3f459fc3073695ad1b28659066eab",
-        "version" : "0.9.1"
+        "revision" : "0a229f8c914b0ec93798cee058cf75b339297513",
+        "version" : "5.0.0"
       }
     },
     {
       "identity" : "firebase-ios-sdk",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/firebase/firebase-ios-sdk",
+      "location" : "https://github.com/firebase/firebase-ios-sdk.git",
       "state" : {
-        "revision" : "8467858fc4cee858511380ac0f9ea5a17d007b5d",
-        "version" : "9.3.0"
+        "revision" : "a580250a9ff49ec38da5430cef20f88ddc831db2",
+        "version" : "10.12.0"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",
       "state" : {
-        "revision" : "f54f60d0164d887e1174fa51ab2efe48a8e9d178",
-        "version" : "9.3.0"
+        "revision" : "0a226a8c50494c4cb877fbde27ab6374520a3354",
+        "version" : "10.12.0"
       }
     },
     {
@@ -50,17 +50,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleUtilities.git",
       "state" : {
-        "revision" : "f4abe56ce62a779e64b525eb133c8fc2a84bbc1f",
-        "version" : "7.7.1"
+        "revision" : "4446686bc3714d49ce043d0f68318f42ed718cb6",
+        "version" : "7.11.4"
       }
     },
     {
-      "identity" : "grpc-ios",
+      "identity" : "grpc-binary",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/grpc/grpc-ios.git",
+      "location" : "https://github.com/google/grpc-binary.git",
       "state" : {
-        "revision" : "8440b914756e0d26d4f4d054a1c1581daedfc5b6",
-        "version" : "1.44.3-grpc"
+        "revision" : "f1b366129d1125be7db83247e003fc333104b569",
+        "version" : "1.50.2"
       }
     },
     {
@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/gtm-session-fetcher.git",
       "state" : {
-        "revision" : "19605024d59eaefdb1f6a2cb11ebe75df4421126",
-        "version" : "2.0.0"
+        "revision" : "d415594121c9e8a4f9d79cecee0965cf35e74dbd",
+        "version" : "3.1.1"
       }
     },
     {
@@ -82,6 +82,15 @@
       }
     },
     {
+      "identity" : "marqueelabel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cbpowell/MarqueeLabel",
+      "state" : {
+        "revision" : "bc00d4cbff7f6c416035e3d16c21885452cd159e",
+        "version" : "4.3.1"
+      }
+    },
+    {
       "identity" : "nanopb",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/nanopb.git",
@@ -91,12 +100,48 @@
       }
     },
     {
+      "identity" : "notificationbanner",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Daltron/NotificationBanner",
+      "state" : {
+        "revision" : "1406ac60bcab58074fc969e9b4cb804679832c8e",
+        "version" : "3.2.1"
+      }
+    },
+    {
       "identity" : "promises",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/promises.git",
       "state" : {
         "revision" : "3e4e743631e86c8c70dbc6efdc7beaa6e90fd3bb",
         "version" : "2.1.1"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
+        "version" : "5.6.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      "state" : {
+        "revision" : "44fee5519785604f056eab6d0400decf160f6ca8",
+        "version" : "10.8.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "129fa838520cd02174f890ae0cfe0242e60714ae",
+        "version" : "2.1.0"
       }
     },
     {

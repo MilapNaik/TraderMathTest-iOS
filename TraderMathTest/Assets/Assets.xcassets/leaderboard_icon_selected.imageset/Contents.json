@@ -1,0 +1,25 @@
+{
+  "images" : [
+    {
+      "filename" : "leaderboard_icon_selected.png",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "icons8-leaderboard-selected.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
+  }
+}
