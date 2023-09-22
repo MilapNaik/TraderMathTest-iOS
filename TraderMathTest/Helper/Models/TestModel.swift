@@ -25,7 +25,7 @@ enum Test: CaseIterable {
         case five = 5
         case ten = 10
         case fifteen = 15
-        case fifty = 50
+//        case fifty = 50
         case eighty = 80
     }
     

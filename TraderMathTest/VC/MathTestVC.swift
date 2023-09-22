@@ -75,7 +75,7 @@ class MathTestVC: BaseVC {
     //MARK: Overridden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupRightBarBtnItem()
+        setupRightBarBtnItem()
         registerForKeyboardNotifications()
     }
     
@@ -207,6 +207,7 @@ extension MathTestVC {
 extension MathTestVC {
     
     func setupRightBarBtnItem() {
+        self.showExitConfirmation = true
         self.customBarBtnItem = UIBarButtonItem(title: "Exit", style: .done, target: self, action: #selector(MathTestVC.finishTestClicked))
     }
     

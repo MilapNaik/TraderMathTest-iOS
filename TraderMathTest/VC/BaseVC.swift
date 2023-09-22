@@ -46,6 +46,12 @@ class BaseVC: UIViewController {
         }
     }
     
+    public var showExitConfirmation : Bool = false {
+        didSet {
+            setupNavbar()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
@@ -65,6 +71,10 @@ class BaseVC: UIViewController {
     }
     
     @objc func goToHome() {
+        if !showExitConfirmation {
+            self.navigationController?.popToRootViewController(animated: true)
+            return
+        }
         let alert = UIAlertController(title: "Exit?", message: "Are you sure you want to go to the home screen, you will lose any unsaved scores or progress.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes, Confirm", style: .default) { _ in
             self.navigationController?.popToRootViewController(animated: true)
