@@ -17,7 +17,8 @@ class MainVC: BaseVC {
     private let preferences = UserDefaults.standard
     
     // MARK: Properties
-    private var testType: Test.TType = .practice
+    private var selectedTestType: Test.TType = .practice
+    private var selectedTestCategory: Test.Category = .math
     
     //MARK: IBOutlets
     @IBOutlet weak var sequenceLbl: UILabel!
@@ -45,16 +46,16 @@ class MainVC: BaseVC {
         super.viewDidLoad()
         
         //Mock Data for testing purposes
-//        let ref = Database.database().reference()
-//        for _ in 1...20 {
-//            ref.child("leaderboard").childByAutoId().setValue(
-//                [ "date" : Date().description,
-//                  "score" : Int.random(in: 10..<50),
-//                  "difficulty" : Test.Level.hard.rawValue,
-//                  "test_type" : Test.Category.sequence.rawValue,
-//                  "total_questions" : 50,
-//                  "time" : "00:54.280"] )
-//        }
+        //        let ref = Database.database().reference()
+        //        for _ in 1...20 {
+        //            ref.child("leaderboard").childByAutoId().setValue(
+        //                [ "date" : Date().description,
+        //                  "score" : Int.random(in: 10..<50),
+        //                  "difficulty" : Test.Level.hard.rawValue,
+        //                  "test_type" : Test.Category.sequence.rawValue,
+        //                  "total_questions" : 50,
+        //                  "time" : "00:54.280"] )
+        //        }
         viewSetup()
     }
     
@@ -78,14 +79,14 @@ class MainVC: BaseVC {
     
     // MARK: IBActions
     @IBAction func practiceClicked() {
-        testType = .practice
-        preferences.set(testType.rawValue, forKey: Test.Key.POT_KEY.val)
+        selectedTestType = .practice
+        preferences.set(selectedTestType.rawValue, forKey: Test.Key.POT_KEY.val)
         showSettingsView()
     }
     
     @IBAction func testClicked() {
-        testType = .test
-        preferences.set(testType.rawValue, forKey: Test.Key.POT_KEY.val)
+        selectedTestType = .test
+        preferences.set(selectedTestType.rawValue, forKey: Test.Key.POT_KEY.val)
         showSettingsView()
     }
     
@@ -109,37 +110,7 @@ class MainVC: BaseVC {
     }
     
     @IBAction func closeSettingsView() {
-        showBottomSelectionView()
-    }
-    
-    // MARK: View
-    func viewSetup() {
-        self.addGestureToViews()
-    }
-    
-    func showBottomSelectionView() {
-        bottomSelectionView.isHidden = false
-        settingsView.isHidden = true
-    }
-    
-    func showSettingsView() {
-        bottomSelectionView.isHidden = true
-        settingsView.isHidden = false
-        updateSettingsView()
-    }
-    
-    func updateSettingsView() {
-        let _ = practiceQuestionsStackView.subviews.map { $0.isHidden = testType != .practice }
-    }
-    
-    func resetAllViews() {
-        bottomSelectionView.isHidden = true
-        settingsView.isHidden = true
-        mathTestView.backgroundColor = .systemBackground
-        sequenceTestView.backgroundColor = .systemBackground
-        settingsView.backgroundColor = .systemBackground
-        sequenceLbl.textColor = .label
-        mathTestLbl.textColor = .label
+        toggleBottomSelectionView(hide: true)
     }
     
     // MARK: Gesture
@@ -163,7 +134,8 @@ class MainVC: BaseVC {
             Test.Category.sequence.rawValue,
             forKey: Test.Key.TEST_TYPE_KEY.val)
         
-        showBottomSelectionView()
+        toggleBottomSelectionView(type: .sequence)
+        selectedTestCategory = .sequence
     }
     
     @objc func mathTestClicked() {
@@ -177,7 +149,63 @@ class MainVC: BaseVC {
             Test.Category.math.rawValue,
             forKey: Test.Key.TEST_TYPE_KEY.val)
         
-        showBottomSelectionView()
+        toggleBottomSelectionView(type: .math)
+        selectedTestCategory = .math
+    }
+    
+    // MARK: View
+    func viewSetup() {
+        addGestureToViews()
+    }
+    
+    func toggleBottomSelectionView(type: Test.Category = .math, hide: Bool = false) {
+        UIView.animate(withDuration: 0.8, delay: 0.1) { [unowned self] in
+            if selectedTestCategory == type && !hide {
+                if bottomSelectionView.isHidden {
+                    bottomSelectionView.alpha = 0.0
+                    bottomSelectionView.isHidden = false
+                    bottomSelectionView.alpha = 1.0
+                }
+                else {
+                    bottomSelectionView.alpha = 1.0
+                    bottomSelectionView.isHidden = true
+                    bottomSelectionView.alpha = 0.0
+                }
+                settingsView.isHidden = true
+            }
+            else {
+                if !hide {
+                    bottomSelectionView.alpha = 0.0
+                    bottomSelectionView.isHidden = hide == true ? !hide : false
+                    settingsView.isHidden = hide == true ? hide : true
+                    bottomSelectionView.alpha = 1.0
+                }
+                else {
+                    bottomSelectionView.isHidden = hide == true ? !hide : false
+                    settingsView.isHidden = hide == true ? hide : true
+                }
+            }
+        }
+    }
+    
+    func showSettingsView() {
+        bottomSelectionView.isHidden = true
+        settingsView.isHidden = false
+        updateSettingsView()
+    }
+    
+    func updateSettingsView() {
+        let _ = practiceQuestionsStackView.subviews.map { $0.isHidden = selectedTestType != .practice }
+    }
+    
+    func resetAllViews() {
+        bottomSelectionView.isHidden = true
+        settingsView.isHidden = true
+        mathTestView.backgroundColor = .systemBackground
+        sequenceTestView.backgroundColor = .systemBackground
+        settingsView.backgroundColor = .systemBackground
+        sequenceLbl.textColor = .label
+        mathTestLbl.textColor = .label
     }
     
     //MARK: User Defaults
