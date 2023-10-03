@@ -80,8 +80,13 @@ class LeaderboardVC: BaseVC {
         scoreTypeControl.setButtonTitles(buttonTitles: Test.ScoreType.allCases.map { $0.rawValue.uppercased() })
         testTypeControl.setButtonTitles(buttonTitles: Test.Category.allCases.map { $0.rawValue.uppercased() })
         levelTypeControl.setButtonTitles(buttonTitles: Test.Level.allCases.map { $0.rawValue.uppercased() })
-        questionsControl.setButtonTitles(buttonTitles: Test.Count.allCases.map { "\($0.rawValue)" })
         
+        if testTypeControl.selectedVal.lowercased() == Test.Category.math.rawValue.lowercased() {
+            questionsControl.setButtonTitles(buttonTitles: Test.Count.allCasesForMath.map { "\($0.rawValue)" })
+        }
+        else {
+            questionsControl.setButtonTitles(buttonTitles: Test.Count.allCasesForSequence.map { "\($0.rawValue)" })
+        }
         //Set delegate for segmented control
         questionsControl.delegate = self
         levelTypeControl.delegate = self
@@ -230,6 +235,12 @@ extension LeaderboardVC: TMTSegmentedControlDelegate {
         case testTypeControl:
             if let testType = Test.Category(rawValue: control.selectedVal.lowercased()) {
                 self.testType = testType
+                if self.testType == .math {
+                    questionsControl.setButtonTitles(buttonTitles: Test.Count.allCasesForMath.map { "\($0.rawValue)" })
+                }
+                else {
+                    questionsControl.setButtonTitles(buttonTitles: Test.Count.allCasesForSequence.map { "\($0.rawValue)" })
+                }
             }
             if scoreType == .global {
                 questionNum = testType == .math ? .eighty : .fifty
