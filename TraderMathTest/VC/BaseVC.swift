@@ -54,12 +54,12 @@ class BaseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .appBackground
         setupNavbar()
     }
     
     fileprivate func setupNavbar() {
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .appBackground
         if let nav = self.navigationController {
             //basic settings for navigation controller
             nav.isNavigationBarHidden = false

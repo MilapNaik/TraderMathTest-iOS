@@ -622,7 +622,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1Qz-o7-0Vq" secondAttribute="trailing" id="3xb-9c-9i2"/>
                             <constraint firstItem="vyy-pU-BFb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="72c-QA-UqE"/>
@@ -726,7 +726,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TYPE HERE" borderStyle="line" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJm-gH-lEB">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type answer here" borderStyle="line" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJm-gH-lEB">
                                         <rect key="frame" x="0.0" y="28.333333333333371" width="247" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="jB6-rK-4xa"/>
@@ -755,7 +755,7 @@
                                             <action selector="minusPressed" destination="U8K-TT-Xdn" id="FDC-QH-4i7"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="," style="done" id="c9y-SS-YUL">
+                                    <barButtonItem title="," style="done" hidden="YES" id="c9y-SS-YUL">
                                         <color key="tintColor" name="AccentNoDarkSupport"/>
                                         <connections>
                                             <action selector="commaPressed" destination="U8K-TT-Xdn" id="nV7-pT-ev5"/>
@@ -1114,22 +1114,47 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="baf-GO-bGY">
-                                <rect key="frame" x="16" y="179.66666666666669" width="343" height="566.33333333333326"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baf-GO-bGY">
+                                <rect key="frame" x="16" y="179.66666666666666" width="343" height="484.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Got any feedback to share with us?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62y-1j-MqA">
+                                <rect key="frame" x="67.333333333333329" y="696" width="240.33333333333337" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYZ-Lj-KAl">
+                                <rect key="frame" x="116.33333333333333" y="722" width="142.33333333333337" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9hZ-RB-u9a"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send Feedback">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sendFeedbackClicked" destination="xSZ-pA-KSI" eventType="touchUpInside" id="7vk-vC-po3"/>
+                                    <action selector="startClicked" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Sbc-vI-HWv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="00v-TV-jVR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Mdn-WA-ski" firstAttribute="top" secondItem="HOV-ts-5CK" secondAttribute="bottom" constant="16" id="3aC-2z-rri"/>
-                            <constraint firstItem="00v-TV-jVR" firstAttribute="bottom" secondItem="baf-GO-bGY" secondAttribute="bottom" constant="32" id="4in-lr-8la"/>
                             <constraint firstItem="00v-TV-jVR" firstAttribute="trailing" secondItem="baf-GO-bGY" secondAttribute="trailing" constant="16" id="6Sa-gH-aqJ"/>
+                            <constraint firstItem="62y-1j-MqA" firstAttribute="top" secondItem="baf-GO-bGY" secondAttribute="bottom" constant="32" id="7Pj-Gr-gFz"/>
+                            <constraint firstItem="OYZ-Lj-KAl" firstAttribute="centerX" secondItem="00v-TV-jVR" secondAttribute="centerX" id="C5H-R8-GzW"/>
+                            <constraint firstItem="62y-1j-MqA" firstAttribute="centerX" secondItem="OYZ-Lj-KAl" secondAttribute="centerX" id="SxA-UF-rY6"/>
+                            <constraint firstItem="OYZ-Lj-KAl" firstAttribute="top" secondItem="62y-1j-MqA" secondAttribute="bottom" constant="8" symbolic="YES" id="Z6G-2d-UsO"/>
                             <constraint firstItem="Mdn-WA-ski" firstAttribute="centerX" secondItem="00v-TV-jVR" secondAttribute="centerX" id="ZIT-2V-rfv"/>
+                            <constraint firstItem="OYZ-Lj-KAl" firstAttribute="bottom" secondItem="00v-TV-jVR" secondAttribute="bottom" constant="-16" id="cNY-hI-ZPS"/>
                             <constraint firstItem="HOV-ts-5CK" firstAttribute="leading" secondItem="00v-TV-jVR" secondAttribute="leading" constant="16" id="gj2-JH-X1v"/>
                             <constraint firstItem="baf-GO-bGY" firstAttribute="top" secondItem="Mdn-WA-ski" secondAttribute="bottom" constant="16" id="mHf-8J-HAv"/>
                             <constraint firstItem="baf-GO-bGY" firstAttribute="leading" secondItem="00v-TV-jVR" secondAttribute="leading" constant="16" id="psE-17-wl9"/>
@@ -1139,11 +1164,12 @@
                     <navigationItem key="navigationItem" id="J1d-am-JVe"/>
                     <connections>
                         <outlet property="InfoText" destination="baf-GO-bGY" id="Vrf-Jn-yo7"/>
+                        <outlet property="versionLbl" destination="VAG-c0-8ad" id="3CD-u1-EDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hI9-oe-SdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955" y="658"/>
+            <point key="canvasLocation" x="954.39999999999998" y="657.63546798029563"/>
         </scene>
     </scenes>
     <resources>
@@ -1155,10 +1181,13 @@
         <image name="sequence_placeholder_img" width="134.33332824707031" height="142.66667175292969"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
-            <color red="0.20000000298023224" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AccentNoDarkSupport">
             <color red="0.20000000298023224" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GrayColor">
             <color red="0.49399998784065247" green="0.49399998784065247" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

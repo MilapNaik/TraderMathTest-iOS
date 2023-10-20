@@ -127,7 +127,7 @@ class MainVC: BaseVC {
         sequenceLbl.textColor = .black
         mathTestLbl.textColor = .label
         sequenceTestView.backgroundColor = .lightPrimary
-        mathTestView.backgroundColor = .systemBackground
+        mathTestView.backgroundColor = .appBackground
         
         //Save preferences
         preferences.set(
@@ -142,7 +142,7 @@ class MainVC: BaseVC {
         
         sequenceLbl.textColor = .label
         mathTestLbl.textColor = .black
-        sequenceTestView.backgroundColor = .systemBackground
+        sequenceTestView.backgroundColor = .appBackground
         mathTestView.backgroundColor = .lightPrimary
         //Save preferences
         preferences.set(
@@ -201,9 +201,9 @@ class MainVC: BaseVC {
     func resetAllViews() {
         bottomSelectionView.isHidden = true
         settingsView.isHidden = true
-        mathTestView.backgroundColor = .systemBackground
-        sequenceTestView.backgroundColor = .systemBackground
-        settingsView.backgroundColor = .systemBackground
+        mathTestView.backgroundColor = .appBackground
+        sequenceTestView.backgroundColor = .appBackground
+        settingsView.backgroundColor = .appBackground
         sequenceLbl.textColor = .label
         mathTestLbl.textColor = .label
     }

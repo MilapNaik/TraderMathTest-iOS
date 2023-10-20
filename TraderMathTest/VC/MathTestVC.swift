@@ -15,6 +15,7 @@ class MathTestVC: BaseVC {
         
     //MARK: Constants
     private let preferences = UserDefaults.standard
+    private let TYPE_ANSWER_PLACEHOLDER = "Type answer here"
     
     //MARK: Variables
     private var questionNumber:Int = 1
@@ -124,7 +125,7 @@ class MathTestVC: BaseVC {
     }
     
     @IBAction func minusPressed() {
-        if answerTf.text?.prefix(1) != "-" {
+        if answerTf.text?.prefix(1) != "-",  answerTf.text != TYPE_ANSWER_PLACEHOLDER {
             answerTf.text = "-" + answerTf.text!
         }
     }
@@ -174,7 +175,7 @@ extension MathTestVC {
         correctAnswer = myQuestions[randomIndex + 1]
         
         qnumLabel.text = "\(questionNumber)/\(questionNum.rawValue)"
-        answerTf.text = "TYPE HERE"
+        answerTf.text = TYPE_ANSWER_PLACEHOLDER
         clear()
     }
     
@@ -291,12 +292,12 @@ extension MathTestVC: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         if textField.text == "" {
-            textField.text = "TYPE HERE"
+            textField.text = TYPE_ANSWER_PLACEHOLDER
         }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField.text == "TYPE HERE" {
+        if textField.text == TYPE_ANSWER_PLACEHOLDER {
             textField.text = ""
         }
         return true
