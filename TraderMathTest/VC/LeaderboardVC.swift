@@ -57,6 +57,7 @@ class LeaderboardVC: BaseVC {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -149,7 +150,6 @@ extension LeaderboardVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
     }
-    
 }
 
 //MARK: DB
@@ -164,7 +164,6 @@ extension LeaderboardVC {
         bestTime = ["-----", "-----", "-----", "-----", "-----"]
         
         let result = db.query(sql: "SELECT * from \(level.rawValue)_\(testType.rawValue)_\(questionNum.rawValue) ORDER BY Score DESC, Time ASC LIMIT \(maxResults)", parameters: nil)
-        
         for (index,row) in result.enumerated() {
             bestScore[index] = String(describing: row["Score"]!)
             bestTime[index] = String(describing: row["Time"]!)
@@ -175,7 +174,7 @@ extension LeaderboardVC {
         }
     }
     
-    fileprivate func checkScores(_ snapshot: DataSnapshot) {
+    func checkScores(_ snapshot: DataSnapshot) {
         var scores: [ScoreModel] = []
         for child in snapshot.children {
             if let snap = child as? DataSnapshot,
@@ -227,6 +226,12 @@ extension LeaderboardVC: TMTSegmentedControlDelegate {
             }
             if scoreType == .global {
                 questionNum = testType == .math ? .eighty : .fifty
+            }
+            else {
+                if questionNum == .fifty || questionNum == .eighty {
+                    questionNum = .five
+                    questionsControl.setIndex(index: 0)
+                }
             }
         case levelTypeControl:
             if let level = Test.Level(rawValue: control.selectedVal.lowercased()) {
