@@ -125,7 +125,10 @@ class MathTestVC: BaseVC {
     }
     
     @IBAction func minusPressed() {
-        if answerTf.text?.prefix(1) != "-",  answerTf.text != TYPE_ANSWER_PLACEHOLDER {
+        if answerTf.text?.prefix(1) != "-" {
+            if answerTf.text == TYPE_ANSWER_PLACEHOLDER  {
+                answerTf.text = ""
+            }
             answerTf.text = "-" + answerTf.text!
         }
     }

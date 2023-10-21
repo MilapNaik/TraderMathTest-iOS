@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wc9-uZ-3y1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wc9-uZ-3y1">
     <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,13 +37,13 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdu-Fg-yLN" customClass="TMTSegmentedControl" customModule="TraderMathTest" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="43.333333333333329" width="279" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="BackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="paL-1b-TOV"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="gdu-Fg-yLN" secondAttribute="trailing" constant="32" id="677-7G-iWs"/>
                                             <constraint firstItem="8wT-1c-0hm" firstAttribute="leading" secondItem="xEE-AU-fgh" secondAttribute="leading" constant="8" id="7SW-s4-wQV"/>
@@ -64,10 +64,10 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaF-eb-jR6" customClass="TMTSegmentedControl" customModule="TraderMathTest" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="43.333333333333314" width="279" height="31"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="BackgroundColor"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="KaF-eb-jR6" firstAttribute="leading" secondItem="oeF-cF-R30" secondAttribute="leading" constant="32" id="VbZ-Od-bVh"/>
                                             <constraint firstItem="eyE-Nx-WgH" firstAttribute="leading" secondItem="oeF-cF-R30" secondAttribute="leading" constant="8" id="aGw-1B-MUG"/>
@@ -88,13 +88,13 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSz-cI-Juq" customClass="TMTSegmentedControl" customModule="TraderMathTest" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="43.333333333333343" width="279" height="31"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="BackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="KOQ-Bh-dtd"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="fSz-cI-Juq" firstAttribute="top" secondItem="Z5J-y2-zrf" secondAttribute="bottom" constant="8" id="0Dg-97-RV9"/>
                                             <constraint firstItem="Z5J-y2-zrf" firstAttribute="leading" secondItem="fhD-zJ-apJ" secondAttribute="leading" constant="8" id="5Hs-vF-L61"/>
@@ -115,13 +115,13 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvx-sT-Rt7" customClass="TMTSegmentedControl" customModule="TraderMathTest" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="43.333333333333314" width="279" height="31"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="BackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="yQc-nr-in0"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="7nH-bT-kWX" firstAttribute="leading" secondItem="eYc-42-L3B" secondAttribute="leading" constant="8" id="30y-ZA-rNb"/>
                                             <constraint firstItem="Fvx-sT-Rt7" firstAttribute="leading" secondItem="eYc-42-L3B" secondAttribute="leading" constant="32" id="8Nc-eX-qD8"/>
@@ -147,7 +147,7 @@
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TdY-LV-BY0">
                                         <rect key="frame" x="0.0" y="43.333333333333371" width="343" height="324.33333333333331"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="dbw-8W-hr7" id="uyn-gA-ZYb"/>
                                             <outlet property="delegate" destination="dbw-8W-hr7" id="lLd-K0-Nl3"/>
@@ -166,7 +166,7 @@
                                                 <color key="color" name="PrimaryColor"/>
                                             </activityIndicatorView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Af6-a2-ppP" firstAttribute="centerY" secondItem="dab-WN-NEM" secondAttribute="centerY" id="i4d-o5-E56"/>
                                             <constraint firstItem="Af6-a2-ppP" firstAttribute="centerX" secondItem="dab-WN-NEM" secondAttribute="centerX" id="jXJ-8q-e9u"/>
@@ -176,7 +176,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uir-tQ-ILq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Uir-tQ-ILq" firstAttribute="bottom" secondItem="cFi-QB-K59" secondAttribute="bottom" id="2xc-fn-boZ"/>
                             <constraint firstAttribute="trailing" secondItem="BrZ-c6-MGx" secondAttribute="trailing" constant="16" id="5jE-8U-bsM"/>
@@ -700,7 +700,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="6b2-EZ-SGq" firstAttribute="top" secondItem="0Qk-K7-eB4" secondAttribute="top" constant="16" id="GI6-er-xXE"/>
                                             <constraint firstAttribute="bottom" secondItem="6b2-EZ-SGq" secondAttribute="bottom" constant="16" id="lTN-6B-sAr"/>
@@ -813,7 +813,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="35j-hQ-lL6" firstAttribute="leading" secondItem="nK7-HA-ccd" secondAttribute="leading" constant="16" id="6Vz-g9-fot"/>
                                             <constraint firstItem="iCC-q8-832" firstAttribute="leading" secondItem="nK7-HA-ccd" secondAttribute="leading" id="Qaf-je-CuF"/>
@@ -828,7 +828,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ULj-gg-fmk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ccP-yI-Hlo" firstAttribute="leading" secondItem="ULj-gg-fmk" secondAttribute="leading" constant="32" id="30c-Th-5gc"/>
                             <constraint firstItem="bcz-ut-zES" firstAttribute="top" secondItem="jnE-FJ-2hl" secondAttribute="bottom" constant="16" id="3t3-94-qnR"/>
@@ -876,7 +876,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sJo-ZV-U8H">
                                 <rect key="frame" x="0.0" y="374.66666666666674" width="375" height="297.33333333333326"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Rjz-eS-c6A" id="0n4-JX-Mer"/>
                                     <outlet property="delegate" destination="Rjz-eS-c6A" id="rdj-qj-hCZ"/>
@@ -995,7 +995,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="UcW-91-Jt7" firstAttribute="leading" secondItem="CIM-zu-Bdn" secondAttribute="trailing" constant="16" id="8q5-X0-J06"/>
                                     <constraint firstItem="JZ3-8V-CkG" firstAttribute="leading" secondItem="NS8-IU-WyQ" secondAttribute="leading" constant="16" id="EMD-vc-diW"/>
@@ -1018,7 +1018,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vrr-mb-rIU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sJo-ZV-U8H" firstAttribute="top" secondItem="NS8-IU-WyQ" secondAttribute="bottom" constant="-5.6843418860808015e-14" id="1dE-SQ-izs"/>
                             <constraint firstItem="NS8-IU-WyQ" firstAttribute="height" secondItem="B36-o9-5tZ" secondAttribute="height" multiplier="0.4" id="6GY-pM-HFW"/>
@@ -1116,7 +1116,7 @@
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baf-GO-bGY">
                                 <rect key="frame" x="16" y="179.66666666666666" width="343" height="484.33333333333337"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1145,7 +1145,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="00v-TV-jVR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Mdn-WA-ski" firstAttribute="top" secondItem="HOV-ts-5CK" secondAttribute="bottom" constant="16" id="3aC-2z-rri"/>
                             <constraint firstItem="00v-TV-jVR" firstAttribute="trailing" secondItem="baf-GO-bGY" secondAttribute="trailing" constant="16" id="6Sa-gH-aqJ"/>
@@ -1181,7 +1181,7 @@
         <image name="sequence_placeholder_img" width="134.33332824707031" height="142.66667175292969"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20000000298023224" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AccentNoDarkSupport">
             <color red="0.20000000298023224" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

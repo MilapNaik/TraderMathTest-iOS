@@ -72,6 +72,7 @@ class LeaderboardVC: BaseVC {
     }
     
     fileprivate func setupTableView() {
+        tableView.backgroundColor = .appBackground
         tableView.register(UINib(nibName: HIGH_SCORE_CELL, bundle: nil), forCellReuseIdentifier: HIGH_SCORE_CELL)
     }
     
