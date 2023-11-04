@@ -131,6 +131,9 @@ class MathTestVC: BaseVC {
             }
             answerTf.text = "-" + answerTf.text!
         }
+        else {
+            answerTf.text = answerTf.text?.replacingOccurrences(of: "-", with: "")
+        }
     }
     
     @IBAction func commaPressed() {

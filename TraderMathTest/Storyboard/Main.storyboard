@@ -163,7 +163,7 @@
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Af6-a2-ppP">
                                                 <rect key="frame" x="153" y="173.33333333333331" width="37" height="37"/>
-                                                <color key="color" name="PrimaryColor"/>
+                                                <color key="color" name="AccentColor"/>
                                             </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -595,7 +595,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PV2-UH-ME8">
                                         <rect key="frame" x="16" y="0.0" width="343" height="24"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="© Copyright Information Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70c-Bj-1G2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="© Gamelap Studios LLC 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70c-Bj-1G2">
                                                 <rect key="frame" x="0.0" y="0.0" width="319" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" name="GrayColor"/>

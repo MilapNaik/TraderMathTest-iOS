@@ -159,7 +159,7 @@ class MainVC: BaseVC {
     }
     
     func toggleBottomSelectionView(type: Test.Category = .math, hide: Bool = false) {
-        UIView.animate(withDuration: 0.8, delay: 0.1) { [unowned self] in
+//        UIView.animate(withDuration: 0.8, delay: 0.1) { [unowned self] in
             if selectedTestCategory == type && !hide {
                 if bottomSelectionView.isHidden {
                     bottomSelectionView.alpha = 0.0
@@ -185,7 +185,7 @@ class MainVC: BaseVC {
                     settingsView.isHidden = hide == true ? hide : true
                 }
             }
-        }
+//        }
     }
     
     func showSettingsView() {
