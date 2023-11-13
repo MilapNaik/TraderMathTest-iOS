@@ -27,6 +27,7 @@ class HighScoreCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.backgroundColor = .appBackground
     }
     
     func setRow(index: Int) {

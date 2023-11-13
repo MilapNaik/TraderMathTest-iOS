@@ -57,6 +57,7 @@ class LeaderboardVC: BaseVC {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -71,6 +72,7 @@ class LeaderboardVC: BaseVC {
     }
     
     fileprivate func setupTableView() {
+        tableView.backgroundColor = .appBackground
         tableView.register(UINib(nibName: HIGH_SCORE_CELL, bundle: nil), forCellReuseIdentifier: HIGH_SCORE_CELL)
     }
     
@@ -80,8 +82,13 @@ class LeaderboardVC: BaseVC {
         scoreTypeControl.setButtonTitles(buttonTitles: Test.ScoreType.allCases.map { $0.rawValue.uppercased() })
         testTypeControl.setButtonTitles(buttonTitles: Test.Category.allCases.map { $0.rawValue.uppercased() })
         levelTypeControl.setButtonTitles(buttonTitles: Test.Level.allCases.map { $0.rawValue.uppercased() })
-        questionsControl.setButtonTitles(buttonTitles: Test.Count.allCases.map { "\($0.rawValue)" })
         
+        if testTypeControl.selectedVal.lowercased() == Test.Category.math.rawValue.lowercased() {
+            questionsControl.setButtonTitles(buttonTitles: Test.Count.allCasesForMath.map { "\($0.rawValue)" })
+        }
+        else {
+            questionsControl.setButtonTitles(buttonTitles: Test.Count.allCasesForSequence.map { "\($0.rawValue)" })
+        }
         //Set delegate for segmented control
         questionsControl.delegate = self
         levelTypeControl.delegate = self
@@ -144,7 +151,6 @@ extension LeaderboardVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
     }
-    
 }
 
 //MARK: DB
@@ -159,7 +165,6 @@ extension LeaderboardVC {
         bestTime = ["-----", "-----", "-----", "-----", "-----"]
         
         let result = db.query(sql: "SELECT * from \(level.rawValue)_\(testType.rawValue)_\(questionNum.rawValue) ORDER BY Score DESC, Time ASC LIMIT \(maxResults)", parameters: nil)
-        
         for (index,row) in result.enumerated() {
             bestScore[index] = String(describing: row["Score"]!)
             bestTime[index] = String(describing: row["Time"]!)
@@ -170,7 +175,7 @@ extension LeaderboardVC {
         }
     }
     
-    fileprivate func checkScores(_ snapshot: DataSnapshot) {
+    func checkScores(_ snapshot: DataSnapshot) {
         var scores: [ScoreModel] = []
         for child in snapshot.children {
             if let snap = child as? DataSnapshot,
@@ -223,6 +228,12 @@ extension LeaderboardVC: TMTSegmentedControlDelegate {
             if scoreType == .global {
                 questionNum = testType == .math ? .eighty : .fifty
             }
+            else {
+                if questionNum == .fifty || questionNum == .eighty {
+                    questionNum = .five
+                    questionsControl.setIndex(index: 0)
+                }
+            }
         case levelTypeControl:
             if let level = Test.Level(rawValue: control.selectedVal.lowercased()) {
                 self.level = level
@@ -230,6 +241,12 @@ extension LeaderboardVC: TMTSegmentedControlDelegate {
         case testTypeControl:
             if let testType = Test.Category(rawValue: control.selectedVal.lowercased()) {
                 self.testType = testType
+                if self.testType == .math {
+                    questionsControl.setButtonTitles(buttonTitles: Test.Count.allCasesForMath.map { "\($0.rawValue)" })
+                }
+                else {
+                    questionsControl.setButtonTitles(buttonTitles: Test.Count.allCasesForSequence.map { "\($0.rawValue)" })
+                }
             }
             if scoreType == .global {
                 questionNum = testType == .math ? .eighty : .fifty

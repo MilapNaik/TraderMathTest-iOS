@@ -15,6 +15,7 @@ class MathTestVC: BaseVC {
         
     //MARK: Constants
     private let preferences = UserDefaults.standard
+    private let TYPE_ANSWER_PLACEHOLDER = "Type answer here"
     
     //MARK: Variables
     private var questionNumber:Int = 1
@@ -75,7 +76,7 @@ class MathTestVC: BaseVC {
     //MARK: Overridden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupRightBarBtnItem()
+        setupRightBarBtnItem()
         registerForKeyboardNotifications()
     }
     
@@ -94,7 +95,7 @@ class MathTestVC: BaseVC {
         startTime = Date.timeIntervalSinceReferenceDate
         answerTf.becomeFirstResponder()
         answerTf.delegate = self
-        
+        answerTf.text = ""
     }
     
     //MARK: Segue
@@ -109,8 +110,34 @@ class MathTestVC: BaseVC {
     
     //MARK: IBAction
     @IBAction func donePressed() {
+        if !answerTf.text!.isEmpty {
+            checkAnswer()
+        }
+        else {
+            ToastHelper.toast("Please type your answer", presenter: self)
+        }
+    }
+    
+    @IBAction func cancelPressed() {
+        answerTf.text = ""
         doneToolbar.isHidden = true
         self.view.endEditing(true)
+    }
+    
+    @IBAction func minusPressed() {
+        if answerTf.text?.prefix(1) != "-" {
+            if answerTf.text == TYPE_ANSWER_PLACEHOLDER  {
+                answerTf.text = ""
+            }
+            answerTf.text = "-" + answerTf.text!
+        }
+        else {
+            answerTf.text = answerTf.text?.replacingOccurrences(of: "-", with: "")
+        }
+    }
+    
+    @IBAction func commaPressed() {
+        answerTf.text = answerTf.text! + ","
     }
     
     @IBAction func clearPressed() {
@@ -154,13 +181,13 @@ extension MathTestVC {
         correctAnswer = myQuestions[randomIndex + 1]
         
         qnumLabel.text = "\(questionNumber)/\(questionNum.rawValue)"
-        answerTf.text = ""
+        answerTf.text = TYPE_ANSWER_PLACEHOLDER
         clear()
     }
     
     //check answer and update the view accordingly
     func checkAnswer() {
-        answer = answerTf.text
+        answer = answerTf.text!.replacingOccurrences(of: ",", with: "")
         questionNumber += 1
         
         //Convert answer and correct answer so all forms are accepted (i.e. .67=0.67=000.67000
@@ -207,7 +234,9 @@ extension MathTestVC {
 extension MathTestVC {
     
     func setupRightBarBtnItem() {
+        self.showExitConfirmation = true
         self.customBarBtnItem = UIBarButtonItem(title: "Exit", style: .done, target: self, action: #selector(MathTestVC.finishTestClicked))
+        self.customBarBtnItem?.tintColor = .accent
     }
     
     @objc func finishTestClicked() {
@@ -260,21 +289,28 @@ extension MathTestVC {
 extension MathTestVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.text!.isEmpty == false {
-            self.checkAnswer()
-        }
-        else {
-            ToastHelper.toast("Please type your answer", presenter: self)
-        }
         return false
     }
-    
+        
     func textFieldDidBeginEditing(_ textField: UITextField) {
         doneToolbar.isHidden = false
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        if textField.text == "" {
+            textField.text = TYPE_ANSWER_PLACEHOLDER
+        }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.text == TYPE_ANSWER_PLACEHOLDER {
+            textField.text = ""
+        }
+        return true
+    }
 }
 
+//MARK: Draft Board Drawing Code
 extension MathTestVC {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

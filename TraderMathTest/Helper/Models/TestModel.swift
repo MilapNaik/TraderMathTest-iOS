@@ -27,6 +27,14 @@ enum Test: CaseIterable {
         case fifteen = 15
         case fifty = 50
         case eighty = 80
+        
+        static var allCasesForMath: [Count] {
+            return [.five, .ten, .fifteen, .eighty]
+        }
+        
+        static var allCasesForSequence: [Count] {
+            return [.five, .ten, .fifteen, .fifty]
+        }
     }
     
     enum TType: String, CaseIterable  {

@@ -12,6 +12,9 @@ extension UIColor {
     class var primary: UIColor { UIColor(named: "PrimaryColor")! }
     class var lightPrimary: UIColor { UIColor(named: "LightPrimary")! }
     class var accent: UIColor { UIColor(named: "AccentColor")! }
+    class var appBackground: UIColor {
+        UIColor(named: "BackgroundColor")!
+    }
 }
 
 extension UIImage {
