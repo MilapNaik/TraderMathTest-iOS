@@ -240,7 +240,7 @@ extension MathTestVC {
     }
     
     @objc func finishTestClicked() {
-        let alert = UIAlertController(title: "Exit?", message: "Are you sure you want to end the test, your score won't be saved if you end it now?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Exit?", message: "Are you sure you want to end the test? Your score won't be saved.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "End Test", style: .default) { _ in
             self.goHome()
         })
